@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}",
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
     extend: {
       maxWidth: {
@@ -17,7 +19,10 @@ module.exports = {
       'lg': '992px',
       'xl': '1200px',
       'xxl': '1400px',
+      'mod': '1190px',
     }
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin'),
+  ],
 }
