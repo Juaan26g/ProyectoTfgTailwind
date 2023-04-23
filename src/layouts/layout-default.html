@@ -5,27 +5,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accordion - Mazer Admin Dashboard</title>
-  <link href="../css/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="elementos/elementos.css">
-  <link rel="shortcut icon" href="elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
-  <link rel="shortcut icon" href="elementos/herramientas/images/logo/favicon.png" type="image/png" />
+  <link href="../../css/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="../elementos/elementos.css">
+  <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
 </head>
 
 <body>
   <div id="app">
-    <div id="sidebar" class="active fixed">
+    <div id="sidebar" class="xl:active xxl:active fixed">
       <div class="sidebar-wrapper active entrada">
-        <div class="sidebar-header relative ">
-          <div class="flex w-60 mt-3 mb-2 items-center ">
+        <div class="sidebar-header relative">
+
+          <div class="flex w-60 mt-3 mb-2 items-center">
             <div class="logo">
-              <a href="index.html"><img src="elementos/herramientas/images/logo/logo.svg" alt="Logo" /></a>
+              <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg" alt="Logo" /></a>
             </div>
 
-            <div class=" flex gap-2 items-center mt-1">
+            <div class="flex gap-2 items-center mt-1">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
-                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons" width="20" height="22"
+                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons sun-color" width="20" height="22"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
-                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                   <path
                     d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
                     opacity=".3"></path>
@@ -46,7 +47,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                 role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20" height="20"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path fill="currentColor"
+                <path fill="#607080"
                   d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
                 </path>
               </svg>
@@ -55,23 +56,19 @@
             <button id="sidebar-hide"
               class="sidebar-hide absolute textoSidebar top-2 right-2 bg-transparent border-none p-0 xl:hidden xxl:hidden">
               <svg class="bi" width="25" height="40" fill="currentColor">
-                <use xlink:href="elementos/herramientas/images/icons.svg#x" />
+                <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
               </svg>
             </button>
-
-
           </div>
-
-
         </div>
-        <div class="sidebar-menu" >
+        <div class="sidebar-menu">
           <ul class="menu">
             <li class="sidebar-title textoSidebar">Menu</li>
 
-            <li class="sidebar-item active">
-              <a href="index.html" class="sidebar-link">
+            <li class="sidebar-item">
+              <a href="../index.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
-                  <use xlink:href="elementos/herramientas/images/icons.svg#grid-fill" />
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-fill" />
                 </svg> <span class="textoSidebar">Dashboard</span>
               </a>
             </li>
@@ -79,7 +76,7 @@
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
-                  <use xlink:href="elementos/herramientas/images/icons.svg#stack" />
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#stack" />
                 </svg> <span class="textoSidebar">Components</span>
               </a>
               <ul class="submenu textoSidebar ml-8">
@@ -140,7 +137,7 @@
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
-                  <use xlink:href="elementos/herramientas/images/icons.svg#collection-fill" />
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
                 </svg> <span class="textoSidebar">Extra Components</span>
               </a>
               <ul class="submenu textoSidebar ml-8">
@@ -162,27 +159,27 @@
               </ul>
             </li>
 
-            <li class="w-60 sidebar-item has-sub">
+            <li class="w-60 sidebar-item has-sub active">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
-                  <use xlink:href="elementos/herramientas/images/icons.svg#grid-1x2-fill" />
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
                 </svg> <span class="textoSidebar">Layouts</span>
               </a>
-              <ul class="submenu textoSidebar ml-8">
-                <li class="submenu-item">
-                  <a href="layouts/layout-default.html">Default Layout</a>
+              <ul class="submenu textoSidebar ml-8 active">
+                <li class="submenu-item active">
+                  <a href="layout-default.html">Default Layout</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layouts/layout-vertical-1-column.html">1 Column</a>
+                  <a href="layout-vertical-1-column.html">1 Column</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layouts/layout-vertical-navbar.html">Vertical Navbar</a>
+                  <a href="layout-vertical-navbar.html">Vertical Navbar</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layouts/layout-rtl.html">RTL Layout</a>
+                  <a href="layout-rtl.html">RTL Layout</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layouts/layout-horizontal.html">Horizontal Menu</a>
+                  <a href="layout-horizontal.html">Horizontal Menu</a>
                 </li>
               </ul>
             </li>
@@ -191,52 +188,78 @@
       </div>
     </div>
 
-    <div id="main" class="ml-4 xl:ml-80">
-      <button id="sidebar-toggle" class="  text-white  rounded ml-4 mt-8 xl:hidden xxl:hidden">
-        <svg class="bi" width="28" height="40" fill="currentColor">
-          <use xlink:href="elementos/herramientas/images/icons.svg#justify" />
+    <div id="main" class="xl:ml-80 xxl:ml-80 textoSidebar">
+      <button id="sidebar-toggle" class="rounded m-8 mb-6 xl:hidden xxl:hidden">
+        <svg class="bi svg-color w-6 h-6" height="100%" width="100%" >
+          <use xlink:href="../elementos/herramientas/images/icons.svg#justify" />
         </svg>
       </button>
-
-
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-        <div class="md:order-2 ">
-          <nav>
-            <ol class="flex flex-wrap p-0 mt-1 mb-4 ml-4 text-base bg-white rounded-none bg-opacity-[0] md:mr-8 "
-              style="list-style: none;">
-              <li class="text-left" style="list-style: outside none none;">
-                <a href="index.html" class="text-blue-700 cursor-pointer"
-                  style=" list-style: outside none none; font-family: 'Nunito';">Dashboard</a>
-              </li>
-              <li class="pl-2 text-left text-gray-500">
-                / Accordion
-              </li>
-            </ol>
-          </nav>
+  
+      <div class="p-8 pt-0 xl:p-8 xxl:p-8">
+        <div>
+          <div>
+            <div class="grid grid-cols-12">
+              <div class="col-span-12 md:col-span-6 md:order-1 order-2 mb-4">
+                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Layout Default</h3>
+                <p class="text-subtitle text-muted">The default layout.</p>
+              </div>
+              <div class="mb-6 col-span-12 md:col-span-6 md:order-2 order-1">
+                <nav class="float-left lg:float-right">
+                  <ol class="text-body flex">
+                    <li class="link">
+                      <a href="../index.html">Dashboard</a>
+                    </li>
+                    <li class="pl-2">
+                      / Layout Default
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <section>
+            <div class="card">
+              <div>
+                <h4 class="card-title log">Default Layout</h4>
+              </div>
+              <div>
+                <p class="leading-7 card-content">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+                  commodi? Ullam quaerat similique iusto temporibus, vero aliquam
+                  praesentium, odit deserunt eaque nihil saepe hic deleniti?
+                  Placeat delectus quibusdam ratione ullam!
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
-
-        <div class="textoSidebar order-1 mb-4 md:mb-0 md:order-1">
-          <h3 class="mt-2 mb-1 ml-4 text-3xl text-white xl:text-3xl"
-            style="line-height: 1.2; font-family: 'Nunito'; font-weight: 600;">
-            Accordion
-          </h3>
-          <p class="ml-4 mt-2 text-slate-400">
-            A pretty helpful component to show organized information to the user.
-          </p>
-        </div>
+        
+        <footer class="pt-16">
+          <div>
+            <div class="float-left">
+              <p class="text-muted">2023 &copy; Mazer</p>
+            </div>
+            <div class="float-right">
+              <p class="text-muted">
+                Crafted with
+                <span class="text-center">
+                  <svg class="w-5 inline-block" fill="#dc3545"
+                    height="100%" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="100%"
+                    xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="_x31_66_x2C__Heart_x2C__Love_x2C__Like_x2C__Twitter"><g>
+                      <path d="M365.4,59.628c60.56,0,109.6,49.03,109.6,109.47c0,109.47-109.6,171.8-219.06,281.271    C146.47,340.898,37,278.568,37,169.099c0-60.44,49.04-109.47,109.47-109.47c54.73,0,82.1,27.37,109.47,82.1    C283.3,86.999,310.67,59.628,365.4,59.628z"/>
+                    </g></g><g id="Layer_1"/>
+                  </svg>
+                </span>
+                by <a class="link" href="https://saugi.me">Saugi</a>
+              </p>
+            </div>
+          </div>
+        </footer>      
       </div>
-
-
-
-
-
-
-
     </div>
   </div>
-
 </body>
-
 </html>
 
 <script>
