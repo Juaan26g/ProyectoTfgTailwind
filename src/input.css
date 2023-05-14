@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-fondo {
+.bg-fondo{
     background-color: #f2f7ff;
 }
 
 .text-body {
     --bs-text-opacity: 1;
-    color: #607080 !important
+    color: #607080!important
 }
 
 p {
@@ -20,7 +20,7 @@ p {
 }
 
 .svg-color:hover {
-    fill: #364b98;
+    fill:  #364b98;
 }
 
 .link {
@@ -33,7 +33,7 @@ p {
 
 .text-muted {
     --bs-text-opacity: 1;
-    color: #7c8db5 !important
+    color: #7c8db5!important
 }
 
 .card {
@@ -64,7 +64,7 @@ p {
     color: #25396f;
 }
 
-.dark .card-content {
+.dark .card-content{
     color: #c2c2d9;
 }
 
@@ -84,3 +84,5 @@ code {
     font-size: 14px;
     word-wrap: break-word;
 }
+
+

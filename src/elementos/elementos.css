@@ -87,243 +87,87 @@ h3 {
 }
 
 /*
-----------------accordion -----------------
+------------------ checkbox ---------------------
 */
 
-.content-wrapper {
-    overflow: hidden;
-    transition: height 0.3s ease-in-out;
+.border-gray-700:focus {
+    box-shadow: 0 0 0 3px rgba(75, 100, 103, 0.4);
+    transition: box-shadow 0.1s ease-in-out;
+
 
 }
 
-.hidden {
-    display: none;
+input {
+    transition: box-shadow 0.1s ease-in-out;
 }
 
 
-/*
-----------------accordion -----------------
-*/
+.custom-checkbox {
+    height: 1.5em;
+    width: 1.5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25em;
+    outline: none;
+    transition: all 150ms;
+    background-color: transparent;
+    cursor: pointer;
 
-.dark .textoCSS {
-    color: #ffffff;
 }
 
-.light .textoCSS {
-    color: #25396f;
-}
-
-.dark .texto2CSS {
-    color: #778ca8;
-}
-
-.light .texto2CSS {
-    color: #9094b5;
-}
-
-.dark .interior {
-    color: #c2c2d0;
-}
-
-.light .interior {
-    color: #6d7d89;
-}
-
-
-
-#footer {
-    transition: transform 0.3s ease;
-}
-
-
-/*
-----------------bloquear scroll pagina-----------------
-*/
-.no-scroll {
-    overflow: hidden;
-    height: 100%;
-}
-
-
-
-/*
-----------------pagina components - pagination-----------------
-*/
-
-.dark .textoPagination {
-    color: #82909b;
-}
-
-.light .textoPagination {
-    color: #455fbe;
-}
-
-
-.dark .textoCSS4 {
-    color: #c1bfbc;
-}
-
-.light .textoCSS4 {
-    color: #617384;
-}
-
-
-/*
-----------------pagina components - tooltip-----------------
-*/
-
-
-.tooltip-container {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip {
-    visibility: hidden;
+.custom-checkbox::before {
+    content: '✔';
+    font-family: '';
+    font-size: 0.8em;
+    color: transparent;
+    text-align: center;
     opacity: 0;
-    position: absolute;
-    background-color: #333;
+    transition: all 150ms;
+    padding-left: 0.5em;
+    padding-top: 0.7em;
+}
+
+.custom-checkbox:focus {
+    border-width: 3px;
+    box-shadow: 0 0 0 1px rgba(75, 100, 103, 0.4);
+}
+
+.custom-checkbox:not(:focus):not(:checked) {
+    box-shadow: 0 0 0 3px rgba(119, 137, 139, 0.4);
+
+}
+
+.custom-checkbox:checked::before {
     color: #fff;
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 12px;
-    white-space: nowrap;
-    transition: opacity 0.2s, visibility 0.2s;
-}
-
-.tooltip-above {
-    bottom: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.tooltip-arrow {
-    content: '';
-    position: absolute;
-    border-style: solid;
-    width: 0;
-    height: 0;
-}
-
-.tooltip-above .tooltip-arrow {
-    top: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 5px 5px 0 5px;
-    border-color: #1f2937 transparent transparent transparent;
-}
-
-.rounded-lg {
-    border-radius: 8px;
-}
-
-.tooltip-container:hover .tooltip {
-    visibility: visible;
     opacity: 1;
+
 }
 
-.tooltip-right {
-    left: calc(100% + 10px);
-    top: 50%;
-    transform: translateY(-50%);
+.custom-checkbox:hover {
+    cursor: default;
 }
 
-.tooltip-right .tooltip-arrow {
-    right: 100%;
-    top: 40%;
-    transform: translateY(-50%);
-    border-width: 5px 0 5px 5px;
-    border-color: transparent transparent transparent #1f2937;
+input[type="checkbox"].selected {
+    border: none;
+    box-shadow: none;
 }
 
-.tooltip-below {
-    top: calc(100% + 5px);
-    left: 50%;
-    transform: translateX(-50%);
+.dark .custom-checkbox:checked {
+    background-color: #334c99;
 }
 
-.tooltip-below .tooltip-arrow {
-    bottom: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 0 5px 5px 5px;
-    border-color: transparent transparent #1f2937 transparent;
+.light .custom-checkbox:checked {
+    background-color: #334c99;
 }
 
-.tooltip-left {
-    top: 50%;
-    right: calc(100% + 4px);
-    transform: translateY(-50%);
+.dark .custom-checkbox {
+    background-color: #1b1b29;
 }
 
-.tooltip-left .tooltip-arrow {
-    top: 40%;
-    left: 91%;
-    transform: translateY(-50%);
-    border-width: 5px 0 5px 5px;
-    border-color: transparent transparent transparent #1f2937;
-}
-
-
-/*
-----------------pagina components - toast-----------------
-*/
-
-
-
-
-.dark .toastEntrada {
-    background-color: #35354d;
-}
-
-.dark .toastEntrada2 {
-    background-color: #292b3f;
-}
-
-
-.light .toastEntrada {
+.light .custom-checkbox {
     background-color: #ffffff;
 }
-
-.light .toastEntrada2 {
-    background-color: #ffffff;
-}
-
-
-.toast-fade {
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
-
-.toast-visible {
-    opacity: 1;
-}
-
-.toast-hidden {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-.light .borderToasts {
-    border-bottom: solid 1px #f2f2f2;
-
-}
-
-
-
-.dark .textoCSS3 {
-    color: #c1bfbc;
-}
-
-.light .textoCSS3 {
-    color: #43507d;
-}
-
-
-
-
-
 
 /*
 ---------------- dark theme / light theme -----------------
@@ -411,8 +255,7 @@ body.dark-theme #sun-moon {
 
 body.dark-theme #toggle-button {
     background-color: #435ebe;
-    border-color: #435ebe;
-    ;
+    border-color: #435ebe;;
 }
 
 /*
@@ -458,12 +301,10 @@ body.dark-theme #toggle-button {
 .layout-navbar {
     --navbar-height: 90px;
 }
-
 .layout-navbar footer {
     padding-left: 2rem;
     padding-right: 2rem;
 }
-
 .layout-navbar.navbar-fixed {
     display: block !important;
 }
@@ -475,33 +316,27 @@ body.dark-theme #toggle-button {
 
 #sidebar .sidebar-wrapper {
     left: -300px;
-}
-
-#sidebar~#main {
+  }
+  #sidebar ~ #main {
     margin-left: 0;
-}
-
-@media screen and (min-width: 1200px) {
+  }
+  @media screen and (min-width: 1200px) {
     #sidebar .sidebar-wrapper {
-        left: 0;
+      left: 0;
     }
-
-    #sidebar~#main {
-        margin-left: 300px;
+    #sidebar ~ #main {
+      margin-left: 300px;
     }
-}
-
-#sidebar.inactive .sidebar-wrapper {
+  }
+  #sidebar.inactive .sidebar-wrapper {
     left: -300px;
-}
-
-#sidebar.inactive~#main {
+  }
+  #sidebar.inactive ~ #main {
     margin-left: 0;
-}
-
-#sidebar.active .sidebar-wrapper {
+  }
+  #sidebar.active .sidebar-wrapper {
     left: 0;
-}
+  }
 
 .sidebar-wrapper {
     background-color: #fff;
@@ -673,23 +508,21 @@ body.dark-theme #toggle-button {
 
 @media screen and (max-width: 1199px) {
     .sidebar-wrapper {
-        position: fixed;
-        left: -300px;
+      position: fixed;
+      left: -300px;
     }
-
     .sidebar-wrapper .sidebar-toggler.x {
-        display: block;
+      display: block;
     }
-}
+  }
 
-#main {
+  #main {
     margin-left: 300px;
     padding: 2rem;
     min-height: 100vh;
-}
-
-@media screen and (max-width: 1199px) {
+  }
+  @media screen and (max-width: 1199px) {
     #main {
-        margin-left: 0;
+      margin-left: 0;
     }
-}
+  }
