@@ -9,26 +9,28 @@
   <link rel="stylesheet" href="../elementos/elementos2.css">
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
-  <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="/node_modules/preline/dist/preline.js"></script>
+
 
 </head>
 
 <body>
   <div id="app">
-    <div id="sidebar" class="xl:active xxl:active fixed">
-      <div class="sidebar-wrapper active entrada">
-        <div class="sidebar-header relative">
+    <div id="sidebar" class="active ">
+      <div class="sidebar-wrapper active entrada min-h-screen">
+        <div class="sidebar-header relative ">
 
-          <div class="flex w-60 mt-3 mb-2 items-center">
+
+          <div class="flex w-60 mt-3 mb-2 items-center ">
             <div class="logo">
               <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg" alt="Logo" /></a>
             </div>
 
-            <div class="flex gap-2 items-center mt-1">
+            <div class=" flex gap-2 items-center mt-1">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
-                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons sun-color" width="20" height="22"
+                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons" width="20" height="22"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
-                <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                   <path
                     d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
                     opacity=".3"></path>
@@ -49,21 +51,25 @@
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                 role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20" height="20"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path fill="#607080"
+                <path fill="currentColor"
                   d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
                 </path>
               </svg>
             </div>
 
             <button id="sidebar-hide"
-              class="sidebar-hide absolute textoSidebar top-2 right-2 bg-transparent border-none p-0 xl:hidden xxl:hidden">
-              <svg class="bi" width="25" height="40" fill="currentColor">
+              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-transparent border-none p-0">
+              <svg class="bi" width="25" height="40" fill="currentColor" style="fill: blue;">
                 <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
               </svg>
             </button>
+
+
           </div>
+
+
         </div>
-        <div class="sidebar-menu">
+        <div class="sidebar-menu" style="font-family: 'Nunito';">
           <ul class="menu">
             <li class="sidebar-title textoSidebar">Menu</li>
 
@@ -82,7 +88,7 @@
                 </svg> <span class="textoSidebar">Components</span>
               </a>
               <ul class="submenu active textoSidebar ml-8">
-                <li class="submenu-item active">
+                <li class="submenu-item active ">
                   <a href="component-accordion.html">Accordion</a>
                 </li>
                 <li class="submenu-item">
@@ -160,7 +166,7 @@
                 </li>
                 <li class="submenu-item">
                   <a href="../extraComponents/extra-component-rating.html">Rating</a>
-                </li>                
+                </li>
               </ul>
             </li>
 
@@ -189,9 +195,15 @@
               </ul>
             </li>
 
+
+
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Forms & Tables</span>
+
             </li>
+
+
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -201,25 +213,27 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Input</a>
+                  <a href="layout-default.html">Input</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Input Group</a>
+                  <a href="layout-vertical-1-column.html">Input Group</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Select</a>
+                  <a href="layout-vertical-navbar.html">Select</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Radio</a>
+                  <a href="layout-rtl.html">Radio</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Checkbox</a>
+                  <a href="layout-horizontal.html">Checkbox</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Textarea</a>
+                  <a href="layout-horizontal.html">Textarea</a>
                 </li>
               </ul>
             </li>
+
+
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -227,7 +241,10 @@
                   <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
                 </svg> <span class="textoSidebar">Form Layout</span>
               </a>
+
             </li>
+
+
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -237,10 +254,13 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Parsley</a>
+                  <a href="extra-component-avatar.html">Parsley</a>
                 </li>
               </ul>
             </li>
+
+
+
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -250,19 +270,21 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Quill</a>
+                  <a href="extra-component-avatar.html">Quill</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">CKEditor</a>
+                  <a href="extra-component-sweetalert.html">CKEditor</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Summernote</a>
+                  <a href="extra-component-toastify.html">Summernote</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">TinyMCE</a>
+                  <a href="extra-component-rating.html">TinyMCE</a>
                 </li>
               </ul>
             </li>
+
+
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -270,7 +292,9 @@
                   <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
                 </svg> <span class="textoSidebar">Table</span>
               </a>
+
             </li>
+
 
             <li class="w-60 sidebar-item has-sub mb-6">
               <a href="#" class="sidebar-link">
@@ -280,17 +304,23 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Datatable</a>
+                  <a href="extra-component-avatar.html">Datatable</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Datatable (jQuery)</a>
+                  <a href="extra-component-sweetalert.html">Datatable (jQuery)</a>
                 </li>
               </ul>
             </li>
 
+
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Extra UI</span>
+
             </li>
+
+
+
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -300,16 +330,19 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Chatbox</a>
+                  <a href="extra-component-avatar.html">Chatbox</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Pricing</a>
+                  <a href="extra-component-sweetalert.html">Pricing</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">To-do list</a>
+                  <a href="extra-component-toastify.html">To-do list</a>
                 </li>
+
               </ul>
             </li>
+
+
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -319,16 +352,18 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Bootstrap Icons</a>
+                  <a href="extra-component-avatar.html">Bootstrap Icons</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Fontawesome</a>
+                  <a href="extra-component-sweetalert.html">Fontawesome</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Dripicons</a>
+                  <a href="extra-component-toastify.html">Dripicons</a>
                 </li>
               </ul>
             </li>
+
+
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -338,13 +373,16 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">ChartJS</a>
+                  <a href="extra-component-avatar.html">ChartJS</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Apexcharts</a>
+                  <a href="extra-component-sweetalert.html">Apexcharts</a>
                 </li>
               </ul>
             </li>
+
+
+
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -354,6 +392,8 @@
               </a>
             </li>
 
+
+
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
@@ -362,13 +402,16 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Google Map</a>
+                  <a href="extra-component-avatar.html">Google Map</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">JS Vector Map</a>
+                  <a href="extra-component-sweetalert.html">JS Vector Map</a>
                 </li>
               </ul>
             </li>
+
+
+
 
             <li class="w-60 sidebar-item has-sub mb-6 ">
               <a href="#" class="sidebar-link">
@@ -378,17 +421,20 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">First Level</a>
+                  <a href="extra-component-avatar.html">First Level</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Another Menu</a>
+                  <a href="extra-component-sweetalert.html">Another Menu</a>
                 </li>
               </ul>
             </li>
 
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Pages</span>
+
             </li>
+
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -397,6 +443,7 @@
                 </svg> <span class="textoSidebar">Email Application</span>
               </a>
             </li>
+
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -408,6 +455,8 @@
               </ul>
             </li>
 
+
+
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
@@ -415,6 +464,9 @@
                 </svg> <span class="textoSidebar">Photo Gallery</span>
               </a>
             </li>
+
+
+
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -424,6 +476,8 @@
               </a>
             </li>
 
+
+
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
@@ -432,16 +486,19 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="auth/auth-login.html">Login</a>
+                  <a href="../auth/auth-login.html">Login</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="auth/auth-register.html">Register</a>
+                  <a href="../auth/auth-register.html">Register</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="auth/auth-forgot-password.html">Forgot Password</a>
+                  <a href="../auth/auth-forgot-password.html">Forgot Password</a>
                 </li>
               </ul>
             </li>
+
+
+
 
             <li class="w-60 sidebar-item has-sub mb-6">
               <a href="#" class="sidebar-link">
@@ -451,20 +508,23 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="errors/error-403.html">403</a>
+                  <a href="../errors/error-403.html">403</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="errors/error-404.html">404</a>
+                  <a href="../errors/error-404.html">404</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="errors/error-500.html">500</a>
+                  <a href="../errors/error-500.html">500</a>
                 </li>
               </ul>
             </li>
 
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Raise Support</span>
+
             </li>
+
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -473,6 +533,7 @@
                 </svg> <span class="textoSidebar">Documentation</span>
               </a>
             </li>
+
 
             <li class="w-60 sidebar-item">
               <a href="#" class="sidebar-link">
@@ -495,7 +556,7 @@
     </div>
 
 
-    <div id="main" class="main ml-4 mod:ml-80">
+    <div id="main" class="main ml-4 mod:ml-80 mod:mt-8">
       <button id="sidebar-toggle" class="  text-white  rounded ml-4 mt-8 mod:hidden ">
 
 
@@ -554,102 +615,168 @@
                     Click the accordions below to expand/collapse the accordion content.
                   </p>
 
-                  <div id="accordion-collapse" data-accordion="collapse">
-                    <h2 id="accordion-collapse-heading-1">
-                      <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
-                        data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
-                        aria-controls="accordion-collapse-body-1">
-                        <span>Accordion Item #1</span>
-                        <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
-                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                        </svg>
-                      </button>
-                    </h2>
 
-                    <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-                      <div class="p-5 border border-b-0 border-gray-200 dark:border-none  content-wrapper">
-                        <p class="interior">
-                          <strong style="font-weight: bolder;">This is the first item's
-                            accordion body.</strong>
-                          It is shown by default, until the collapse plugin adds the
-                          appropriate classes that we use to style each element. These
-                          classes control the overall appearance, as well as the showing and
-                          hiding via CSS transitions. You can modify any of this with custom
-                          CSS or overriding our default variables. It's also worth noting
-                          that just about any HTML can go within the
-                          <code class="font-mono text-sm leading-5 text-pink-600">accordion-collapse-body-1</code>,
-                          though the
-                          transition does limit overflow.
-                        </p>
-                      </div>
-                    </div>
-                    <h2 id="accordion-collapse-heading-2">
+
+
+
+
+
+
+
+
+
+                  <div class="hs-accordion-group">
+
+                    <div class="hs-accordion active " id="hs-basic-heading-1">
+
                       <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
-                        data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
-                        aria-controls="accordion-collapse-body-2">
+                        class="hs-accordion-active:text-blue-600 hs-accordion-active:bg-blue-50  hs-accordion-toggle active flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 ">
+                        <span>Accordion Item #1</span>
+                        <svg
+                          class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                          width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg
+                          class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                          width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+
+                      </button>
+
+
+                      <div id="hs-basic-collapse-one"
+                        class=" hs-accordion-content  overflow-hidden transition-[height] duration-300 ">
+                        <div class=" p-5  border border-gray-200 dark:border-none content-wrapper">
+                          <p class="interior">
+                            <strong style="font-weight: bolder;">This is the first item's
+                              accordion body.</strong>
+                            It is shown by default, until the collapse plugin adds the
+                            appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and
+                            hiding via CSS transitions. You can modify any of this with custom
+                            CSS or overriding our default variables. It's also worth noting
+                            that just about any HTML can go within the
+                            <code class="font-mono text-sm leading-5 text-pink-600">hs-basic-heading-1</code>,
+                            though the
+                            transition does limit overflow.
+                          </p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="hs-accordion" id="hs-basic-heading-2">
+
+                      <button type="button"
+                        class="hs-accordion-active:text-blue-600 hs-accordion-active:bg-blue-50  hs-accordion-toggle active flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
+                        aria-controls="hs-basic-collapse-two">
                         <span>Accordion Item #2</span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
+                        <svg
+                          class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                          width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg
+                          class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                          width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
                       </button>
-                    </h2>
-                    <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                      <div class="p-5 border border-b-0 border-gray-200 dark:border-none">
-                        <p class="interior">
-                          <strong style="font-weight: bolder;">This is the second item's
-                            accordion body.</strong>
-                          It is shown by default, until the collapse plugin adds the
-                          appropriate classes that we use to style each element. These
-                          classes control the overall appearance, as well as the showing and
-                          hiding via CSS transitions. You can modify any of this with custom
-                          CSS or overriding our default variables. It's also worth noting
-                          that just about any HTML can go within the
-                          <code class="font-mono text-sm leading-5 text-pink-600">accordion-collapse-body-1</code>,
-                          though the
-                          transition does limit overflow.
-                        </p>
+                      <div id="hs-basic-collapse-two"
+                        class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                        aria-labelledby="hs-basic-heading-2">
+
+                        <div class=" p-5  border border-gray-200 dark:border-none content-wrapper">
+                          <p class="interior">
+                            <strong style="font-weight: bolder;">This is the second item's
+                              accordion body.</strong>
+                            It is shown by default, until the collapse plugin adds the
+                            appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and
+                            hiding via CSS transitions. You can modify any of this with custom
+                            CSS or overriding our default variables. It's also worth noting
+                            that just about any HTML can go within the
+                            <code class="font-mono text-sm leading-5 text-pink-600">hs-basic-heading-2</code>,
+                            though the
+                            transition does limit overflow.
+                          </p>
+                        </div>
                       </div>
+
                     </div>
-                    <h2 id="accordion-collapse-heading-3">
+
+
+
+                    <div class="hs-accordion" id="hs-basic-heading-3">
+
                       <button type="button"
-                        class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border border-gray-200 rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
-                        data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
-                        aria-controls="accordion-collapse-body-3">
+                        class="hs-accordion-active:text-blue-600 hs-accordion-active:bg-blue-50  hs-accordion-toggle active flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border  border-gray-200 rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
+                        aria-controls="hs-basic-collapse-3">
                         <span>Accordion Item #3</span>
-                        <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
+                        <svg
+                          class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                          width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg
+                          class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                          width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                         </svg>
                       </button>
-                    </h2>
-                    <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-                      <div class="p-5 border border-b-0 border-gray-200 dark:border-none">
-                        <p class="interior">
-                          <strong style="font-weight: bolder;">This is the third item's
-                            accordion body.</strong>
-                          It is shown by default, until the collapse plugin adds the
-                          appropriate classes that we use to style each element. These
-                          classes control the overall appearance, as well as the showing and
-                          hiding via CSS transitions. You can modify any of this with custom
-                          CSS or overriding our default variables. It's also worth noting
-                          that just about any HTML can go within the
-                          <code class="font-mono text-sm leading-5 text-pink-600">accordion-collapse-body-1</code>,
-                          though the
-                          transition does limit overflow.
-                        </p>
+                      <div id="hs-basic-collapse-3"
+                        class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                        aria-labelledby="hs-basic-heading-3">
+                        <div class=" p-5  border border-gray-200 dark:border-none content-wrapper">
+                          <p class="interior">
+                            <strong style="font-weight: bolder;">This is the third item's
+                              accordion body.</strong>
+                            It is shown by default, until the collapse plugin adds the
+                            appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and
+                            hiding via CSS transitions. You can modify any of this with custom
+                            CSS or overriding our default variables. It's also worth noting
+                            that just about any HTML can go within the
+                            <code class="font-mono text-sm leading-5 text-pink-600">hs-basic-heading-3</code>,
+                            though the
+                            transition does limit overflow.
+                          </p>
+                        </div>
                       </div>
+
+
                     </div>
+
+
+
+
                   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
               </div>
             </div>
@@ -667,117 +794,150 @@
               <div class="flex-auto px-6 pt-0 pb-6 text-slate-300">
                 <p class="mt-0 mb-4 interior">
                   Add
-                  <code class="font-mono text-sm leading-5 text-pink-600">accordion-flush</code>
+                  <code class="font-mono text-sm leading-5 text-pink-600">hs-accordion</code>
                   to remove the default background-color, some borders, and some rounded
                   corners to render accordions edge-to-edge with their parent container.
                 </p>
 
-                <div id="accordion-collapse" data-accordion="collapse">
-                  <h2 id="accordion-collapse-heading-1">
+
+
+                <div class="hs-accordion-group">
+
+                  <div class="hs-accordion " id="hs-basic-heading-4">
 
                     <button type="button"
-                      class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500  border-b border-gray-200 rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
-                      data-accordion-target="#accordion-collapse-body-1b" aria-expanded="false"
-                      aria-controls="accordion-collapse-body-1">
+                      class="hs-accordion-active:text-blue-600 hs-accordion-active:bg-blue-50  hs-accordion-toggle active flex items-center justify-between w-full p-5 font-medium text-left text-gray-500  rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
+                      aria-controls="hs-basic-collapse-4">
                       <span>Accordion Item #1</span>
-                      <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
-                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                          clip-rule="evenodd"></path>
+                      <svg
+                        class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                        width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                      <svg
+                        class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                        width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                       </svg>
                     </button>
 
-                  </h2>
-                  <div id="accordion-collapse-body-1b" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-none">
-                      <p class="interior">
-                        Placeholder content for this accordion, which is intended to demonstrate the
-                        <code class="font-mono text-sm leading-5 text-pink-600">accordion-flush</code>,
-                        class. This is the first item's accordion body.
-                      </p>
+                    <div id="hs-basic-collapse-4"
+                      class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                      aria-labelledby="hs-basic-heading-4">
+
+                      <div class="p-5 border border-b-0 border-gray-200 dark:border-none">
+                        <p class="interior">
+                          Placeholder content for this accordion, which is intended to demonstrate the
+                          <code class="font-mono text-sm leading-5 text-pink-600">hs-basic-heading-4</code>,
+                          class. This is the first item's accordion body.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <h2 id="accordion-collapse-heading-2">
+
+
+                  <div class="hs-accordion " id="hs-basic-heading-5">
 
                     <button type="button"
-                      class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b border-gray-200 rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
-                      data-accordion-target="#accordion-collapse-body-2b" aria-expanded="false"
-                      aria-controls="accordion-collapse-body-2">
+                      class="hs-accordion-active:text-blue-600 hs-accordion-active:bg-blue-50  hs-accordion-toggle active flex items-center justify-between w-full p-5 font-medium text-left text-gray-500  border-t border-gray-200 rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
+                      aria-controls="hs-basic-collapse-5">
                       <span>Accordion Item #2</span>
-                      <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                          clip-rule="evenodd"></path>
+                      <svg
+                        class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                        width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                      <svg
+                        class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                        width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                       </svg>
                     </button>
 
-                  </h2>
-                  <div id="accordion-collapse-body-2b" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-none">
-                      <p class="interior">
-                        Placeholder content for this accordion, which is intended to demonstrate the
-                        <code class="font-mono text-sm leading-5 text-pink-600">accordion-flush</code>,
-                        class. This is the second item's accordion body. Let's imagine this being filled with some
-                        actual content.
-                      </p>
+                    <div id="hs-basic-collapse-5"
+                      class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                      aria-labelledby="hs-basic-heading-5">
+                      <div class="p-5 border border-b-0 border-gray-200 dark:border-none">
+                        <p class="interior">
+                          Placeholder content for this accordion, which is intended to demonstrate the
+                          <code class="font-mono text-sm leading-5 text-pink-600">hs-basic-heading-5</code>,
+                          class. This is the second item's accordion body. Let's imagine this being filled with some
+                          actual content.
+                        </p>
+                      </div>
                     </div>
+
                   </div>
-                  <h2 id="accordion-collapse-heading-3">
+
+
+                  <div class="hs-accordion " id="hs-basic-heading-6">
 
                     <button type="button"
-                      class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500  border-gray-200 rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
-                      data-accordion-target="#accordion-collapse-body-3b" aria-expanded="false"
-                      aria-controls="accordion-collapse-body-3">
+                      class="hs-accordion-active:text-blue-600 hs-accordion-active:bg-blue-50  hs-accordion-toggle active flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-t border-gray-200  rounded-t-md focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800  dark:border-none dark:text-gray-500 "
+                      aria-controls="hs-basic-collapse-6">
                       <span>Accordion Item #3</span>
-                      <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                          clip-rule="evenodd"></path>
+                      <svg
+                        class="hs-accordion-active:hidden hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                        width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                      <svg
+                        class="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                        width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                       </svg>
                     </button>
 
-                  </h2>
-                  <div id="accordion-collapse-body-3b" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-none">
-                      <p class="interior">
-                        Placeholder content for this accordion, which is intended to demonstrate the
-                        <code class="font-mono text-sm leading-5 text-pink-600">accordion-flush</code>,
-                        class. This is the third item's accordion body. Nothing more exciting happening here in terms of
-                        content, but just filling up the space to make it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world application.
-                      </p>
+                    <div id="hs-basic-collapse-6"
+                      class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                      aria-labelledby="hs-basic-heading-6">
+                      <div class="p-5 border border-b-0 border-gray-200 dark:border-none">
+                        <p class="interior">
+                          Placeholder content for this accordion, which is intended to demonstrate the
+                          <code class="font-mono text-sm leading-5 text-pink-600">hs-basic-heading-6</code>,
+                          class. This is the third item's accordion body. Nothing more exciting happening here in terms
+                          of
+                          content, but just filling up the space to make it look, at least at first glance, a bit more
+                          representative of how this would look in a real-world application.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
+
           </div>
         </div>
       </div>
+    </div>
 
-      <div id="footer" class="block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
-        data-mb="20">
+    <div id="footer" class="block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';" data-mb="20">
 
-        <div class="float-left text-slate-400 mb-3">
-          <p class="mt-8 ml-4 texto2CSS">2023 © Mazer</p>
-        </div>
-        <div class="texto2CSS float-right text-slate-400 mr-8 mb-12 mt-9 ">
-          <p class="mt-0">
-            Crafted with
-            <span class="inline-block text-red-500">
-              <svg width="15" height="15" fill="currentColor">
-                <use xlink:href="../elementos/herramientas/images/icons.svg#heart-fill" />
-              </svg>
-            </span>
-            by
-            <a href="https://saugi.me" class="text-blue-700 cursor-pointer" style="text-decoration: none;">Saugi</a>
-          </p>
-        </div>
+      <div class="float-left text-slate-400 mb-3">
+        <p class="mt-8 ml-4 texto2CSS">2023 © Mazer</p>
+      </div>
+      <div class=" float-right text-slate-400 mr-8 mb-12 mt-9 ">
+        <p class="texto2CSS mt-0">
+          Crafted with
+          <span class="inline-block text-red-500">
+            <svg width="15" height="15" fill="currentColor">
+              <use xlink:href="../elementos/herramientas/images/icons.svg#heart-fill" />
+            </svg>
+          </span>
+          by
+          <a href="https://saugi.me" class="text-blue-700 cursor-pointer" style="text-decoration: none;">Saugi</a>
+        </p>
       </div>
     </div>
+  </div>
 
 
   </div>
@@ -953,32 +1113,6 @@
       localStorage.setItem('theme', 'light');
     }
   }
-
-
-  document.querySelectorAll('[data-accordion-target]').forEach((button) => {
-    button.addEventListener('click', () => {
-      const targetId = button.getAttribute('data-accordion-target');
-      const target = document.getElementById(targetId);
-      const contentWrapper = target.querySelector('.content-wrapper');
-      const isExpanded = button.getAttribute('aria-expanded') === 'true';
-
-      button.setAttribute('aria-expanded', !isExpanded);
-
-      if (isExpanded) {
-        contentWrapper.style.maxHeight = '0';
-      } else {
-        contentWrapper.style.maxHeight = `${contentWrapper.scrollHeight}px`;
-      }
-    });
-  });
-
-  // Inicializa los elementos de acordeón en la carga de la página
-  window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.content-wrapper').forEach((element) => {
-      element.style.maxHeight = '0';
-    });
-  });
-
 
 
 
