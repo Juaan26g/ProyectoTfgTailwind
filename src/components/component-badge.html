@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Badge - Mazer Admin Dashboard</title>
+  <link rel="stylesheet" href="../elementos/elementos2.css">
+  <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
+  <link href="../../css/output.css" rel="stylesheet">
+  <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="sidebar" class="active ">
+      <div class="sidebar-wrapper active entrada min-h-screen">
+        <div class="sidebar-header relative ">
+
+
+          <div class="flex w-60 mt-3 mb-2 items-center ">
+            <div class="logo">
+              <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg" alt="Logo" /></a>
+            </div>
+
+            <div class=" flex gap-2 items-center mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons" width="20" height="22"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
+                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
+                    opacity=".3"></path>
+                  <g transform="translate(-210 -1)">
+                    <path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path>
+                    <circle cx="220.5" cy="11.5" r="4"></circle>
+                    <path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"></path>
+                  </g>
+                </g>
+              </svg>
+
+              <div class="relative block mb-2 mt-2 form-switch fs-6" id="theme-toggle">
+                <div id="toggle-button" onclick="toggleTheme()">
+                  <div id="sun-moon" class="sun"></div>
+                </div>
+              </div>
+
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20" height="20"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
+                </path>
+              </svg>
+            </div>
+
+            <button id="sidebar-hide"
+              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-transparent border-none p-0">
+              <svg class="bi" width="25" height="40" fill="currentColor" style="fill: blue;">
+                <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
+              </svg>
+            </button>
+
+
+          </div>
+
+
+        </div>
+        <div class="sidebar-menu" style="font-family: 'Nunito';">
+          <ul class="menu">
+            <li class="sidebar-title textoSidebar">Menu</li>
+
+            <li class="sidebar-item ">
+              <a href="../index.html" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-fill" />
+                </svg> <span class="textoSidebar">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item active has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#stack" />
+                </svg> <span class="textoSidebar">Components</span>
+              </a>
+              <ul class="submenu active textoSidebar ml-8">
+                <li class="submenu-item  ">
+                  <a href="component-accordion.html">Accordion</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="component-alert.html">Alert</a>
+                </li>
+                <li class="submenu-item active">
+                  <a href="component-badge.html">Badge</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="component-breadcrumb.html">Breadcrumb</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-button.html">Button</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-card.html">Card</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-carousel.html">Carousel</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-collapse.html">Collapse</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-dropdown.html">Dropdown</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-list-group.html">List Group</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-modal.html">Modal</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-navs.html">Navs</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="component-pagination.html">Pagination</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-progress.html">Progress</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-spinner.html">Spinner</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="component-toasts.html">Toasts</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="component-tooltip.html">Tooltip</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
+                </svg> <span class="textoSidebar">Extra Components</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-avatar.html">Avatar</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-divider.html">Divider</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-date-picker.html">Date Picker</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-sweetalert.html">Sweet Alert</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-toastify.html">Toastify</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-rating.html">Rating</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub mb-6">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
+                </svg> <span class="textoSidebar">Layouts</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../layouts/layout-default.html">Default Layout</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-vertical-1-column.html">1 Column</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-vertical-navbar.html">Vertical Navbar</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-rtl.html">RTL Layout</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-horizontal.html">Horizontal Menu</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Forms & Tables</span>
+
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#hexagon-fill" />
+                </svg> <span class="textoSidebar">Form Elements</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="layout-default.html">Input</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="layout-vertical-1-column.html">Input Group</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="layout-vertical-navbar.html">Select</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="layout-rtl.html">Radio</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="layout-horizontal.html">Checkbox</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="layout-horizontal.html">Textarea</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
+                </svg> <span class="textoSidebar">Form Layout</span>
+              </a>
+
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#journal-check" />
+                </svg> <span class="textoSidebar">Form Validation</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Parsley</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#pen-fill" />
+                </svg> <span class="textoSidebar">Form Editor</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Quill</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">CKEditor</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-toastify.html">Summernote</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-rating.html">TinyMCE</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
+                </svg> <span class="textoSidebar">Table</span>
+              </a>
+
+            </li>
+
+
+            <li class="w-60 sidebar-item has-sub mb-6">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-spreadsheet-fill" />
+                </svg> <span class="textoSidebar">Datatables</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Datatable</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">Datatable (jQuery)</a>
+                </li>
+              </ul>
+            </li>
+
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Extra UI</span>
+
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#pentagon-fill" />
+                </svg> <span class="textoSidebar">Widgets</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Chatbox</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">Pricing</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-toastify.html">To-do list</a>
+                </li>
+
+              </ul>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#egg-fill" />
+                </svg> <span class="textoSidebar">Icons</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Bootstrap Icons</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">Fontawesome</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-toastify.html">Dripicons</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#bar-chart-fill" />
+                </svg> <span class="textoSidebar">Charts</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">ChartJS</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">Apexcharts</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#cloud-arrow-up-fill" />
+                </svg> <span class="textoSidebar">File Uploader</span>
+              </a>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#map-fill" />
+                </svg> <span class="textoSidebar">Maps</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Google Map</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">JS Vector Map</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item has-sub mb-6 ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
+                </svg> <span class="textoSidebar">Multi-Level Menu</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">First Level</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">Another Menu</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Pages</span>
+
+            </li>
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#envelope-fill" />
+                </svg> <span class="textoSidebar">Email Application</span>
+              </a>
+            </li>
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#chat-dots-fill" />
+                </svg> <span class="textoSidebar">Chat Application</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+              </ul>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#image-fill" />
+                </svg> <span class="textoSidebar">Photo Gallery</span>
+              </a>
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#basket-fill" />
+                </svg> <span class="textoSidebar">Checkout Page</span>
+              </a>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#person-badge-fill" />
+                </svg> <span class="textoSidebar">Authentication</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../auth/auth-login.html">Login</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../auth/auth-register.html">Register</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../auth/auth-forgot-password.html">Forgot Password</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item has-sub mb-6">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#x-octagon-fill" />
+                </svg> <span class="textoSidebar">Errors</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../errors/error-403.html">403</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../errors/error-404.html">404</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../errors/error-500.html">500</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Raise Support</span>
+
+            </li>
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#life-preserver" />
+                </svg> <span class="textoSidebar">Documentation</span>
+              </a>
+            </li>
+
+
+            <li class="w-60 sidebar-item">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#puzzle" />
+                </svg> <span class="textoSidebar">Contribute</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item mb-4">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#cash" />
+                </svg> <span class="textoSidebar">Donate</span>
+              </a>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- pagina -->
+    <div id="main" class="main ml-4 mod:ml-80 mod:mt-8">
+
+      <!-- boton movil -->
+
+      <button id="sidebar-toggle" class="  text-white  rounded ml-4 mt-8 mod:hidden ">
+
+
+        <svg class="bi" width="28" height="40" fill="currentColor" style="fill: blue;">
+          <use xlink:href="../elementos/herramientas/images/icons.svg#justify" />
+        </svg>
+
+
+      </button>
+
+      <!-- titulo -->
+
+
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div class="md:order-2">
+          <nav>
+            <ol
+              class="flex flex-nowrap flex-wrap p-0 mt-1 mb-4 lg:mb-14 ml-4 text-base bg-white rounded-none bg-opacity-[0] md:mr-8  "
+              style="list-style: none;">
+              <li class="text-left" style="list-style: outside none none;">
+                <a href="../index.html" class="text-blue-700 cursor-pointer"
+                  style=" list-style: outside none none; font-family: 'Nunito';">Dashboard</a>
+              </li>
+              <li class="pl-2 text-left text-gray-500 whitespace-nowrap">
+                / Badge
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="order-1 mb-4 md:mb-0 md:order-1  w-6/12">
+          <h3 class="textoCSS mt-2 mb-1 ml-4 mod:ml-3 text-3xl text-white xl:text-3xl"
+            style="line-height: 1.2; font-family: 'Nunito'; font-weight: 600;">
+            Badge
+          </h3>
+          <p class="ml-4 mt-2 text-slate-400 texto2CSS mod:ml-3 mod:mt-3 ">
+            Examples for badges, our small count and labeling component. </p>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- contenido -->
+
+
+      <div class="main-container" style="font-family: 'Nunito' ;">
+
+        <div class=" flex mt-4 mr-3">
+
+          <div class="flex-none px-3 pr-4 mt-0 w-full max-w-full leading-6 text-gray-500 md:w-1/2 md:flex-none">
+            <div class="entrada flex relative flex-col mb-8 min-w-0 text-gray-500 break-words bg-clip-border "
+              style="min-height: 100px; border-radius: 11.2px;">
+              <div class="p-6 mb-0 break-words" style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="textoCSS mt-0 mb-2 text-lg font-bold  mod:text-xl" style="line-height: 1.2;">
+                  Variation
+                </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 text-gray-500 break-words">
+                <div class="text-gray-500">
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-blue-700 rounded">Primary</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-gray-500 rounded">Secondary</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-green-700 rounded">Success</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-red-500 rounded">Danger</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-yellow-400 rounded">Warning</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-cyan-400 rounded">Info</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap rounded bg-neutral-900">Dark</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="entrada flex relative flex-col mb-8 min-w-0 text-gray-500 break-words bg-clip-border"
+              style="min-height: 100px; border-radius: 11.2px;">
+              <div class="p-6 mb-0 break-words" style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="textoCSS mt-0 mb-2 text-lg font-bold mod:text-xl" style="line-height: 1.2;">
+                  Light
+                </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 text-gray-500 break-words">
+                <div class="text-gray-500">
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center align-baseline whitespace-nowrap bg-blue-100 rounded text-slate-800">Primary</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-gray-900 align-baseline whitespace-nowrap bg-gray-300 rounded">Secondary</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-green-900 align-baseline whitespace-nowrap bg-emerald-200 rounded">Success</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center align-baseline whitespace-nowrap bg-red-200 rounded text-stone-900">Danger</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-lime-900 align-baseline whitespace-nowrap bg-yellow-100 rounded">Warning</span>
+                  <span
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-emerald-900 align-baseline whitespace-nowrap bg-cyan-100 rounded">Info</span>
+                  <span
+                    class="dark:text-white dark:bg-gray-600 inline-block py-1 px-2 text-sm font-bold leading-none text-center align-baseline whitespace-nowrap rounded bg-neutral-300 text-neutral-900">Dark</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="entrada flex relative flex-col mb-8 min-w-0 text-gray-500 break-words bg-clip-border "
+              style="min-height: 5px; border-radius: 11.2px;">
+              <div class="p-6 mb-0 break-words" style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="textoCSS mt-0 mb-2 text-xl font-bold  mod:text-xl" style="line-height: 1.2;">
+                  Heading
+                </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <h1 class="textoCSS mt-0 mb-2 text-4xl font-bold  xl:text-4xl" style="line-height: 1.2;">
+                  Heading 1
+                  <span
+                    class="text-white inline-block py-3 px-6 leading-none text-center align-baseline whitespace-nowrap bg-gray-500 rounded">New</span>
+                </h1>
+                <h2 class="textoCSS mt-0 mb-2 text-3xl font-bold  xl:text-3xl" style="line-height: 1.2;">
+                  Heading 2
+                  <span
+                    class="text-white inline-block py-2 px-4 leading-none text-center align-baseline whitespace-nowrap bg-gray-500 rounded">New</span>
+                </h2>
+                <h3 class="textoCSS mt-0 mb-2 text-3xl font-bold  xl:text-3xl" style="line-height: 1.2;">
+                  Heading 3
+                  <span
+                    class="text-white inline-block py-2 px-4 text-2xl leading-none text-center align-baseline whitespace-nowrap bg-gray-500 rounded">New</span>
+                </h3>
+                <h4 class="textoCSS mt-0 mb-2 text-2xl font-bold  xl:text-2xl" style="line-height: 1.2;">
+                  Heading 4
+                  <span
+                    class="text-white inline-block py-2 px-3 text-xl leading-none text-center align-baseline whitespace-nowrap bg-gray-500 rounded">New</span>
+                </h4>
+                <h5 class="textoCSS mt-0 mb-2 text-xl font-bold " style="line-height: 1.2;">
+                  Heading 5
+                  <span
+                    class="text-white inline-block py-1 px-3 text-base leading-none text-center align-baseline whitespace-nowrap bg-gray-500 rounded">New</span>
+                </h5>
+                <h6 class="textoCSS mt-0 mb-2 text-base font-bold text-white" style="line-height: 1.2;">
+                  Heading 6
+                  <span
+                    class="text-white inline-block py-1 px-2 text-sm leading-none text-center align-baseline whitespace-nowrap bg-gray-500 rounded">New</span>
+                </h6>
+              </div>
+
+            </div>
+          </div>
+          <div class=" flex-none pl-2 pr-5 mt-0 w-full max-w-full leading-6 text-gray-500 md:w-1/2 md:flex-none">
+            <div class="entrada flex relative flex-col mb-8 pb-6 min-w-0 text-gray-500 break-words bg-clip-border "
+              style="min-height: 100px; border-radius: 11.2px;">
+              <div class="p-6 mb-0 break-words" style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="textoCSS mt-0 mb-2 text-xl font-bold  mod:text-xl" style="line-height: 1.2;">
+                  Button
+                </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <div class="break-words">
+                  <div class="mt-0 text-slate-300">Simple</div>
+                  <button type="button"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white normal-case align-middle bg-blue-700 rounded border border-blue-700 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Notifications
+                    <span
+                      class="inline-block relative -top-px py-1 px-2 ml-1 text-sm font-bold leading-none align-baseline whitespace-nowrap bg-white bg-opacity-[0.25]"
+                      style="border-radius: 50%;">4</span>
+                  </button>
+                  <button type="button"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white normal-case align-middle bg-red-500 rounded border border-red-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Notifications
+                    <span
+                      class="inline-block relative -top-px py-1 px-2 ml-1 text-sm font-bold leading-none align-baseline whitespace-nowrap bg-white bg-opacity-[0.25]"
+                      style="border-radius: 50%;">4</span>
+                  </button>
+                  <button type="button"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black normal-case align-middle bg-yellow-400 rounded border border-yellow-400 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Notifications
+                    <span
+                      class="inline-block relative -top-px py-1 px-2 ml-1 text-sm font-bold leading-none text-white align-baseline whitespace-nowrap bg-white bg-opacity-[0.25]"
+                      style="border-radius: 50%;">4</span>
+                  </button>
+                  <button type="button"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white normal-case align-middle bg-green-700 rounded border border-green-700 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Notifications
+                    <span
+                      class="inline-block relative -top-px py-1 px-2 ml-1 text-sm font-bold leading-none align-baseline whitespace-nowrap bg-white bg-opacity-[0.25]"
+                      style="border-radius: 50%;">4</span>
+                  </button>
+                  <button type="button"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white normal-case align-middle rounded border border-solid cursor-pointer select-none border-neutral-900 bg-neutral-900"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Notifications
+                    <span
+                      class="inline-block relative -top-px py-1 px-2 ml-1 text-sm font-bold leading-none align-baseline whitespace-nowrap bg-white bg-opacity-[0.25]"
+                      style="border-radius: 50%;">4</span>
+                  </button>
+                  <div class="text-slate-300">Icons</div>
+                  <button type="button"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white normal-case align-middle bg-blue-700 rounded border border-blue-700 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    <i class="w-4 h-4 italic break-words"></i> Notifications
+                    <span
+                      class="inline-block relative -top-px py-1 px-2 ml-1 text-sm font-bold leading-none align-baseline whitespace-nowrap bg-white bg-opacity-[0.25]"
+                      style="border-radius: 50%;">4</span>
+                  </button>
+                  <button type="button"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white normal-case align-middle bg-red-500 rounded border border-red-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    <i class="w-4 h-4 italic break-words"></i> Notifications
+                    <span
+                      class="inline-block relative -top-px py-1 px-2 ml-1 text-sm font-bold leading-none align-baseline whitespace-nowrap bg-white bg-opacity-[0.25]"
+                      style="border-radius: 50%;">4</span>
+                  </button>
+                  <button type="button"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black normal-case align-middle bg-yellow-400 rounded border border-yellow-400 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    <i class="w-4 h-4 italic break-words"></i> Notifications
+                    <span
+                      class="inline-block relative -top-px py-1 px-2 ml-1 text-sm font-bold leading-none text-white align-baseline whitespace-nowrap bg-white bg-opacity-[0.25]"
+                      style="border-radius: 50%;">4</span>
+                  </button>
+                  <button type="button"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white normal-case align-middle bg-green-700 rounded border border-green-700 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    <i class="w-4 h-4 italic break-words"></i> Notifications
+                    <span
+                      class="inline-block relative -top-px py-1 px-2 ml-1 text-sm font-bold leading-none align-baseline whitespace-nowrap bg-white bg-opacity-[0.25]"
+                      style="border-radius: 50%;">4</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+            <div class="entrada flex relative flex-col mb-8 min-w-0 text-gray-500 break-words bg-clip-border "
+              style="min-height: 100px; border-radius: 11.2px;">
+              <div class="p-6 mb-0 break-words" style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="textoCSS mt-0 mb-2 text-xl font-bold text-blue-900 mod:text-xl" style="line-height: 1.2;">
+                  Link
+                </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <div class="break-words">
+                  <a href="#"
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-blue-700 rounded cursor-pointer"
+                    style="text-decoration: none;">Primary</a>
+                  <a href="#"
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-gray-500 rounded cursor-pointer"
+                    style="text-decoration: none;">Secondary</a>
+                  <a href="#"
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-green-700 rounded cursor-pointer"
+                    style="text-decoration: none;">Success</a>
+                  <a href="#"
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-red-500 rounded cursor-pointer"
+                    style="text-decoration: none;">Danger</a>
+                  <a href="#"
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-yellow-400 rounded cursor-pointer"
+                    style="text-decoration: none;">Warning</a>
+                  <a href="#"
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap bg-cyan-400 rounded cursor-pointer"
+                    style="text-decoration: none;">Info</a>
+                  <a href="#"
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center align-baseline whitespace-nowrap bg-gray-300 rounded cursor-pointer text-neutral-700"
+                    style="text-decoration: none;">Light</a>
+                  <a href="#"
+                    class="inline-block py-1 px-2 text-sm font-bold leading-none text-center text-white align-baseline whitespace-nowrap rounded cursor-pointer bg-neutral-900"
+                    style="text-decoration: none;">Dark</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <!-- footer -->
+
+
+
+
+        <div id="footer" class=" block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
+          data-mb="20">
+
+          <div class="float-left text-slate-400 mb-3">
+            <p class="mt-9 mod:ml-3 ml-4 texto2CSS">2023 © Mazer</p>
+          </div>
+          <div class="float-right  mr-8 mb-12 mt-9 texto2CSS">
+            <p class="texto2CSS mt-0">
+              Crafted with
+              <span class="inline-block text-red-500">
+                <svg width="15" height="15" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#heart-fill" />
+                </svg>
+              </span>
+              by
+              <a href="https://saugi.me" class="text-blue-700 cursor-pointer" style="text-decoration: none;">Saugi</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+</body>
+
+
+</html>
+
+<script>
+
+  //---------------------color theme y sidebar--------------------
+
+  const themeToggle = document.getElementById('theme-toggle');
+  const html = document.getElementsByTagName('html')[0];
+  const body = document.getElementsByTagName('body')[0];
+  const sunMoon = document.getElementById('sun-moon');
+
+
+  themeToggle.addEventListener('click', () => {
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      html.classList.add('light');
+      body.classList.remove('bg-dark');
+      body.classList.add('bg-light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.remove('light');
+      html.classList.add('dark');
+      body.classList.remove('bg-light');
+      body.classList.add('bg-dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'dark') {
+    html.classList.add('dark');
+    body.classList.add('bg-dark');
+    sunMoon.classList.remove('sun');
+    sunMoon.classList.add('moon');
+    body.classList.add('dark-theme');
+
+  } else {
+    html.classList.add('light');
+    body.classList.add('bg-light');
+    sunMoon.classList.remove('moon');
+    sunMoon.classList.add('sun');
+    body.classList.remove('dark-theme');
+
+  }
+
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const sidebarItems = document.querySelectorAll('.has-sub');
+
+    sidebarItems.forEach(sidebarItem => {
+      const submenu = sidebarItem.querySelector('.submenu');
+
+      if (!submenu.classList.contains('active')) {
+        submenu.style.maxHeight = '0';
+      }
+
+      sidebarItem.addEventListener('click', function (event) {
+
+        const target = event.target;
+
+        if (target.closest('.submenu-item')) {
+          return;
+        }
+
+        event.preventDefault();
+
+        if (!submenu.classList.contains('active')) {
+          submenu.classList.add('active');
+          const height = submenu.scrollHeight;
+          submenu.style.maxHeight = `${height}px`;
+          submenu.style.transitionDuration = `${Math.round(400 + (height / 10))}ms`;
+        } else {
+          const height = submenu.scrollHeight;
+          submenu.style.maxHeight = '0';
+          submenu.style.transition = 'max-height 0.3s ease-out';
+          setTimeout(() => {
+            submenu.classList.remove('active');
+          }, 300);
+        }
+
+
+      });
+    });
+  });
+
+
+  function handleResize() {
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+    if (window.innerWidth <= 1200) {
+      sidebarToggle.classList.remove('hidden');
+      if (sidebar.classList.contains('active') && window.devicePixelRatio >= 1.5) {
+        sidebar.classList.remove('active');
+      }
+    } else {
+      sidebarToggle.classList.add('hidden');
+      if (!sidebar.classList.contains('active')) {
+        sidebar.classList.add('active');
+      }
+    }
+  }
+
+  window.addEventListener('resize', handleResize);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebarHide = document.getElementById('sidebar-hide');
+    const body = document.body;
+    const overlay = document.getElementById('main');
+
+    function onZoomChange() {
+      toggleSidebar(null, true);
+    }
+
+    function toggleSidebar(event, forceClose = false) {
+      if (event) {
+        event.stopPropagation();
+      }
+      if (forceClose) {
+        body.classList.remove('no-scroll');
+        overlay.classList.remove('active');
+      } else {
+        sidebar.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+        overlay.classList.toggle('active');
+      }
+    }
+    window.addEventListener('resize', onZoomChange);
+
+
+
+
+    sidebarToggle.addEventListener('click', toggleSidebar);
+    sidebarHide.addEventListener('click', toggleSidebar);
+
+    body.addEventListener('click', (event) => {
+      if (!event.target.closest('#sidebar') && !event.target.closest('#sidebar-toggle')) {
+        if (sidebar.classList.contains('active') && window.innerWidth <= 1200) {
+          toggleSidebar();
+        }
+      }
+    });
+
+    handleResize();
+  });
+
+
+  function toggleTheme() {
+    const body = document.body;
+    const sunMoon = document.getElementById('sun-moon');
+    body.classList.toggle('dark-theme');
+
+    if (body.classList.contains('dark-theme')) {
+      sunMoon.classList.remove('sun');
+      sunMoon.classList.add('moon');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      sunMoon.classList.remove('moon');
+      sunMoon.classList.add('sun');
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+
+
+
+
+
+</script>

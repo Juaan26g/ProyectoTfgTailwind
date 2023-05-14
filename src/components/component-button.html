@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Button - Mazer Admin Dashboard</title>
+  <link rel="stylesheet" href="../elementos/elementos2.css">
+  <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
+  <link href="../../css/output.css" rel="stylesheet">
+  <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+  <div id="app">
+    <div id="sidebar" class="active ">
+      <div class="sidebar-wrapper active entrada min-h-screen">
+        <div class="sidebar-header relative ">
+
+
+          <div class="flex w-60 mt-3 mb-2 items-center ">
+            <div class="logo">
+              <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg" alt="Logo" /></a>
+            </div>
+
+            <div class=" flex gap-2 items-center mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons" width="20" height="22"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
+                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
+                    opacity=".3"></path>
+                  <g transform="translate(-210 -1)">
+                    <path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path>
+                    <circle cx="220.5" cy="11.5" r="4"></circle>
+                    <path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"></path>
+                  </g>
+                </g>
+              </svg>
+
+              <div class="relative block mb-2 mt-2 form-switch fs-6" id="theme-toggle">
+                <div id="toggle-button" onclick="toggleTheme()">
+                  <div id="sun-moon" class="sun"></div>
+                </div>
+              </div>
+
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20" height="20"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
+                </path>
+              </svg>
+            </div>
+
+            <button id="sidebar-hide"
+              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-transparent border-none p-0">
+              <svg class="bi" width="25" height="40" fill="currentColor" style="fill: blue;">
+                <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
+              </svg>
+            </button>
+
+
+          </div>
+
+
+        </div>
+        <div class="sidebar-menu" style="font-family: 'Nunito';">
+          <ul class="menu">
+            <li class="sidebar-title textoSidebar">Menu</li>
+
+            <li class="sidebar-item ">
+              <a href="../index.html" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-fill" />
+                </svg> <span class="textoSidebar">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item active has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#stack" />
+                </svg> <span class="textoSidebar">Components</span>
+              </a>
+              <ul class="submenu active textoSidebar ml-8">
+                <li class="submenu-item  ">
+                  <a href="component-accordion.html">Accordion</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-alert.html">Alert</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-badge.html">Badge</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="component-breadcrumb.html">Breadcrumb</a>
+                </li>
+                <li class="submenu-item active">
+                  <a href="component-button.html">Button</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-card.html">Card</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-carousel.html">Carousel</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-collapse.html">Collapse</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-dropdown.html">Dropdown</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-list-group.html">List Group</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-modal.html">Modal</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-navs.html">Navs</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="component-pagination.html">Pagination</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-progress.html">Progress</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="component-spinner.html">Spinner</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="component-toasts.html">Toasts</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="component-tooltip.html">Tooltip</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
+                </svg> <span class="textoSidebar">Extra Components</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-avatar.html">Avatar</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-divider.html">Divider</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-date-picker.html">Date Picker</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-sweetalert.html">Sweet Alert</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-toastify.html">Toastify</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-rating.html">Rating</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub mb-6">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
+                </svg> <span class="textoSidebar">Layouts</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../layouts/layout-default.html">Default Layout</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-vertical-1-column.html">1 Column</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-vertical-navbar.html">Vertical Navbar</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-rtl.html">RTL Layout</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-horizontal.html">Horizontal Menu</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Forms & Tables</span>
+
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#hexagon-fill" />
+                </svg> <span class="textoSidebar">Form Elements</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="layout-default.html">Input</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="layout-vertical-1-column.html">Input Group</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="layout-vertical-navbar.html">Select</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="layout-rtl.html">Radio</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="layout-horizontal.html">Checkbox</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="layout-horizontal.html">Textarea</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
+                </svg> <span class="textoSidebar">Form Layout</span>
+              </a>
+
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#journal-check" />
+                </svg> <span class="textoSidebar">Form Validation</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Parsley</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#pen-fill" />
+                </svg> <span class="textoSidebar">Form Editor</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Quill</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">CKEditor</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-toastify.html">Summernote</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-rating.html">TinyMCE</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
+                </svg> <span class="textoSidebar">Table</span>
+              </a>
+
+            </li>
+
+
+            <li class="w-60 sidebar-item has-sub mb-6">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-spreadsheet-fill" />
+                </svg> <span class="textoSidebar">Datatables</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Datatable</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">Datatable (jQuery)</a>
+                </li>
+              </ul>
+            </li>
+
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Extra UI</span>
+
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#pentagon-fill" />
+                </svg> <span class="textoSidebar">Widgets</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Chatbox</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">Pricing</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-toastify.html">To-do list</a>
+                </li>
+
+              </ul>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#egg-fill" />
+                </svg> <span class="textoSidebar">Icons</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Bootstrap Icons</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">Fontawesome</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-toastify.html">Dripicons</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#bar-chart-fill" />
+                </svg> <span class="textoSidebar">Charts</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">ChartJS</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">Apexcharts</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#cloud-arrow-up-fill" />
+                </svg> <span class="textoSidebar">File Uploader</span>
+              </a>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#map-fill" />
+                </svg> <span class="textoSidebar">Maps</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">Google Map</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">JS Vector Map</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item has-sub mb-6 ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
+                </svg> <span class="textoSidebar">Multi-Level Menu</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="extra-component-avatar.html">First Level</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="extra-component-sweetalert.html">Another Menu</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Pages</span>
+
+            </li>
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#envelope-fill" />
+                </svg> <span class="textoSidebar">Email Application</span>
+              </a>
+            </li>
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#chat-dots-fill" />
+                </svg> <span class="textoSidebar">Chat Application</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+              </ul>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#image-fill" />
+                </svg> <span class="textoSidebar">Photo Gallery</span>
+              </a>
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#basket-fill" />
+                </svg> <span class="textoSidebar">Checkout Page</span>
+              </a>
+            </li>
+
+
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#person-badge-fill" />
+                </svg> <span class="textoSidebar">Authentication</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../auth/auth-login.html">Login</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../auth/auth-register.html">Register</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../auth/auth-forgot-password.html">Forgot Password</a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+            <li class="w-60 sidebar-item has-sub mb-6">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#x-octagon-fill" />
+                </svg> <span class="textoSidebar">Errors</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../errors/error-403.html">403</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../errors/error-404.html">404</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../errors/error-500.html">500</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Raise Support</span>
+
+            </li>
+
+
+            <li class="w-60 sidebar-item ">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#life-preserver" />
+                </svg> <span class="textoSidebar">Documentation</span>
+              </a>
+            </li>
+
+
+            <li class="w-60 sidebar-item">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#puzzle" />
+                </svg> <span class="textoSidebar">Contribute</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item mb-4">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#cash" />
+                </svg> <span class="textoSidebar">Donate</span>
+              </a>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- pagina -->
+    <div id="main" class="main ml-4 mod:ml-80 mod:mt-8">
+
+      <!-- boton movil -->
+
+      <button id="sidebar-toggle" class="  text-white  rounded ml-4 mt-8 mod:hidden ">
+
+
+        <svg class="bi" width="28" height="40" fill="currentColor" style="fill: blue;">
+          <use xlink:href="../elementos/herramientas/images/icons.svg#justify" />
+        </svg>
+
+
+      </button>
+
+      <!-- titulo -->
+
+
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div class="md:order-2">
+          <nav>
+            <ol
+              class="flex flex-nowrap flex-wrap p-0 mt-1 mb-4 lg:mb-14 ml-4 text-base bg-white rounded-none bg-opacity-[0] md:mr-8  "
+              style="list-style: none;">
+              <li class="text-left" style="list-style: outside none none;">
+                <a href="../index.html" class="text-blue-700 cursor-pointer"
+                  style=" list-style: outside none none; font-family: 'Nunito';">Dashboard</a>
+              </li>
+              <li class="pl-2 text-left text-gray-500 whitespace-nowrap">
+                / Button
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="order-1 mb-4 md:mb-0 md:order-1  w-6/12">
+          <h3 class="textoCSS mt-2 mb-1 ml-4 mod:ml-3 text-3xl text-white xl:text-3xl"
+            style="line-height: 1.2; font-family: 'Nunito'; font-weight: 600;">
+            Button
+          </h3>
+          <p class="ml-4 mt-2 text-slate-400 texto2CSS mod:ml-3 mod:mt-3 ">
+            Use Tailwind's custom button styles for actions in forms, dialogs, and more with support for multiple
+            sizes, states, and more. </p>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- contenido -->
+
+
+      <div class="main-container">
+
+
+
+
+
+
+        <div class="mod:ml-0 ml-1  mr-2 mb-5 flex flex-wrap" style="font-family: 'Nunito';">
+
+          <div class="mt-4 flex-none pr-6 pl-1 w-full max-w-full leading-6  md:flex-none text-slate-300">
+            <div class="ml-2 flex flex-col  pb-3  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+
+              <div class="p-6 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Basic Buttons
+                </h4>
+
+
+              </div>
+
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <h6 class="textoCSS mt-0 mb-2 text-base font-bold text-white" style="line-height: 1.2;">
+                  Default
+                </h6>
+                <p class="texto2CSS mt-0 mb-4 break-words text-slate-400">
+                  Use the
+                  <code class="font-mono text-sm leading-5 text-pink-600">.rounded .rounded.bg-blue-700</code>
+                  classes.
+                </p>
+                <div class="break-words">
+                  <a href="#"
+                    class="hover:bg-blue-800 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-blue-700 rounded border border-blue-700 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Blue</a>
+                  <a href="#"
+                    class="hover:bg-gray-600 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Gray</a>
+                  <a href="#"
+                    class="hover:bg-cyan-600 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-cyan-400 rounded border border-cyan-400 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Cyan</a>
+                  <a href="#"
+                    class="hover:bg-yellow-600  inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-yellow-400 rounded border border-yellow-400 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Yellow</a>
+                  <a href="#"
+                    class="hover:bg-red-700  inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-red-500 rounded border border-red-500 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Red</a>
+                  <a href="#"
+                    class="hover:bg-green-800 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-green-700 rounded border border-green-700 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Green</a>
+                  <a href="#"
+                    class="hover:bg-gray-400 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-gray-300 rounded border border-gray-300 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">White</a>
+                  <a href="#"
+                    class="hover:bg-gray-600 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle rounded border border-solid cursor-pointer select-none border-neutral-900 bg-neutral-900"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Black</a>
+                </div>
+                <hr
+                  class="my-4 mx-0 break-words border-b-0 border-t dark:border-solid dark:border-gray-100 border-gray-900 opacity-25 border-x-0"
+                  style="border-width: 1px 0px 0px; border-image: initial;" />
+                <h6 class="textoCSS mt-0 mb-2 text-base font-bold text-white" style="line-height: 1.2;">
+                  Rounded
+                </h6>
+                <p class="textoCSS3 mt-0 mb-4 break-words">
+                  Use a class
+                  <code class="font-mono text-sm leading-5 text-pink-600">.rounded</code>
+
+                  to
+                  create round button.
+                </p>
+                <div class="break-words">
+                  <a href="#"
+                    class="hover:bg-blue-800 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-blue-700 border border-blue-700 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; border-radius: 800px; transition: none 0s ease 0s;">Blue</a>
+                  <a href="#"
+                    class="hover:bg-gray-600 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-gray-500 border border-gray-500 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; border-radius: 800px; transition: none 0s ease 0s;">Gray</a>
+                  <a href="#"
+                    class="hover:bg-cyan-600 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-cyan-400 border border-cyan-400 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; border-radius: 800px; transition: none 0s ease 0s;">Cyan</a>
+                  <a href="#"
+                    class="hover:bg-yellow-600 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-yellow-400 border border-yellow-400 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; border-radius: 800px; transition: none 0s ease 0s;">Yellow</a>
+                  <a href="#"
+                    class="hover:bg-red-700 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-red-500 border border-red-500 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; border-radius: 800px; transition: none 0s ease 0s;">Red</a>
+                  <a href="#"
+                    class="hover:bg-green-800 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-green-700 border border-green-700 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; border-radius: 800px; transition: none 0s ease 0s;">Green</a>
+                  <a href="#"
+                    class="hover:bg-gray-400 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-gray-300 border border-gray-300 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; border-radius: 800px; transition: none 0s ease 0s;">White</a>
+                  <a href="#"
+                    class="hover:bg-gray-600 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle border border-solid cursor-pointer select-none border-neutral-900 bg-neutral-900"
+                    style="text-decoration: none; font-family: Nunito; border-radius: 800px; transition: none 0s ease 0s;">Black</a>
+                </div>
+              </div>
+
+
+
+
+
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+
+
+        <div class="mod:ml-0 ml-1 mt-5 mr-2 mb-4 flex flex-wrap" style="font-family: 'Nunito';">
+
+          <div class="mt-4 flex-none pr-6 pl-1 w-full max-w-full leading-6  md:flex-none text-slate-300">
+            <div class="ml-2 flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+
+              <div class="p-6 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Buttons <code
+                    class="font-mono text-sm leading-5 text-pink-600">.rounded .rounded.bg-opacity-[0].bg-blue-700</code>
+                </h4>
+
+
+              </div>
+
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <p class="mt-0 mb-4 break-words text-slate-400">
+                  Use the
+                  <code class="font-mono text-sm leading-5 text-pink-600">.rounded .rounded.border-blue-700</code>
+                  classes.
+                </p>
+                <div class="break-words">
+
+                  <a href="#"
+                    class="hover:bg-blue-800 hover:text-white inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-blue-700 align-middle bg-white rounded border border-blue-700 border-solid cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Blue</a>
+
+                  <a href="#"
+                    class="hover:bg-gray-600 hover:text-white inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center  align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Gray</a>
+
+                  <a href="#"
+                    class="hover:bg-cyan-600 hover:text-black inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-cyan-400 align-middle bg-white rounded border border-cyan-400 border-solid cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Cyan</a>
+
+                  <a href="#"
+                    class="hover:bg-yellow-600 hover:text-black inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-yellow-400 align-middle bg-white rounded border border-yellow-400 border-solid cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Yellow</a>
+
+                  <a href="#"
+                    class="hover:bg-red-700 hover:text-white inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-red-500 align-middle bg-white rounded border border-red-500 border-solid cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Red</a>
+
+                  <a href="#"
+                    class="hover:bg-green-800 hover:text-white inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-green-700 align-middle bg-white rounded border border-green-700 border-solid cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Green</a>
+
+                  <a href="#"
+                    class="hover:bg-gray-400 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-gray-300 align-middle bg-white rounded border border-gray-300 border-solid cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">White</a>
+
+                  <a href="#"
+                    class="hover:bg-black hover:text-white inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center align-middle bg-white rounded border border-solid cursor-pointer select-none border-neutral-900 text-neutral-900 bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Black</a>
+
+                </div>
+              </div>
+
+
+
+
+
+
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+
+        <div class=" flex flex-wrap mb-5" style="font-family: 'Nunito';">
+          <div
+            class="mod:mt-4 mt-5 flex-none mod:pr-6 pr-5 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300"
+            data-type="flush">
+            <div class="mod:ml-2 ml-3 flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="height: 255px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Button Sizes
+                </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <p class="mt-0 mb-4 break-words text-slate-400">
+                  Use the
+                  <code class="font-mono text-sm leading-5 text-pink-600">py-3 px-3</code> or
+                  <code class="font-mono text-sm leading-5 text-pink-600">py-1 px-1</code>
+                  classes.
+                </p>
+                <div class="break-words">
+                  <a href="#"
+                    class="hover:bg-yellow-800 inline-block py-1 px-2 mt-0 mr-2 mb-2 ml-0 text-sm font-normal leading-5 text-center text-black align-middle bg-yellow-400 rounded border border-yellow-400 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Small</a>
+                  <a href="#"
+                    class="hover:bg-red-700 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-red-500 rounded border border-red-500 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Normal</a>
+                  <a href="#"
+                    class="hover:bg-gray-600 inline-block py-2 px-4 mt-0 mr-2 mb-2 ml-0 text-xl font-normal leading-7 text-center text-white align-middle rounded border border-solid cursor-pointer select-none border-neutral-900 bg-neutral-900"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Large</a>
+                </div>
+                <div class="break-words">
+                  <a href="#"
+                    class="hover:bg-blue-800 hover:text-white inline-block py-1 px-2 mt-0 mr-2 mb-2 ml-0 text-sm font-normal leading-5 text-center text-blue-700 align-middle bg-white rounded border border-blue-700 border-solid cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Small</a>
+                  <a href="#"
+                    class="hover:bg-blue-800 hover:text-white inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-blue-700 align-middle bg-white rounded border border-blue-700 border-solid cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Normal</a>
+                  <a href="#"
+                    class="hover:bg-blue-800 hover:text-white inline-block py-2 px-4 mt-0 mr-2 mb-2 ml-0 text-xl font-normal leading-7 text-center text-blue-700 align-middle bg-white rounded border border-blue-700 border-solid cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Large</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div
+            class="mod:mt-4 mt-5 flex-none pr-8  mod:pl-0 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300">
+            <div class=" flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="height: 188px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Button States </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <p class="mt-0 mb-4 break-words text-slate-400">
+                  Use the
+                  <code class="font-mono text-sm leading-5 text-pink-600">.opacity</code>
+
+                  class.
+                </p>
+                <div class="break-words">
+                  <a href="#"
+                    class="hover:bg-blue-800 inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-blue-700 rounded border border-blue-700 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">Normal</a>
+                  <a href="#"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-blue-700 rounded border border-blue-700 border-solid cursor-pointer pointer-events-none select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s; opacity: 0.65;">Disabled</a>
+                  <a href="#"
+                    class="inline-block py-1 px-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-blue-700 rounded border border-blue-700 border-solid cursor-pointer pointer-events-none select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s; opacity: 0.65;">Progress</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class=" flex flex-wrap" style="font-family: 'Nunito';">
+          <div
+            class="mod:mt-4 mt-5 flex-none mod:pr-6 pr-5 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300"
+            data-type="flush">
+            <div class="mod:ml-2 ml-3 flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="height: 288px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Icon Button
+                </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <p class="mt-0 mb-4 break-words text-slate-400">
+                  Use the
+                  <code class="font-mono text-sm leading-5 text-pink-600">SVG</code> and
+                  <code class="font-mono text-sm leading-5 text-pink-600">.inline-flex</code>
+                  label / classes.
+                </p>
+
+                <div class="break-words">
+                  <a href="#"
+                    class=" entrada texto2CSS inline-flex p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center align-middle bg-white rounded    cursor-pointer select-none bg-opacity-[0]"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" class="text-slate-300"></path>
+                      <circle cx="12" cy="7" r="4" class="text-slate-300"></circle>
+                    </svg>
+
+
+                    Default</a>
+
+
+                  <a href="#"
+                    class="hover:bg-blue-800 inline-flex p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-blue-700 rounded border border-blue-700 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" class="break-words"></path>
+                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" class="break-words"></path>
+                    </svg>
+                    Blue</a>
+
+
+                  <a href="#"
+                    class="hover:bg-gray-600 inline-flex p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" class="break-words"></path>
+                      <circle cx="12" cy="7" r="4" class="break-words"></circle>
+                    </svg>
+                    Gray</a>
+
+
+                  <a href="#"
+                    class="hover:bg-cyan-500 inline-flex p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-cyan-400 rounded border border-cyan-400 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <circle cx="12" cy="12" r="10" class="break-words"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12" class="break-words"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8" class="break-words"></line>
+                    </svg>
+                    Cyan</a>
+
+
+                  <a href="#"
+                    class="hover:bg-yellow-600 inline-flex p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-yellow-400 rounded border border-yellow-400 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                        class="break-words"></path>
+                      <line x1="12" y1="9" x2="12" y2="13" class="break-words"></line>
+                      <line x1="12" y1="17" x2="12.01" y2="17" class="break-words"></line>
+                    </svg>
+                    Yellow</a>
+
+
+                  <a href="#"
+                    class="hover:bg-red-700 inline-flex p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-red-500 rounded border border-red-500 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <circle cx="12" cy="12" r="10" class="break-words"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12" class="break-words"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16" class="break-words"></line>
+                    </svg>
+                    Red</a>
+                  <a href="#"
+                    class="hover:bg-green-800 inline-flex p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-green-700 rounded border border-green-700 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" class="break-words"></path>
+                      <polyline points="22 4 12 14.01 9 11.01" class="break-words"></polyline>
+                    </svg>
+                    Green</a>
+                  <a href="#"
+                    class="hover:bg-gray-400 inline-flex p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-gray-300 rounded border border-gray-300 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        class="break-words"></polygon>
+                    </svg>
+                    White</a>
+
+                  <a href="#"
+                    class="hover:bg-gray-600 inline-flex p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle rounded border border-solid cursor-pointer select-none border-neutral-900 bg-neutral-900"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" class="break-words"></path>
+                      <polyline points="13 2 13 9 20 9" class="break-words"></polyline>
+                    </svg>
+                    Black
+                  </a>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div
+            class="mod:mt-4 mt-5 flex-none pr-8 mod:pl-0 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300">
+            <div class=" flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Only Icon Button </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <p class="mt-0 mb-4 break-words text-slate-400">
+                  Use the
+                  <code class="font-mono text-sm leading-5 text-pink-600">SVG</code> label.
+                </p>
+                <div class="break-words">
+                  <a href="#"
+                    class="hover:bg-blue-800 inline-block p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-blue-700 rounded border border-blue-700 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" class="break-words"></path>
+                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" class="break-words"></path>
+                    </svg>
+
+                  </a>
+
+
+                  <a href="#"
+                    class="hover:bg-gray-600 inline-block p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" class="break-words"></path>
+                      <circle cx="12" cy="7" r="4" class="break-words"></circle>
+                    </svg>
+
+                  </a>
+
+
+                  <a href="#"
+                    class="hover:bg-cyan-600 inline-block p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-cyan-400 rounded border border-cyan-400 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <circle cx="12" cy="12" r="10" class="break-words"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12" class="break-words"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8" class="break-words"></line>
+                    </svg>
+
+                  </a>
+
+
+                  <a href="#"
+                    class="hover:bg-yellow-800 inline-block p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-yellow-400 rounded border border-yellow-400 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                        class="break-words"></path>
+                      <line x1="12" y1="9" x2="12" y2="13" class="break-words"></line>
+                      <line x1="12" y1="17" x2="12.01" y2="17" class="break-words"></line>
+                    </svg>
+
+                  </a>
+
+
+
+                  <a href="#"
+                    class="hover:bg-red-900 inline-block p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-red-500 rounded border border-red-500 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <circle cx="12" cy="12" r="10" class="break-words"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12" class="break-words"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16" class="break-words"></line>
+                    </svg>
+
+                  </a>
+
+
+                  <a href="#"
+                    class="hover:bg-green-900 inline-block p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-green-700 rounded border border-green-700 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" class="break-words"></path>
+                      <polyline points="22 4 12 14.01 9 11.01" class="break-words"></polyline>
+                    </svg>
+
+                  </a>
+
+
+                  <a href="#"
+                    class="hover:bg-gray-500 inline-block p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-black align-middle bg-gray-300 rounded border border-gray-300 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        class="break-words"></polygon>
+                    </svg>
+
+                  </a>
+
+
+                  <a href="#"
+                    class="hover:bg-gray-700 inline-block p-2 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle rounded border border-solid cursor-pointer select-none border-neutral-900 bg-neutral-900"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" class="break-words"></path>
+                      <polyline points="13 2 13 9 20 9" class="break-words"></polyline>
+                    </svg>
+
+                  </a>
+
+
+                </div>
+                <p class="mt-0 mb-4 break-words text-slate-400">Sizes.</p>
+                <div class="break-words">
+                  <a href="#"
+                    class="hover:bg-yellow-800 inline-block p-2 py-2 mt-0 mr-2 mb-2 ml-0 text-sm font-normal leading-5 text-center text-black align-middle bg-yellow-400 rounded border border-yellow-400 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                        class="break-words"></path>
+                      <line x1="12" y1="9" x2="12" y2="13" class="break-words"></line>
+                      <line x1="12" y1="17" x2="12.01" y2="17" class="break-words"></line>
+                    </svg></a>
+                  <a href="#"
+                    class="hover:bg-red-900 inline-block p-2 py-3 mt-0 mr-2 mb-2 ml-0 text-base font-normal text-center text-white align-middle bg-red-500 rounded border border-red-500 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <circle cx="12" cy="12" r="10" class="break-words"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12" class="break-words"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16" class="break-words"></line>
+                    </svg></a>
+                  <a href="#"
+                    class="hover:bg-green-900 inline-block p-2 py-4 mt-0 mr-2 mb-2 ml-0 text-xl font-normal leading-7 text-center text-white align-middle bg-green-700 rounded border border-green-700 border-solid cursor-pointer select-none"
+                    style="text-decoration: none; font-family: Nunito; transition: none 0s ease 0s;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="mr-1 w-4 h-4 align-middle">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" class="break-words"></path>
+                      <polyline points="22 4 12 14.01 9 11.01" class="break-words"></polyline>
+                    </svg></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class=" flex flex-wrap mb-8 " style="font-family: 'Nunito';">
+          <div
+            class="mod:mt-4 mt-5 flex-none mod:pr-6 pr-5 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300"
+            data-type="flush">
+            <div class="mod:ml-2 ml-3 flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Button Group
+                </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <div class="inline-flex relative mb-4 align-middle rounded" role="group" aria-label="Basic example">
+                  <button type="button"
+                    class="hover:bg-gray-600 inline-block relative flex-auto py-1 px-3 m-0 text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Left
+                  </button>
+                  <button type="button"
+                    class="hover:bg-gray-600 inline-block relative flex-auto py-1 px-3 my-0 mr-0 -ml-px text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded rounded-l-none border border-gray-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Middle
+                  </button>
+                  <button type="button"
+                    class="hover:bg-gray-600 inline-block relative flex-auto py-1 px-3 my-0 mr-0 -ml-px text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded rounded-l-none border border-gray-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Right
+                  </button>
+                </div>
+                <div class="inline-flex relative mb-4 align-middle rounded" role="group" aria-label="Basic example">
+                  <button type="button"
+                    class="hover:bg-red-600 inline-block relative flex-auto py-1 px-3 m-0 text-base font-normal text-center text-white normal-case align-middle bg-red-500 rounded border border-red-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Left
+                  </button>
+                  <button type="button"
+                    class="hover:bg-yellow-500 inline-block relative flex-auto py-1 px-3 my-0 mr-0 -ml-px text-base font-normal text-center text-black normal-case align-middle bg-yellow-400 rounded rounded-l-none border border-yellow-400 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Middle
+                  </button>
+                  <button type="button"
+                    class="hover:bg-green-800 inline-block relative flex-auto py-1 px-3 my-0 mr-0 -ml-px text-base font-normal text-center text-white normal-case align-middle bg-green-700 rounded rounded-l-none border border-green-700 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Right
+                  </button>
+                </div>
+                <div class="inline-flex relative mb-4 align-middle rounded" role="group" aria-label="Basic example">
+                  <button type="button"
+                    class="hover:bg-red-600 inline-block relative flex-auto py-1 px-2 m-0 text-sm font-normal leading-5 text-center text-white normal-case align-middle bg-red-500 rounded border border-red-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Left
+                  </button>
+                  <button type="button"
+                    class="hover:bg-red-600 inline-block relative flex-auto py-1 px-2 my-0 mr-0 -ml-px text-sm font-normal leading-5 text-center text-white normal-case align-middle bg-red-500 rounded rounded-l-none border border-red-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Middle
+                  </button>
+                  <button type="button"
+                    class="hover:bg-red-600 inline-block relative flex-auto py-1 px-2 my-0 mr-0 -ml-px text-sm font-normal leading-5 text-center text-white normal-case align-middle bg-red-500 rounded rounded-l-none border border-red-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Right
+                  </button>
+                </div>
+                <div class="block clear-both break-words" style='content: "";'></div>
+                <div class="textoCSS3 inline-flex relative align-middle rounded" role="group"
+                  aria-label="Basic example">
+                  <button type="button"
+                    class="inline-block relative flex-auto py-2 px-4 m-0 text-xl font-normal leading-7 text-center normal-case align-middle bg-white rounded border border-solid cursor-pointer select-none border-zinc-200 bg-opacity-[0]"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Left
+                  </button>
+                  <button type="button"
+                    class="hover:bg-blue-800 inline-block relative flex-auto py-2 px-4 my-0 mr-0 -ml-px text-xl font-normal leading-7 text-center text-white normal-case align-middle bg-blue-700 rounded rounded-l-none border border-blue-700 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Middle
+                  </button>
+                  <button type="button"
+                    class="textoCSS3 inline-block relative flex-auto py-2 px-4 my-0 mr-0 -ml-px text-xl font-normal leading-7 text-center normal-case align-middle bg-white rounded rounded-l-none border border-solid cursor-pointer select-none border-zinc-200 bg-opacity-[0]"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Right
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div
+            class="mod:mt-4 mt-5 flex-none pr-8 mod:pl-0 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300">
+            <div class=" flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="height: 237px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Vertical Variation </h4>
+              </div>
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words text-slate-300">
+                <div class="inline-flex relative flex-col justify-center items-start align-middle text-slate-300"
+                  role="group" aria-label="Basic example">
+                  <button type="button"
+                    class="hover:bg-gray-600 inline-block relative flex-auto py-1 px-3 m-0 w-full text-base font-normal text-center text-white normal-case align-middle bg-gray-500 border border-gray-500 border-solid cursor-pointer select-none"
+                    style="border-radius: 4px 4px 0px 0px; font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Left
+                  </button>
+                  <button type="button"
+                    class="hover:bg-gray-600 inline-block relative flex-auto py-1 px-3 m-0 w-full text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded-none rounded-t-none border border-gray-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Middle
+                  </button>
+                  <button type="button"
+                    class="hover:bg-gray-600 inline-block relative flex-auto py-1 px-3 m-0 w-full text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded-none rounded-t-none border border-gray-500 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Right
+                  </button>
+                  <button type="button"
+                    class="hover:bg-gray-600 inline-block relative flex-auto py-1 px-3 m-0 w-full text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded-t-none border border-gray-500 border-solid cursor-pointer select-none"
+                    style="border-radius: 0px 0px 4px 4px; font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
+                    Justify
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- footer -->
+
+
+
+
+        <div id="footer" class=" block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
+          data-mb="20">
+
+          <div class="float-left text-slate-400 mb-3">
+            <p class="mt-9 mod:ml-3 ml-4 texto2CSS">2023 © Mazer</p>
+          </div>
+          <div class="float-right text-slate-400 mr-8 mb-12 mt-9 texto2CSS">
+            <p class="texto2CSS mt-0">
+              Crafted with
+              <span class="inline-block text-red-500">
+                <svg width="15" height="15" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#heart-fill" />
+                </svg>
+              </span>
+              by
+              <a href="https://saugi.me" class="text-blue-700 cursor-pointer" style="text-decoration: none;">Saugi</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+</body>
+
+
+</html>
+
+<script>
+
+  //---------------------color theme y sidebar--------------------
+
+  const themeToggle = document.getElementById('theme-toggle');
+  const html = document.getElementsByTagName('html')[0];
+  const body = document.getElementsByTagName('body')[0];
+  const sunMoon = document.getElementById('sun-moon');
+
+
+  themeToggle.addEventListener('click', () => {
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      html.classList.add('light');
+      body.classList.remove('bg-dark');
+      body.classList.add('bg-light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.remove('light');
+      html.classList.add('dark');
+      body.classList.remove('bg-light');
+      body.classList.add('bg-dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'dark') {
+    html.classList.add('dark');
+    body.classList.add('bg-dark');
+    sunMoon.classList.remove('sun');
+    sunMoon.classList.add('moon');
+    body.classList.add('dark-theme');
+
+  } else {
+    html.classList.add('light');
+    body.classList.add('bg-light');
+    sunMoon.classList.remove('moon');
+    sunMoon.classList.add('sun');
+    body.classList.remove('dark-theme');
+
+  }
+
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const sidebarItems = document.querySelectorAll('.has-sub');
+
+    sidebarItems.forEach(sidebarItem => {
+      const submenu = sidebarItem.querySelector('.submenu');
+
+      if (!submenu.classList.contains('active')) {
+        submenu.style.maxHeight = '0';
+      }
+
+      sidebarItem.addEventListener('click', function (event) {
+
+        const target = event.target;
+
+        if (target.closest('.submenu-item')) {
+          return;
+        }
+
+        event.preventDefault();
+
+        if (!submenu.classList.contains('active')) {
+          submenu.classList.add('active');
+          const height = submenu.scrollHeight;
+          submenu.style.maxHeight = `${height}px`;
+          submenu.style.transitionDuration = `${Math.round(400 + (height / 10))}ms`;
+        } else {
+          const height = submenu.scrollHeight;
+          submenu.style.maxHeight = '0';
+          submenu.style.transition = 'max-height 0.3s ease-out';
+          setTimeout(() => {
+            submenu.classList.remove('active');
+          }, 300);
+        }
+
+
+      });
+    });
+  });
+
+
+  function handleResize() {
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+    if (window.innerWidth <= 1200) {
+      sidebarToggle.classList.remove('hidden');
+      if (sidebar.classList.contains('active') && window.devicePixelRatio >= 1.5) {
+        sidebar.classList.remove('active');
+      }
+    } else {
+      sidebarToggle.classList.add('hidden');
+      if (!sidebar.classList.contains('active')) {
+        sidebar.classList.add('active');
+      }
+    }
+  }
+
+  window.addEventListener('resize', handleResize);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebarHide = document.getElementById('sidebar-hide');
+    const body = document.body;
+    const overlay = document.getElementById('main');
+
+    function onZoomChange() {
+      toggleSidebar(null, true);
+    }
+
+    function toggleSidebar(event, forceClose = false) {
+      if (event) {
+        event.stopPropagation();
+      }
+      if (forceClose) {
+        body.classList.remove('no-scroll');
+        overlay.classList.remove('active');
+      } else {
+        sidebar.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+        overlay.classList.toggle('active');
+      }
+    }
+    window.addEventListener('resize', onZoomChange);
+
+
+
+
+    sidebarToggle.addEventListener('click', toggleSidebar);
+    sidebarHide.addEventListener('click', toggleSidebar);
+
+    body.addEventListener('click', (event) => {
+      if (!event.target.closest('#sidebar') && !event.target.closest('#sidebar-toggle')) {
+        if (sidebar.classList.contains('active') && window.innerWidth <= 1200) {
+          toggleSidebar();
+        }
+      }
+    });
+
+    handleResize();
+  });
+
+
+  function toggleTheme() {
+    const body = document.body;
+    const sunMoon = document.getElementById('sun-moon');
+    body.classList.toggle('dark-theme');
+
+    if (body.classList.contains('dark-theme')) {
+      sunMoon.classList.remove('sun');
+      sunMoon.classList.add('moon');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      sunMoon.classList.remove('moon');
+      sunMoon.classList.add('sun');
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+
+
+
+
+
+</script>
