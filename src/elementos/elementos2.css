@@ -1,0 +1,678 @@
+/*
+------------------ fuentes de letras -----------------
+*/
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../elementos/herramientas/fonts/vendor/@fontsource/nunito/files/nunito-all-400-normal.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../elementos/herramientas/fonts/vendor/@fontsource/nunito/files/nunito-all-700-normal.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*
+------------------ boton y paginas errores -----------------
+*/
+
+.boton-error:hover {
+    background-color: #1d4ed8;
+    color: white;
+}
+
+.bg-light {
+    background-color: #ebf3ff;
+}
+
+.bg-dark {
+    background-color: #151521;
+}
+
+/*
+------- texto Log in. ---------
+*/
+
+.dark .log {
+    color: white;
+}
+
+.light .log {
+    color: #25396f;
+}
+
+
+
+
+
+
+/*
+------- poner icono en username y password + entrada ---------
+*/
+
+.icono1 {
+    margin-left: 3px;
+}
+
+.dark .entrada {
+    background-color: #1b1b29;
+}
+
+.light .entrada {
+    background-color: #ffffff;
+}
+
+/*
+---------------- dark theme / light theme -----------------
+*/
+
+.bg-light {
+    background-color: #ebf3ff;
+}
+
+.bg-dark {
+    background-color: #151521;
+}
+
+
+
+/*
+----------------sidebar animación-----------------
+*/
+@media screen and (max-width: 1200px) {
+    #sidebar {
+        transform: translateX(0%);
+    }
+
+    #sidebar.active {
+        transform: translateX(-0%);
+        transition: transform 0.1s ease;
+
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    #sidebar {
+        transform: translateX(0%);
+    }
+
+    #sidebar.active {
+        transform: translateX(0%);
+        transition: transform 0.1s ease;
+    }
+}
+
+
+/*
+----------------sidebar boton luz-----------------
+*/
+
+:root {
+    --light-bg-color: #ffffff;
+    --light-text-color: #000000;
+    --dark-bg-color: #1a1a1a;
+    --dark-text-color: #f1f1f1;
+}
+
+.light #toggle-button {
+    width: 30px;
+    height: 17px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+    border: solid 2px gray;
+
+}
+
+
+
+.dark #toggle-button {
+    width: 30px;
+    height: 17px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+
+#sun-moon {
+    width: 9px;
+    height: 9px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.2s;
+
+}
+
+
+
+body.dark-theme #sun-moon {
+
+    left: 17px;
+    background-color: var(--dark-text-color);
+
+}
+
+body.dark-theme #toggle-button {
+    background-color: #435ebe;
+
+}
+
+
+
+
+
+/*
+----------------accordion -----------------
+*/
+
+
+
+
+.hidden {
+    display: none;
+}
+
+/*
+----------------accordion -----------------
+*/
+
+.dark .textoCSS {
+    color: #ffffff;
+}
+
+.light .textoCSS {
+    color: #25396f;
+}
+
+.dark .texto2CSS {
+    color: #778ca8;
+}
+
+.light .texto2CSS {
+    color: #9094b5;
+}
+
+.dark .interior {
+    color: #c2c2d0;
+}
+
+.light .interior {
+    color: #6d7d89;
+}
+
+
+
+#footer {
+    transition: transform 0.3s ease;
+}
+
+
+/*
+----------------bloquear scroll pagina-----------------
+*/
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+
+
+/*
+----------------pagina components - pagination-----------------
+*/
+
+.dark .textoPagination {
+    color: #82909b;
+}
+
+.light .textoPagination {
+    color: #455fbe;
+}
+
+
+.dark .textoCSS4 {
+    color: #c1bfbc;
+}
+
+.light .textoCSS4 {
+    color: #617384;
+}
+
+
+
+
+
+
+
+/*
+----------------pagina components - tooltip-----------------
+*/
+
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.tooltip-above {
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip-arrow {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+}
+
+.tooltip-above .tooltip-arrow {
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px 5px 0 5px;
+    border-color: #1f2937 transparent transparent transparent;
+}
+
+.rounded-lg {
+    border-radius: 8px;
+}
+
+.tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-right {
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tooltip-right .tooltip-arrow {
+    right: 100%;
+    top: 40%;
+    transform: translateY(-50%);
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #1f2937;
+}
+
+.tooltip-below {
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip-below .tooltip-arrow {
+    bottom: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #1f2937 transparent;
+}
+
+.tooltip-left {
+    top: 50%;
+    right: calc(100% + 4px);
+    transform: translateY(-50%);
+}
+
+.tooltip-left .tooltip-arrow {
+    top: 40%;
+    left: 91%;
+    transform: translateY(-50%);
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #1f2937;
+}
+
+
+
+
+
+
+/*
+----------------pagina components - toast-----------------
+*/
+
+
+
+
+.dark .toastEntrada {
+    background-color: #35354d;
+}
+
+.dark .toastEntrada2 {
+    background-color: #292b3f;
+}
+
+
+.light .toastEntrada {
+    background-color: #ffffff;
+}
+
+.light .toastEntrada2 {
+    background-color: #ffffff;
+}
+
+
+.toast-fade {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.toast-visible {
+    opacity: 1;
+}
+
+.toast-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.light .borderToasts {
+    border-bottom: solid 1px #f2f2f2;
+
+}
+
+
+
+.dark .textoCSS3 {
+    color: #c1bfbc;
+}
+
+.light .textoCSS3 {
+    color: #43507d;
+}
+
+
+
+
+
+/*
+----------------sidebar herramientas-----------------
+*/
+
+.main.active {
+    opacity: 0.4;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+}
+
+
+
+
+.dark .textoSidebar {
+    color: #9099ac;
+}
+
+.light .textoSidebar {
+    color: #3d396f;
+}
+
+
+
+.bi-layout-sidebar-inset-reverse:before {
+    content: "\f45c"
+}
+
+.bi-layout-sidebar-inset:before {
+    content: "\f45d"
+}
+
+.bi-layout-sidebar-reverse:before {
+    content: "\f45e"
+}
+
+.bi-layout-sidebar:before {
+    content: "\f45f"
+}
+
+
+
+.bi-layout-text-sidebar-reverse:before {
+    content: "\f461"
+}
+
+.bi-layout-text-sidebar:before {
+    content: "\f462"
+}
+
+.bi-window-sidebar:before {
+    content: "\f61f"
+}
+
+
+#sidebar.active .sidebar-wrapper {
+    left: 0
+}
+
+#sidebar:not(.active) .sidebar-wrapper {
+    left: -300px
+}
+
+
+
+.sidebar-wrapper {
+    background-color: #fff;
+    bottom: 0;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    transition: left .5s ease-out;
+    width: 300px;
+    z-index: 10
+}
+
+.sidebar-wrapper .sidebar-header {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.8rem 2rem 1rem;
+}
+
+.sidebar-wrapper .sidebar-header img {
+    height: 1.2rem
+}
+
+.sidebar-wrapper .sidebar-toggler.x {
+    display: none;
+    position: absolute;
+    right: 1.75rem;
+    top: .25rem
+}
+
+.sidebar-wrapper .menu {
+    font-weight: 600;
+    margin-top: 1rem;
+    padding: 0 2rem
+}
+
+.sidebar-wrapper .menu .sidebar-title {
+    font-size: 1rem;
+    font-weight: 600;
+    list-style: none;
+    margin: 1.5rem 0 1rem;
+    padding: 0 1rem
+}
+
+.sidebar-wrapper .menu .sidebar-link {
+    align-items: center;
+    border-radius: .5rem;
+    color: #25396f;
+    display: block;
+    display: flex;
+    font-size: 1rem;
+    padding: .2rem 1rem;
+    text-decoration: none;
+    transition: all .5s
+}
+
+.sidebar-wrapper .menu .sidebar-link i,
+.sidebar-wrapper .menu .sidebar-link svg {
+    color: #7c8db5
+}
+
+.sidebar-wrapper .menu .sidebar-link i:before {
+    vertical-align: top
+}
+
+.sidebar-wrapper .menu .sidebar-link span {
+    margin-left: 1rem
+}
+
+.dark .sidebar-wrapper .menu .sidebar-link:hover {
+    background-color: #282839
+}
+
+.light .sidebar-wrapper .menu .sidebar-link:hover {
+    background-color: #f0f1f5
+}
+
+.sidebar-wrapper .menu .sidebar-item {
+    list-style: none;
+    margin-top: .5rem;
+    position: relative
+}
+
+.sidebar-wrapper .menu .sidebar-item.has-sub .sidebar-link:after {
+    content: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><path style="fill:none;stroke:gray;stroke-width:1" d="m6 9 6 6 6-6"/></svg>');
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 12px
+}
+
+.sidebar-wrapper .menu .sidebar-item.active.has-sub .sidebar-link:after {
+    content: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><path style="fill:none;stroke:%23fff;stroke-width:1" d="m6 9 6 6 6-6"/></svg>')
+}
+
+.sidebar-wrapper .menu .sidebar-item.active>.sidebar-link {
+    background-color: #435ebe
+}
+
+.sidebar-wrapper .menu .sidebar-item.active>.sidebar-link span {
+    color: #fff
+}
+
+.sidebar-wrapper .menu .sidebar-item.active>.sidebar-link i,
+.sidebar-wrapper .menu .sidebar-item.active>.sidebar-link svg {
+    fill: #fff;
+    color: #fff
+}
+
+.sidebar-wrapper .menu .sidebar-item.active>.sidebar-link.has-sub:after {
+    content: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><path style="fill:none;stroke:%23fff;stroke-width:1" d="m6 9 6 6 6-6"/></svg>')
+}
+
+.sidebar-wrapper .menu .submenu {
+    display: none;
+    list-style: none;
+    overflow: hidden;
+    transition: max-height 2s cubic-bezier(0, .55, .45, 1)
+}
+
+.sidebar-wrapper .menu .submenu.active {
+    display: block;
+    max-height: 999px
+}
+
+.sidebar-wrapper .menu .submenu .submenu-item.active {
+    position: relative
+}
+
+.sidebar-wrapper .menu .submenu .submenu-item.active>a {
+    color: #435ebe;
+    font-weight: 700
+}
+
+.sidebar-wrapper .menu .submenu .submenu-item a {
+    display: block;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    padding: .7rem 2rem;
+    transition: all .3s
+}
+
+.dark .sidebar-wrapper .menu .submenu .submenu-item a:hover {
+    color: white;
+    margin-left: .3rem
+}
+
+.light .sidebar-wrapper .menu .submenu .submenu-item a:hover {
+    color: #5953ae;
+    margin-left: .3rem
+}
+
+
+.sidebar-backdrop {
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9
+}
+
+@media screen and (max-width:1199px) {
+    .sidebar-wrapper {
+        left: -300px;
+        position: absolute
+    }
+
+    .sidebar-wrapper .sidebar-toggler.x {
+        display: block;
+    }
+}
