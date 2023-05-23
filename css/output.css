@@ -1254,14 +1254,6 @@ input:checked + .toggle-bg {
   order: 2;
 }
 
-.order-first {
-  order: -9999;
-}
-
-.order-last {
-  order: 9999;
-}
-
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
@@ -1288,6 +1280,10 @@ input:checked + .toggle-bg {
 
 .m-1 {
   margin: 0.25rem;
+}
+
+.m-8 {
+  margin: 2rem;
 }
 
 .\!my-0 {
@@ -3350,6 +3346,10 @@ input:checked + .toggle-bg {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .p-\[5px\] {
@@ -6458,6 +6458,10 @@ code {
     padding: 1.5rem;
   }
 
+  .xl\:p-8 {
+    padding: 2rem;
+  }
+
   .xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -6494,6 +6498,10 @@ code {
 
   .xxl\:p-6 {
     padding: 1.5rem;
+  }
+
+  .xxl\:p-8 {
+    padding: 2rem;
   }
 
   .xxl\:text-3xl {
