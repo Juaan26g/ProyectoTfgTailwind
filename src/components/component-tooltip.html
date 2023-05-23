@@ -15,23 +15,21 @@
 </head>
 
 <body>
-
   <div id="app">
-    <div id="sidebar" class="active ">
-      <div class="sidebar-wrapper active entrada min-h-screen">
-        <div class="sidebar-header relative ">
+    <div id="sidebar" class="xl:active xxl:active fixed">
+      <div class="sidebar-wrapper active entrada">
+        <div class="sidebar-header relative">
 
-
-          <div class="flex w-60 mt-3 mb-2 items-center ">
+          <div class="flex w-60 mt-3 mb-2 items-center">
             <div class="logo">
               <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg" alt="Logo" /></a>
             </div>
 
-            <div class=" flex gap-2 items-center mt-1">
+            <div class="flex gap-2 items-center mt-1">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
-                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons" width="20" height="22"
+                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons sun-color" width="20" height="22"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
-                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                   <path
                     d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
                     opacity=".3"></path>
@@ -52,25 +50,21 @@
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                 role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20" height="20"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path fill="currentColor"
+                <path fill="#607080"
                   d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
                 </path>
               </svg>
             </div>
 
             <button id="sidebar-hide"
-              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-transparent border-none p-0">
-              <svg class="bi" width="25" height="40" fill="currentColor" style="fill: blue;">
+              class="sidebar-hide absolute textoSidebar top-2 right-2 bg-color-transparent border-none p-0 xl:hidden xxl:hidden">
+              <svg class="bi" width="25" height="40" fill="currentColor">
                 <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
               </svg>
             </button>
-
-
           </div>
-
-
         </div>
-        <div class="sidebar-menu" style="font-family: 'Nunito';">
+        <div class="sidebar-menu">
           <ul class="menu">
             <li class="sidebar-title textoSidebar">Menu</li>
 
@@ -167,7 +161,7 @@
                 </li>
                 <li class="submenu-item">
                   <a href="../extraComponents/extra-component-rating.html">Rating</a>
-                </li>
+                </li>                
               </ul>
             </li>
 
@@ -196,16 +190,9 @@
               </ul>
             </li>
 
-
-
-
             <li class="sidebar-item  mb-4">
-
               <span class="ml-4 textoSidebar">Forms & Tables</span>
-
             </li>
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -215,27 +202,25 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="layout-default.html">Input</a>
+                  <a href="">Input</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layout-vertical-1-column.html">Input Group</a>
+                  <a href="">Input Group</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layout-vertical-navbar.html">Select</a>
+                  <a href="">Select</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layout-rtl.html">Radio</a>
+                  <a href="">Radio</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layout-horizontal.html">Checkbox</a>
+                  <a href="">Checkbox</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layout-horizontal.html">Textarea</a>
+                  <a href="">Textarea</a>
                 </li>
               </ul>
             </li>
-
-
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -243,10 +228,7 @@
                   <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
                 </svg> <span class="textoSidebar">Form Layout</span>
               </a>
-
             </li>
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -256,13 +238,10 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Parsley</a>
+                  <a href="">Parsley</a>
                 </li>
               </ul>
             </li>
-
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -272,21 +251,19 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Quill</a>
+                  <a href="">Quill</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">CKEditor</a>
+                  <a href="">CKEditor</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-toastify.html">Summernote</a>
+                  <a href="">Summernote</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-rating.html">TinyMCE</a>
+                  <a href="">TinyMCE</a>
                 </li>
               </ul>
             </li>
-
-
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -294,9 +271,7 @@
                   <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
                 </svg> <span class="textoSidebar">Table</span>
               </a>
-
             </li>
-
 
             <li class="w-60 sidebar-item has-sub mb-6">
               <a href="#" class="sidebar-link">
@@ -306,23 +281,17 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Datatable</a>
+                  <a href="">Datatable</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">Datatable (jQuery)</a>
+                  <a href="">Datatable (jQuery)</a>
                 </li>
               </ul>
             </li>
 
-
             <li class="sidebar-item  mb-4">
-
               <span class="ml-4 textoSidebar">Extra UI</span>
-
             </li>
-
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -332,19 +301,16 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Chatbox</a>
+                  <a href="../widgets/ui-widgets-chatbox.html">Chatbox</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">Pricing</a>
+                  <a href="../widgets/ui-widgets-pricing.html">Pricing</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-toastify.html">To-do list</a>
+                  <a href="">To-do list</a>
                 </li>
-
               </ul>
             </li>
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -354,18 +320,16 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Bootstrap Icons</a>
+                  <a href="">Bootstrap Icons</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">Fontawesome</a>
+                  <a href="">Fontawesome</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-toastify.html">Dripicons</a>
+                  <a href="">Dripicons</a>
                 </li>
               </ul>
             </li>
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -375,26 +339,21 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">ChartJS</a>
+                  <a href="../charts/ui-chart-chartjs.html">ChartJS</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">Apexcharts</a>
+                  <a href="../charts/ui-chart-apexcharts.html">Apexcharts</a>
                 </li>
               </ul>
             </li>
 
-
-
-
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../fileUploader/ui-file-uploader.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#cloud-arrow-up-fill" />
                 </svg> <span class="textoSidebar">File Uploader</span>
               </a>
             </li>
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -404,16 +363,13 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Google Map</a>
+                  <a href="../maps/ui-map-google-map.html">Google Map</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">JS Vector Map</a>
+                  <a href="../maps/ui-map-jsvectormap.html">JS Vector Map</a>
                 </li>
               </ul>
             </li>
-
-
-
 
             <li class="w-60 sidebar-item has-sub mb-6 ">
               <a href="#" class="sidebar-link">
@@ -423,20 +379,17 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">First Level</a>
+                  <a href="">First Level</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">Another Menu</a>
+                  <a href="">Another Menu</a>
                 </li>
               </ul>
             </li>
 
             <li class="sidebar-item  mb-4">
-
               <span class="ml-4 textoSidebar">Pages</span>
-
             </li>
-
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -445,7 +398,6 @@
                 </svg> <span class="textoSidebar">Email Application</span>
               </a>
             </li>
-
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -457,8 +409,6 @@
               </ul>
             </li>
 
-
-
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
@@ -466,9 +416,6 @@
                 </svg> <span class="textoSidebar">Photo Gallery</span>
               </a>
             </li>
-
-
-
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -478,8 +425,6 @@
               </a>
             </li>
 
-
-
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
@@ -488,19 +433,16 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="../auth/auth-login.html">Login</a>
+                  <a href="auth/auth-login.html">Login</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="../auth/auth-register.html">Register</a>
+                  <a href="auth/auth-register.html">Register</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="../auth/auth-forgot-password.html">Forgot Password</a>
+                  <a href="auth/auth-forgot-password.html">Forgot Password</a>
                 </li>
               </ul>
             </li>
-
-
-
 
             <li class="w-60 sidebar-item has-sub mb-6">
               <a href="#" class="sidebar-link">
@@ -510,23 +452,20 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="../errors/error-403.html">403</a>
+                  <a href="errors/error-403.html">403</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="../errors/error-404.html">404</a>
+                  <a href="errors/error-404.html">404</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="../errors/error-500.html">500</a>
+                  <a href="errors/error-500.html">500</a>
                 </li>
               </ul>
             </li>
 
             <li class="sidebar-item  mb-4">
-
               <span class="ml-4 textoSidebar">Raise Support</span>
-
             </li>
-
 
             <li class="w-60 sidebar-item ">
               <a href="#" class="sidebar-link">
@@ -535,7 +474,6 @@
                 </svg> <span class="textoSidebar">Documentation</span>
               </a>
             </li>
-
 
             <li class="w-60 sidebar-item">
               <a href="#" class="sidebar-link">
@@ -552,19 +490,13 @@
                 </svg> <span class="textoSidebar">Donate</span>
               </a>
             </li>
-
-
-
           </ul>
         </div>
       </div>
     </div>
 
-
-
-
     <!-- pagina -->
-    <div id="main" class="main ml-4 mod:ml-80 mod:mt-8">
+    <div id="main" class="main ml-4 mod:ml-80">
 
       <!-- boton movil -->
 

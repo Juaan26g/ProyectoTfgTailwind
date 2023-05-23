@@ -53,7 +53,7 @@
             </div>
 
             <button id="sidebar-hide"
-              class="sidebar-hide absolute textoSidebar top-2 right-2 bg-transparent border-none p-0 xl:hidden xxl:hidden">
+              class="sidebar-hide absolute textoSidebar top-2 right-2 bg-color-transparent border-none p-0 xl:hidden xxl:hidden">
               <svg class="bi" width="25" height="40" fill="currentColor">
                 <use xlink:href="elementos/herramientas/images/icons.svg#x" />
               </svg>
@@ -297,10 +297,10 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Chatbox</a>
+                  <a href="widgets/ui-widgets-chatbox.html">Chatbox</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Pricing</a>
+                  <a href="widgets/ui-widgets-pricing.html">Pricing</a>
                 </li>
                 <li class="submenu-item">
                   <a href="">To-do list</a>
@@ -335,16 +335,16 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">ChartJS</a>
+                  <a href="charts/ui-chart-chartjs.html">ChartJS</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Apexcharts</a>
+                  <a href="charts/ui-chart-apexcharts.html">Apexcharts</a>
                 </li>
               </ul>
             </li>
 
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="fileUploader/ui-file-uploader.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="elementos/herramientas/images/icons.svg#cloud-arrow-up-fill" />
                 </svg> <span class="textoSidebar">File Uploader</span>
@@ -359,26 +359,45 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Google Map</a>
+                  <a href="maps/ui-map-google-map.html">Google Map</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">JS Vector Map</a>
+                  <a href="maps/ui-map-jsvectormap.html">JS Vector Map</a>
                 </li>
               </ul>
             </li>
 
-            <li class="w-60 sidebar-item has-sub mb-6 ">
+            <li class="w-60 sidebar-item has-sub mb-6">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="elementos/herramientas/images/icons.svg#collection-fill" />
                 </svg> <span class="textoSidebar">Multi-Level Menu</span>
               </a>
               <ul class="submenu textoSidebar ml-8">
-                <li class="submenu-item">
-                  <a href="">First Level</a>
+                <li class="sidebar-item has-sub">
+                  <a class="sidebar-link" href="#">First Level</a>
+
+                  <ul class="submenu">
+                    <li class="submenu-item has-sub">
+                      <a href="multiLevelMenu/ui-multi-level-menu.html" class="sidebar-link"
+                        >Second Level</a
+                      >
+                    </li>
+
+                    <li class="submenu-item">
+                      <a href="#" class="sidebar-link">Second Level Menu</a>
+                    </li>
+                  </ul>
                 </li>
-                <li class="submenu-item">
-                  <a href="">Another Menu</a>
+
+                <li class="sidebar-item has-sub">
+                  <a class="sidebar-link" href="#">Another Menu</a>
+
+                  <ul class="submenu">
+                    <li class="submenu-item">
+                      <a href="#" class="sidebar-link">Second Level Menu</a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>

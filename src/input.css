@@ -36,21 +36,21 @@ p {
     color: #7c8db5!important
 }
 
-.card {
+.card-default {
     background-color: white;
     border: 1px solid white;
     border-radius: .7rem;
     padding: 1.5rem;
 }
 
-.light .card {
+.light .card-default {
     background-color: white;
     border: 1px solid white;
     border-radius: .7rem;
     padding: 1.5rem;
 }
 
-.dark .card {
+.dark .card-default {
     background-color: #1e1e2d;
     border: 1px solid #1e1e2d;
     border-radius: .7rem;
@@ -58,13 +58,19 @@ p {
 }
 
 .card-title {
-    padding-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+.light .card-title {
     color: #25396f;
 }
 
-.dark .card-content{
+.dark .card-title {
+    color: #fff;
+}
+
+.dark .card-content {
     color: #c2c2d9;
 }
 
@@ -85,4 +91,18 @@ code {
     word-wrap: break-word;
 }
 
+.bg-color-transparent {
+    background-color: transparent;
+}
 
+.bg-color-danger {
+    background-color: #dc3545 !important;
+}
+
+.bg-color-primary {
+    background-color: #435ebe !important;
+}
+
+.bg-color-success {
+    background-color: #198754 !important;
+}
