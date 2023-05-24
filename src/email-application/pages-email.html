@@ -1,0 +1,1377 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Application - Mazer Admin Dashboard</title>
+  <link rel="stylesheet" href="../elementos/elementos2.css">
+  <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
+  <link href="../../css/output.css" rel="stylesheet">
+  <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="/node_modules/preline/dist/preline.js"></script>
+  <script defer src="../elementos/button-light-dark.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="sidebar" class="active ">
+      <div class="sidebar-wrapper active entrada min-h-screen">
+        <div class="sidebar-header relative ">
+          <div class="flex w-60 mt-3 mb-2  ">
+
+            <div class="logo">
+              <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg" alt="Logo" /></a>
+            </div>
+
+            <div class=" flex gap-2  mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons" width="20" height="22"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
+                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
+                    opacity=".3"></path>
+                  <g transform="translate(-210 -1)">
+                    <path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path>
+                    <circle cx="220.5" cy="11.5" r="4"></circle>
+                    <path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"></path>
+                  </g>
+                </g>
+              </svg>
+
+              <div class="relative block mb-2 mt-1  fs-6" id="theme-toggle">
+                <div id="toggle-button" onclick="toggleTheme()">
+                  <div id="sun-moon" class="sun"></div>
+                </div>
+              </div>
+
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20" height="20"
+                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
+                </path>
+              </svg>
+            </div>
+
+            <button id="sidebar-hide"
+              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-transparent border-none p-0">
+              <svg class="bi" width="25" height="40" fill="currentColor" style="fill: blue;">
+                <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="sidebar-menu" style="font-family: 'Nunito';">
+          <ul class="menu">
+            <li class="sidebar-title textoSidebar">Menu</li>
+
+            <li class="sidebar-item ">
+              <a href="../index.html" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-fill" />
+                </svg> <span class="textoSidebar">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#stack" />
+                </svg> <span class="textoSidebar">Components</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item  ">
+                  <a href="../components/component-accordion.html">Accordion</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-alert.html">Alert</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-badge.html">Badge</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="../components/component-breadcrumb.html">Breadcrumb</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-button.html">Button</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-card.html">Card</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-carousel.html">Carousel</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-collapse.html">Collapse</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-dropdown.html">Dropdown</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-list-group.html">List Group</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-modal.html">Modal</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-navs.html">Navs</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-pagination.html">Pagination</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-progress.html">Progress</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-spinner.html">Spinner</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="../components/component-toasts.html">Toasts</a>
+                </li>
+                <li class="submenu-item ">
+                  <a href="../components/component-tooltip.html">Tooltip</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
+                </svg> <span class="textoSidebar">Extra Components</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-avatar.html">Avatar</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-divider.html">Divider</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-date-picker.html">Date Picker</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-sweetalert.html">Sweet Alert</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-toastify.html">Toastify</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../extraComponents/extra-component-rating.html">Rating</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub mb-6">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
+                </svg> <span class="textoSidebar">Layouts</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../layouts/layout-default.html">Default Layout</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-vertical-1-column.html">1 Column</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-vertical-navbar.html">Vertical Navbar</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-rtl.html">RTL Layout</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../layouts/layout-horizontal.html">Horizontal Menu</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Forms & Tables</span>
+
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#hexagon-fill" />
+                </svg> <span class="textoSidebar">Form Elements</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../formtables/form-elements/form-element-input.html">Input</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../formtables/form-elements/form-element-input-group.html">Input Group</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../formtables/form-elements/form-element-select.html">Select</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../formtables/form-elements/form-element-radio.html">Radio</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../formtables/form-elements/form-element-checkbox.html">Checkbox</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../formtables/form-elements/form-element-textarea.html">Textarea</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item ">
+              <a href="../formtables/form-layout.html" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
+                </svg> <span class="textoSidebar">Form Layout</span>
+              </a>
+
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#journal-check" />
+                </svg> <span class="textoSidebar">Form Validation</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../formtables/form-validation-parsley.html">Parsley</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#pen-fill" />
+                </svg> <span class="textoSidebar">Form Editor</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../formtables/form-editor/form-editor-quill.html">Quill</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../formtables/form-editor/form-editor-ckeditor.html">CKEditor</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../formtables/form-editor/form-editor-summernote.html">Summernote</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../formtables/form-editor/form-editor-tinymce.html">TinyMCE</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item ">
+              <a href="../formtables/table.html" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
+                </svg> <span class="textoSidebar">Table</span>
+              </a>
+
+            </li>
+
+
+            <li class="w-60 sidebar-item has-sub mb-6">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-spreadsheet-fill" />
+                </svg> <span class="textoSidebar">Datatables</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../formtables/datatables/table-datatable.html">Datatable</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../formtables/datatables/table-datatable-jquery.html">Datatable (jQuery)</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Extra UI</span>
+
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#pentagon-fill" />
+                </svg> <span class="textoSidebar">Widgets</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../widgets/ui-widgets-chatbox.html">Chatbox</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../widgets/ui-widgets-pricing.html">Pricing</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../widgets/ui-widgets-to-do-list.html">To-do list</a>
+                </li>
+
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#egg-fill" />
+                </svg> <span class="textoSidebar">Icons</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../icons/ui-icons-tailwind-icons.html">Tailwind Icons</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../icons/ui-icons-fontawesome.html">Fontawesome</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../icons/ui-icons-dripicons.html">Dripicons</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#bar-chart-fill" />
+                </svg> <span class="textoSidebar">Charts</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../charts/ui-chart-chartjs.html">ChartJS</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../charts/ui-chart-apexcharts.html">Apexcharts</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item ">
+              <a href="../fileUploader/ui-file-uploader.html" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#cloud-arrow-up-fill" />
+                </svg> <span class="textoSidebar">File Uploader</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#map-fill" />
+                </svg> <span class="textoSidebar">Maps</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../maps/ui-map-google-map.html">Google Map</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../maps/ui-map-jsvectormap.html">JS Vector Map</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 hs-accordion-group mb-7">
+
+              <div class=" submenu-item hs-accordion" id="hs-basic-heading-1">
+
+                <button type="button" class="mt-3 ml-4 flex textoSidebar hs-accordion-toggle "
+                  aria-controls="hs-basic-collapse-1"> <svg class="mr-4 bi" width="15" height="20" fill="currentColor">
+                    <use xlink:href="../elementos/herramientas/images/icons.svg#three-dots" />
+                  </svg>
+                  <span class="">Multi-level Menu</span>
+                  <svg
+                    class="ml-8 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-400 dark:text-gray-500"
+                    width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+
+                </button>
+
+                <div id="hs-basic-collapse-1"
+                  class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300"
+                  aria-labelledby="hs-basic-heading-1">
+                  <div class=" p-5 content-wrapper">
+                    <ul class=" textoSidebar ml-8">
+                      <li class="">
+                        <div class="hs-accordion-group">
+                          <div class="hs-accordion" id="hs-basic-heading-1">
+
+                            <button type="button" class="ml-3 flex textoSidebar hs-accordion-toggle"
+                              aria-controls="hs-basic-collapse-1">
+                              <span class="text-sm">First Level</span>
+                              <svg
+                                class="ml-16 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-500"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                              </svg>
+                            </button>
+
+                            <div id="hs-basic-collapse-1"
+                              class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300 "
+                              aria-labelledby="hs-basic-heading-1">
+                              <div class=" p-5 content-wrapper">
+                                <ul class=" textoSidebar ">
+                                  <li class="text-sm ml-5">
+                                    <a href="../multiLevelMenu/ui-multi-level-menu.html">Second Level</a>
+                                  </li>
+                                  <li class="text-sm ml-5 mt-4 hs-accordion-toggle">
+                                    <a href="#">Second Level Menu</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hs-accordion" id="hs-basic-heading-2">
+
+                            <button type="button" class="flex mt-6 ml-3 textoSidebar hs-accordion-toggle "
+                              aria-controls="hs-basic-collapse-2">
+                              <span class="text-sm">Another Menu</span>
+                              <svg
+                                class="ml-10 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-500"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                              </svg>
+                            </button>
+
+                            <div id="hs-basic-collapse-2"
+                              class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300 "
+                              aria-labelledby="hs-basic-heading-2">
+                              <div class=" p-5 content-wrapper">
+                                <ul class=" textoSidebar">
+                                  <li class=" hs-accordion-toggle text-sm ml-5">
+                                    <a href="#">Second Level Menu</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Pages</span>
+
+            </li>
+
+            <li class="w-60 sidebar-item active">
+              <a href="../email-application/pages-email.html" class="sidebar-link active">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#envelope-fill" />
+                </svg> <span class="textoSidebar">Email Application</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item ">
+              <a href="../chat-application/pages-chat.html" class="sidebar-link ">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#chat-dots-fill" />
+                </svg> <span class="textoSidebar">Chat Application</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item ">
+              <a href="../photo-gallery/pages-photo.html" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#image-fill" />
+                </svg> <span class="textoSidebar">Photo Gallery</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item  ">
+              <a href="../checkout-page/pages-checkout.html" class="sidebar-link ">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#basket-fill" />
+                </svg> <span class="textoSidebar">Checkout Page</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#person-badge-fill" />
+                </svg> <span class="textoSidebar">Authentication</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../auth/auth-login.html">Login</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../auth/auth-register.html">Register</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../auth/auth-forgot-password.html">Forgot Password</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="w-60 sidebar-item has-sub mb-6">
+              <a href="#" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#x-octagon-fill" />
+                </svg> <span class="textoSidebar">Errors</span>
+              </a>
+              <ul class="submenu textoSidebar ml-8">
+                <li class="submenu-item">
+                  <a href="../errors/error-403.html">403</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../errors/error-404.html">404</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../errors/error-500.html">500</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="sidebar-item  mb-4">
+
+              <span class="ml-4 textoSidebar">Raise Support</span>
+
+            </li>
+
+            <li class="w-60 sidebar-item ">
+              <a href="https://zuramai.github.io/mazer/docs/" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#life-preserver" />
+                </svg> <span class="textoSidebar">Documentation</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item">
+              <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#puzzle" />
+                </svg> <span class="textoSidebar">Contribute</span>
+              </a>
+            </li>
+
+            <li class="w-60 sidebar-item mb-4">
+              <a href="https://github.com/zuramai/mazer#donation" class="sidebar-link">
+                <svg class="bi" width="15" height="40" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#cash" />
+                </svg> <span class="textoSidebar">Donate</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- pagina -->
+    <div id="main" class="main ml-4 mod:ml-80 mod:mt-8">
+
+      <!-- boton movil -->
+      <button id="sidebar-toggle" class="  text-white  rounded ml-4 mt-8 mod:hidden ">
+        <svg class="bi" width="28" height="40" fill="currentColor" style="fill: blue;">
+          <use xlink:href="../elementos/herramientas/images/icons.svg#justify" />
+        </svg>
+      </button>
+
+      <!-- titulo -->
+      <div class="flex flex-col md:flex-row justify-between  ">
+        <div class="md:order-2">
+          <nav>
+            <ol
+              class="flex flex-nowrap flex-wrap p-0 mt-1 mb-4 lg:mb-14 ml-4 text-base bg-white rounded-none bg-opacity-[0] md:mr-8  "
+              style="list-style: none;">
+              <li class="text-left" style="list-style: outside none none;">
+                <a href="../index.html" class="text-blue-700 cursor-pointer"
+                  style=" list-style: outside none none; font-family: 'Nunito';">Dashboard</a>
+              </li>
+              <li class="pl-2 text-left text-gray-500 whitespace-nowrap">
+                / Email Application
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="order-1 mb-4 md:mb-0 md:order-1  w-6/12">
+          <h3 class="textoCSS mt-2 mb-1 ml-4 mod:ml-3 text-3xl text-white xl:text-3xl"
+            style="line-height: 1.2; font-family: 'Nunito'; font-weight: 600;">
+            Email Application
+          </h3>
+          <p class="ml-4 mt-2 text-slate-400 texto2CSS mod:ml-3 mod:mt-3 ">
+            A full inbox-ui for you to implement messaging. </p>
+        </div>
+      </div>
+
+      <!-- contenido -->
+      <div class="main-container">
+
+        <div class="mod:ml-0 ml-1 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
+
+          <div class="mt-4  flex-none pr-6 pl-1 w-full max-w-full leading-6  md:flex-none text-slate-300">
+            <div class="ml-2  flex  w-full min-w-0 break-words bg-clip-border"
+              style="min-height: 100px; border-radius: 11.2px;">
+
+              <div class="dark:border-gray-800 border entrada w-96 leading-6 text-gray-500 bg-white"
+                style="height: 619px; z-index: 3;">
+                <div class="py-px px-6 mb-3 text-gray-500">
+                  <!-- compose button  -->
+                  <button type="button"
+                    class="inline-block py-1 px-3 mt-4 mx-0 w-full text-base font-medium text-center text-white normal-case align-middle bg-blue-700 rounded border border-indigo-700 border-solid cursor-pointer select-none"
+                    style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;">
+                    <i class="w-4 h-4 italic"></i>
+                    + Compose
+                  </button>
+                </div>
+                <div class="overflow-auto relative py-0 px-6 text-gray-500" style="height: 507.2px;">
+                  <!-- sidebar menu  -->
+                  <div class="flex flex-col pl-0 mb-0 rounded">
+                    <a href="#"
+                      class="flex block relative py-1 px-0 font-medium text-blue-400 bg-transparent cursor-pointer hover:text-slate-500"
+                      id="inbox-menu" style="text-decoration: none; z-index: 2;">
+                      <div class=" inline mr-4">
+                        <svg class=" bi" width="15" height="20" fill="currentColor">
+                          <use xlink:href="../elementos/herramientas/images/icons.svg#envelope" />
+                        </svg>
+                      </div>
+                      Inbox
+                      <span
+                        class="inline-block py-1 px-2 text-sm font-bold leading-none text-center align-baseline whitespace-nowrap dark:bg-blue-300 bg-indigo-50 rounded text-slate-800">5</span>
+                    </a>
+                    <a href="#"
+                      class=" mt-3 flex block relative py-1 px-0 font-medium bg-transparent cursor-pointer dark:text-gray-400 text-neutral-800 hover:text-slate-500"
+                      style="text-decoration: none;">
+                      <div class="inline mr-4">
+                        <svg class="bi" width="15" height="20" fill="currentColor">
+                          <use xlink:href="../elementos/herramientas/images/icons.svg#archive" />
+                        </svg>
+                      </div>
+                      Sent
+                    </a>
+                    <a href="#"
+                      class=" mt-3 flex block relative py-1 px-0 font-medium bg-transparent cursor-pointer dark:text-gray-400 text-neutral-800 hover:text-slate-500"
+                      style="text-decoration: none;">
+                      <div class="inline mr-4">
+                        <svg class=" bi" width="15" height="20" fill="currentColor">
+                          <use xlink:href="../elementos/herramientas/images/icons.svg#pencil" />
+                        </svg>
+                      </div>
+                      Draft
+                    </a>
+                    <a href="#"
+                      class=" mt-3 flex block relative py-1 px-0 font-medium bg-transparent cursor-pointer dark:text-gray-400 text-neutral-800 hover:text-slate-500"
+                      style="text-decoration: none;">
+                      <div class="inline mr-4">
+                        <svg class=" bi" width="15" height="20" fill="currentColor">
+                          <use xlink:href="../elementos/herramientas/images/icons.svg#star" />
+                        </svg>
+                      </div>
+                      Starred
+                    </a>
+                    <a href="#"
+                      class=" mt-3 flex block relative py-1 px-0 font-medium bg-transparent cursor-pointer dark:text-gray-400 text-neutral-800 hover:text-slate-500"
+                      style="text-decoration: none;">
+                      <div class="inline mr-4">
+                        <svg class=" bi" width="15" height="20" fill="currentColor">
+                          <use xlink:href="../elementos/herramientas/images/icons.svg#info-circle" />
+                        </svg>
+                      </div>
+                      Spam
+                      <span
+                        class="inline-block py-1 px-2 text-sm font-bold leading-none text-center align-baseline whitespace-nowrap dark:bg-red-300 bg-red-100 rounded text-stone-900">3</span>
+                    </a>
+                    <a href="#"
+                      class=" mt-3 flex block relative py-1 px-0 font-medium bg-transparent cursor-pointer dark:text-gray-400 text-neutral-800 hover:text-slate-500"
+                      style="text-decoration: none;">
+                      <div class="inline mr-4">
+                        <svg class=" bi" width="15" height="20" fill="currentColor">
+                          <use xlink:href="../elementos/herramientas/images/icons.svg#trash" />
+                        </svg>
+                      </div>
+                      Trash
+                    </a>
+                  </div>
+                  <!-- sidebar menu  end-->
+
+                  <!-- sidebar label start -->
+                  <label
+                    class="inline-block mx-0 mt-8 mb-2 font-sans font-serif tracking-wider text-gray-400 cursor-default">Labels</label>
+                  <div class="flex flex-col pl-0 mb-0 rounded">
+                    <a href="#"
+                      class=" flex relative justify-between  py-2 px-0 font-medium bg-transparent cursor-pointer dark:text-gray-400 text-neutral-800 hover:text-slate-500"
+                      style="text-decoration: none;">
+                      Product
+                      <span class=""></span>
+                    </a>
+                    <a href="#"
+                      class=" flex relative justify-between  py-2 px-0 font-medium bg-transparent cursor-pointer dark:text-gray-400 text-neutral-800 hover:text-slate-500"
+                      style="text-decoration: none;">
+                      Work
+                      <span class=""></span>
+                    </a>
+                    <a href="#"
+                      class=" flex relative justify-between  py-2 px-0 font-medium bg-transparent cursor-pointer dark:text-gray-400 text-neutral-800 hover:text-slate-500"
+                      style="text-decoration: none;">
+                      Misc
+                      <span class=""></span>
+                    </a>
+                    <a href="#"
+                      class=" flex relative justify-between  py-2 px-0 font-medium bg-transparent cursor-pointer dark:text-gray-400 text-neutral-800 hover:text-slate-500"
+                      style="text-decoration: none;">
+                      Family
+                      <span class=""></span>
+                    </a>
+                    <a href="#"
+                      class=" flex relative justify-between  py-2 px-0 font-medium bg-transparent cursor-pointer dark:text-gray-400 text-neutral-800 hover:text-slate-500"
+                      style="text-decoration: none;">
+                      Design
+                      <span class=""></span>
+                    </a>
+
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="dark:border-gray-800 border entrada flex flex-col">
+
+                <div class=" flex  h-20  py-4 px-6 leading-6 text-gray-500 dark:border-gray-800 border">
+                  <!-- action left start here -->
+                  <div class="flex text-gray-500">
+                    <!-- select All checkbox -->
+                    <div class="mr-4 cursor-pointer">
+                      <input id="default-checkbox" type="checkbox" value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                      <label for="checkboxsmall" class="inline-block"></label>
+                    </div>
+                    <!-- delete unread dropdown -->
+                    <ul class="flex pl-0 m-0" style="list-style: none;">
+                      <li class="inline-block text-left" style="list-style: outside none none;">
+                        <button type="button"
+                          class="inline-block py-1 px-2 m-0 text-base font-normal text-center normal-case align-middle bg-white rounded dark:border-gray-800 border cursor-pointer select-none bg-opacity-[0]"
+                          data-toggle="tooltip"
+                          style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s; list-style: outside none none;">
+                          <span class="" style="list-style: outside none none;">
+                            <svg class="textoCSS3 bi" width="15" height="20" fill="currentColor">
+                              <use xlink:href="../elementos/herramientas/images/icons.svg#trash" />
+                            </svg>
+                          </span>
+                        </button>
+                      </li>
+                      <li class="inline-block text-left" style="list-style: outside none none;">
+                        <button type="button"
+                          class="inline-block py-1 px-2 m-0 text-base font-normal text-center normal-case align-middle bg-white rounded dark:border-gray-800 border cursor-pointer select-none bg-opacity-[0]"
+                          style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s; list-style: outside none none;">
+                          <span class="inline" style="list-style: outside none none;">
+                            <svg class="textoCSS3 bi" width="15" height="20" fill="currentColor">
+                              <use xlink:href="../elementos/herramientas/images/icons.svg#envelope" />
+                            </svg>
+                          </span>
+                        </button>
+                      </li>
+                      <li class="inline-block text-left" style="list-style: outside none none;">
+                        <div class="relative" style="list-style: outside none none;">
+                          <button type="button"
+                            class=" py-1 px-2 m-0 text-base font-normal text-center normal-case whitespace-nowrap bg-white rounded dark:border-gray-800 border cursor-pointer select-none bg-opacity-[0]"
+                            id="folder" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style='font-family: Nunito; text-decoration: none; vertical-align: 0.255em; transition: none 0s ease 0s; content: ""; list-style: outside none none;'>
+                            <span class="" style="list-style: outside none none;">
+                              <svg class="textoCSS3 bi" width="15" height="20" fill="currentColor">
+                                <use xlink:href="../elementos/herramientas/images/icons.svg#folder" />
+                              </svg>
+                            </span>
+                          </button>
+
+                        </div>
+                      </li>
+                      <li class="inline-block text-left" style="list-style: outside none none;">
+                        <div class="relative" style="list-style: outside none none;">
+                          <button type="button"
+                            class=" py-1 px-2 m-0 text-base font-normal text-center normal-case whitespace-nowrap bg-white rounded dark:border-gray-800 border cursor-pointer select-none bg-opacity-[0]"
+                            id="tag" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style='font-family: Nunito; text-decoration: none; vertical-align: 0.255em; transition: none 0s ease 0s; content: ""; list-style: outside none none;'>
+                            <span class="" style="list-style: outside none none;">
+                              <svg class="textoCSS3 bi" width="15" height="20" fill="currentColor">
+                                <use xlink:href="../elementos/herramientas/images/icons.svg#tag" />
+                              </svg>
+                            </span>
+                          </button>
+
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- action left end here -->
+
+                  <!-- action right start here -->
+                  <div class=" flex mb-4 text-gray-500">
+
+                    <!-- search bar  -->
+                    <div class="flex-grow my-0 mx-3">
+                      <div class="relative mb-3">
+                        <input type="text"
+                          class=" entrada block py-1 pr-3 pl-10 m-0 w-full font-sans font-serif font-normal leading-normal bg-clip-padding bg-white rounded dark:border-gray-800 border appearance-none cursor-text focus:border-indigo-300 focus:bg-white focus:text-gray-500"
+                          placeholder="Search email.." style="transition: none 0s ease 0s;" />
+                        <div class="absolute left-0 py-0 px-2" style="top: 0.28rem;">
+                          <svg class="textoCSS3 bi" width="15" height="20" fill="currentColor">
+                            <use xlink:href="../elementos/herramientas/images/icons.svg#search" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- pagination and page count -->
+                    <span class="ml-3 textoCSS3 sm:block">1-10 of 653</span>
+                    <div class="ml-5 flex text-gray-500">
+
+                      <ul class="flex pl-0 m-0" style="list-style: none;">
+                        <li class="inline-block text-left" style="list-style: outside none none;">
+                          <button type="button"
+                            class="textoCSS3 inline-block py-1 px-2 m-0 text-base font-normal text-center normal-case align-middle bg-white rounded dark:border-gray-800 border cursor-pointer select-none bg-opacity-[0]"
+                            data-toggle="tooltip"
+                            style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s; list-style: outside none none;">
+                            <span class="" style="list-style: outside none none;">
+                              <svg class=" bi" width="15" height="20" fill="currentColor">
+                                <use xlink:href="../elementos/herramientas/images/icons.svg#chevron-left" />
+                              </svg>
+                            </span>
+                          </button>
+                        </li>
+                        <li class="inline-block text-left" style="list-style: outside none none;">
+                          <button type="button"
+                            class="textoCSS3 inline-block py-1 px-2 m-0 text-base font-normal text-center normal-case align-middle bg-white rounded dark:border-gray-800 border cursor-pointer select-none bg-opacity-[0]"
+                            style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s; list-style: outside none none;">
+                            <span class="inline" style="list-style: outside none none;">
+                              <svg class=" bi" width="15" height="20" fill="currentColor">
+                                <use xlink:href="../elementos/herramientas/images/icons.svg#chevron-right" />
+                              </svg>
+                            </span>
+                          </button>
+                        </li>
+
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+
+                <li
+                  class="flex relative items-center py-4 px-6 leading-6 text-left text-gray-500 dark:bg-gray-800 bg-gray-100 cursor-pointer"
+                  style="animation: 0.5s linear 0s 1 normal both running fadeIn; z-index: 1;">
+                  <div class="flex items-center text-left cursor-pointer">
+                    <div class="mr-4 text-gray-500">
+                      <div class="cursor-pointer">
+                        <input id="default-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkboxsmall1" class="inline-block"></label>
+                      </div>
+                    </div>
+                    <span class=" mr-2 text-gray-300">
+                      <svg class="bi" width="15" height="20" fill="currentColor">
+                        <use xlink:href="../elementos/herramientas/images/icons.svg#star" stroke="gold" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="text-left cursor-pointer">
+                    <div class="inline-flex relative w-10 h-10 text-center align-middle" style="border-radius: 50%;">
+                      <img src="../elementos/herramientas/images/faces/1.jpg" alt="avtar img holder"
+                        class="w-10 h-10 text-gray-500 align-middle border-2 border-white border-solid"
+                        style="border-radius: 50%;" />
+                    </div>
+                  </div>
+                  <div class="overflow-hidden flex-1 pl-4 text-left cursor-pointer">
+                    <div class="flex justify-between text-gray-500">
+                      <div class="inline-grid w-2/3 cursor-pointer">
+                        <span class="dark:text-white font-medium ">Puto TFG de los cojones 👍</span>
+                      </div>
+                      <div class="absolute right-4 cursor-pointer">
+                        <span class="">
+                          <span class="text-sm leading-5 text-gray-400">4:14 AM</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between text-gray-500 whitespace-nowrap overflow-ellipsis">
+                      <p class="my-0 mr-4 text-xs font-normal text-gray-400" style="line-height: 1.75;">
+                        Hey John, bah kivu decrete epanorthotic unnotched Argyroneta nonius
+                        veratrine preimaginary
+                      </p>
+                      <div class="whitespace-nowrap">
+                        <span class="cursor-pointer">
+                          <span class=""></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+                <li
+                  class="flex relative items-center py-4 px-6 leading-6 text-left text-gray-500 dark:bg-gray-800 bg-gray-100 cursor-pointer"
+                  style="animation: 0.5s linear 0s 1 normal both running fadeIn; z-index: 1;">
+                  <div class="flex items-center text-left cursor-pointer">
+                    <div class="mr-4 text-gray-500">
+                      <div class="cursor-pointer">
+                        <input id="default-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkboxsmall2" class="inline-block"></label>
+                      </div>
+                    </div>
+                    <span class="mr-2 text-gray-300">
+                      <svg class="bi" width="15" height="20" fill="currentColor">
+                        <use xlink:href="../elementos/herramientas/images/icons.svg#star" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="text-left cursor-pointer">
+                    <div class="inline-flex relative w-10 h-10 text-center align-middle" style="border-radius: 50%;">
+                      <img class="w-10 h-10 text-gray-500 align-middle border-2 border-white border-solid"
+                        src="../elementos/herramientas/images/faces/3.jpg" alt="Generic placeholder image"
+                        style="border-radius: 50%;" />
+                    </div>
+                  </div>
+                  <div class="overflow-hidden flex-1 pl-4 text-left cursor-pointer">
+                    <div class="flex justify-between text-gray-500">
+                      <div class="inline-grid w-2/3 cursor-pointer">
+                        <span class="dark:text-white font-medium truncate">Seguro que el TFG lo creó un francés
+                          😃</span>
+                      </div>
+                      <div class="absolute right-4 cursor-pointer">
+                        <span class="">
+                          <span class="text-sm leading-5 text-gray-400">2:15 AM</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between text-gray-500 whitespace-nowrap overflow-ellipsis">
+                      <p class="my-0 mr-4 text-xs font-normal text-gray-400" style="line-height: 1.75;">
+                        We will start the new application development soon once this will be
+                        completed.
+                      </p>
+                      <div class="whitespace-nowrap">
+                        <span class="cursor-pointer">
+                          <span class=""></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  class="flex relative items-center py-4 px-6 leading-6 text-left text-gray-500 dark:bg-gray-900 bg-white cursor-pointer"
+                  style="animation: 0.5s linear 0s 1 normal both running fadeIn; z-index: 1;">
+                  <div class="flex items-center text-left cursor-pointer">
+                    <div class="mr-4 text-gray-500">
+                      <div class="cursor-pointer">
+                        <input id="default-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkboxsmall3" class="inline-block"></label>
+                      </div>
+                    </div>
+                    <span class=" mr-2 text-gray-300">
+                      <svg class="bi" width="15" height="20" fill="currentColor">
+                        <use xlink:href="../elementos/herramientas/images/icons.svg#star" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="text-left cursor-pointer">
+                    <div class="inline-flex relative w-10 h-10 text-center align-middle" style="border-radius: 50%;">
+                      <img class="w-10 h-10 text-gray-500 align-middle border-2 border-white border-solid"
+                        src="../elementos/herramientas/images/faces/7.jpg" alt="Generic placeholder image"
+                        style="border-radius: 50%;" />
+                    </div>
+                  </div>
+                  <div class="overflow-hidden flex-1 pl-4 text-left cursor-pointer">
+                    <div class="flex justify-between text-gray-500">
+                      <div class="inline-grid w-2/3 cursor-pointer">
+                        <span class="dark:text-white font-medium truncate">Odiar Francia</span>
+                      </div>
+                      <div class="absolute right-4 cursor-pointer">
+                        <span class="">
+                          <span class="text-sm leading-5 text-gray-400">2:15 AM</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between text-gray-500 whitespace-nowrap overflow-ellipsis">
+                      <p class="my-0 mr-4 text-xs text-gray-400" style="line-height: 1.75;">
+                        I will provide you more details after this Saturday. Hope that will be
+                        fine for you..
+                      </p>
+                      <div class="whitespace-nowrap">
+                        <span class="flex items-center cursor-pointer">
+                          <i class="mr-4 w-4 h-4 italic"></i>
+                          <span class=""></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  class="flex relative items-center py-4 px-6 leading-6 text-left text-gray-500 dark:bg-gray-900 bg-white cursor-pointer"
+                  style="animation: 0.5s linear 0s 1 normal both running fadeIn; z-index: 1;">
+                  <div class="flex items-center text-left cursor-pointer">
+                    <div class="mr-4 text-gray-500">
+                      <div class="cursor-pointer">
+                        <input id="default-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkboxsmall3" class="inline-block"></label>
+                      </div>
+                    </div>
+                    <span class=" mr-2 text-gray-300">
+                      <svg class="bi" width="15" height="20" fill="currentColor">
+                        <use xlink:href="../elementos/herramientas/images/icons.svg#star" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="text-left cursor-pointer">
+                    <div class="inline-flex relative w-10 h-10 text-center align-middle" style="border-radius: 50%;">
+                      <img class="w-10 h-10 text-gray-500 align-middle border-2 border-white border-solid"
+                        src="../elementos/herramientas/images/faces/5.jpg" alt="Generic placeholder image"
+                        style="border-radius: 50%;" />
+                    </div>
+                  </div>
+                  <div class="overflow-hidden flex-1 pl-4 text-left cursor-pointer">
+                    <div class="flex justify-between text-gray-500">
+                      <div class="inline-grid w-2/3 cursor-pointer">
+                        <span class="dark:text-white font-medium">Odiar Francia</span>
+                      </div>
+                      <div class="absolute right-4 cursor-pointer">
+                        <span class="">
+                          <span class="text-sm leading-5 text-gray-400">Yesterday</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between text-gray-500 whitespace-nowrap overflow-ellipsis">
+                      <p class="my-0 mr-4 text-xs text-gray-400" style="line-height: 1.75;">
+                        When the equation, first to ability the forwards, the a but travelling, outlines sentinels bad
+                        expand to good...
+                      </p>
+                      <div class="whitespace-nowrap">
+                        <span class="flex items-center cursor-pointer">
+                          <i class="mr-4 w-4 h-4 italic"></i>
+                          <span class=""></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+                <li
+                  class="flex relative items-center py-4 px-6 leading-6 text-left text-gray-500 dark:bg-gray-800 bg-gray-100 cursor-pointer"
+                  style="animation: 0.5s linear 0s 1 normal both running fadeIn; z-index: 1;">
+                  <div class="flex items-center text-left cursor-pointer">
+                    <div class="mr-4 text-gray-500">
+                      <div class="cursor-pointer">
+                        <input id="default-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkboxsmall3" class="inline-block"></label>
+                      </div>
+                    </div>
+                    <span class=" mr-2 text-gray-300">
+                      <svg class="bi" width="15" height="20" fill="currentColor">
+                        <use xlink:href="../elementos/herramientas/images/icons.svg#star" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="text-left cursor-pointer">
+                    <div class="inline-flex relative w-10 h-10 text-center align-middle" style="border-radius: 50%;">
+                      <img class="w-10 h-10 text-gray-500 align-middle border-2 border-white border-solid"
+                        src="../elementos/herramientas/images/faces/3.jpg" alt="Generic placeholder image"
+                        style="border-radius: 50%;" />
+                    </div>
+                  </div>
+                  <div class="overflow-hidden flex-1 pl-4 text-left cursor-pointer">
+                    <div class="flex justify-between text-gray-500">
+                      <div class="inline-grid w-2/3 cursor-pointer">
+                        <span class="dark:text-white font-medium">Odiar Francia</span>
+                      </div>
+                      <div class="absolute right-4 cursor-pointer">
+                        <span class="">
+                          <span class="text-sm leading-5 text-gray-400">15 July</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between text-gray-500 whitespace-nowrap overflow-ellipsis">
+                      <p class="my-0 mr-4 text-xs text-gray-400" style="line-height: 1.75;">
+                        Thanks for your feedback ! Here's a new layout for a new Modern Admin theme
+                      </p>
+                      <div class="whitespace-nowrap">
+                        <span class="flex items-center cursor-pointer">
+                          <i class="mr-4 w-4 h-4 italic"></i>
+                          <span class=""></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  class="flex relative items-center py-4 px-6 leading-6 text-left text-gray-500 dark:bg-gray-800 bg-gray-100 cursor-pointer"
+                  style="animation: 0.5s linear 0s 1 normal both running fadeIn; z-index: 1;">
+                  <div class="flex items-center text-left cursor-pointer">
+                    <div class="mr-4 text-gray-500">
+                      <div class="cursor-pointer">
+                        <input id="default-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkboxsmall3" class="inline-block"></label>
+                      </div>
+                    </div>
+                    <span class=" mr-2 text-gray-300">
+                      <svg class="bi" width="15" height="20" fill="currentColor">
+                        <use xlink:href="../elementos/herramientas/images/icons.svg#star" stroke="gold" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="text-left cursor-pointer">
+                    <div class="inline-flex relative w-10 h-10 text-center align-middle" style="border-radius: 50%;">
+                      <img class="w-10 h-10 text-gray-500 align-middle border-2 border-white border-solid"
+                        src="../elementos/herramientas/images/faces/8.jpg" alt="Generic placeholder image"
+                        style="border-radius: 50%;" />
+                    </div>
+                  </div>
+                  <div class="overflow-hidden flex-1 pl-4 text-left cursor-pointer">
+                    <div class="flex justify-between text-gray-500">
+                      <div class="inline-grid w-2/3 cursor-pointer">
+                        <span class="dark:text-white font-medium">Odiar Francia
+                          🎉</span>
+                      </div>
+                      <div class="absolute right-4 cursor-pointer">
+                        <span class="">
+                          <span class="text-sm leading-5 text-gray-400">12-07-2019</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between text-gray-500 whitespace-nowrap overflow-ellipsis">
+                      <p class="my-0 mr-4 text-xs text-gray-400" style="line-height: 1.75;">
+                        Hey John, bah kivu decrete epanorthotic unnotched Argyroneta nonius veratrine preimaginary...
+                      </p>
+                      <div class="whitespace-nowrap">
+                        <span class="flex items-center cursor-pointer">
+                          <i class="mr-4 w-4 h-4 italic"></i>
+                          <span class=""></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+
+                <li
+                  class="flex relative items-center py-4 px-6 leading-6 text-left text-gray-500 dark:bg-gray-900 bg-white cursor-pointer"
+                  style="animation: 0.5s linear 0s 1 normal both running fadeIn; z-index: 1;">
+                  <div class="flex items-center text-left cursor-pointer">
+                    <div class="mr-4 text-gray-500">
+                      <div class="cursor-pointer">
+                        <input id="default-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkboxsmall3" class="inline-block"></label>
+                      </div>
+                    </div>
+                    <span class=" mr-2 text-gray-300">
+                      <svg class="bi" width="15" height="20" fill="currentColor">
+                        <use xlink:href="../elementos/herramientas/images/icons.svg#star" stroke="gold" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="text-left cursor-pointer">
+                    <div class="inline-flex relative w-10 h-10 text-center align-middle" style="border-radius: 50%;">
+                      <img class="w-10 h-10 text-gray-500 align-middle border-2 border-white border-solid"
+                        src="../elementos/herramientas/images/faces/5.jpg" alt="Generic placeholder image"
+                        style="border-radius: 50%;" />
+                    </div>
+                  </div>
+                  <div class="overflow-hidden flex-1 pl-4 text-left cursor-pointer">
+                    <div class="flex justify-between text-gray-500">
+                      <div class="inline-grid w-2/3 cursor-pointer">
+                        <span class="dark:text-white font-medium ">Odiar Francia</span>
+                      </div>
+                      <div class="absolute right-4 cursor-pointer">
+                        <span class="">
+                          <span class="text-sm leading-5 text-gray-400">03-29-2019</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex justify-between text-gray-500 whitespace-nowrap overflow-ellipsis">
+                      <p class="my-0 mr-4 text-xs text-gray-400" style="line-height: 1.75;">
+                        Hope your like it, or feel free to comment, feedback or rebound!
+                      </p>
+                      <div class="whitespace-nowrap">
+                        <span class="flex items-center cursor-pointer">
+                          <i class="mr-4 w-4 h-4 italic"></i>
+                          <span class=""></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+              </div>
+
+              <div class="dark:border-gray-800 border ml-16 entrada w-96 leading-6 text-gray-500 bg-white"
+                style="height: 619px; z-index: 3;">
+
+                <div class="entrada flex mt-6 ml-6 mb-0 leading-6 text-gray-500 break-words bg-white"
+                  style="border-radius: 10.2px 10.2px 0px 0px;">
+                  <h3 class="mt-0 textoCSS text-3xl font-bold text-blue-900 xl:text-3xl" id="emailCompose"
+                    style="line-height: 1.2;">
+                    New Message
+
+                  </h3>
+                  <button
+                    class="ml-28 dark:bg-white bg-gray-200 border border-4 border-black text-3xl font-bold text-blue-900 xl:text-3xl"
+                    id="emailCompose" style="line-height: 1.2;">
+                    X
+
+                  </button>
+                </div>
+
+                <div class="flex-auto p-6 leading-6  break-words">
+                  <div class="mb-3 ">
+                    <label for="emailfrom"
+                      class="textoCSS4 inline-block font-semibold break-words cursor-default">from</label>
+                    <input type="text" id="emailfrom"
+                      class="dark:border-gray-800 block py-1 px-3 m-0 w-full font-normal leading-normal bg-clip-padding dark:bg-gray-400 bg-gray-200 rounded border border-solid opacity-100 appearance-none cursor-default border-slate-200 focus:border-indigo-300 focus:bg-white "
+                      placeholder="user@example.com" />
+                  </div>
+                  <div class="text-gray-500">
+                    <input type="email" id="emailTo"
+                      class="dark:border-gray-800 dark:bg-gray-900 block py-1 px-3 m-0 w-full text-base font-normal leading-normal bg-clip-padding bg-white rounded border border-solid appearance-none cursor-text border-slate-200 focus:border-indigo-300 focus:bg-white focus:text-gray-500"
+                      placeholder="To" required="" style="transition: none 0s ease 0s;" />
+                    <label for="emailTo" class="textoCSS4 inline-block break-words cursor-default">To</label>
+                  </div>
+                  <div class="text-gray-500">
+                    <input type="text" id="emailSubject"
+                      class="dark:border-gray-800 dark:bg-gray-900 block py-1 px-3 m-0 w-full text-base font-normal leading-normal bg-clip-padding bg-white rounded border border-solid appearance-none cursor-text border-slate-200 focus:border-indigo-300 focus:bg-white focus:text-gray-500"
+                      placeholder="Subject" style="transition: none 0s ease 0s;" />
+                    <label for="emailSubject" class="textoCSS4 inline-block break-words cursor-default">Subject</label>
+                  </div>
+                  <div class="text-gray-500">
+                    <input type="text" id="emailCC"
+                      class="dark:border-gray-800 dark:bg-gray-900 block py-1 px-3 m-0 w-full text-base font-normal leading-normal bg-clip-padding bg-white rounded border border-solid appearance-none cursor-text border-slate-200 focus:border-indigo-300 focus:bg-white focus:text-gray-500"
+                      placeholder="CC" style="transition: none 0s ease 0s;" />
+                    <label for="emailCC" class="textoCSS4 inline-block break-words cursor-default">CC</label>
+                  </div>
+                  <div class="text-gray-500">
+                    <input type="text" id="emailBCC"
+                      class="dark:border-gray-800 dark:bg-gray-900 block py-1 px-3 m-0 w-full text-base font-normal leading-normal bg-clip-padding bg-white rounded border border-solid appearance-none cursor-text border-slate-200 focus:border-indigo-300 focus:bg-white focus:text-gray-500"
+                      placeholder="BCC" style="transition: none 0s ease 0s;" />
+                    <label for="emailBCC" class="textoCSS4 inline-block break-words cursor-default">BCC</label>
+                  </div>
+                  <!-- Compose mail Quill editor -->
+                  <div
+                    class="dark:border-gray-800 dark:bg-gray-900 relative text-gray-500 rounded border border-solid border-zinc-200">
+                    <div class="break-words">
+                      <div class="px-0" data-gramm="false" data-placeholder="Type something....." contenteditable="true"
+                        style="min-height: 80px;">
+                        <p class="mt-0 mb-4"><br class="" /></p>
+                      </div>
+                      <div class="" tabindex="-1" contenteditable="true"></div>
+                      <div class="left-0">
+                        <a class="text-indigo-700 cursor-pointer" target="_blank" href="about:blank"
+                          style="text-decoration: none;"></a><input type="text" data-formula="e=mc^2"
+                          data-link="https://quilljs.com" data-video="Embed URL" class="m-0 text-black cursor-text" /><a
+                          class="text-indigo-700" style="text-decoration: none;"></a><a class="text-indigo-700"
+                          style="text-decoration: none;"></a>
+                      </div>
+                    </div>
+                    <div class="flex justify-end break-words">
+                      <div class="pb-0">
+                        <span class="mr-0">
+                          <button class="m-0 text-center text-black normal-case rounded-none cursor-pointer"
+                            type="button">
+                            <svg viewBox="0 0 18 18" class="align-middle">
+                              <path class=""
+                                d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z">
+                              </path>
+                              <path class=""
+                                d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z">
+                              </path>
+                            </svg>
+                          </button>
+                          <button class="m-0 text-center text-black normal-case rounded-none cursor-pointer"
+                            type="button">
+                            <svg viewBox="0 0 18 18" class="align-middle">
+                              <line class="" x1="7" x2="13" y1="4" y2="4"></line>
+                              <line class="" x1="5" x2="11" y1="14" y2="14"></line>
+                              <line class="" x1="8" x2="10" y1="14" y2="4"></line>
+                            </svg>
+                          </button>
+                          <button class="m-0 text-center text-black normal-case rounded-none cursor-pointer"
+                            type="button">
+                            <svg viewBox="0 0 18 18" class="align-middle">
+                              <path class="" d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path>
+                              <rect class="" height="1" rx="0.5" ry="0.5" width="12" x="3" y="15"></rect>
+                            </svg>
+                          </button>
+                          <button class="m-0 text-center text-black normal-case rounded-none cursor-pointer"
+                            type="button">
+                            <svg viewBox="0 0 18 18" class="align-middle">
+                              <line class="" x1="7" x2="11" y1="7" y2="11"></line>
+                              <path class=""
+                                d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z">
+                              </path>
+                              <path class=""
+                                d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z">
+                              </path>
+                            </svg>
+                          </button>
+                          <button class="m-0 text-center text-black normal-case rounded-none cursor-pointer"
+                            type="button">
+                            <svg viewBox="0 0 18 18" class="align-middle">
+                              <rect class="" height="10" width="12" x="3" y="4"></rect>
+                              <circle class="" cx="6" cy="7" r="1"></circle>
+                              <polyline class="" points="5 12 5 11 7 9 8 10 11 7 13 9 13 12 5 12"></polyline>
+                            </svg>
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2 mb-3 textoCSS4">
+                    <div class="break-words">
+                      <input type="file" class="m-0 whitespace-pre cursor-default" id="emailAttach" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <div id="footer" class=" block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
+          data-mb="20">
+
+          <div class="float-left text-slate-400 mb-3">
+            <p class="mt-9 mod:ml-3 ml-4 texto2CSS">2023 © Mazer</p>
+          </div>
+          <div class="float-right text-slate-400 mr-8 mb-12 mt-9 texto2CSS">
+            <p class="texto2CSS mt-0">
+              Crafted with
+              <span class="inline-block text-red-500">
+                <svg width="15" height="15" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#heart-fill" />
+                </svg>
+              </span>
+              by
+              <a href="https://saugi.me" class="text-blue-700 cursor-pointer" style="text-decoration: none;">Saugi</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

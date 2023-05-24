@@ -10,8 +10,8 @@
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
   <link href="../../css/output.css" rel="stylesheet">
   <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
-
-
+  <script defer src="../elementos/button-light-dark.js"></script>
+  <script src="/node_modules/preline/dist/preline.js"></script>
 
 </head>
 
@@ -21,7 +21,6 @@
     <div id="sidebar" class="active ">
       <div class="sidebar-wrapper active entrada min-h-screen">
         <div class="sidebar-header relative ">
-
 
           <div class="flex w-60 mt-3 mb-2 items-center ">
             <div class="logo">
@@ -44,7 +43,7 @@
                 </g>
               </svg>
 
-              <div class="relative block mb-2 mt-2 form-switch fs-6" id="theme-toggle">
+              <div class="relative block mb-2 mt-2  fs-6" id="theme-toggle">
                 <div id="toggle-button" onclick="toggleTheme()">
                   <div id="sun-moon" class="sun"></div>
                 </div>
@@ -60,15 +59,13 @@
             </div>
 
             <button id="sidebar-hide"
-              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-color-transparent border-none p-0">
+              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-transparent border-none p-0">
               <svg class="bi" width="25" height="40" fill="currentColor" style="fill: blue;">
                 <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
               </svg>
             </button>
 
-
           </div>
-
 
         </div>
         <div class="sidebar-menu" style="font-family: 'Nunito';">
@@ -197,15 +194,11 @@
               </ul>
             </li>
 
-
-
             <li class="sidebar-item  mb-4">
 
               <span class="ml-4 textoSidebar">Forms & Tables</span>
 
             </li>
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -215,38 +208,34 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="layout-default.html">Input</a>
+                  <a href="../formtables/form-elements/form-element-input.html">Input</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layout-vertical-1-column.html">Input Group</a>
+                  <a href="../formtables/form-elements/form-element-input-group.html">Input Group</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layout-vertical-navbar.html">Select</a>
+                  <a href="../formtables/form-elements/form-element-select.html">Select</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layout-rtl.html">Radio</a>
+                  <a href="../formtables/form-elements/form-element-radio.html">Radio</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layout-horizontal.html">Checkbox</a>
+                  <a href="../formtables/form-elements/form-element-checkbox.html">Checkbox</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="layout-horizontal.html">Textarea</a>
+                  <a href="../formtables/form-elements/form-element-textarea.html">Textarea</a>
                 </li>
               </ul>
             </li>
 
-
-
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../formtables/form-layout.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
                 </svg> <span class="textoSidebar">Form Layout</span>
               </a>
 
             </li>
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -256,13 +245,10 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Parsley</a>
+                  <a href="../formtables/form-validation-parsley.html">Parsley</a>
                 </li>
               </ul>
             </li>
-
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -272,24 +258,22 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Quill</a>
+                  <a href="../formtables/form-editor/form-editor-quill.html">Quill</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">CKEditor</a>
+                  <a href="../formtables/form-editor/form-editor-ckeditor.html">CKEditor</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-toastify.html">Summernote</a>
+                  <a href="../formtables/form-editor/form-editor-summernote.html">Summernote</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-rating.html">TinyMCE</a>
+                  <a href="../formtables/form-editor/form-editor-tinymce.html">TinyMCE</a>
                 </li>
               </ul>
             </li>
 
-
-
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../formtables/table.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
                 </svg> <span class="textoSidebar">Table</span>
@@ -306,23 +290,19 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Datatable</a>
+                  <a href="../formtables/datatables/table-datatable.html">Datatable</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">Datatable (jQuery)</a>
+                  <a href="../formtables/datatables/table-datatable-jquery.html">Datatable (jQuery)</a>
                 </li>
               </ul>
             </li>
-
 
             <li class="sidebar-item  mb-4">
 
               <span class="ml-4 textoSidebar">Extra UI</span>
 
             </li>
-
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -332,19 +312,17 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Chatbox</a>
+                  <a href="../widgets/ui-widgets-chatbox.html">Chatbox</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">Pricing</a>
+                  <a href="../widgets/ui-widgets-pricing.html">Pricing</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-toastify.html">To-do list</a>
+                  <a href="../widgets/ui-widgets-to-do-list.html">To-do list</a>
                 </li>
 
               </ul>
             </li>
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -354,18 +332,16 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Bootstrap Icons</a>
+                  <a href="../icons/ui-icons-tailwind-icons.html">Tailwind Icons</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">Fontawesome</a>
+                  <a href="../icons/ui-icons-fontawesome.html">Fontawesome</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-toastify.html">Dripicons</a>
+                  <a href="../icons/ui-icons-dripicons.html">Dripicons</a>
                 </li>
               </ul>
             </li>
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -375,16 +351,13 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">ChartJS</a>
+                  <a href="../charts/ui-chart-chartjs.html">ChartJS</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">Apexcharts</a>
+                  <a href="../charts/ui-chart-apexcharts.html">Apexcharts</a>
                 </li>
               </ul>
             </li>
-
-
-
 
             <li class="w-60 sidebar-item ">
               <a href="../fileUploader/ui-file-uploader.html" class="sidebar-link">
@@ -394,8 +367,6 @@
               </a>
             </li>
 
-
-
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
@@ -404,31 +375,101 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="extra-component-avatar.html">Google Map</a>
+                  <a href="../maps/ui-map-google-map.html">Google Map</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">JS Vector Map</a>
+                  <a href="../maps/ui-map-jsvectormap.html">JS Vector Map</a>
                 </li>
               </ul>
             </li>
 
+            <li class="w-60 hs-accordion-group mb-7">
 
+              <div class=" submenu-item hs-accordion" id="hs-basic-heading-1">
 
+                <button type="button" class="mt-3 ml-4 flex textoSidebar hs-accordion-toggle "
+                  aria-controls="hs-basic-collapse-1"> <svg class="mr-4 bi" width="15" height="20" fill="currentColor">
+                    <use xlink:href="../elementos/herramientas/images/icons.svg#three-dots" />
+                  </svg>
+                  <span class="">Multi-level Menu</span>
+                  <svg
+                    class="ml-8 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-400 dark:text-gray-500"
+                    width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
 
-            <li class="w-60 sidebar-item has-sub mb-6 ">
-              <a href="#" class="sidebar-link">
-                <svg class="bi" width="15" height="40" fill="currentColor">
-                  <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
-                </svg> <span class="textoSidebar">Multi-Level Menu</span>
-              </a>
-              <ul class="submenu textoSidebar ml-8">
-                <li class="submenu-item">
-                  <a href="extra-component-avatar.html">First Level</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="extra-component-sweetalert.html">Another Menu</a>
-                </li>
-              </ul>
+                </button>
+
+                <div id="hs-basic-collapse-1"
+                  class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300"
+                  aria-labelledby="hs-basic-heading-1">
+                  <div class=" p-5 content-wrapper">
+                    <ul class=" textoSidebar ml-8">
+                      <li class="">
+                        <div class="hs-accordion-group">
+                          <div class="hs-accordion" id="hs-basic-heading-1">
+
+                            <button type="button" class="ml-3 flex textoSidebar hs-accordion-toggle"
+                              aria-controls="hs-basic-collapse-1">
+                              <span class="text-sm">First Level</span>
+                              <svg
+                                class="ml-16 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-500"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                              </svg>
+                            </button>
+
+                            <div id="hs-basic-collapse-1"
+                              class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300 "
+                              aria-labelledby="hs-basic-heading-1">
+                              <div class=" p-5 content-wrapper">
+                                <ul class=" textoSidebar ">
+                                  <li class="text-sm ml-5">
+                                    <a href="../multiLevelMenu/ui-multi-level-menu.html">Second Level</a>
+                                  </li>
+                                  <li class="text-sm ml-5 mt-4 hs-accordion-toggle">
+                                    <a href="#">Second Level Menu</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hs-accordion" id="hs-basic-heading-2">
+
+                            <button type="button" class="flex mt-6 ml-3 textoSidebar hs-accordion-toggle "
+                              aria-controls="hs-basic-collapse-2">
+                              <span class="text-sm">Another Menu</span>
+                              <svg
+                                class="ml-10 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-500"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                              </svg>
+                            </button>
+
+                            <div id="hs-basic-collapse-2"
+                              class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300 "
+                              aria-labelledby="hs-basic-heading-2">
+                              <div class=" p-5 content-wrapper">
+                                <ul class=" textoSidebar">
+                                  <li class=" hs-accordion-toggle text-sm ml-5">
+                                    <a href="#">Second Level Menu</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
 
             <li class="sidebar-item  mb-4">
@@ -437,18 +478,16 @@
 
             </li>
 
-
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../email-application/pages-email.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#envelope-fill" />
                 </svg> <span class="textoSidebar">Email Application</span>
               </a>
             </li>
 
-
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../chat-application/pages-chat.html" class="sidebar-link ">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#chat-dots-fill" />
                 </svg> <span class="textoSidebar">Chat Application</span>
@@ -457,28 +496,21 @@
               </ul>
             </li>
 
-
-
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../photo-gallery/pages-photo.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#image-fill" />
                 </svg> <span class="textoSidebar">Photo Gallery</span>
               </a>
             </li>
 
-
-
-
-            <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+            <li class="w-60 sidebar-item  ">
+              <a href="../checkout-page/pages-checkout.html" class="sidebar-link ">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#basket-fill" />
                 </svg> <span class="textoSidebar">Checkout Page</span>
               </a>
             </li>
-
-
 
             <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
@@ -498,9 +530,6 @@
                 </li>
               </ul>
             </li>
-
-
-
 
             <li class="w-60 sidebar-item has-sub mb-6">
               <a href="#" class="sidebar-link">
@@ -527,18 +556,16 @@
 
             </li>
 
-
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="https://zuramai.github.io/mazer/docs/" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#life-preserver" />
                 </svg> <span class="textoSidebar">Documentation</span>
               </a>
             </li>
 
-
             <li class="w-60 sidebar-item">
-              <a href="#" class="sidebar-link">
+              <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#puzzle" />
                 </svg> <span class="textoSidebar">Contribute</span>
@@ -546,44 +573,30 @@
             </li>
 
             <li class="w-60 sidebar-item mb-4">
-              <a href="#" class="sidebar-link">
+              <a href="https://github.com/zuramai/mazer#donation" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#cash" />
                 </svg> <span class="textoSidebar">Donate</span>
               </a>
             </li>
 
-
-
           </ul>
         </div>
       </div>
     </div>
 
-
-
-
-
-
-
-
     <!-- pagina -->
     <div id="main" class="main ml-4 mod:ml-80 mod:mt-8">
 
       <!-- boton movil -->
-
       <button id="sidebar-toggle" class="  text-white  rounded ml-4 mt-8 mod:hidden ">
-
 
         <svg class="bi" width="28" height="40" fill="currentColor" style="fill: blue;">
           <use xlink:href="../elementos/herramientas/images/icons.svg#justify" />
         </svg>
 
-
       </button>
-
       <!-- titulo -->
-
 
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
         <div class="md:order-2">
@@ -612,19 +625,8 @@
         </div>
       </div>
 
-
-
-
-
       <!-- contenido -->
-
-
       <div class="main-container">
-
-
-
-
-
 
         <div class="mod:ml-0 ml-1  mr-2 mb-4 flex flex-wrap" style="font-family: 'Nunito';">
 
@@ -637,16 +639,9 @@
                   Basic
                 </h4>
 
-
               </div>
 
-
               <div class="flex-auto p-6 leading-6 break-words text-slate-300">
-
-
-
-
-
 
                 <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset"
                   data-dropdown-offset-distance="1" data-dropdown-offset-skidding="59" data-dropdown-placement="bottom"
@@ -676,25 +671,6 @@
                   </ul>
                 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset"
                   data-dropdown-offset-distance="1" data-dropdown-offset-skidding="59" data-dropdown-placement="bottom"
                   class="mr-1 text-white bg-gray-500 hover:bg-gray-600  focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2.5 text-center inline-flex items-center "
@@ -702,8 +678,6 @@
                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg></button>
-
-
 
                 <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset"
                   data-dropdown-offset-distance="1" data-dropdown-offset-skidding="59" data-dropdown-placement="bottom"
@@ -713,8 +687,6 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg></button>
 
-
-
                 <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset"
                   data-dropdown-offset-distance="1" data-dropdown-offset-skidding="59" data-dropdown-placement="bottom"
                   class="mr-1 text-white bg-cyan-500 hover:bg-cyan-600 focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2.5 text-center inline-flex items-center"
@@ -722,8 +694,6 @@
                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg></button>
-
-
 
                 <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset"
                   data-dropdown-offset-distance="1" data-dropdown-offset-skidding="59" data-dropdown-placement="bottom"
@@ -733,8 +703,6 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg></button>
 
-
-
                 <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset"
                   data-dropdown-offset-distance="1" data-dropdown-offset-skidding="59" data-dropdown-placement="bottom"
                   class="mr-1 text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-1 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2.5 text-center inline-flex items-center "
@@ -742,9 +710,6 @@
                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg></button>
-
-
-
 
                 <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset"
                   data-dropdown-offset-distance="1" data-dropdown-offset-skidding="59" data-dropdown-placement="bottom"
@@ -754,23 +719,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg></button>
 
-
-
-
-
-
               </div>
-
-
-
-
             </div>
-
           </div>
-
-
-
-
         </div>
 
         <div class="mod:ml-0 ml-1 mt-5 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
@@ -784,13 +735,7 @@
                   Split Dropdowns
                 </h4>
 
-
               </div>
-
-
-
-
-
 
               <div class="flex-auto p-6 leading-6 break-words text-slate-300">
                 <p class="textoCSS3 mt-0 mb-4 break-words">
@@ -809,7 +754,6 @@
                       Blue
                     </button>
 
-
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="20"
                       data-dropdown-placement="bottom"
@@ -819,8 +763,6 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                       </svg></button>
                   </div>
-
-
 
                   <!-- Dropdown menu -->
                   <div id="dropdownDivider"
@@ -850,13 +792,7 @@
                     </div>
                   </div>
 
-
                 </div>
-
-
-
-
-
 
                 <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
                   <div class="bg-gray-500 rounded-md">
@@ -865,7 +801,6 @@
                       style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
                       Gray
                     </button>
-
 
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="20"
@@ -878,10 +813,6 @@
                   </div>
                 </div>
 
-
-
-
-
                 <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
                   <div class="bg-green-700  rounded-md">
                     <button type="button"
@@ -889,7 +820,6 @@
                       style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
                       Green
                     </button>
-
 
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="20"
@@ -902,10 +832,6 @@
                   </div>
                 </div>
 
-
-
-
-
                 <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
                   <div class="bg-cyan-500 rounded-md">
                     <button type="button"
@@ -913,7 +839,6 @@
                       style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
                       Cyan
                     </button>
-
 
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="20"
@@ -926,10 +851,6 @@
                   </div>
                 </div>
 
-
-
-
-
                 <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
                   <div class="bg-red-600 rounded-md">
                     <button type="button"
@@ -937,7 +858,6 @@
                       style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
                       Red
                     </button>
-
 
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="20"
@@ -950,10 +870,6 @@
                   </div>
                 </div>
 
-
-
-
-
                 <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
                   <div class="bg-yellow-400 rounded-md">
                     <button type="button"
@@ -961,7 +877,6 @@
                       style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
                       Yellow
                     </button>
-
 
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="20"
@@ -974,11 +889,6 @@
                   </div>
                 </div>
 
-
-
-
-
-
                 <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
                   <div class="bg-gray-400 rounded-md">
                     <button type="button"
@@ -986,7 +896,6 @@
                       style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
                       Light
                     </button>
-
 
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="20"
@@ -999,11 +908,6 @@
                   </div>
                 </div>
 
-
-
-
-
-
                 <div class="inline-flex relative mb-1 align-middle rounded">
                   <div class="bg-black rounded-md">
                     <button type="button"
@@ -1011,7 +915,6 @@
                       style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
                       Black
                     </button>
-
 
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="20"
@@ -1024,17 +927,8 @@
                   </div>
                 </div>
               </div>
-
-
-
-
             </div>
-
           </div>
-
-
-
-
         </div>
 
         <div class="mod:ml-0 ml-1 mt-5 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
@@ -1048,7 +942,6 @@
                   Dropdown with Icons & Emoji
                 </h4>
 
-
               </div>
 
               <div class="flex-auto p-6 leading-6 break-words text-slate-300">
@@ -1059,13 +952,6 @@
                   <code class="font-mono text-sm leading-5 text-pink-600">SVG</code>
                   for font-size and spacing of emojis.
                 </p>
-
-
-
-
-
-
-
 
                 <button id="dropdownOffsetButton" data-dropdown-toggle="emoji1" data-dropdown-offset-distance="1"
                   data-dropdown-offset-skidding="50" data-dropdown-placement="bottom"
@@ -1128,7 +1014,6 @@
                   </ul>
                 </div>
 
-
                 <!-- Dropdown menu emoji 3 -->
                 <div id="emoji3"
                   class="z-10 hidden bg-white divide-y divide-gray-100 rounded-sm shadow w-52 dark:bg-gray-700">
@@ -1151,9 +1036,6 @@
                   </ul>
                 </div>
 
-
-
-
                 <div class="inline-flex relative mb-1 align-middle rounded">
                   <div class="relative break-words">
                     <button id="dropdownOffsetButton" data-dropdown-toggle="emoji2" data-dropdown-offset-distance="1"
@@ -1166,8 +1048,6 @@
                   </div>
                 </div>
 
-
-
                 <div class="inline-flex relative mb-1 align-middle rounded">
                   <div class="relative break-words">
                     <button id="dropdownOffsetButton" data-dropdown-toggle="emoji3" data-dropdown-offset-distance="1"
@@ -1179,20 +1059,9 @@
                       </svg></button>
                   </div>
                 </div>
-
               </div>
-
-
-
-
-
             </div>
-
           </div>
-
-
-
-
         </div>
 
         <div class="mod:ml-0 ml-1 mt-5 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
@@ -1205,7 +1074,6 @@
                 <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
                   Directions
                 </h4>
-
 
               </div>
 
@@ -1222,10 +1090,6 @@
                   to the parent element.
                 </p>
                 <div class="mt-1 break-words">
-
-
-
-
 
                   <!-- Dropdown menu -->
                   <div id="dropdownDivider2"
@@ -1251,13 +1115,6 @@
 
                   </div>
 
-
-
-
-
-
-
-
                   <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
                     <div class="relative text-slate-300">
                       <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownDivider2"
@@ -1273,8 +1130,6 @@
                     </div>
                   </div>
 
-
-
                   <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
                     <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownDivider2"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="49" data-dropdown-placement="top"
@@ -1286,10 +1141,6 @@
                           clip-rule="evenodd"></path>
                       </svg></button>
                   </div>
-
-
-
-
 
                   <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
                     <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownDivider2"
@@ -1304,8 +1155,6 @@
                       </svg></button>
                   </div>
 
-
-
                   <div class="inline-flex relative mb-1 align-middle rounded">
                     <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownDivider2"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="59"
@@ -1319,23 +1168,12 @@
                       </svg>Drop Left</button>
                   </div>
 
-
-
-
-
                 </div>
               </div>
-
-
-
-
 
             </div>
 
           </div>
-
-
-
 
         </div>
 
@@ -1350,9 +1188,7 @@
                   Sizes
                 </h4>
 
-
               </div>
-
 
               <div class="flex-auto p-6 leading-6 break-words text-slate-300">
                 <p class="textoCSS3 mt-0 mb-4 break-words">
@@ -1410,7 +1246,6 @@
                           Large
                         </button>
 
-
                         <button id="dropdownDividerButton" data-dropdown-toggle="dropdownOffset"
                           data-dropdown-offset-distance="1" data-dropdown-offset-skidding="-4"
                           data-dropdown-placement="bottom"
@@ -1430,7 +1265,6 @@
                           Default
                         </button>
 
-
                         <button id="dropdownDividerButton" data-dropdown-toggle="dropdownOffset"
                           data-dropdown-offset-distance="1" data-dropdown-offset-skidding="23"
                           data-dropdown-placement="bottom"
@@ -1443,11 +1277,6 @@
                       </div>
                     </div>
 
-
-
-
-
-
                     <div class="inline-flex relative mb-1 align-middle rounded">
 
                       <div class="bg-blue-700 rounded-md ">
@@ -1456,7 +1285,6 @@
                           style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
                           Small
                         </button>
-
 
                         <button id="dropdownDividerButton" data-dropdown-toggle="dropdownOffset"
                           data-dropdown-offset-distance="1" data-dropdown-offset-skidding="33"
@@ -1469,52 +1297,13 @@
                           </svg></button>
                       </div>
 
-
-
-
-
-
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                   </div>
                 </div>
               </div>
-
-
-
-
             </div>
-
           </div>
-
-
-
-
         </div>
-
-
-
-
-
-
-
-
-
 
         <div class="mod:ml-0 ml-1 mt-5 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
 
@@ -1527,9 +1316,7 @@
                   Options
                 </h4>
 
-
               </div>
-
 
               <div class="flex-auto p-6 leading-6 break-words text-slate-300">
                 <p class="textoCSS3 mt-0 mb-4 break-words">
@@ -1565,7 +1352,6 @@
 
                     </ul>
                   </div>
-
 
                   <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset4"
                     data-dropdown-offset-distance="1" data-dropdown-offset-skidding="56"
@@ -1615,7 +1401,6 @@
                       Reference
                     </button>
 
-
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider3"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="23"
                       data-dropdown-placement="bottom"
@@ -1627,23 +1412,13 @@
                   </div>
                 </div>
 
-
-
               </div>
-
-
-
-
 
             </div>
 
           </div>
 
-
-
-
         </div>
-
 
         <div class="mod:ml-0 ml-1 mt-5 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
 
@@ -1656,9 +1431,7 @@
                   Variations
                 </h4>
 
-
               </div>
-
 
               <div class="flex-auto p-6 leading-6 break-words text-slate-300">
                 <p class="textoCSS3 mt-0 mb-4 break-words">
@@ -1742,10 +1515,6 @@
                   </div>
                 </div>
 
-
-
-
-
                 <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
 
                   <div class="bg-blue-700 rounded-md">
@@ -1754,7 +1523,6 @@
                       style="font-family: Nunito; text-decoration: none; transition: none 0s ease 0s;">
                       Icons
                     </button>
-
 
                     <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider5"
                       data-dropdown-offset-distance="1" data-dropdown-offset-skidding="72" data-dropdown-placement="top"
@@ -1769,18 +1537,6 @@
                           clip-rule="evenodd"></path>
                       </svg></button>
                   </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
                   <!-- Dropdown menu -->
                   <div id="dropdownDivider5"
@@ -1813,11 +1569,7 @@
 
                   </div>
 
-
                 </div>
-
-
-
 
                 <div class="inline-flex relative mr-1 mb-1 align-middle rounded">
                   <button id="dropdownOffsetButton" data-dropdown-toggle="dropdownOffset9"
@@ -1829,8 +1581,6 @@
                         d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
                         clip-rule="evenodd"></path>
                     </svg></button>
-
-
 
                   <!-- Dropdown menu 1 -->
                   <div id="dropdownOffset9"
@@ -1876,40 +1626,21 @@
                       <div
                         class="overflow-hidden my-2 mx-0 h-0 text-left border-t border-solid opacity-100 border-slate-300"
                         style="list-style: outside none none;"></div>
-                      <a class="texto2CSS block clear-both py-2 px-6 w-full font-normal whitespace-nowrap bg-color-transparent border-0 cursor-pointer text-zinc-500"
+                      <a class="texto2CSS block clear-both py-2 px-6 w-full font-normal whitespace-nowrap bg-transparent border-0 cursor-pointer text-zinc-500"
                         href="#" style=" transition: all 0.5s ease 0s; list-style: outside none none;">New
                         around here? Sign up</a>
-                      <a class="texto2CSS block clear-both py-2 px-6 w-full font-normal whitespace-nowrap bg-color-transparent border-0 cursor-pointer"
+                      <a class="texto2CSS block clear-both py-2 px-6 w-full font-normal whitespace-nowrap bg-transparent border-0 cursor-pointer"
                         href="#" style=" transition: all 0.5s ease 0s; list-style: outside none none;">Forgot
                         password?</a>
                     </div>
-
                   </div>
                 </div>
-
-
-
               </div>
-
-
-
-
             </div>
-
           </div>
-
-
-
-
         </div>
 
-
-
         <!-- footer -->
-
-
-
-
         <div id="footer" class=" block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
           data-mb="20">
 
@@ -1930,187 +1661,8 @@
           </div>
         </div>
       </div>
-
-
-
-
     </div>
-
-
-
-
   </div>
-
-
 </body>
 
-
 </html>
-
-<script>
-
-  //---------------------color theme y sidebar--------------------
-
-  const themeToggle = document.getElementById('theme-toggle');
-  const html = document.getElementsByTagName('html')[0];
-  const body = document.getElementsByTagName('body')[0];
-  const sunMoon = document.getElementById('sun-moon');
-
-
-  themeToggle.addEventListener('click', () => {
-    if (html.classList.contains('dark')) {
-      html.classList.remove('dark');
-      html.classList.add('light');
-      body.classList.remove('bg-dark');
-      body.classList.add('bg-light');
-      localStorage.setItem('theme', 'light');
-    } else {
-      html.classList.remove('light');
-      html.classList.add('dark');
-      body.classList.remove('bg-light');
-      body.classList.add('bg-dark');
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-
-  const savedTheme = localStorage.getItem('theme');
-
-  if (savedTheme === 'dark') {
-    html.classList.add('dark');
-    body.classList.add('bg-dark');
-    sunMoon.classList.remove('sun');
-    sunMoon.classList.add('moon');
-    body.classList.add('dark-theme');
-
-  } else {
-    html.classList.add('light');
-    body.classList.add('bg-light');
-    sunMoon.classList.remove('moon');
-    sunMoon.classList.add('sun');
-    body.classList.remove('dark-theme');
-
-  }
-
-
-
-
-
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const sidebarItems = document.querySelectorAll('.has-sub');
-
-    sidebarItems.forEach(sidebarItem => {
-      const submenu = sidebarItem.querySelector('.submenu');
-
-      if (!submenu.classList.contains('active')) {
-        submenu.style.maxHeight = '0';
-      }
-
-      sidebarItem.addEventListener('click', function (event) {
-
-        const target = event.target;
-
-        if (target.closest('.submenu-item')) {
-          return;
-        }
-
-        event.preventDefault();
-
-        if (!submenu.classList.contains('active')) {
-          submenu.classList.add('active');
-          const height = submenu.scrollHeight;
-          submenu.style.maxHeight = `${height}px`;
-          submenu.style.transitionDuration = `${Math.round(400 + (height / 10))}ms`;
-        } else {
-          const height = submenu.scrollHeight;
-          submenu.style.maxHeight = '0';
-          submenu.style.transition = 'max-height 0.3s ease-out';
-          setTimeout(() => {
-            submenu.classList.remove('active');
-          }, 300);
-        }
-
-
-      });
-    });
-  });
-
-
-  function handleResize() {
-    const sidebarToggle = document.getElementById('sidebar-toggle');
-    const sidebar = document.getElementById('sidebar');
-    if (window.innerWidth <= 1200) {
-      sidebarToggle.classList.remove('hidden');
-      if (sidebar.classList.contains('active') && window.devicePixelRatio >= 1.5) {
-        sidebar.classList.remove('active');
-      }
-    } else {
-      sidebarToggle.classList.add('hidden');
-      if (!sidebar.classList.contains('active')) {
-        sidebar.classList.add('active');
-      }
-    }
-  }
-
-  window.addEventListener('resize', handleResize);
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const sidebar = document.getElementById('sidebar');
-    const sidebarToggle = document.getElementById('sidebar-toggle');
-    const sidebarHide = document.getElementById('sidebar-hide');
-    const body = document.body;
-    const overlay = document.getElementById('main');
-
-    function onZoomChange() {
-      toggleSidebar(null, true);
-    }
-
-    function toggleSidebar(event, forceClose = false) {
-      if (event) {
-        event.stopPropagation();
-      }
-      if (forceClose) {
-        body.classList.remove('no-scroll');
-        overlay.classList.remove('active');
-      } else {
-        sidebar.classList.toggle('active');
-        body.classList.toggle('no-scroll');
-        overlay.classList.toggle('active');
-      }
-    }
-    window.addEventListener('resize', onZoomChange);
-
-
-
-
-    sidebarToggle.addEventListener('click', toggleSidebar);
-    sidebarHide.addEventListener('click', toggleSidebar);
-
-    body.addEventListener('click', (event) => {
-      if (!event.target.closest('#sidebar') && !event.target.closest('#sidebar-toggle')) {
-        if (sidebar.classList.contains('active') && window.innerWidth <= 1200) {
-          toggleSidebar();
-        }
-      }
-    });
-
-    handleResize();
-  });
-
-
-  function toggleTheme() {
-    const body = document.body;
-    const sunMoon = document.getElementById('sun-moon');
-    body.classList.toggle('dark-theme');
-
-    if (body.classList.contains('dark-theme')) {
-      sunMoon.classList.remove('sun');
-      sunMoon.classList.add('moon');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      sunMoon.classList.remove('moon');
-      sunMoon.classList.add('sun');
-      localStorage.setItem('theme', 'light');
-    }
-  }
-</script>
