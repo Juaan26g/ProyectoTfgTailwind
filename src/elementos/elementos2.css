@@ -65,13 +65,8 @@ p {
     color: #25396f;
 }
 
-
-
-
-
-
 /*
-------- poner icono en username y password + entrada ---------
+------- poner icono en username y password + entrada (color bg) ---------
 */
 
 .icono1 {
@@ -97,8 +92,6 @@ p {
 .bg-dark {
     background-color: #151521;
 }
-
-
 
 /*
 ----------------sidebar animación-----------------
@@ -126,7 +119,6 @@ p {
     }
 }
 
-
 /*
 ----------------sidebar boton luz-----------------
 */
@@ -147,8 +139,6 @@ p {
     border: solid 2px gray;
 
 }
-
-
 
 .dark #toggle-button {
     width: 30px;
@@ -172,8 +162,6 @@ p {
 
 }
 
-
-
 body.dark-theme #sun-moon {
 
     left: 17px;
@@ -186,24 +174,13 @@ body.dark-theme #toggle-button {
 
 }
 
-
-
-
-
 /*
-----------------accordion -----------------
+----------------accordion + textoCSS (color text) -----------------
 */
-
-
-
 
 .hidden {
     display: none;
 }
-
-/*
-----------------accordion -----------------
-*/
 
 .dark .textoCSS {
     color: #ffffff;
@@ -229,25 +206,20 @@ body.dark-theme #toggle-button {
     color: #6d7d89;
 }
 
-
-
 #footer {
     transition: transform 0.3s ease;
 }
-
 
 /*
 ----------------bloquear scroll pagina-----------------
 */
 .no-scroll {
-    overflow: hidden;
+    /*  overflow: hidden; */
     height: 100%;
 }
 
-
-
 /*
-----------------pagina components - pagination-----------------
+----------------pagina components - pagination + textoCSS (color text)-----------------
 */
 
 .dark .textoPagination {
@@ -258,7 +230,6 @@ body.dark-theme #toggle-button {
     color: #455fbe;
 }
 
-
 .dark .textoCSS4 {
     color: #c1bfbc;
 }
@@ -267,16 +238,9 @@ body.dark-theme #toggle-button {
     color: #617384;
 }
 
-
-
-
-
-
-
 /*
 ----------------pagina components - tooltip-----------------
 */
-
 
 .tooltip-container {
     position: relative;
@@ -369,17 +333,9 @@ body.dark-theme #toggle-button {
     border-color: transparent transparent transparent #1f2937;
 }
 
-
-
-
-
-
 /*
-----------------pagina components - toast-----------------
+----------------pagina components - toast + textoCSS (color text)-----------------
 */
-
-
-
 
 .dark .toastEntrada {
     background-color: #35354d;
@@ -419,8 +375,6 @@ body.dark-theme #toggle-button {
 
 }
 
-
-
 .dark .textoCSS3 {
     color: #c1bfbc;
 }
@@ -430,16 +384,14 @@ body.dark-theme #toggle-button {
 }
 
 
-
-
-
 /*
 ----------------sidebar herramientas-----------------
 */
-
+/*
 .main.active {
-    opacity: 0.4;
+     opacity: 0.4; 
 }
+*/
 
 #sidebar {
     position: fixed;
@@ -448,9 +400,6 @@ body.dark-theme #toggle-button {
     height: 100%;
     z-index: 100;
 }
-
-
-
 
 .dark .textoSidebar {
     color: #9099ac;

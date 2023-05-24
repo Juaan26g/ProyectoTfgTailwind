@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alert - Mazer Admin Dashboard</title>
+  <title>Photo Gallery - Mazer Admin Dashboard</title>
   <link rel="stylesheet" href="../elementos/elementos2.css">
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
@@ -12,17 +12,20 @@
   <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
   <script defer src="../elementos/button-light-dark.js"></script>
   <script src="/node_modules/preline/dist/preline.js"></script>
-
+  <style>
+    .hs-overlay {
+      background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+  </style>
 </head>
 
 <body>
-
   <div id="app">
-    <div id="sidebar" class="active ">
+    <div id="sidebar" class="active">
       <div class="sidebar-wrapper active entrada min-h-screen">
         <div class="sidebar-header relative ">
-
           <div class="flex w-60 mt-3 mb-2 items-center ">
+
             <div class="logo">
               <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg" alt="Logo" /></a>
             </div>
@@ -42,13 +45,11 @@
                   </g>
                 </g>
               </svg>
-
               <div class="relative block mb-2 mt-2  fs-6" id="theme-toggle">
                 <div id="toggle-button" onclick="toggleTheme()">
                   <div id="sun-moon" class="sun"></div>
                 </div>
               </div>
-
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                 role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20" height="20"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -66,9 +67,10 @@
             </button>
 
           </div>
-
         </div>
+
         <div class="sidebar-menu" style="font-family: 'Nunito';">
+
           <ul class="menu">
             <li class="sidebar-title textoSidebar">Menu</li>
 
@@ -80,63 +82,64 @@
               </a>
             </li>
 
-            <li class="w-60 sidebar-item active has-sub">
+            <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#stack" />
                 </svg> <span class="textoSidebar">Components</span>
               </a>
-              <ul class="submenu active textoSidebar ml-8">
+
+              <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item  ">
-                  <a href="component-accordion.html">Accordion</a>
-                </li>
-                <li class="submenu-item active">
-                  <a href="component-alert.html">Alert</a>
+                  <a href="../components/component-accordion.html">Accordion</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-badge.html">Badge</a>
+                  <a href="../components/component-alert.html">Alert</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-badge.html">Badge</a>
                 </li>
                 <li class="submenu-item ">
-                  <a href="component-breadcrumb.html">Breadcrumb</a>
+                  <a href="../components/component-breadcrumb.html">Breadcrumb</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-button.html">Button</a>
+                  <a href="../components/component-button.html">Button</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-card.html">Card</a>
+                  <a href="../components/component-card.html">Card</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-carousel.html">Carousel</a>
+                  <a href="../components/component-carousel.html">Carousel</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-collapse.html">Collapse</a>
+                  <a href="../components/component-collapse.html">Collapse</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-dropdown.html">Dropdown</a>
+                  <a href="../components/component-dropdown.html">Dropdown</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-list-group.html">List Group</a>
+                  <a href="../components/component-list-group.html">List Group</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-modal.html">Modal</a>
+                  <a href="../components/component-modal.html">Modal</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-navs.html">Navs</a>
+                  <a href="../components/component-navs.html">Navs</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-pagination.html">Pagination</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-progress.html">Progress</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="../components/component-spinner.html">Spinner</a>
                 </li>
                 <li class="submenu-item ">
-                  <a href="component-pagination.html">Pagination</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="component-progress.html">Progress</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="component-spinner.html">Spinner</a>
+                  <a href="../components/component-toasts.html">Toasts</a>
                 </li>
                 <li class="submenu-item ">
-                  <a href="component-toasts.html">Toasts</a>
-                </li>
-                <li class="submenu-item ">
-                  <a href="component-tooltip.html">Tooltip</a>
+                  <a href="../components/component-tooltip.html">Tooltip</a>
                 </li>
               </ul>
             </li>
@@ -496,8 +499,8 @@
               </ul>
             </li>
 
-            <li class="w-60 sidebar-item ">
-              <a href="../photo-gallery/pages-photo.html" class="sidebar-link">
+            <li class="w-60 sidebar-item active">
+              <a href="../photo-gallery/pages-photo.html" class="sidebar-link active">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#image-fill" />
                 </svg> <span class="textoSidebar">Photo Gallery</span>
@@ -579,7 +582,6 @@
                 </svg> <span class="textoSidebar">Donate</span>
               </a>
             </li>
-
           </ul>
         </div>
       </div>
@@ -589,8 +591,7 @@
     <div id="main" class="main ml-4 mod:ml-80 mod:mt-8">
 
       <!-- boton movil -->
-      <button id="sidebar-toggle" class="  text-white  rounded ml-4 mt-8 mod:hidden ">
-
+      <button id="sidebar-toggle" class="text-white rounded ml-4 mt-8 mod:hidden ">
         <svg class="bi" width="28" height="40" fill="currentColor" style="fill: blue;">
           <use xlink:href="../elementos/herramientas/images/icons.svg#justify" />
         </svg>
@@ -601,14 +602,14 @@
         <div class="md:order-2">
           <nav>
             <ol
-              class="flex flex-nowrap flex-wrap p-0 mt-1 mb-4 lg:mb-14 ml-4 text-base bg-white rounded-none bg-opacity-[0] md:mr-8  "
+              class="flex flex-nowrap flex-wrap p-0 mt-1 mb-4 lg:mb-14 ml-4 text-base bg-white rounded-none bg-opacity-[0] md:mr-8"
               style="list-style: none;">
               <li class="text-left" style="list-style: outside none none;">
                 <a href="../index.html" class="text-blue-700 cursor-pointer"
                   style=" list-style: outside none none; font-family: 'Nunito';">Dashboard</a>
               </li>
               <li class="pl-2 text-left text-gray-500 whitespace-nowrap">
-                / Alert
+                / Photo Gallery
               </li>
             </ol>
           </nav>
@@ -617,388 +618,223 @@
         <div class="order-1 mb-4 md:mb-0 md:order-1  w-6/12">
           <h3 class="textoCSS mt-2 mb-1 ml-4 mod:ml-3 text-3xl text-white xl:text-3xl"
             style="line-height: 1.2; font-family: 'Nunito'; font-weight: 600;">
-            Alert
+            Photo Gallery
           </h3>
           <p class="ml-4 mt-2 text-slate-400 texto2CSS mod:ml-3 mod:mt-3 ">
-            A pretty helpful component to show emphasized information to the user. </p>
+            Super simple photo gallery. </p>
         </div>
       </div>
 
       <!-- contenido -->
-      <div class="main-container" style="font-family: 'Nunito' ;">
+      <div class="main-container">
 
-        <div class=" md:flex mt-4 mr-3">
+        <div class="mod:ml-0 ml-1 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
 
-          <div class="flex-none px-3 pr-4 mt-0 w-full max-w-full leading-6 text-gray-500 md:w-1/2 md:flex-none">
-            <div class="entrada flex relative flex-col mb-8 min-w-0 text-gray-500 break-words bg-clip-border "
-              style="height: 679.031px; border-radius: 11.2px;">
-              <div class="p-6 mb-0 break-words" style="border-radius: 10.2px 10.2px 0px 0px;">
-                <h4 class="textoCSS mt-0 mb-2 text-lg font-bold  mod:text-xl" style="line-height: 1.2;">
-                  Default
+          <div class="mt-4  flex-none pr-6 pl-1 w-full max-w-full leading-6  md:flex-none text-slate-300">
+            <div class="ml-2  flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 100px; border-radius: 11.2px;">
+
+              <div class="pt-5 pr-3 pl-6 mb-6 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Our Gallery
                 </h4>
               </div>
-              <div class="flex-auto px-6 pt-0 pb-6 break-words">
-                <div class="relative p-4 mb-4 text-white bg-blue-700 rounded">
-                  This is blue alert.
-                </div>
-                <div class="relative p-4 mb-4 text-white bg-green-600 rounded">
-                  This is green alert.
-                </div>
-                <div class="relative p-4 mb-4 bg-amber-300 rounded text-yellow-700">
-                  This is yellow alert.
-                </div>
-                <div class="relative p-4 mb-4 text-white bg-red-400 rounded">
-                  This is red alert.
-                </div>
-                <div class="relative p-4 mb-4 text-white rounded bg-zinc-700">
-                  This is dark (zinc) alert.
-                </div>
-                <div class="relative p-4 mb-4 bg-gray-100 rounded text-neutral-700">
-                  This is neutral alert.
-                </div>
-                <div class="relative p-4 mb-4 rounded bg-stone-50 text-zinc-500">
-                  This is light (stone) alert.
-                </div>
-                <div class="relative p-4 mb-4 text-white bg-blue-400 rounded">
-                  This is info (blue) alert.
-                </div>
-              </div>
-            </div>
-            <div class="entrada flex relative flex-col mb-8 min-w-0 text-gray-500 break-words bg-clip-border"
-              style="height: 535.031px; border-radius: 11.2px;">
-              <div class="p-6 mb-0 break-words" style="border-radius: 10.2px 10.2px 0px 0px;">
-                <h4 class="textoCSS mt-0 mb-2 text-lg font-bold mod:text-xl" style="line-height: 1.2;">
-                  With Icon
-                </h4>
-              </div>
-              <div class="flex-auto px-6 pt-0 pb-6 break-words">
-                <div class="flex relative p-4 mb-4 text-white bg-blue-700 rounded">
 
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon fill="none" stroke="white" stroke-width="2"
-                      points="25,0 32,17.5 50,17.5 36,28.75 40,47.5 25,38.75 10,47.5 14,28.75 0,17.5 18,17.5" />
-                  </svg> This is blue alert.
-
-                </div>
-                <div class="flex relative p-4 mb-4 text-white bg-green-600 rounded">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="25" cy="25" r="24" fill="none" stroke="white" stroke-width="2" />
-                    <polyline points="14,25 22,33 36,19" fill="none" stroke="white" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg> This is green alert.
-                </div>
-                <div class="flex relative p-4 mb-4 bg-amber-300 rounded text-stone-700">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="25,4 4,44 46,44" fill="none" stroke="black" stroke-width="2" />
-                    <rect x="23" y="17" width="4" height="15" fill="black" />
-                    <rect x="23" y="34" width="4" height="4" fill="black" />
-                  </svg> This is yellow alert.
-                </div>
-                <div class="flex relative p-4 mb-4 text-white bg-red-400 rounded">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect x="1" y="1" width="48" height="48" fill="none" stroke="white" stroke-width="2" />
-                    <line x1="15" y1="15" x2="35" y2="35" stroke="white" stroke-width="2" stroke-linecap="round" />
-                    <line x1="35" y1="15" x2="15" y2="35" stroke="white" stroke-width="2" stroke-linecap="round" />
-                  </svg>
-                  This is red alert.
-                </div>
-                <div class="flex relative p-4 mb-4 bg-gray-100 rounded text-neutral-700">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon fill="none" stroke="black" stroke-width="2"
-                      points="25,0 32,17.5 50,17.5 36,28.75 40,47.5 25,38.75 10,47.5 14,28.75 0,17.5 18,17.5" />
-                  </svg> This is neutral alert.
-                </div>
-                <div class="flex relative p-4 mb-4 text-white bg-blue-400 rounded">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon fill="none" stroke="white" stroke-width="2"
-                      points="25,0 32,17.5 50,17.5 36,28.75 40,47.5 25,38.75 10,47.5 14,28.75 0,17.5 18,17.5" />
-                  </svg> This is info (blue) alert.
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 text-gray-500 break-words">
+                <div class="flex flex-wrap -mx-3 mt-0 text-gray-500">
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyN3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1632951634308-d7889939c125?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1632949107130-fc0d4f747b26?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3OHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
                 </div>
 
+                <div class="flex flex-wrap -mx-3 mt-2 text-gray-500 md:mt-6" data-bs-toggle="modal"
+                  data-bs-target="#galleryModal">
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyN3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1632951634308-d7889939c125?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1632949107130-fc0d4f747b26?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3OHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="entrada flex relative flex-col mb-8 min-w-0 text-gray-500 break-words bg-clip-border "
-              style="min-height: 5px; border-radius: 11.2px;">
-              <div class="p-6 mb-0 break-words" style="border-radius: 10.2px 10.2px 0px 0px;">
-                <h4 class="textoCSS mt-0 mb-2 text-xl font-bold  mod:text-xl" style="line-height: 1.2;">
-                  Dismissable
-                </h4>
-              </div>
-              <div class="flex-auto px-6 pt-0 pb-6 break-words">
-                <div id="alert-1"
-                  class="flex justify-between relative py-3 pr-3 pl-4 mb-4 text-white bg-blue-700 rounded" role="alert"
-                  style="transition: none 0s ease 0s;">
-                  This is blue alert.
-                  <button type="button"
-                    class="    text-blue-500 rounded-lg  focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8  dark:text-blue-400 dark:hover:bg-gray-700"
-                    data-dismiss-target="#alert-1" aria-label="Close">
-                    <span class="sr-only">Close</span>
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div id="alert-2"
-                  class="flex justify-between relative py-3 pr-3 pl-4 mb-4 text-white bg-green-600 rounded"
-                  style="transition: none 0s ease 0s;">
-                  This is green alert.
-                  <button type="button"
-                    class="    text-blue-500 rounded-lg  focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8  dark:text-blue-400 dark:hover:bg-gray-700"
-                    data-dismiss-target="#alert-2" aria-label="Close">
-                    <span class="sr-only">Close</span>
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div id="alert-3"
-                  class="flex justify-between relative py-3 pr-3 pl-4 mb-4 bg-amber-300 rounded text-stone-700"
-                  role="alert" style="transition: none 0s ease 0s;">
-                  Holy guacamole!
-                  You should check in on some of those fields below.
-                  <button type="button"
-                    class="    text-blue-500 rounded-lg  focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8  dark:text-blue-400 dark:hover:bg-gray-700"
-                    data-dismiss-target="#alert-3" aria-label="Close">
-                    <span class="sr-only">Close</span>
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div id="alert-4"
-                  class="flex justify-between relative py-3 pr-3 pl-4 mb-4 text-white bg-red-400 rounded"
-                  style="transition: none 0s ease 0s;">
-                  This is red alert.
-                  <button type="button"
-                    class="    text-blue-500 rounded-lg  focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8  dark:text-blue-400 dark:hover:bg-gray-700"
-                    data-dismiss-target="#alert-4" aria-label="Close">
-                    <span class="sr-only">Close</span>
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div id="alert-5"
-                  class="flex justify-between relative py-3 pr-3 pl-4 mb-4 text-white rounded bg-zinc-700"
-                  style="transition: none 0s ease 0s;">
-                  This is dark (zinc) alert.
-                  <button type="button"
-                    class="    text-blue-500 rounded-lg  focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8  dark:text-blue-400 dark:hover:bg-gray-700"
-                    data-dismiss-target="#alert-5" aria-label="Close">
-                    <span class="sr-only">Close</span>
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div id="alert-6"
-                  class="flex justify-between relative py-3 pr-3 pl-4 mb-4 bg-gray-100 rounded text-neutral-700"
-                  style="transition: none 0s ease 0s;">
-                  This is neutral alert.
-                  <button type="button"
-                    class="    text-blue-500 rounded-lg  focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8  dark:text-blue-400 dark:hover:bg-gray-700"
-                    data-dismiss-target="#alert-6" aria-label="Close">
-                    <span class="sr-only">Close</span>
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div id="alert-7"
-                  class="flex justify-between relative py-3 pr-3 pl-4 mb-4 rounded bg-stone-50 text-zinc-500"
-                  style="transition: none 0s ease 0s;">
-                  This is light (stone) alert.
-                  <button type="button"
-                    class="    text-blue-500 rounded-lg  focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8  dark:text-blue-400 dark:hover:bg-gray-700"
-                    data-dismiss-target="#alert-7" aria-label="Close">
-                    <span class="sr-only">Close</span>
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div id="alert-8"
-                  class="flex justify-between relative py-3 pr-3 pl-4 mb-4 text-white bg-blue-400 rounded"
-                  style="transition: none 0s ease 0s;">
-                  This is info (blue) alert.
-                  <button type="button"
-                    class="    text-red-500 rounded-lg  focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8  dark:text-blue-400 dark:hover:bg-gray-700"
-                    data-dismiss-target="#alert-8" aria-label="Close">
-                    <span class="sr-only">Close</span>
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                    </svg>
-                  </button>
+
+              <div id="hs-vertically-centered-modal1"
+                class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[100] overflow-x-hidden overflow-y-auto">
+                <div
+                  class="hs-overlay-open:mt-7  hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+                  <div
+                    class="flex flex-col bg-white  ml-20 border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+                    <div class="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">
+                      <h3 class="font-bold text-gray-800 dark:text-white">
+                        Our Gallery Example
+                      </h3>
+                      <button type="button"
+                        class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-sm dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
+                        data-hs-overlay="#hs-vertically-centered-modal">
+                        <span class="sr-only">Close</span>
+                        <svg class="w-3.5 h-3.5" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0.258206 1.00652C0.351976 0.912791 0.479126 0.860131 0.611706 0.860131C0.744296 0.860131 0.871447 0.912791 0.965207 1.00652L3.61171 3.65302L6.25822 1.00652C6.30432 0.958771 6.35952 0.920671 6.42052 0.894471C6.48152 0.868271 6.54712 0.854471 6.61352 0.853901C6.67992 0.853321 6.74572 0.865971 6.80722 0.891111C6.86862 0.916251 6.92442 0.953381 6.97142 1.00032C7.01832 1.04727 7.05552 1.1031 7.08062 1.16454C7.10572 1.22599 7.11842 1.29183 7.11782 1.35822C7.11722 1.42461 7.10342 1.49022 7.07722 1.55122C7.05102 1.61222 7.01292 1.6674 6.96522 1.71352L4.31871 4.36002L6.96522 7.00648C7.05632 7.10078 7.10672 7.22708 7.10552 7.35818C7.10442 7.48928 7.05182 7.61468 6.95912 7.70738C6.86642 7.80018 6.74102 7.85268 6.60992 7.85388C6.47882 7.85498 6.35252 7.80458 6.25822 7.71348L3.61171 5.06702L0.965207 7.71348C0.870907 7.80458 0.744606 7.85498 0.613506 7.85388C0.482406 7.85268 0.357007 7.80018 0.264297 7.70738C0.171597 7.61468 0.119017 7.48928 0.117877 7.35818C0.116737 7.22708 0.167126 7.10078 0.258206 7.00648L2.90471 4.36002L0.258206 1.71352C0.164476 1.61976 0.111816 1.4926 0.111816 1.36002C0.111816 1.22744 0.164476 1.10028 0.258206 1.00652Z"
+                            fill="currentColor" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="w-96  overflow-y-auto">
+
+                      <div id="default-carousel" class="pb-6 pr-6 pl-6 relative w-full" data-carousel="slide">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-72 overflow-hidden rounded-2xl ">
+                          <!-- Item 1 -->
+                          <div class="hidden duration-1000 ease-in-out" data-carousel-item="active">
+                            <img
+                              src="https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyN3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                              alt="...">
+                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+
+                            </div>
+                          </div>
+                          <!-- Item 2 -->
+                          <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                            <img
+                              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80"
+                              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                              alt="...">
+                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+
+                            </div>
+                          </div>
+                          <!-- Item 3 -->
+                          <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                            <img
+                              src="https://images.unsplash.com/photo-1632951634308-d7889939c125?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                              alt="...">
+                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+
+                            </div>
+                          </div>
+                          <!-- Item 4 -->
+                          <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                            <img
+                              src="https://images.unsplash.com/photo-1632949107130-fc0d4f747b26?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3OHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                              alt="...">
+                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Slider indicators -->
+                        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-10 left-1/2">
+                          <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                            data-carousel-slide-to="0"></button>
+                          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                            data-carousel-slide-to="1"></button>
+                          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                            data-carousel-slide-to="2"></button>
+                          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                            data-carousel-slide-to="3"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button"
+                          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                          data-carousel-prev>
+                          <span
+                            class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-white-800"
+                              fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                              </path>
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                          </span>
+                        </button>
+                        <button type="button"
+                          class="absolute top-0 right-0 left-90 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                          data-carousel-next>
+                          <span
+                            class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-white-800"
+                              fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                              </path>
+                            </svg>
+                            <span class="sr-only">Next</span>
+                          </span>
+                        </button>
+                      </div>
+
+                    </div>
+                    <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-gray-700">
+                      <button type="button"
+                        class="hs-dropdown-toggle py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+                        data-hs-overlay="#hs-vertically-centered-modal1">
+                        Close
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class=" flex-none pl-2 pr-5 mt-0 w-full max-w-full leading-6 text-gray-500 md:w-1/2 md:flex-none">
-            <div class="entrada flex relative flex-col mb-8 min-w-0 text-gray-500 break-words bg-clip-border "
-              style="height: 543.031px; border-radius: 11.2px;">
-              <div class="p-6 mb-0 break-words" style="border-radius: 10.2px 10.2px 0px 0px;">
-                <h4 class="textoCSS mt-0 mb-2 text-xl font-bold  mod:text-xl" style="line-height: 1.2;">
-                  Light
-                </h4>
-              </div>
-              <div class="flex-auto px-6 pt-0 pb-6 break-words">
-                <div
-                  class="flex relative p-4 mb-4 text-blue-900 bg-blue-50 rounded border border-blue-100 border-solid">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon fill="none" stroke="black" stroke-width="2"
-                      points="25,0 32,17.5 50,17.5 36,28.75 40,47.5 25,38.75 10,47.5 14,28.75 0,17.5 18,17.5" />
-                  </svg> This is blue alert.
-                </div>
-                <div
-                  class="flex relative p-4 mb-4 text-green-600 bg-emerald-100 rounded border border-emerald-100 border-solid">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="25" cy="25" r="24" fill="none" stroke="black" stroke-width="2" />
-                    <polyline points="14,25 22,33 36,19" fill="none" stroke="black" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                  This is green alert.
-                </div>
-                <div
-                  class="flex relative p-4 mb-4 text-yellow-700 bg-yellow-50 rounded border border-yellow-100 border-solid">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="25,4 4,44 46,44" fill="none" stroke="black" stroke-width="2" />
-                    <rect x="23" y="17" width="4" height="15" fill="black" />
-                    <rect x="23" y="34" width="4" height="4" fill="black" />
-                  </svg>
-                  This is yellow alert.
-                </div>
-                <div
-                  class="flex relative p-4 mb-4 text-rose-900 bg-red-100 rounded border border-rose-200 border-solid">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect x="1" y="1" width="48" height="48" fill="none" stroke="black" stroke-width="2" />
-                    <line x1="15" y1="15" x2="35" y2="35" stroke="black" stroke-width="2" stroke-linecap="round" />
-                    <line x1="35" y1="15" x2="15" y2="35" stroke="black" stroke-width="2" stroke-linecap="round" />
-                  </svg> This is red alert.
-                </div>
-                <div
-                  class="flex relative p-4 mb-4 rounded border border-solid border-zinc-200 bg-slate-200 text-slate-600">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon fill="none" stroke="black" stroke-width="2"
-                      points="25,0 32,17.5 50,17.5 36,28.75 40,47.5 25,38.75 10,47.5 14,28.75 0,17.5 18,17.5" />
-                  </svg>
-                  This is neutral alert.
-                </div>
-                <div
-                  class="flex relative p-4 mb-4 text-cyan-700 bg-cyan-50 rounded border border-cyan-100 border-solid">
-                  <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 mr-1 " fill="currentColor" viewBox="0 0 50 50"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon fill="none" stroke="black" stroke-width="2"
-                      points="25,0 32,17.5 50,17.5 36,28.75 40,47.5 25,38.75 10,47.5 14,28.75 0,17.5 18,17.5" />
-                  </svg> This is info alert.
-                </div>
-              </div>
-            </div>
-            <div class="entrada flex relative flex-col mb-8 min-w-0 text-gray-500 break-words bg-clip-border "
-              style="height: 973.365px; border-radius: 11.2px;">
-              <div class="p-6 mb-0 break-words" style="border-radius: 10.2px 10.2px 0px 0px;">
-                <h4 class="textoCSS mt-0 mb-2 text-xl font-bold text-indigo-900 mod:text-xl" style="line-height: 1.2;">
-                  Heading
-                </h4>
-              </div>
-              <div class="flex-auto px-6 pt-0 pb-6 break-words">
-                <div class="relative p-4 mb-4 text-white bg-blue-700 rounded">
-                  <h4 class="mt-0 mb-2 ml-2 text-2xl font-bold text-white xl:text-2xl" style="line-height: 1.2;">
-                    Blue
-                  </h4>
-                  <p class="my-0 ml-2 text-white">This is blue alert.</p>
-                </div>
-                <div class="relative p-4 mb-4  bg-green-600 rounded">
-                  <h4 class="mt-0 mb-2 ml-2 text-2xl font-bold text-white xl:text-2xl" style="line-height: 1.2;">
-                    Green
-                  </h4>
-                  <p class="my-0 ml-2 text-white">This is green alert.</p>
-                </div>
-                <div class="relative p-4 mb-4 bg-amber-300 rounded text-stone-700">
-                  <h4 class="mt-0 mb-2 ml-2 text-2xl font-bold text-indigo-900 xl:text-2xl" style="line-height: 1.2;">
-                    Yellow
-                  </h4>
-                  <p class="my-0 ml-2 ">This is yellow alert.</p>
-                </div>
-                <div class="relative p-4 mb-4 text-white bg-red-400 rounded">
-                  <h4 class="mt-0 mb-2 ml-2 text-2xl font-bold text-white xl:text-2xl" style="line-height: 1.2;">
-                    Red
-                  </h4>
-                  <p class="my-0 ml-2 text-white">This is red alert.</p>
-                </div>
-                <div class="relative p-4 mb-4 text-white rounded bg-zinc-700">
-                  <h4 class="mt-0 mb-2 ml-2 text-2xl font-bold text-white xl:text-2xl" style="line-height: 1.2;">
-                    Black
-                  </h4>
-                  <p class="my-0 ml-2 text-white">This is dark (zinc) alert.</p>
-                </div>
-                <div class="relative p-4 mb-4 bg-gray-100 rounded text-neutral-700">
-                  <h4 class="mt-0 mb-2 ml-2 text-2xl font-bold text-indigo-900 xl:text-2xl" style="line-height: 1.2;">
-                    Neutral
-                  </h4>
-                  <p class="my-0 ml-2">This is neutral alert.</p>
-                </div>
-                <div class="relative p-4 mb-4 rounded bg-stone-50 text-zinc-500">
-                  <h4 class="mt-0 mb-2 ml-2 text-2xl font-bold text-indigo-900 xl:text-2xl" style="line-height: 1.2;">
-                    Light
-                  </h4>
-                  <p class="my-0 ml-2">This is light (stone) alert.</p>
-                </div>
-                <div class="relative p-4 mb-4 text-white bg-blue-400 rounded">
-                  <h4 class="mt-0 mb-2 ml-2 text-2xl font-bold text-white xl:text-2xl" style="line-height: 1.2;">
-                    Info
-                  </h4>
-                  <p class="my-0 ml-2 text-white">This is info (blue) alert.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <!-- footer -->
         <div id="footer" class=" block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
           data-mb="20">
-
           <div class="float-left text-slate-400 mb-3">
             <p class="mt-9 mod:ml-3 ml-4 texto2CSS">2023 © Mazer</p>
           </div>
-          <div class="float-right text-slate-400 mr-8 mb-12 mt-9">
+          <div class="float-right text-slate-400 mr-8 mb-12 mt-9 texto2CSS">
             <p class="texto2CSS mt-0">
               Crafted with
               <span class="inline-block text-red-500">
@@ -1012,11 +848,8 @@
           </div>
         </div>
       </div>
-
     </div>
-
   </div>
-
 </body>
 
 </html>
