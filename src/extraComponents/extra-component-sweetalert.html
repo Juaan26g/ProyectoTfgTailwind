@@ -7,6 +7,7 @@
     <title>Avatar - Mazer Admin Dashboard</title>
     <link href="/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="../elementos/elementos2.css">
+    <link rel="stylesheet" href="../elementos/extensiones/sweetalert2/sweetalert2.min.css" />
     <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
     <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
 </head>
@@ -518,7 +519,7 @@
                                             <a href="../index.html">Dashboard</a>
                                         </li>
                                         <li class="pl-2">
-                                            / Avatar
+                                            / SweetAlert
                                         </li>
                                     </ol>
                                 </nav>
@@ -561,138 +562,6 @@
 </body>
 
 </html>
-
-<script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const html = document.getElementsByTagName('html')[0];
-    const body = document.getElementsByTagName('body')[0];
-    const sunMoon = document.getElementById('sun-moon');
-
-
-    themeToggle.addEventListener('click', () => {
-        if (html.classList.contains('dark')) {
-            html.classList.remove('dark');
-            html.classList.add('light');
-            body.classList.remove('bg-dark');
-            body.classList.add('bg-light');
-            localStorage.setItem('theme', 'light');
-        } else {
-            html.classList.remove('light');
-            html.classList.add('dark');
-            body.classList.remove('bg-light');
-            body.classList.add('bg-dark');
-            localStorage.setItem('theme', 'dark');
-        }
-    });
-
-    const savedTheme = localStorage.getItem('theme');
-
-    if (savedTheme === 'dark') {
-        html.classList.add('dark');
-        body.classList.add('bg-dark');
-        sunMoon.classList.remove('sun');
-        sunMoon.classList.add('moon');
-        body.classList.add('dark-theme');
-
-    } else {
-        html.classList.add('light');
-        body.classList.add('bg-light');
-        sunMoon.classList.remove('moon');
-        sunMoon.classList.add('sun');
-        body.classList.remove('dark-theme');
-
-    }
-
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const sidebarItems = document.querySelectorAll('.has-sub');
-
-        sidebarItems.forEach(sidebarItem => {
-            const submenu = sidebarItem.querySelector('.submenu');
-
-            if (!submenu.classList.contains('active')) {
-                submenu.style.maxHeight = '0';
-            }
-
-            sidebarItem.addEventListener('click', function (event) {
-
-                const target = event.target;
-
-                if (target.closest('.submenu-item')) {
-                    return;
-                }
-
-                event.preventDefault();
-
-                if (!submenu.classList.contains('active')) {
-                    submenu.classList.add('active');
-                    const height = submenu.scrollHeight;
-                    submenu.style.maxHeight = `${height}px`;
-                    submenu.style.transitionDuration = `${Math.round(400 + (height / 10))}ms`;
-                } else {
-                    const height = submenu.scrollHeight;
-                    submenu.style.maxHeight = '0';
-                    submenu.style.transition = 'max-height 0.3s ease-out';
-                    setTimeout(() => {
-                        submenu.classList.remove('active');
-                    }, 300);
-                }
-
-
-            });
-        });
-    });
-
-
-    function handleResize() {
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebar = document.getElementById('sidebar');
-        if (window.innerWidth <= 1200) {
-            sidebarToggle.classList.remove('hidden');
-            if (sidebar.classList.contains('active') && window.devicePixelRatio >= 1.5) {
-                sidebar.classList.remove('active');
-            }
-        } else {
-            sidebarToggle.classList.add('hidden');
-            if (!sidebar.classList.contains('active')) {
-                sidebar.classList.add('active');
-            }
-        }
-    }
-
-    window.addEventListener('resize', handleResize);
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const sidebar = document.getElementById('sidebar');
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebarHide = document.getElementById('sidebar-hide');
-
-        sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        sidebarHide.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        handleResize();
-    });
-
-    function toggleTheme() {
-        const body = document.body;
-        const sunMoon = document.getElementById('sun-moon');
-        body.classList.toggle('dark-theme');
-
-        if (body.classList.contains('dark-theme')) {
-            sunMoon.classList.remove('sun');
-            sunMoon.classList.add('moon');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            sunMoon.classList.remove('moon');
-            sunMoon.classList.add('sun');
-            localStorage.setItem('theme', 'light');
-        }
-    }
-
-
-</script>
+<script src="../elementos/extensiones/sweetalert2/sweetalert2.min.js"></script>
+<script src="../elementos/static/sweetalert2.js"></script>
+<script defer src="../elementos/button-light-dark.js"></script>

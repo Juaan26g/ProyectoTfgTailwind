@@ -962,9 +962,17 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
+.\!container {
+  width: 100% !important;
+}
+
 @media (min-width: 320px) {
   .container {
     max-width: 320px;
+  }
+
+  .\!container {
+    max-width: 320px !important;
   }
 }
 
@@ -972,11 +980,19 @@ input:checked + .toggle-bg {
   .container {
     max-width: 576px;
   }
+
+  .\!container {
+    max-width: 576px !important;
+  }
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+
+  .\!container {
+    max-width: 768px !important;
   }
 }
 
@@ -984,11 +1000,19 @@ input:checked + .toggle-bg {
   .container {
     max-width: 992px;
   }
+
+  .\!container {
+    max-width: 992px !important;
+  }
 }
 
 @media (min-width: 1190px) {
   .container {
     max-width: 1190px;
+  }
+
+  .\!container {
+    max-width: 1190px !important;
   }
 }
 
@@ -996,11 +1020,19 @@ input:checked + .toggle-bg {
   .container {
     max-width: 1200px;
   }
+
+  .\!container {
+    max-width: 1200px !important;
+  }
 }
 
 @media (min-width: 1400px) {
   .container {
     max-width: 1400px;
+  }
+
+  .\!container {
+    max-width: 1400px !important;
   }
 }
 
@@ -4019,6 +4051,11 @@ input:checked + .toggle-bg {
 
 .not-italic {
   font-style: normal;
+}
+
+.ordinal {
+  --tw-ordinal: ordinal;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
 .leading-10 {
