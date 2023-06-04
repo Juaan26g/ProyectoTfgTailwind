@@ -4,34 +4,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tooltip - Mazer Admin Dashboard</title>
+  <title>Photo Gallery - Mazer Admin Dashboard</title>
   <link rel="stylesheet" href="../elementos/elementos2.css">
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
   <link href="../../css/output.css" rel="stylesheet">
   <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
-  <script defer src="../elementos/tooltipPlus.js"></script>
   <script defer src="../elementos/button-light-dark.js"></script>
   <script src="/node_modules/preline/dist/preline.js"></script>
-
+  <style>
+    .hs-overlay {
+      background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">
-    <div id="sidebar" class="xl:active xxl:active fixed">
-      <div class="sidebar-wrapper active entrada">
-        <div class="sidebar-header relative">
+    <div id="sidebar" class="active">
+      <div class="sidebar-wrapper active entrada min-h-screen">
+        <div class="sidebar-header relative ">
+          <div class="flex w-60 mt-3 mb-2 items-center ">
 
-          <div class="flex w-60 mt-3 mb-2 items-center">
             <div class="logo">
               <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg" alt="Logo" /></a>
             </div>
 
-            <div class="flex gap-2 items-center mt-1">
+            <div class=" flex gap-2 items-center mt-1">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
-                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons sun-color" width="20" height="22"
+                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons" width="20" height="22"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
-                <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                   <path
                     d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
                     opacity=".3"></path>
@@ -42,33 +45,32 @@
                   </g>
                 </g>
               </svg>
-
               <div class="relative block mb-2 mt-2  fs-6" id="theme-toggle">
                 <div id="toggle-button" onclick="toggleTheme()">
                   <div id="sun-moon" class="sun"></div>
                 </div>
               </div>
-
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                 role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20" height="20"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path fill="#607080"
+                <path fill="currentColor"
                   d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
                 </path>
               </svg>
             </div>
 
             <button id="sidebar-hide"
-              class="sidebar-hide absolute textoSidebar top-2 right-2 bg-color-transparent border-none p-0 xl:hidden xxl:hidden">
-              <svg class="bi" width="25" height="40" fill="currentColor">
+              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-transparent border-none p-0">
+              <svg class="bi" width="25" height="40" fill="currentColor" style="fill: blue;">
                 <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
               </svg>
             </button>
 
-
           </div>
         </div>
-        <div class="sidebar-menu">
+
+        <div class="sidebar-menu" style="font-family: 'Nunito';">
+
           <ul class="menu">
             <li class="sidebar-title textoSidebar">Menu</li>
 
@@ -80,63 +82,64 @@
               </a>
             </li>
 
-            <li class="w-60 sidebar-item active has-sub">
+            <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#stack" />
                 </svg> <span class="textoSidebar">Components</span>
               </a>
-              <ul class="submenu active textoSidebar ml-8">
+
+              <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item  ">
-                  <a href="component-accordion.html">Accordion</a>
+                  <a href="../components/component-accordion.html">Accordion</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-alert.html">Alert</a>
+                  <a href="../components/component-alert.html">Alert</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-badge.html">Badge</a>
+                  <a href="../components/component-badge.html">Badge</a>
                 </li>
                 <li class="submenu-item ">
-                  <a href="component-breadcrumb.html">Breadcrumb</a>
+                  <a href="../components/component-breadcrumb.html">Breadcrumb</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-button.html">Button</a>
+                  <a href="../components/component-button.html">Button</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-card.html">Card</a>
+                  <a href="../components/component-card.html">Card</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-carousel.html">Carousel</a>
+                  <a href="../components/component-carousel.html">Carousel</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-collapse.html">Collapse</a>
+                  <a href="../components/component-collapse.html">Collapse</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-dropdown.html">Dropdown</a>
+                  <a href="../components/component-dropdown.html">Dropdown</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-list-group.html">List Group</a>
+                  <a href="../components/component-list-group.html">List Group</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-modal.html">Modal</a>
+                  <a href="../components/component-modal.html">Modal</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-navs.html">Navs</a>
+                  <a href="../components/component-navs.html">Navs</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-pagination.html">Pagination</a>
+                  <a href="../components/component-pagination.html">Pagination</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-progress.html">Progress</a>
+                  <a href="../components/component-progress.html">Progress</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-spinner.html">Spinner</a>
+                  <a href="../components/component-spinner.html">Spinner</a>
                 </li>
-                <li class="submenu-item">
-                  <a href="component-toasts.html">Toasts</a>
+                <li class="submenu-item ">
+                  <a href="../components/component-toasts.html">Toasts</a>
                 </li>
-                <li class="submenu-item active">
-                  <a href="component-tooltip.html">Tooltip</a>
+                <li class="submenu-item ">
+                  <a href="../components/component-tooltip.html">Tooltip</a>
                 </li>
               </ul>
             </li>
@@ -165,7 +168,7 @@
                 </li>
                 <li class="submenu-item">
                   <a href="../extraComponents/extra-component-rating.html">Rating</a>
-                </li>                
+                </li>
               </ul>
             </li>
 
@@ -195,7 +198,9 @@
             </li>
 
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Forms & Tables</span>
+
             </li>
 
             <li class="w-60 sidebar-item has-sub">
@@ -232,6 +237,7 @@
                   <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
                 </svg> <span class="textoSidebar">Form Layout</span>
               </a>
+
             </li>
 
             <li class="w-60 sidebar-item has-sub">
@@ -275,7 +281,9 @@
                   <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
                 </svg> <span class="textoSidebar">Table</span>
               </a>
+
             </li>
+
 
             <li class="w-60 sidebar-item has-sub mb-6">
               <a href="#" class="sidebar-link">
@@ -294,7 +302,9 @@
             </li>
 
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Extra UI</span>
+
             </li>
 
             <li class="w-60 sidebar-item has-sub">
@@ -313,6 +323,7 @@
                 <li class="submenu-item">
                   <a href="../widgets/ui-widgets-to-do-list.html">To-do list</a>
                 </li>
+
               </ul>
             </li>
 
@@ -471,7 +482,9 @@
             </li>
 
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Pages</span>
+
             </li>
 
             <li class="w-60 sidebar-item ">
@@ -492,8 +505,8 @@
               </ul>
             </li>
 
-            <li class="w-60 sidebar-item ">
-              <a href="../photo-gallery/pages-photo.html" class="sidebar-link">
+            <li class="w-60 sidebar-item active">
+              <a href="../photo-gallery/pages-photo.html" class="sidebar-link active">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#image-fill" />
                 </svg> <span class="textoSidebar">Photo Gallery</span>
@@ -516,13 +529,13 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="auth/auth-login.html">Login</a>
+                  <a href="../auth/auth-login.html">Login</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="auth/auth-register.html">Register</a>
+                  <a href="../auth/auth-register.html">Register</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="auth/auth-forgot-password.html">Forgot Password</a>
+                  <a href="../auth/auth-forgot-password.html">Forgot Password</a>
                 </li>
               </ul>
             </li>
@@ -535,19 +548,21 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="errors/error-403.html">403</a>
+                  <a href="../errors/error-403.html">403</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="errors/error-404.html">404</a>
+                  <a href="../errors/error-404.html">404</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="errors/error-500.html">500</a>
+                  <a href="../errors/error-500.html">500</a>
                 </li>
               </ul>
             </li>
 
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Raise Support</span>
+
             </li>
 
             <li class="w-60 sidebar-item ">
@@ -579,10 +594,10 @@
     </div>
 
     <!-- pagina -->
-    <div id="main" class="main ml-4 mod:ml-80">
+    <div id="main" class="main ml-4 mod:ml-80 mod:mt-8">
 
       <!-- boton movil -->
-      <button id="sidebar-toggle" class="  text-white  rounded ml-4 mt-8 mod:hidden ">
+      <button id="sidebar-toggle" class="text-white rounded ml-4 mt-8 mod:hidden ">
         <svg class="bi" width="28" height="40" fill="currentColor" style="fill: blue;">
           <use xlink:href="../elementos/herramientas/images/icons.svg#justify" />
         </svg>
@@ -593,14 +608,14 @@
         <div class="md:order-2">
           <nav>
             <ol
-              class="flex flex-nowrap flex-wrap p-0 mt-1 mb-4 lg:mb-14 ml-4 text-base bg-white rounded-none bg-opacity-[0] md:mr-8  "
+              class="flex flex-nowrap flex-wrap p-0 mt-1 mb-4 lg:mb-14 ml-4 text-base bg-white rounded-none bg-opacity-[0] md:mr-8"
               style="list-style: none;">
               <li class="text-left" style="list-style: outside none none;">
                 <a href="../index.html" class="text-blue-700 cursor-pointer"
                   style=" list-style: outside none none; font-family: 'Nunito';">Dashboard</a>
               </li>
               <li class="pl-2 text-left text-gray-500 whitespace-nowrap">
-                / Tooltip
+                / Photo Gallery
               </li>
             </ol>
           </nav>
@@ -609,167 +624,237 @@
         <div class="order-1 mb-4 md:mb-0 md:order-1  w-6/12">
           <h3 class="textoCSS mt-2 mb-1 ml-4 mod:ml-3 text-3xl text-white xl:text-3xl"
             style="line-height: 1.2; font-family: 'Nunito'; font-weight: 600;">
-            Tooltip
+            Photo Gallery
           </h3>
           <p class="ml-4 mt-2 text-slate-400 texto2CSS mod:ml-3 mod:mt-3 ">
-            The tooltip, also known as infotip or hint, is a common graphical user interface element which shows
-            additional information on element hover. </p>
+            Super simple photo gallery. </p>
         </div>
       </div>
 
       <!-- contenido -->
       <div class="main-container">
-        <div class=" flex flex-wrap" style="font-family: 'Nunito';">
 
-          <div class="flex-none px-3 pr-5 pl-3 mt-4 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300">
-            <div class="flex flex-col mb-8 min-w-0 break-words bg-clip-border entrada"
-              style="min-height: 195px; border-radius: 11.2px;">
-              <div class="" data-type="default">
+        <div class="mod:ml-0 ml-1 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
 
-                <div class="p-6 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
-                  <h4 class="mt-0 mb-1 text-xl font-bold text-white xl:text-xl textoCSS">
-                    Basic Tooltip
-                  </h4>
-                </div>
-                <div class="flex-auto px-6 pt-0 pb-6 break-words">
+          <div class="mt-4  flex-none pr-6 pl-1 w-full max-w-full leading-6  md:flex-none text-slate-300">
+            <div class="ml-2  flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 100px; border-radius: 11.2px;">
 
-                  <div class="tooltip-container inline-block mr-1 mb-2">
-                    <button
-                      class="tooltip-button inline-block py-1 px-3 m-0 text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none">
-                      Tooltip on top
-                    </button>
-                    <div
-                      class="tooltip tooltip-above absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Tooltip on top
-                      <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </div>
-
-                  <div class="tooltip-container inline-block mr-1 mb-2">
-                    <button
-                      class="tooltip-button inline-block py-1 px-3 m-0 text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none">
-                      Tooltip on right
-                    </button>
-                    <div
-                      class="tooltip tooltip-right absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Tooltip on right
-                      <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </div>
-
-                  <div class="tooltip-container inline-block mr-1 mb-2">
-                    <button
-                      class="tooltip-button inline-block py-1 px-3 m-0 text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none">
-                      Tooltip on bottom
-                    </button>
-                    <div
-                      class="tooltip tooltip-below absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Tooltip on bottom
-                      <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </div>
-
-                  <div class="tooltip-container inline-block mr-1 mb-2">
-                    <button
-                      class="tooltip-button inline-block py-1 px-3 m-0 text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none">
-                      Tooltip on left
-                    </button>
-                    <div
-                      class="tooltip tooltip-left absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Tooltip on left
-                      <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-4 flex-none pr-8 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300"
-            data-type="flush">
-            <div class="flex flex-col mb-8 min-w-0 break-words bg-clip-border entrada"
-              style="min-height: 200px; border-radius: 11.2px;">
-              <div class="p-6 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+              <div class="pt-5 pr-3 pl-6 mb-6 " style="border-radius: 10.2px 10.2px 0px 0px;">
                 <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
-                  Tooltip in Text
+                  Our Gallery
                 </h4>
               </div>
-              <div class="flex-auto px-6 pt-0 pb-2 text-slate-300">
 
-                <p class="mt-0 mb-4 interior ">
-                  Tight pants next level keffiyeh
-                  <span class="tooltip-container">
+              <div class="flex-auto px-6 pt-0 pb-6 leading-6 text-gray-500 break-words">
+                <div class="flex flex-wrap -mx-3 mt-0 text-gray-500">
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyN3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1632951634308-d7889939c125?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1632949107130-fc0d4f747b26?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3OHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                </div>
 
-                    <a href="#" class="tooltip-button text-blue-700 cursor-pointer" style="text-decoration: none;">you
-                      probably</a>
-                    <span
-                      class="tooltip tooltip-above absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Some tooltip text!
-                      <span class="tooltip-arrow" data-popper-arrow></span>
-                    </span>
-                  </span>
+                <div class="flex flex-wrap -mx-3 mt-2 text-gray-500 md:mt-6" data-bs-toggle="modal"
+                  data-bs-target="#galleryModal">
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyN3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1632951634308-d7889939c125?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                  <div
+                    class="flex-none px-3 my-2 w-1/2 max-w-full break-words sm:w-1/2 sm:flex-none md:my-0 lg:w-1/4 lg:flex-none">
+                    <a href="#" class="">
+                      <img class="w-full align-middle" data-hs-overlay="#hs-vertically-centered-modal1"
+                        src="https://images.unsplash.com/photo-1632949107130-fc0d4f747b26?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3OHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" />
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-                  haven't heard of them. Photo booth beard raw denim letterpress vegan
-                  messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie
-                  sustainable quinoa 8-bit american apparel
+              <div id="hs-vertically-centered-modal1"
+                class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[100] overflow-x-hidden overflow-y-auto">
+                <div
+                  class="hs-overlay-open:mt-7  hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+                  <div
+                    class="flex flex-col bg-white  ml-20 border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+                    <div class="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">
+                      <h3 class="font-bold text-gray-800 dark:text-white">
+                        Our Gallery Example
+                      </h3>
+                      <button type="button"
+                        class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-sm dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
+                        data-hs-overlay="#hs-vertically-centered-modal">
+                        <span class="sr-only">Close</span>
+                        <svg class="w-3.5 h-3.5" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0.258206 1.00652C0.351976 0.912791 0.479126 0.860131 0.611706 0.860131C0.744296 0.860131 0.871447 0.912791 0.965207 1.00652L3.61171 3.65302L6.25822 1.00652C6.30432 0.958771 6.35952 0.920671 6.42052 0.894471C6.48152 0.868271 6.54712 0.854471 6.61352 0.853901C6.67992 0.853321 6.74572 0.865971 6.80722 0.891111C6.86862 0.916251 6.92442 0.953381 6.97142 1.00032C7.01832 1.04727 7.05552 1.1031 7.08062 1.16454C7.10572 1.22599 7.11842 1.29183 7.11782 1.35822C7.11722 1.42461 7.10342 1.49022 7.07722 1.55122C7.05102 1.61222 7.01292 1.6674 6.96522 1.71352L4.31871 4.36002L6.96522 7.00648C7.05632 7.10078 7.10672 7.22708 7.10552 7.35818C7.10442 7.48928 7.05182 7.61468 6.95912 7.70738C6.86642 7.80018 6.74102 7.85268 6.60992 7.85388C6.47882 7.85498 6.35252 7.80458 6.25822 7.71348L3.61171 5.06702L0.965207 7.71348C0.870907 7.80458 0.744606 7.85498 0.613506 7.85388C0.482406 7.85268 0.357007 7.80018 0.264297 7.70738C0.171597 7.61468 0.119017 7.48928 0.117877 7.35818C0.116737 7.22708 0.167126 7.10078 0.258206 7.00648L2.90471 4.36002L0.258206 1.71352C0.164476 1.61976 0.111816 1.4926 0.111816 1.36002C0.111816 1.22744 0.164476 1.10028 0.258206 1.00652Z"
+                            fill="currentColor" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="w-96  overflow-y-auto">
 
-                  <span class="tooltip-container">
-                    <a href="#" data-bs-toggle="tooltip" data-bs-original-title="Another tooltip text!"
-                      class="text-blue-700 cursor-pointer" style="text-decoration: none;">have a</a>
-                    <span
-                      class="tooltip tooltip-above absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Another tooltip text!
-                      <span class="tooltip-arrow" data-popper-arrow></span>
-                    </span>
-                  </span>
+                      <div id="default-carousel" class="pb-6 pr-6 pl-6 relative w-full" data-carousel="slide">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-72 overflow-hidden rounded-2xl ">
+                          <!-- Item 1 -->
+                          <div class="hidden duration-1000 ease-in-out" data-carousel-item="active">
+                            <img
+                              src="https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyN3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                              alt="...">
+                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
 
-                  terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo
-                  thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's
-                  cleanse vegan chambray. A really ironic artisan
+                            </div>
+                          </div>
+                          <!-- Item 2 -->
+                          <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                            <img
+                              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80"
+                              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                              alt="...">
+                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
 
-                  <span class="tooltip-container">
-                    <a href="#" data-bs-toggle="tooltip" data-bs-original-title="Another here too!"
-                      class="text-blue-700 cursor-pointer" style="text-decoration: none;">whatever keytar</a>
-                    <span
-                      class="tooltip tooltip-above absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Another here too!
-                      <span class="tooltip-arrow" data-popper-arrow></span>
-                    </span>
-                  </span>
+                            </div>
+                          </div>
+                          <!-- Item 3 -->
+                          <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                            <img
+                              src="https://images.unsplash.com/photo-1632951634308-d7889939c125?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                              alt="...">
+                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
 
-                  , scenester
-                  farm-to-table banksy Austin twitter handle freegan cred raw
-                  denim single-origin coffee viral.
+                            </div>
+                          </div>
+                          <!-- Item 4 -->
+                          <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                            <img
+                              src="https://images.unsplash.com/photo-1632949107130-fc0d4f747b26?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3OHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                              alt="...">
+                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
 
-                </p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Slider indicators -->
+                        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-10 left-1/2">
+                          <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                            data-carousel-slide-to="0"></button>
+                          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                            data-carousel-slide-to="1"></button>
+                          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                            data-carousel-slide-to="2"></button>
+                          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                            data-carousel-slide-to="3"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button"
+                          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                          data-carousel-prev>
+                          <span
+                            class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-white-800"
+                              fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                              </path>
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                          </span>
+                        </button>
+                        <button type="button"
+                          class="absolute top-0 right-0 left-90 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                          data-carousel-next>
+                          <span
+                            class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-white-800"
+                              fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                              </path>
+                            </svg>
+                            <span class="sr-only">Next</span>
+                          </span>
+                        </button>
+                      </div>
+
+                    </div>
+                    <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-gray-700">
+                      <button type="button"
+                        class="hs-dropdown-toggle py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+                        data-hs-overlay="#hs-vertically-centered-modal1">
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- footer -->
-      <div id="footer" class=" block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
-        data-mb="20">
-
-        <div class="float-left text-slate-400 mb-3">
-          <p class="mt-9 mod:ml-3 ml-4 texto2CSS">2023 © Mazer</p>
-        </div>
-        <div class="float-right text-slate-400 mr-8 mb-12 mt-9 ">
-          <p class="texto2CSS mt-0">
-            Crafted with
-            <span class="inline-block text-red-500">
-              <svg width="15" height="15" fill="currentColor">
-                <use xlink:href="../elementos/herramientas/images/icons.svg#heart-fill" />
-              </svg>
-            </span>
-            by
-            <a href="https://saugi.me" class="text-blue-700 cursor-pointer" style="text-decoration: none;">Saugi</a>
-          </p>
+        <!-- footer -->
+        <div id="footer" class=" block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
+          data-mb="20">
+          <div class="float-left text-slate-400 mb-3">
+            <p class="mt-9 mod:ml-3 ml-4 texto2CSS">2023 © Mazer</p>
+          </div>
+          <div class="float-right text-slate-400 mr-8 mb-12 mt-9 texto2CSS">
+            <p class="texto2CSS mt-0">
+              Crafted with
+              <span class="inline-block text-red-500">
+                <svg width="15" height="15" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#heart-fill" />
+                </svg>
+              </span>
+              by
+              <a href="https://saugi.me" class="text-blue-700 cursor-pointer" style="text-decoration: none;">Saugi</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </body>
 

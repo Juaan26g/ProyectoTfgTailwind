@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../elementos/elementos2.css">
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
-
+  <script defer src="../elementos/light-dark.js"></script>
 </head>
 
 <body>
@@ -25,23 +25,6 @@
         style="  transition: none 0s ease 0s;">Go Home</a>
     </div>
   </div>
-
 </body>
 
 </html>
-
-
-<script>
-  const html = document.getElementsByTagName('html')[0];
-  const error = document.getElementById('error');
-
-  const savedTheme = localStorage.getItem('theme');
-
-  if (savedTheme === 'dark') {
-    html.classList.add('dark');
-    error.classList.add('bg-dark');
-  } else {
-    html.classList.add('light');
-    error.classList.add('bg-light');
-  }
-</script>

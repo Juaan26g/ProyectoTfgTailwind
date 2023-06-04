@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navs - Mazer Admin Dashboard</title>
+  <title>List Group - Mazer Admin Dashboard</title>
   <link rel="stylesheet" href="../elementos/elementos2.css">
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
@@ -59,7 +59,7 @@
             </div>
 
             <button id="sidebar-hide"
-              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-color-transparent border-none p-0">
+              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-transparent border-none p-0">
               <svg class="bi" width="25" height="40" fill="currentColor" style="fill: blue;">
                 <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
               </svg>
@@ -114,13 +114,13 @@
                 <li class="submenu-item">
                   <a href="component-dropdown.html">Dropdown</a>
                 </li>
-                <li class="submenu-item">
+                <li class="submenu-item active">
                   <a href="component-list-group.html">List Group</a>
                 </li>
                 <li class="submenu-item">
                   <a href="component-modal.html">Modal</a>
                 </li>
-                <li class="submenu-item active">
+                <li class="submenu-item">
                   <a href="component-navs.html">Navs</a>
                 </li>
                 <li class="submenu-item ">
@@ -615,7 +615,7 @@
                   style=" list-style: outside none none; font-family: 'Nunito';">Dashboard</a>
               </li>
               <li class="pl-2 text-left text-gray-500 whitespace-nowrap">
-                / Navs
+                / List Group
               </li>
             </ol>
           </nav>
@@ -624,143 +624,64 @@
         <div class="order-1 mb-4 md:mb-0 md:order-1  w-6/12">
           <h3 class="textoCSS mt-2 mb-1 ml-4 mod:ml-3 text-3xl text-white xl:text-3xl"
             style="line-height: 1.2; font-family: 'Nunito'; font-weight: 600;">
-            Navs
+            List Group
           </h3>
           <p class="ml-4 mt-2 text-slate-400 texto2CSS mod:ml-3 mod:mt-3 ">
-            Examples for how to use Tailwind's included navigation components. </p>
+            List groups are a flexible and powerful component for displaying a series of content. </p>
         </div>
       </div>
 
       <!-- contenido -->
       <div class="main-container">
-        <div class="mod:ml-0 ml-1  mr-2 mb-4 flex flex-wrap" style="font-family: 'Nunito';">
 
-          <div class="mt-4 flex-none pr-6 pl-1 w-full max-w-full leading-6  md:flex-none text-slate-300">
-            <div class="ml-2 flex flex-col  min-w-0 break-words bg-clip-border entrada"
-              style="min-height: 143px; border-radius: 11.2px;">
-
-              <div class="p-6 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
-                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
-                  Default
-                </h4>
-
-              </div>
-
-              <ul class="ml-10  mt-2 flex">
-                <li class="mr-8">
-                  <a class="dark:text-gray-300 text-blue-600 hover:text-black  dark:hover:text-gray-300"
-                    href="#">Active</a>
-                </li>
-                <li class="mr-8">
-                  <a class="dark:text-gray-300 text-blue-600 hover:text-black  dark:hover:text-gray-300"
-                    href="#">Link</a>
-                </li>
-                <li class="mr-8">
-                  <a class="dark:text-gray-300 text-blue-600 hover:text-black  dark:hover:text-gray-300"
-                    href="#">Link</a>
-                </li>
-                <li class="mr-8">
-                  <a class="dark:text-gray-500  cursor-default" href="#">Disabled</a>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="mb-8 mt-5 flex flex-wrap" style="font-family: 'Nunito';">
+        <div class="mb-4  flex flex-wrap" style="font-family: 'Nunito';">
 
           <div
-            class="mt-4 mb-10 flex-none mod:pr-6 pr-6 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300">
+            class="mt-4 flex-none mod:pr-6 pr-5 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300">
             <div class="mod:ml-2 ml-3 flex flex-col   min-w-0 break-words bg-clip-border entrada"
               style="min-height: 195px; border-radius: 11.2px;">
 
               <div class="p-6 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
                 <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
-                  Horizontal Navs
+                  Simple List Group
                 </h4>
 
               </div>
 
-              <div class="ml-6 flex" id="accordion-color" data-accordion="collapse"
-                data-active-classes="dark:bg-gray-800 text-blue-600 border-blue-600 border-b-2 bg-gray-100 pointer-events-none">
+              <p class="textoCSS3 mt-6 ml-6 mr-6 mt-0 mb-4 leading-6 break-words text-slate-300">
+                The most basic list group is simply an unordered list with list items, and the
+                proper classes. Build upon it with the options that follow, or your own CSS as
+                needed.
+              </p>
 
-                <h2 id="accordion-color-heading-1">
-
-                  <button type="button" class="py-2 px-4 inline-flex justify-center items-center gap-2 text-md"
-                    data-accordion-target="#accordion-color-body-1" aria-expanded="true"
-                    aria-controls="accordion-color-body-1">
-                    Home
-                  </button>
-
-                </h2>
-
-                <h2 id="accordion-color-heading-2">
-                  <button type="button" class="py-2 px-4 inline-flex justify-center items-center gap-2 text-md"
-                    data-accordion-target="#accordion-color-body-2" aria-expanded="false"
-                    aria-controls="accordion-color-body-2">
-                    Profile
-                  </button>
-                </h2>
-
-                <h2 id="accordion-color-heading-3">
-                  <button type="button" class="py-2 px-4 inline-flex justify-center items-center gap-2 text-md"
-                    data-accordion-target="#accordion-color-body-3" aria-expanded="false"
-                    aria-controls="accordion-color-body-3">
-                    Contact
-                  </button>
-                </h2>
-
-              </div>
-
-              <div id="accordion-color-body-1"
-                class=" ml-6 mb-8  hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="accordion-color-heading-1">
-                <div class="mt-2">
-                  <p class="textoCSS3 mr-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nulla neque. Ut hendrerit nulla
-                    a
-                    euismod pretium. Fusce venenatis sagittis ex efficitur suscipit. In tempor mattis fringilla. Sed
-                    id
-                    tincidunt orci, et volutpat ligula. Aliquam sollicitudin sagittis ex, a rhoncus nisl feugiat quis.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ligula a tempor vulputate.
-                    Suspendisse pretium mollis ultrices.
-                  </p>
-                </div>
-              </div>
-
-              <div id="accordion-color-body-2"
-                class="ml-6 mb-8 hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="accordion-color-heading-2">
-                <div class="mt-2">
-                  <p class="textoCSS3 mr-8">
-                    Integer interdum diam eleifend metus lacinia, quis gravida eros mollis. Fusce non sapien sit amet
-                    magna dapibus ultrices. Morbi tincidunt magna ex, eget faucibus sapien bibendum non. Duis a mauris
-                    ex. Ut finibus risus sed massa mattis porta. Aliquam sagittis massa et purus efficitur ultricies.
-                    Integer pretium dolor at sapien laoreet ultricies. Fusce congue et lorem id convallis. Nulla
-                    volutpat tellus nec molestie finibus. In nec odio tincidunt eros finibus ullamcorper. Ut sodales,
-                    dui nec posuere finibus, nisl sem aliquam metus, eu accumsan lacus felis at odio. Sed lacus quam,
-                    convallis quis condimentum ut, accumsan congue massa. Pellentesque et quam vel massa pretium
-                    ullamcorper vitae eu tortor.
-                  </p>
-                </div>
-              </div>
-
-              <div id="accordion-color-body-3"
-                class="ml-6 mb-8  hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="accordion-color-heading-3">
-                <div class="mt-2">
-                  <p class="textoCSS3 mr-8">
-                    Duis ultrices purus non eros fermentum hendrerit. Aenean ornare interdum viverra. Sed ut odio velit.
-                    Aenean eu diam dictum nibh rhoncus mattis quis ac risus. Vivamus eu congue ipsum. Maecenas id
-                    sollicitudin ex. Cras in ex vestibulum, posuere orci at, sollicitudin purus. Morbi mollis elementum
-                    enim, in cursus sem placerat ut.
-                  </p>
-                </div>
-              </div>
+              <ul class="ml-6 mb-6 pr-6 flex flex-col">
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium border text-white -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md dark:bg-blue-700 bg-blue-600 dark:border-gray-700 dark:text-white">
+                  Cras justo odio
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Dapibus ac facilisis in
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Morbi leo risus
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Porta ac consectetur ac
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  chocolate cheesecake candy
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Oat cake icing pastry pie carrot
+                </li>
+              </ul>
 
             </div>
-
           </div>
 
           <div class="mt-4 flex-none pr-8 mod:pl-0 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none ">
@@ -769,28 +690,484 @@
 
               <div class="p-6 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
                 <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
-                  Javascript Behavior
+                  Disabled items
                 </h4>
 
               </div>
 
-              <div class="flex">
+              <p class="textoCSS3 mt-6 ml-6 mr-6 mt-0 mb-4 leading-6 text-gray-500 break-words">
+                Add
+                <code class="font-mono text-sm leading-5 text-pink-600">.disabled</code> to a
+                <code class="font-mono text-sm leading-5 text-pink-600">.list-group-item</code>
+                to gray it out to appear disabled.
+              </p>
 
-                <div class="ml-6 flex-none" id="accordion-color" data-accordion="collapse"
+              <ul class="ml-6 mb-6 pr-6 flex flex-col">
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Cras justo odio
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Dapibus ac facilisis in
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-400 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-white dark:border-gray-900 dark:text-black">
+                  Morbi leo risus
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Porta ac consectetur ac
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Vestibulum at eros
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Biscuit jelly beans macaroon danish pudding
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Oat cake icing pastry pie carrot
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class=" flex flex-wrap" style="font-family: 'Nunito';">
+          <div
+            class="mod:mt-4 mt-5 flex-none mod:pr-6 pr-5 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300"
+            data-type="flush">
+            <div class="mod:ml-2 ml-3 flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Button list Group
+                </h4>
+              </div>
+
+              <ul class="ml-6 mb-6 mt-8 pr-6 flex flex-col">
+                <li
+                  class="cursor-pointer inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium border text-white -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md dark:bg-blue-700 bg-blue-600 dark:border-gray-700 dark:text-white">
+                  Cras justo odio
+                </li>
+                <li
+                  class="active:dark:bg-gray-700 active:dark:text-gray-500 active:bg-gray-200 active:text-gray-500 cursor-pointer inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Dapibus ac facilisis in
+                </li>
+                <li
+                  class="active:dark:bg-gray-700 active:dark:text-gray-500 active:bg-gray-200 active:text-gray-500 cursor-pointer inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Morbi leo risus
+                </li>
+                <li
+                  class="active:dark:bg-gray-700 active:dark:text-gray-500 active:bg-gray-200 active:text-gray-500 cursor-pointer inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Porta ac consectetur ac
+                </li>
+                <li
+                  class="active:dark:bg-gray-700 active:dark:text-gray-500 active:bg-gray-200 active:text-gray-500 cursor-pointer inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  Vestibulum at eros
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+          <div
+            class="mod:mt-4 mt-5 flex-none pr-8 mod:pl-0 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300">
+            <div class=" flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Badges
+                </h4>
+              </div>
+
+              <p class=" textoCSS3 mt-8 ml-6 mr-6 mb-4 leading-6 break-words text-slate-300">
+                Use Utility classes
+                <code class="font-mono text-sm leading-5 text-pink-600">.flex</code>
+                <code class="font-mono text-sm leading-5 text-pink-600">.justify-content-between</code>
+                <code class="font-mono text-sm leading-5 text-pink-600">align-items-center</code>
+                to create space between badge and your content
+              </p>
+
+              <ul class="ml-6 mb-6  pr-6 flex flex-col">
+
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <div class="flex justify-between w-full">
+                    Biscuit jelly beans macaroon danish pudding.
+                    <span
+                      class="inline-flex items-center py-1 px-2 rounded-md text-xs font-medium bg-yellow-400 text-white">8</span>
+                  </div>
+                </li>
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <div class="flex justify-between w-full">
+                    chocolate cheesecake candy
+                    <span
+                      class="inline-flex items-center py-1 px-2 rounded-md text-xs font-medium bg-cyan-500 text-white">7</span>
+                  </div>
+                </li>
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <div class="flex justify-between w-full">
+                    Oat cake icing pastry pie carrot
+                    <span
+                      class="inline-flex items-center py-1 px-2 rounded-md text-xs font-medium bg-red-500 text-white">6</span>
+                  </div>
+                </li>
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <div class="flex justify-between w-full">
+                    space between badgeOat cake icing pastry pie carrot
+                    <span
+                      class="inline-flex items-center px-2 mt-3 mb-3 rounded-md text-xs font-medium bg-gray-500 text-white">5</span>
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 flex flex-wrap" style="font-family: 'Nunito';">
+          <div
+            class="mod:mt-4 mt-5 flex-none mod:pr-6 pr-5 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300"
+            data-type="flush">
+            <div class="mod:ml-2 ml-3 flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Checkboxes and radios
+                </h4>
+              </div>
+
+              <p class="textoCSS3 mt-8 ml-6 mr-6 mb-4 leading-6 break-words text-slate-300">
+                Place checkboxes and radios within list group items and customize as needed.
+              </p>
+
+              <ul class="ml-6 mb-6 pr-6 flex flex-col">
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <input id="default-checkbox" type="checkbox" value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                  <label for="checkbox-1" class="inline-block text-left break-words cursor-default">
+                    Cras justo odio
+                  </label>
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <input id="default-checkbox" type="checkbox" value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                  <label for="checkbox-1" class="inline-block text-left break-words cursor-default">
+                    Dapibus ac facilisis in
+                  </label>
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <input id="default-checkbox" type="checkbox" value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                  <label for="checkbox-1" class="inline-block text-left break-words cursor-default">
+                    Morbi leo risus
+                  </label>
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <input id="default-checkbox" type="checkbox" value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                  <label for="checkbox-1" class="inline-block text-left break-words cursor-default">
+                    Porta ac consectetur ac
+                  </label>
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <input id="default-checkbox" type="checkbox" value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                  <label for="checkbox-1" class="inline-block text-left break-words cursor-default">
+                    Vestibulum at eros
+                  </label>
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <input id="default-checkbox" type="checkbox" value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                  <label for="checkbox-1" class="inline-block text-left break-words cursor-default">
+                    Vestibulum at eros
+                  </label>
+                </li>
+                <li
+                  class="inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-900 dark:border-gray-900 dark:text-gray-400">
+                  <input id="default-checkbox" type="checkbox" value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                  <label for="checkbox-1" class="inline-block text-left break-words cursor-default">
+                    Vestibulum at eros
+                  </label>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div
+            class="mod:mt-4 mt-5 flex-none pr-8 mod:pl-0 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300">
+            <div class=" flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Custom content
+                </h4>
+              </div>
+
+              <p class="textoCSS3 mt-8 ml-6 mr-6 mb-4 leading-6 break-words text-slate-300">
+                Add nearly any HTML within, even for linked list groups like the one below.
+              </p>
+
+              <a href="#"
+                class="dark:border-none ml-6 mr-6 block relative py-2 px-4 rounded-sm leading-6 text-white break-words bg-blue-700 border border-blue-700 border-solid cursor-pointer"
+                style="text-decoration: none; z-index: 2;">
+                <div class="flex justify-between w-full  text-white cursor-pointer">
+                  <h1 class="mt-0  text-xl font-bold">
+                    List group item heading
+                  </h1>
+                  <p class="text-sm text-white">3 days ago</p>
+                </div>
+                <p class="mt-0 mb-1 text-white cursor-pointer">
+                  Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                  risus varius blandit.
+                </p>
+                <small class="text-sm leading-5 break-words">Donec id elit non mi porta.</small>
+              </a>
+
+              <a href="#"
+                class="dark:border-none active:dark:bg-gray-700 active:dark:text-gray-500 active:bg-gray-200 active:text-gray-500 border ml-6 mr-6 block relative py-2 px-4 rounded-sm leading-6 text-white break-words  cursor-pointer"
+                style="text-decoration: none; z-index: 2;">
+                <div class="flex justify-between w-full   cursor-pointer">
+                  <h1 class="textoCSS mt-0  text-xl font-bold">
+                    List group item heading
+                  </h1>
+                  <p class="text-sm ">3 days ago</p>
+                </div>
+                <p class="mt-0 mb-1  cursor-pointer">
+                  Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                  risus varius blandit.
+                </p>
+                <p class="text-sm  leading-5 break-words">Donec id elit non mi porta.</p>
+              </a>
+
+              <a href="#"
+                class="dark:border-none active:dark:bg-gray-700 active:dark:text-gray-500 active:bg-gray-200 active:text-gray-500 border ml-6 mr-6 mb-6 block relative py-2 px-4 rounded-sm leading-6 text-white break-words  cursor-pointer"
+                style="text-decoration: none; z-index: 2;">
+                <div class="flex justify-between w-full   cursor-pointer">
+                  <h1 class="textoCSS mt-0  text-xl font-bold">
+                    List group item heading
+                  </h1>
+                  <p class="text-sm ">3 days ago</p>
+                </div>
+                <p class="mt-0 mb-1  cursor-pointer">
+                  Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+                  risus varius blandit.
+                </p>
+                <p class="text-sm  leading-5 break-words">Donec id elit non mi porta.</p>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 flex flex-wrap" style="font-family: 'Nunito';">
+          <div
+            class="mod:mt-4 mt-5 flex-none mod:pr-6 pr-5 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300"
+            data-type="flush">
+            <div class="mod:ml-2 ml-3 flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Contextual classes
+                </h4>
+
+              </div>
+
+              <p class="textoCSS3 mt-8 ml-6 mr-6 mb-4 leading-6 text-gray-500 break-words">
+                Use contextual classes to style list items, default or linked. Also includes
+                .active state.
+              </p>
+
+
+              <ul class="ml-6 mb-6 pr-6 flex flex-col">
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium border text-indigo-700 -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md  bg-indigo-200 ">
+                  Cras justo odio
+                </li>
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium border text-green-700 -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md  bg-green-200 ">
+                  Dapibus ac facilisis in
+                </li>
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium border text-red-700 -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md  bg-red-200 ">
+                  Morbi leo risus
+                </li>
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium border text-yellow-700 -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md  bg-yellow-100 ">
+                  Porta ac consectetur ac
+                </li>
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium border text-cyan-700 -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md  bg-cyan-200 ">
+                  Vestibulum at eros
+                </li>
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium border text-gray-700 -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md  bg-gray-200 ">
+                  chocolate cheesecake candy
+                </li>
+                <li
+                  class=" inline-flex items-center gap-x-2 py-2 px-4 text-md font-medium border text-gray-900 -mt-px first:rounded-t-md first:mt-0 last:rounded-b-md  bg-gray-400 ">
+                  Oat cake icing pastry pie carrot
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div
+            class="mod:mt-4 mt-5 flex-none pr-8 mod:pl-0 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300">
+            <div class=" flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+              <div class="p-5 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  Horizontal
+                </h4>
+              </div>
+
+              <p class="textoCSS3 mt-8 ml-6 mr-6 mb-4  leading-6 text-gray-500 break-words">
+                Add
+                <code class="font-mono text-sm leading-5 text-pink-600">.list-group</code>
+                to change the layout of list group items from vertical to horizontal across
+                all breakpoints.choose a responsive variantcode
+                <code class="font-mono text-sm leading-5 text-pink-600">
+                  .list-group-horizontal-{sm|md|lg|xl}</code>
+                to make a list group horizontal starting at that breakpoint’s min-width.
+              </p>
+
+              <div class="ml-6 flex" id="accordion-color" data-accordion="collapse"
+                data-active-classes="text-white border-blue-600 border-b-2 bg-blue-700 pointer-events-none">
+
+                <h2 id="accordion-color-heading-1">
+
+                  <button type="button"
+                    class="border dark:border-none  py-2 px-8 inline-flex justify-center items-center text-md active:dark:bg-gray-800 active:bg-gray-200"
+                    data-accordion-target="#accordion-color-body-1" aria-expanded="true"
+                    aria-controls="accordion-color-body-1">
+                    Option 1
+                  </button>
+
+                </h2>
+
+                <h2 id="accordion-color-heading-2">
+                  <button type="button"
+                    class="border dark:border-none  py-2 px-8 inline-flex justify-center items-center text-md active:dark:bg-gray-800 active:bg-gray-200"
+                    data-accordion-target="#accordion-color-body-2" aria-expanded="false"
+                    aria-controls="accordion-color-body-2">
+                    Option 2
+                  </button>
+                </h2>
+
+                <h2 id="accordion-color-heading-3">
+                  <button type="button"
+                    class="border dark:border-none py-2 px-9 inline-flex justify-center items-center text-md active:dark:bg-gray-800 active:bg-gray-200"
+                    data-accordion-target="#accordion-color-body-3" aria-expanded="false"
+                    aria-controls="accordion-color-body-3">
+                    Option 3
+                  </button>
+
+                </h2>
+
+              </div>
+
+              <div id="accordion-color-body-1"
+                class=" ml-6 mb-8 pr-2 hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="accordion-color-heading-1">
+                <div class="mt-2">
+                  <p class="textoCSS3 mr-6">
+                    Irure enim occaecat labore sit qui aliquip reprehenderit amet velit. Deserunt ullamco ex elit
+                    nostrud ut dolore nisi officia magna sit occaecat laboris sunt dolor. Nisi eu minim cillum occaecat
+                    aute est cupidatat aliqua labore aute occaecat ea aliquip sunt amet. Aute mollit dolor ut
+                    exercitation irure commodo non amet consectetur quis amet culpa. Quis ullamco nisi amet qui aute
+                    irure eu. Magna labore dolor quis ex labore id nostrud deserunt dolor eiusmod eu pariatur culpa
+                    mollit in irure Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quis porro doloribus
+                    est natus doloremque, eos laudantium exercitationem impedit sapiente tenetur soluta reiciendis
+                    deserunt!
+                  </p>
+                </div>
+              </div>
+
+              <div id="accordion-color-body-2"
+                class="ml-6 mb-8 pr-2 hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="accordion-color-heading-2">
+                <div class="mt-2">
+                  <p class="textoCSS3 mr-8">
+                    Cupidatat quis ad sint excepteur laborum in esse qui. Et excepteur consectetur ex nisi eu do cillum
+                    ad laborum. Mollit et eu officia dolore sunt Lorem culpa qui commodo velit ex amet id ex. Officia
+                    anim incididunt laboris deserunt anim aute dolor incididunt veniam aute dolore do exercitation.
+                    Dolor nisi culpa ex ad irure in elit eu dolore. Ad laboris ipsum reprehenderit irure non commodo
+                    enim culpa commodo veniam incididunt veniam ad. Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Exercitationem, porro! Amet soluta tempora eveniet blanditiis alias eos, dolor qui
+                    consectetur!
+                  </p>
+                </div>
+              </div>
+
+              <div id="accordion-color-body-3"
+                class="ml-6 mb-8 pr-2 hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="accordion-color-heading-3">
+                <div class="mt-2">
+                  <p class="textoCSS3 mr-8">
+                    Ut ut do pariatur aliquip aliqua aliquip exercitation do nostrud commodo reprehenderit aute ipsum
+                    voluptate. Irure Lorem et laboris nostrud amet cupidatat cupidatat anim do ut velit mollit consequat
+                    enim tempor. Consectetur est minim nostrud nostrud consectetur irure labore voluptate irure. Ipsum
+                    id Lorem sit sint voluptate est pariatur eu ad cupidatat et deserunt culpa sit eiusmod deserunt.
+                    Consectetur et fugiat anim do eiusmod aliquip nulla laborum elit adipisicing pariatur cillum. Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Molestias, inventore!
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mod:ml-0 ml-1 mt-5 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
+
+          <div class="mt-4 flex-none pr-6 pl-1 w-full max-w-full leading-6  md:flex-none text-slate-300">
+            <div class="ml-2 flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 195px; border-radius: 11.2px;">
+
+              <div class="p-6 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+                <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
+                  List group navigation
+                </h4>
+
+              </div>
+
+              <div class="flex mt-5">
+                <div class="dark:bg-black border dark:border-none ml-6 mb-10 flex-none" id="accordion-color"
+                  data-accordion="collapse"
                   data-active-classes="dark:bg-blue-600 bg-blue-500 text-white rounded-sm w-full pointer-events-none">
-
                   <h2 id="accordion-color-heading-4">
-
-                    <button type="button" class="py-2 px-4 inline-flex justify-start items-center gap-2 text-md"
+                    <button type="button"
+                      class="border-t dark:border-none py-2 px-4 inline-flex justify-start items-center text-md pr-52"
                       data-accordion-target="#accordion-color-body-4" aria-expanded="true"
                       aria-controls="accordion-color-body-4">
                       Home
                     </button>
+                  </h2>
 
                   </h2>
 
                   <h2 id="accordion-color-heading-5">
-                    <button type="button" class="py-2 px-4 inline-flex justify-start items-center gap-2 text-md"
+                    <button type="button"
+                      class="dark:border-none border-t py-2 px-4 inline-flex justify-start items-center text-md pr-52"
                       data-accordion-target="#accordion-color-body-5" aria-expanded="false"
                       aria-controls="accordion-color-body-5">
                       Profile
@@ -798,7 +1175,8 @@
                   </h2>
 
                   <h2 id="accordion-color-heading-6">
-                    <button type="button" class="py-2 px-4 inline-flex justify-start items-center gap-2 text-md"
+                    <button type="button"
+                      class="dark:border-none border-t py-2 px-4 inline-flex justify-start items-center text-md pr-44"
                       data-accordion-target="#accordion-color-body-6" aria-expanded="false"
                       aria-controls="accordion-color-body-6">
                       Messages
@@ -806,7 +1184,8 @@
                   </h2>
 
                   <h2 id="accordion-color-heading-7">
-                    <button type="button" class="mb-5 py-2 px-4 inline-flex justify-start items-center gap-2 text-md"
+                    <button type="button"
+                      class="dark:border-none border-t py-2 px-4 inline-flex justify-start items-center text-md pr-48"
                       data-accordion-target="#accordion-color-body-7" aria-expanded="false"
                       aria-controls="accordion-color-body-7">
                       Settings
@@ -820,11 +1199,13 @@
                   aria-labelledby="accordion-color-heading-4">
                   <div class=" ml-6">
                     <p class="textoCSS3 mr-6">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nulla neque. Ut hendrerit nulla
-                      a euismod pretium. Fusce venenatis sagittis ex efficitur suscipit. In tempor mattis fringilla. Sed
-                      id tincidunt orci, et volutpat ligula. Aliquam sollicitudin sagittis ex, a rhoncus nisl feugiat
-                      quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ligula a tempor
-                      vulputate. Suspendisse pretium mollis ultrices.
+                      Velit aute mollit ipsum ad dolor consectetur nulla officia culpa adipisicing exercitation fugiat
+                      tempor. Voluptate deserunt sit sunt nisi aliqua fugiat proident ea ut. Mollit voluptate
+                      reprehenderit occaecat nisi ad non minim tempor sunt voluptate consectetur exercitation id ut
+                      nulla. Ea et fugiat aliquip nostrud sunt incididunt consectetur culpa aliquip eiusmod dolor. Anim
+                      ad Lorem aliqua in cupidatat nisi enim eu nostrud do aliquip veniam minim. Lorem ipsum dolor sit
+                      amet consectetur, adipisicing elit. Aliquam itaque nisi obcaecati doloremque et est ex possimus
+                      quidem dolorem soluta.
                     </p>
                   </div>
                 </div>
@@ -834,9 +1215,11 @@
                   aria-labelledby="accordion-color-heading-5">
                   <div class=" ml-6">
                     <p class="textoCSS3 mr-8">
-                      Integer interdum diam eleifend metus lacinia, quis gravida eros mollis. Fusce non sapien sit amet
-                      magna dapibus ultrices. Morbi tincidunt magna ex, eget faucibus sapien bibendum non. Duis a mauris
-                      ex. Ut finibus risus sed massa mattis porta. Aliquam sagittis massa et purus efficitur ultricies.
+                      Cupidatat quis ad sint excepteur laborum in esse qui. Et excepteur consectetur ex nisi eu do
+                      cillum ad laborum. Mollit et eu officia dolore sunt Lorem culpa qui commodo velit ex amet id ex.
+                      Officia anim incididunt laboris deserunt anim aute dolor incididunt veniam aute dolore do
+                      exercitation. Dolor nisi culpa ex ad irure in elit eu dolore. Ad laboris ipsum reprehenderit irure
+                      non commodo enim culpa commodo veniam incididunt veniam ad.
                     </p>
                   </div>
                 </div>
@@ -846,9 +1229,12 @@
                   aria-labelledby="accordion-color-heading-6">
                   <div class=" ml-6">
                     <p class="textoCSS3 mr-8">
-                      Integer pretium dolor at sapien laoreet ultricies. Fusce congue et lorem id convallis. Nulla
-                      volutpat tellus nec molestie finibus. In nec odio tincidunt eros finibus ullamcorper. Ut sodales,
-                      dui nec posuere finibus, nisl sem aliquam metus, eu accumsan lacus felis at odio.
+                      Ut ut do pariatur aliquip aliqua aliquip exercitation do nostrud commodo reprehenderit aute ipsum
+                      voluptate. Irure Lorem et laboris nostrud amet cupidatat cupidatat anim do ut velit mollit
+                      consequat enim tempor. Consectetur est minim nostrud nostrud consectetur irure labore voluptate
+                      irure. Ipsum id Lorem sit sint voluptate est pariatur eu ad cupidatat et deserunt culpa sit
+                      eiusmod deserunt. Consectetur et fugiat anim do eiusmod aliquip nulla laborum elit adipisicing
+                      pariatur cillum.
                     </p>
                   </div>
                 </div>
@@ -858,17 +1244,19 @@
                   aria-labelledby="accordion-color-heading-7">
                   <div class=" ml-6">
                     <p class="textoCSS3 mr-8">
-                      Sed lacus quam, convallis quis condimentum ut, accumsan congue massa. Pellentesque et quam vel
-                      massa pretium ullamcorper vitae eu tortor.
+                      Irure enim occaecat labore sit qui aliquip reprehenderit amet velit. Deserunt ullamco ex elit
+                      nostrud ut dolore nisi officia magna sit occaecat laboris sunt dolor. Nisi eu minim cillum
+                      occaecat aute est cupidatat aliqua labore aute occaecat ea aliquip sunt amet. Aute mollit dolor ut
+                      exercitation irure commodo non amet consectetur quis amet culpa. Quis ullamco nisi amet qui aute
+                      irure eu. Magna labore dolor quis ex labore id nostrud deserunt dolor eiusmod eu pariatur culpa
+                      mollit in irure
+
                     </p>
                   </div>
                 </div>
               </div>
-
             </div>
-
           </div>
-
         </div>
 
         <!-- footer -->
@@ -894,6 +1282,7 @@
       </div>
     </div>
   </div>
+
 </body>
 
 </html>

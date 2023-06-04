@@ -4,34 +4,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tooltip - Mazer Admin Dashboard</title>
+  <title>Chat Application - Mazer Admin Dashboard</title>
   <link rel="stylesheet" href="../elementos/elementos2.css">
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
   <link href="../../css/output.css" rel="stylesheet">
   <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
-  <script defer src="../elementos/tooltipPlus.js"></script>
   <script defer src="../elementos/button-light-dark.js"></script>
   <script src="/node_modules/preline/dist/preline.js"></script>
 
 </head>
 
 <body>
-  <div id="app">
-    <div id="sidebar" class="xl:active xxl:active fixed">
-      <div class="sidebar-wrapper active entrada">
-        <div class="sidebar-header relative">
 
-          <div class="flex w-60 mt-3 mb-2 items-center">
+  <div id="app">
+    <div id="sidebar" class="active ">
+      <div class="sidebar-wrapper active entrada min-h-screen">
+        <div class="sidebar-header relative ">
+
+          <div class="flex w-60 mt-3 mb-2 items-center ">
             <div class="logo">
               <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg" alt="Logo" /></a>
             </div>
 
-            <div class="flex gap-2 items-center mt-1">
+            <div class=" flex gap-2 items-center mt-1">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
-                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons sun-color" width="20" height="22"
+                role="img" class="ml-14 textoSidebar iconify iconify--system-uicons" width="20" height="22"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
-                <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                   <path
                     d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
                     opacity=".3"></path>
@@ -52,23 +52,23 @@
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                 role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20" height="20"
                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path fill="#607080"
+                <path fill="currentColor"
                   d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
                 </path>
               </svg>
             </div>
 
             <button id="sidebar-hide"
-              class="sidebar-hide absolute textoSidebar top-2 right-2 bg-color-transparent border-none p-0 xl:hidden xxl:hidden">
-              <svg class="bi" width="25" height="40" fill="currentColor">
+              class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-transparent border-none p-0">
+              <svg class="bi" width="25" height="40" fill="currentColor" style="fill: blue;">
                 <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
               </svg>
             </button>
 
-
           </div>
+
         </div>
-        <div class="sidebar-menu">
+        <div class="sidebar-menu" style="font-family: 'Nunito';">
           <ul class="menu">
             <li class="sidebar-title textoSidebar">Menu</li>
 
@@ -80,63 +80,63 @@
               </a>
             </li>
 
-            <li class="w-60 sidebar-item active has-sub">
+            <li class="w-60 sidebar-item has-sub">
               <a href="#" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#stack" />
                 </svg> <span class="textoSidebar">Components</span>
               </a>
-              <ul class="submenu active textoSidebar ml-8">
+              <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item  ">
-                  <a href="component-accordion.html">Accordion</a>
+                  <a href="../components/component-accordion.html">Accordion</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-alert.html">Alert</a>
+                  <a href="../components/component-alert.html">Alert</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-badge.html">Badge</a>
+                  <a href="../components/component-badge.html">Badge</a>
                 </li>
                 <li class="submenu-item ">
-                  <a href="component-breadcrumb.html">Breadcrumb</a>
+                  <a href="../components/component-breadcrumb.html">Breadcrumb</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-button.html">Button</a>
+                  <a href="../components/component-button.html">Button</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-card.html">Card</a>
+                  <a href="../components/component-card.html">Card</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-carousel.html">Carousel</a>
+                  <a href="../components/component-carousel.html">Carousel</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-collapse.html">Collapse</a>
+                  <a href="../components/component-collapse.html">Collapse</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-dropdown.html">Dropdown</a>
+                  <a href="../components/component-dropdown.html">Dropdown</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-list-group.html">List Group</a>
+                  <a href="../components/component-list-group.html">List Group</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-modal.html">Modal</a>
+                  <a href="../components/component-modal.html">Modal</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-navs.html">Navs</a>
+                  <a href="../components/component-navs.html">Navs</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-pagination.html">Pagination</a>
+                  <a href="../components/component-pagination.html">Pagination</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-progress.html">Progress</a>
+                  <a href="../components/component-progress.html">Progress</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="component-spinner.html">Spinner</a>
+                  <a href="../components/component-spinner.html">Spinner</a>
                 </li>
-                <li class="submenu-item">
-                  <a href="component-toasts.html">Toasts</a>
+                <li class="submenu-item ">
+                  <a href="../components/component-toasts.html">Toasts</a>
                 </li>
-                <li class="submenu-item active">
-                  <a href="component-tooltip.html">Tooltip</a>
+                <li class="submenu-item ">
+                  <a href="../components/component-tooltip.html">Tooltip</a>
                 </li>
               </ul>
             </li>
@@ -165,7 +165,7 @@
                 </li>
                 <li class="submenu-item">
                   <a href="../extraComponents/extra-component-rating.html">Rating</a>
-                </li>                
+                </li>
               </ul>
             </li>
 
@@ -195,7 +195,9 @@
             </li>
 
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Forms & Tables</span>
+
             </li>
 
             <li class="w-60 sidebar-item has-sub">
@@ -232,6 +234,7 @@
                   <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
                 </svg> <span class="textoSidebar">Form Layout</span>
               </a>
+
             </li>
 
             <li class="w-60 sidebar-item has-sub">
@@ -275,7 +278,9 @@
                   <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
                 </svg> <span class="textoSidebar">Table</span>
               </a>
+
             </li>
+
 
             <li class="w-60 sidebar-item has-sub mb-6">
               <a href="#" class="sidebar-link">
@@ -294,7 +299,9 @@
             </li>
 
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Extra UI</span>
+
             </li>
 
             <li class="w-60 sidebar-item has-sub">
@@ -313,6 +320,7 @@
                 <li class="submenu-item">
                   <a href="../widgets/ui-widgets-to-do-list.html">To-do list</a>
                 </li>
+
               </ul>
             </li>
 
@@ -471,7 +479,9 @@
             </li>
 
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Pages</span>
+
             </li>
 
             <li class="w-60 sidebar-item ">
@@ -482,8 +492,8 @@
               </a>
             </li>
 
-            <li class="w-60 sidebar-item ">
-              <a href="../chat-application/pages-chat.html" class="sidebar-link ">
+            <li class="w-60 sidebar-item active">
+              <a href="../chat-application/pages-chat.html" class="sidebar-link active">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#chat-dots-fill" />
                 </svg> <span class="textoSidebar">Chat Application</span>
@@ -516,13 +526,13 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="auth/auth-login.html">Login</a>
+                  <a href="../auth/auth-login.html">Login</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="auth/auth-register.html">Register</a>
+                  <a href="../auth/auth-register.html">Register</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="auth/auth-forgot-password.html">Forgot Password</a>
+                  <a href="../auth/auth-forgot-password.html">Forgot Password</a>
                 </li>
               </ul>
             </li>
@@ -535,19 +545,21 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="errors/error-403.html">403</a>
+                  <a href="../errors/error-403.html">403</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="errors/error-404.html">404</a>
+                  <a href="../errors/error-404.html">404</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="errors/error-500.html">500</a>
+                  <a href="../errors/error-500.html">500</a>
                 </li>
               </ul>
             </li>
 
             <li class="sidebar-item  mb-4">
+
               <span class="ml-4 textoSidebar">Raise Support</span>
+
             </li>
 
             <li class="w-60 sidebar-item ">
@@ -573,19 +585,23 @@
                 </svg> <span class="textoSidebar">Donate</span>
               </a>
             </li>
+
           </ul>
         </div>
       </div>
     </div>
 
     <!-- pagina -->
-    <div id="main" class="main ml-4 mod:ml-80">
+    <div id="main" class="main ml-4 mod:ml-80 mod:mt-8">
 
       <!-- boton movil -->
+
       <button id="sidebar-toggle" class="  text-white  rounded ml-4 mt-8 mod:hidden ">
+
         <svg class="bi" width="28" height="40" fill="currentColor" style="fill: blue;">
           <use xlink:href="../elementos/herramientas/images/icons.svg#justify" />
         </svg>
+
       </button>
 
       <!-- titulo -->
@@ -600,7 +616,7 @@
                   style=" list-style: outside none none; font-family: 'Nunito';">Dashboard</a>
               </li>
               <li class="pl-2 text-left text-gray-500 whitespace-nowrap">
-                / Tooltip
+                / Chat Application
               </li>
             </ol>
           </nav>
@@ -609,167 +625,60 @@
         <div class="order-1 mb-4 md:mb-0 md:order-1  w-6/12">
           <h3 class="textoCSS mt-2 mb-1 ml-4 mod:ml-3 text-3xl text-white xl:text-3xl"
             style="line-height: 1.2; font-family: 'Nunito'; font-weight: 600;">
-            Tooltip
+            Chat Application
           </h3>
           <p class="ml-4 mt-2 text-slate-400 texto2CSS mod:ml-3 mod:mt-3 ">
-            The tooltip, also known as infotip or hint, is a common graphical user interface element which shows
-            additional information on element hover. </p>
+            An application for user to check Chat inbox. </p>
         </div>
       </div>
 
       <!-- contenido -->
       <div class="main-container">
-        <div class=" flex flex-wrap" style="font-family: 'Nunito';">
 
-          <div class="flex-none px-3 pr-5 pl-3 mt-4 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300">
-            <div class="flex flex-col mb-8 min-w-0 break-words bg-clip-border entrada"
-              style="min-height: 195px; border-radius: 11.2px;">
-              <div class="" data-type="default">
+        <div class="mod:ml-0 ml-1 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
 
-                <div class="p-6 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
-                  <h4 class="mt-0 mb-1 text-xl font-bold text-white xl:text-xl textoCSS">
-                    Basic Tooltip
-                  </h4>
-                </div>
-                <div class="flex-auto px-6 pt-0 pb-6 break-words">
+          <div class="mt-4  flex-none pr-6 pl-1 w-full max-w-full leading-6  md:flex-none text-slate-300">
+            <div class="ml-2  flex flex-col  min-w-0 break-words bg-clip-border entrada"
+              style="min-height: 100px; border-radius: 11.2px;">
 
-                  <div class="tooltip-container inline-block mr-1 mb-2">
-                    <button
-                      class="tooltip-button inline-block py-1 px-3 m-0 text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none">
-                      Tooltip on top
-                    </button>
-                    <div
-                      class="tooltip tooltip-above absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Tooltip on top
-                      <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </div>
-
-                  <div class="tooltip-container inline-block mr-1 mb-2">
-                    <button
-                      class="tooltip-button inline-block py-1 px-3 m-0 text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none">
-                      Tooltip on right
-                    </button>
-                    <div
-                      class="tooltip tooltip-right absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Tooltip on right
-                      <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </div>
-
-                  <div class="tooltip-container inline-block mr-1 mb-2">
-                    <button
-                      class="tooltip-button inline-block py-1 px-3 m-0 text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none">
-                      Tooltip on bottom
-                    </button>
-                    <div
-                      class="tooltip tooltip-below absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Tooltip on bottom
-                      <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </div>
-
-                  <div class="tooltip-container inline-block mr-1 mb-2">
-                    <button
-                      class="tooltip-button inline-block py-1 px-3 m-0 text-base font-normal text-center text-white normal-case align-middle bg-gray-500 rounded border border-gray-500 border-solid cursor-pointer select-none">
-                      Tooltip on left
-                    </button>
-                    <div
-                      class="tooltip tooltip-left absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Tooltip on left
-                      <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-4 flex-none pr-8 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none text-slate-300"
-            data-type="flush">
-            <div class="flex flex-col mb-8 min-w-0 break-words bg-clip-border entrada"
-              style="min-height: 200px; border-radius: 11.2px;">
-              <div class="p-6 mb-0 " style="border-radius: 10.2px 10.2px 0px 0px;">
+              <div class="pt-5 pr-3 pl-6 mb-2 " style="border-radius: 10.2px 10.2px 0px 0px;">
                 <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
-                  Tooltip in Text
+                  Coming Soon!
                 </h4>
-              </div>
-              <div class="flex-auto px-6 pt-0 pb-2 text-slate-300">
 
-                <p class="mt-0 mb-4 interior ">
-                  Tight pants next level keffiyeh
-                  <span class="tooltip-container">
+                <p class="textoCSS3 mt-7 mb-4 break-words"> While you wait, you can use the <a
+                    href="../widgets/ui-widgets-chatbox.html" class="text-blue-700">chatbox widget.</a></p>
 
-                    <a href="#" class="tooltip-button text-blue-700 cursor-pointer" style="text-decoration: none;">you
-                      probably</a>
-                    <span
-                      class="tooltip tooltip-above absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Some tooltip text!
-                      <span class="tooltip-arrow" data-popper-arrow></span>
-                    </span>
-                  </span>
+                <p class="textoCSS3 mt-4 mb-7 break-words">If you want to contribute, check out our <a
+                    href="https://github.com/zuramai/mazer" class="text-blue-700">template repository</a> . </p>
 
-                  haven't heard of them. Photo booth beard raw denim letterpress vegan
-                  messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie
-                  sustainable quinoa 8-bit american apparel
-
-                  <span class="tooltip-container">
-                    <a href="#" data-bs-toggle="tooltip" data-bs-original-title="Another tooltip text!"
-                      class="text-blue-700 cursor-pointer" style="text-decoration: none;">have a</a>
-                    <span
-                      class="tooltip tooltip-above absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Another tooltip text!
-                      <span class="tooltip-arrow" data-popper-arrow></span>
-                    </span>
-                  </span>
-
-                  terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo
-                  thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's
-                  cleanse vegan chambray. A really ironic artisan
-
-                  <span class="tooltip-container">
-                    <a href="#" data-bs-toggle="tooltip" data-bs-original-title="Another here too!"
-                      class="text-blue-700 cursor-pointer" style="text-decoration: none;">whatever keytar</a>
-                    <span
-                      class="tooltip tooltip-above absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-900">
-                      Another here too!
-                      <span class="tooltip-arrow" data-popper-arrow></span>
-                    </span>
-                  </span>
-
-                  , scenester
-                  farm-to-table banksy Austin twitter handle freegan cred raw
-                  denim single-origin coffee viral.
-
-                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- footer -->
-      <div id="footer" class=" block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
-        data-mb="20">
+        <!-- footer -->
+        <div id="footer" class=" block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
+          data-mb="20">
 
-        <div class="float-left text-slate-400 mb-3">
-          <p class="mt-9 mod:ml-3 ml-4 texto2CSS">2023 © Mazer</p>
-        </div>
-        <div class="float-right text-slate-400 mr-8 mb-12 mt-9 ">
-          <p class="texto2CSS mt-0">
-            Crafted with
-            <span class="inline-block text-red-500">
-              <svg width="15" height="15" fill="currentColor">
-                <use xlink:href="../elementos/herramientas/images/icons.svg#heart-fill" />
-              </svg>
-            </span>
-            by
-            <a href="https://saugi.me" class="text-blue-700 cursor-pointer" style="text-decoration: none;">Saugi</a>
-          </p>
+          <div class="float-left text-slate-400 mb-3">
+            <p class="mt-9 mod:ml-3 ml-4 texto2CSS">2023 © Mazer</p>
+          </div>
+          <div class="float-right text-slate-400 mr-8 mb-12 mt-9 texto2CSS">
+            <p class="texto2CSS mt-0">
+              Crafted with
+              <span class="inline-block text-red-500">
+                <svg width="15" height="15" fill="currentColor">
+                  <use xlink:href="../elementos/herramientas/images/icons.svg#heart-fill" />
+                </svg>
+              </span>
+              by
+              <a href="https://saugi.me" class="text-blue-700 cursor-pointer" style="text-decoration: none;">Saugi</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </body>
 

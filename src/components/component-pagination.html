@@ -10,8 +10,8 @@
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
   <link href="../../css/output.css" rel="stylesheet">
   <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
-
-
+  <script defer src="../elementos/button-light-dark.js"></script>
+  <script src="/node_modules/preline/dist/preline.js"></script>
 
 </head>
 
@@ -42,7 +42,7 @@
                 </g>
               </svg>
 
-              <div class="relative block mb-2 mt-2 form-switch fs-6" id="theme-toggle">
+              <div class="relative block mb-2 mt-2  fs-6" id="theme-toggle">
                 <div id="toggle-button" onclick="toggleTheme()">
                   <div id="sun-moon" class="sun"></div>
                 </div>
@@ -63,7 +63,11 @@
                 <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
               </svg>
             </button>
+
+
           </div>
+
+
         </div>
         <div class="sidebar-menu">
           <ul class="menu">
@@ -203,28 +207,28 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Input</a>
+                  <a href="../formtables/form-elements/form-element-input.html">Input</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Input Group</a>
+                  <a href="../formtables/form-elements/form-element-input-group.html">Input Group</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Select</a>
+                  <a href="../formtables/form-elements/form-element-select.html">Select</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Radio</a>
+                  <a href="../formtables/form-elements/form-element-radio.html">Radio</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Checkbox</a>
+                  <a href="../formtables/form-elements/form-element-checkbox.html">Checkbox</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Textarea</a>
+                  <a href="../formtables/form-elements/form-element-textarea.html">Textarea</a>
                 </li>
               </ul>
             </li>
 
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../formtables/form-layout.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
                 </svg> <span class="textoSidebar">Form Layout</span>
@@ -239,7 +243,7 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Parsley</a>
+                  <a href="../formtables/form-validation-parsley.html">Parsley</a>
                 </li>
               </ul>
             </li>
@@ -252,22 +256,22 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Quill</a>
+                  <a href="../formtables/form-editor/form-editor-quill.html">Quill</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">CKEditor</a>
+                  <a href="../formtables/form-editor/form-editor-ckeditor.html">CKEditor</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Summernote</a>
+                  <a href="../formtables/form-editor/form-editor-summernote.html">Summernote</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">TinyMCE</a>
+                  <a href="../formtables/form-editor/form-editor-tinymce.html">TinyMCE</a>
                 </li>
               </ul>
             </li>
 
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../formtables/table.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
                 </svg> <span class="textoSidebar">Table</span>
@@ -282,10 +286,10 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Datatable</a>
+                  <a href="../formtables/datatables/table-datatable.html">Datatable</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Datatable (jQuery)</a>
+                  <a href="../formtables/datatables/table-datatable-jquery.html">Datatable (jQuery)</a>
                 </li>
               </ul>
             </li>
@@ -308,7 +312,7 @@
                   <a href="../widgets/ui-widgets-pricing.html">Pricing</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">To-do list</a>
+                  <a href="../widgets/ui-widgets-to-do-list.html">To-do list</a>
                 </li>
               </ul>
             </li>
@@ -321,13 +325,13 @@
               </a>
               <ul class="submenu textoSidebar ml-8">
                 <li class="submenu-item">
-                  <a href="">Bootstrap Icons</a>
+                  <a href="../icons/ui-icons-tailwind-icons.html">Tailwind Icons</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Fontawesome</a>
+                  <a href="../icons/ui-icons-fontawesome.html">Fontawesome</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Dripicons</a>
+                  <a href="../icons/ui-icons-dripicons.html">Dripicons</a>
                 </li>
               </ul>
             </li>
@@ -372,20 +376,99 @@
               </ul>
             </li>
 
-            <li class="w-60 sidebar-item has-sub mb-6 ">
-              <a href="#" class="sidebar-link">
-                <svg class="bi" width="15" height="40" fill="currentColor">
-                  <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
-                </svg> <span class="textoSidebar">Multi-Level Menu</span>
-              </a>
-              <ul class="submenu textoSidebar ml-8">
-                <li class="submenu-item">
-                  <a href="">First Level</a>
-                </li>
-                <li class="submenu-item">
-                  <a href="">Another Menu</a>
-                </li>
-              </ul>
+            <li class="w-60 hs-accordion-group mb-7">
+
+              <div class=" submenu-item hs-accordion" id="hs-basic-heading-1">
+
+                <button type="button"
+                  class="hover:dark:bg-gray-700 hover:bg-gray-200 mt-3 ml-4 flex textoSidebar hs-accordion-toggle "
+                  aria-controls="hs-basic-collapse-1"> <svg class="mr-4 bi" width="15" height="20" fill="currentColor">
+                    <use xlink:href="../elementos/herramientas/images/icons.svg#three-dots" />
+                  </svg>
+                  <span class="">Multi-level Menu</span>
+                  <svg
+                    class="ml-8 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-400 dark:text-gray-500"
+                    width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+
+                </button>
+
+                <div id="hs-basic-collapse-1"
+                  class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300"
+                  aria-labelledby="hs-basic-heading-1">
+                  <div class=" p-5 content-wrapper">
+                    <ul class=" textoSidebar ml-8">
+                      <li class="">
+                        <div class="hs-accordion-group">
+                          <div class="hs-accordion" id="hs-basic-heading-1">
+
+                            <button type="button"
+                              class="hover:dark:bg-gray-700 hover:bg-gray-200 ml-3 flex textoSidebar hs-accordion-toggle"
+                              aria-controls="hs-basic-collapse-1">
+                              <span class="text-sm">First Level</span>
+                              <svg
+                                class="ml-16 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-500"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                              </svg>
+                            </button>
+
+                            <div id="hs-basic-collapse-1"
+                              class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300 "
+                              aria-labelledby="hs-basic-heading-1">
+                              <div class=" p-5 content-wrapper">
+                                <ul class=" textoSidebar ">
+                                  <li
+                                    class="hover:translate-x-2 duration-300 ease-in-out hover:text-blue-800 hover:dark:text-white text-sm ml-5">
+                                    <a href="../multiLevelMenu/ui-multi-level-menu.html">Second Level</a>
+                                  </li>
+                                  <li
+                                    class="hover:translate-x-2 duration-300 ease-in-out hover:text-blue-800 hover:dark:text-white text-sm ml-5 mt-4 hs-accordion-toggle">
+                                    <a href="#">Second Level Menu</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hs-accordion" id="hs-basic-heading-2">
+
+                            <button type="button"
+                              class="hover:dark:bg-gray-700 hover:bg-gray-200 flex mt-6 ml-3 textoSidebar hs-accordion-toggle "
+                              aria-controls="hs-basic-collapse-2">
+                              <span class="text-sm">Another Menu</span>
+                              <svg
+                                class="ml-10 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-500"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                              </svg>
+                            </button>
+
+                            <div id="hs-basic-collapse-2"
+                              class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300 "
+                              aria-labelledby="hs-basic-heading-2">
+                              <div class=" p-5 content-wrapper">
+                                <ul class=" textoSidebar">
+                                  <li
+                                    class="hover:translate-x-2 duration-300 ease-in-out hover:text-blue-800 hover:dark:text-white hs-accordion-toggle text-sm ml-5">
+                                    <a href="#">Second Level Menu</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
 
             <li class="sidebar-item  mb-4">
@@ -393,7 +476,7 @@
             </li>
 
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../email-application/pages-email.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#envelope-fill" />
                 </svg> <span class="textoSidebar">Email Application</span>
@@ -401,7 +484,7 @@
             </li>
 
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../chat-application/pages-chat.html" class="sidebar-link ">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#chat-dots-fill" />
                 </svg> <span class="textoSidebar">Chat Application</span>
@@ -411,15 +494,15 @@
             </li>
 
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="../photo-gallery/pages-photo.html" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#image-fill" />
                 </svg> <span class="textoSidebar">Photo Gallery</span>
               </a>
             </li>
 
-            <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+            <li class="w-60 sidebar-item  ">
+              <a href="../checkout-page/pages-checkout.html" class="sidebar-link ">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#basket-fill" />
                 </svg> <span class="textoSidebar">Checkout Page</span>
@@ -469,7 +552,7 @@
             </li>
 
             <li class="w-60 sidebar-item ">
-              <a href="#" class="sidebar-link">
+              <a href="https://zuramai.github.io/mazer/docs/" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#life-preserver" />
                 </svg> <span class="textoSidebar">Documentation</span>
@@ -477,7 +560,7 @@
             </li>
 
             <li class="w-60 sidebar-item">
-              <a href="#" class="sidebar-link">
+              <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#puzzle" />
                 </svg> <span class="textoSidebar">Contribute</span>
@@ -485,12 +568,15 @@
             </li>
 
             <li class="w-60 sidebar-item mb-4">
-              <a href="#" class="sidebar-link">
+              <a href="https://github.com/zuramai/mazer#donation" class="sidebar-link">
                 <svg class="bi" width="15" height="40" fill="currentColor">
                   <use xlink:href="../elementos/herramientas/images/icons.svg#cash" />
                 </svg> <span class="textoSidebar">Donate</span>
               </a>
             </li>
+
+
+
           </ul>
         </div>
       </div>
@@ -500,20 +586,13 @@
     <div id="main" class="main ml-4 mod:ml-80">
 
       <!-- boton movil -->
-
       <button id="sidebar-toggle" class="  text-white  rounded ml-4 mt-8 mod:hidden ">
-
-
         <svg class="bi" width="28" height="40" fill="currentColor" style="fill: blue;">
           <use xlink:href="../elementos/herramientas/images/icons.svg#justify" />
         </svg>
-
-
       </button>
 
       <!-- titulo -->
-
-
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
         <div class="md:order-2">
           <nav>
@@ -541,17 +620,8 @@
         </div>
       </div>
 
-
-
-
-
       <!-- contenido -->
-
-
       <div class="main-container">
-
-
-
         <div class="mb-4  flex flex-wrap" style="font-family: 'Nunito';">
 
           <div
@@ -563,7 +633,6 @@
                 <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
                   Basic Pagination
                 </h4>
-
 
               </div>
               <div class="mb-8 flex-auto px-6 pt-0 pb-6 leading-6 break-words textoCSS4">
@@ -594,17 +663,9 @@
                     </li>
                   </ul>
                 </nav>
-
-
-
-
-
               </div>
-
             </div>
-
           </div>
-
 
           <div class="mt-4 flex-none pr-8 mod:pl-0 pl-1 w-full max-w-full leading-6 md:w-1/2 md:flex-none ">
             <div class=" flex flex-col  min-w-0 break-words bg-clip-border entrada"
@@ -614,7 +675,6 @@
                 <h4 class="mt-0 mb-1 text-xl font-bold text-white mod:text-xl textoCSS" style="font-family: 'Nunito';">
                   Pagination with Icon
                 </h4>
-
 
               </div>
               <div class="mb-8 flex-auto px-6 pt-0 pb-6 leading-6 break-words textoCSS4">
@@ -662,26 +722,10 @@
                   </ul>
                 </nav>
 
-
-
-
-
-
-
               </div>
-
             </div>
-
           </div>
-
-
         </div>
-
-
-
-
-
-
 
         <div class=" flex flex-wrap" style="font-family: 'Nunito';">
           <div
@@ -787,9 +831,6 @@
                   </ul>
                 </nav>
 
-
-
-
                 <nav aria-label="Page navigation example">
                   <ul class="mb-4 inline-flex items-center -space-x-px">
                     <li>
@@ -812,7 +853,6 @@
                       <a href="#"
                         class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
 
-
                     </li>
                     <li>
                       <a href="#" aria-current="page"
@@ -834,16 +874,6 @@
                     </li>
                   </ul>
                 </nav>
-
-
-
-
-
-
-
-
-
-
 
               </div>
             </div>
@@ -992,7 +1022,6 @@
           </div>
         </div>
 
-
         <div class="mod:ml-0 ml-1 mt-5 mr-2 mb-8 flex flex-wrap" style="font-family: 'Nunito';">
 
           <div class="mt-4 flex-none pr-6 pl-1 w-full max-w-full leading-6  md:flex-none text-slate-300">
@@ -1004,11 +1033,7 @@
                   Alignment
                 </h4>
 
-
               </div>
-
-
-
 
               <div class="flex-auto px-6 pt-0 pb-6 leading-6 break-words textoCSS4">
                 Change the alignment of pagination components with flexbox utilities.
@@ -1042,8 +1067,6 @@
                     </li>
                   </ul>
                 </nav>
-
-
 
                 <nav aria-label="Page navigation example" class="mt-4 flex justify-center">
                   <ul class="mb-1 inline-flex items-center -space-x-px">
@@ -1107,21 +1130,10 @@
               </div>
 
             </div>
-
           </div>
-
-
-
-
         </div>
 
-
-
         <!-- footer -->
-
-
-
-
         <div id="footer" class=" block clear-both mb-5 leading-6 text-slate-400" style="font-family: 'Nunito';"
           data-mb="20">
 
@@ -1142,193 +1154,8 @@
           </div>
         </div>
       </div>
-
-
-
-
     </div>
-
-
-
-
   </div>
-
-
 </body>
 
-
 </html>
-
-<script>
-
-  //---------------------color theme y sidebar--------------------
-
-  const themeToggle = document.getElementById('theme-toggle');
-  const html = document.getElementsByTagName('html')[0];
-  const body = document.getElementsByTagName('body')[0];
-  const sunMoon = document.getElementById('sun-moon');
-
-
-  themeToggle.addEventListener('click', () => {
-    if (html.classList.contains('dark')) {
-      html.classList.remove('dark');
-      html.classList.add('light');
-      body.classList.remove('bg-dark');
-      body.classList.add('bg-light');
-      localStorage.setItem('theme', 'light');
-    } else {
-      html.classList.remove('light');
-      html.classList.add('dark');
-      body.classList.remove('bg-light');
-      body.classList.add('bg-dark');
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-
-  const savedTheme = localStorage.getItem('theme');
-
-  if (savedTheme === 'dark') {
-    html.classList.add('dark');
-    body.classList.add('bg-dark');
-    sunMoon.classList.remove('sun');
-    sunMoon.classList.add('moon');
-    body.classList.add('dark-theme');
-
-  } else {
-    html.classList.add('light');
-    body.classList.add('bg-light');
-    sunMoon.classList.remove('moon');
-    sunMoon.classList.add('sun');
-    body.classList.remove('dark-theme');
-
-  }
-
-
-
-
-
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const sidebarItems = document.querySelectorAll('.has-sub');
-
-    sidebarItems.forEach(sidebarItem => {
-      const submenu = sidebarItem.querySelector('.submenu');
-
-      if (!submenu.classList.contains('active')) {
-        submenu.style.maxHeight = '0';
-      }
-
-      sidebarItem.addEventListener('click', function (event) {
-
-        const target = event.target;
-
-        if (target.closest('.submenu-item')) {
-          return;
-        }
-
-        event.preventDefault();
-
-        if (!submenu.classList.contains('active')) {
-          submenu.classList.add('active');
-          const height = submenu.scrollHeight;
-          submenu.style.maxHeight = `${height}px`;
-          submenu.style.transitionDuration = `${Math.round(400 + (height / 10))}ms`;
-        } else {
-          const height = submenu.scrollHeight;
-          submenu.style.maxHeight = '0';
-          submenu.style.transition = 'max-height 0.3s ease-out';
-          setTimeout(() => {
-            submenu.classList.remove('active');
-          }, 300);
-        }
-
-
-      });
-    });
-  });
-
-
-  function handleResize() {
-    const sidebarToggle = document.getElementById('sidebar-toggle');
-    const sidebar = document.getElementById('sidebar');
-    if (window.innerWidth <= 1200) {
-      sidebarToggle.classList.remove('hidden');
-      if (sidebar.classList.contains('active') && window.devicePixelRatio >= 1.5) {
-        sidebar.classList.remove('active');
-      }
-    } else {
-      sidebarToggle.classList.add('hidden');
-      if (!sidebar.classList.contains('active')) {
-        sidebar.classList.add('active');
-      }
-    }
-  }
-
-  window.addEventListener('resize', handleResize);
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const sidebar = document.getElementById('sidebar');
-    const sidebarToggle = document.getElementById('sidebar-toggle');
-    const sidebarHide = document.getElementById('sidebar-hide');
-    const body = document.body;
-    const overlay = document.getElementById('main');
-
-    function onZoomChange() {
-      toggleSidebar(null, true);
-    }
-
-    function toggleSidebar(event, forceClose = false) {
-      if (event) {
-        event.stopPropagation();
-      }
-      if (forceClose) {
-        body.classList.remove('no-scroll');
-        overlay.classList.remove('active');
-      } else {
-        sidebar.classList.toggle('active');
-        body.classList.toggle('no-scroll');
-        overlay.classList.toggle('active');
-      }
-    }
-    window.addEventListener('resize', onZoomChange);
-
-
-
-
-    sidebarToggle.addEventListener('click', toggleSidebar);
-    sidebarHide.addEventListener('click', toggleSidebar);
-
-    body.addEventListener('click', (event) => {
-      if (!event.target.closest('#sidebar') && !event.target.closest('#sidebar-toggle')) {
-        if (sidebar.classList.contains('active') && window.innerWidth <= 1200) {
-          toggleSidebar();
-        }
-      }
-    });
-
-    handleResize();
-  });
-
-
-  function toggleTheme() {
-    const body = document.body;
-    const sunMoon = document.getElementById('sun-moon');
-    body.classList.toggle('dark-theme');
-
-    if (body.classList.contains('dark-theme')) {
-      sunMoon.classList.remove('sun');
-      sunMoon.classList.add('moon');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      sunMoon.classList.remove('moon');
-      sunMoon.classList.add('sun');
-      localStorage.setItem('theme', 'light');
-    }
-  }
-
-
-
-
-
-
-</script>
