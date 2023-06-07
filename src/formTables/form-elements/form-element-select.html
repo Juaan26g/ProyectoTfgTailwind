@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avatar - Mazer Admin Dashboard</title>
     <link href="/css/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="../elementos/elementos2.css">
-    <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
-    <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../elementos/elementos2.css">
+    <link rel="shortcut icon" href="../../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../elementos/herramientas/images/logo/favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
                     <div class="flex w-60 mt-3 mb-2 items-center">
                         <div class="logo">
-                            <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg"
+                            <a href="../../index.html"><img src="../../elementos/herramientas/images/logo/logo.svg"
                                     alt="Logo" /></a>
                         </div>
 
@@ -508,60 +508,261 @@
                     <div>
                         <div class="grid grid-cols-12">
                             <div class="col-span-12 md:col-span-6 md:order-1 order-2 mb-4">
-                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Avatar</h3>
-                                <p class="text-subtitle text-muted">A container to show avatar images or initials.</p>
+                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Select</h3>
+                                <p class="text-subtitle text-muted">Customize the native &laquo;select&raquo; with
+                                    custom CSS that
+                                    changes the element’s initial appearance.</p>
                             </div>
                             <div class="mb-6 col-span-12 md:col-span-6 md:order-2 order-1">
                                 <nav class="float-left lg:float-right">
                                     <ol class="text-body flex">
                                         <li class="link">
-                                            <a href="../index.html">Dashboard</a>
+                                            <a href="../../index.html">Dashboard</a>
                                         </li>
                                         <li class="pl-2">
-                                            / Avatar
+                                            / Select
                                         </li>
                                     </ol>
                                 </nav>
                             </div>
                         </div>
                     </div>
-                    <section class="section">
+                    <section class="bootstrap-select">
+                        <div class="flex flex-col">
+                            <div class="w-full">
+                                <div class="bg-white rounded-lg shadow-md p-4">
+                                    <div class="">
+                                        <h4 class="text-lg font-semibold">Bootstrap Select</h4>
+                                    </div>
+                                    <div class="">
+                                        <div class="p-4">
+                                            <div class="flex flex-col md:flex-row md:space-x-4">
+                                                <div class="w-full md:w-1/2 mb-4">
+                                                    <h6 class="text-sm font-semibold">Basic Select</h6>
+                                                    <p class="text-sm text-gray-600">
+                                                        Use <code class="bg-gray-100 p-1 rounded-md">.form-select</code>
+                                                        class for basic select
+                                                        control.
+                                                    </p>
+
+                                                    <select
+                                                        class="block w-full py-1.5 pl-3 pr-7 text-base font-medium leading-6 text-gray-600 bg-white bg-no-repeat border border-gray-300 rounded-md appearance-none bg-right-center bg-size-4 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                                                        block w-full rounded-md" id="basicSelect">
+                                                        <option>IT</option>
+                                                        <option>Blade Runner</option>
+                                                        <option>Thor Ragnarok</option>
+                                                    </select>
+
+                                                </div>
+                                                <div class="w-full md:w-1/2 mb-4">
+                                                    <h6 class="text-sm font-semibold">Disabled Select</h6>
+                                                    <p class="text-sm text-gray-600">
+                                                        Use <code class="bg-gray-100 p-1 rounded-md">disabled</code>
+                                                        attribute for disabled
+                                                        select control.
+                                                    </p>
+
+                                                    <select
+                                                        class="block w-full py-1.5 pl-3 pr-7 text-base font-medium leading-6 text-gray-600 bg-white bg-no-repeat border border-gray-300 rounded-md appearance-none bg-right-center bg-size-4 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                                                        disabled id="disabledSelect">
+                                                        <option>Green</option>
+                                                        <option>Red</option>
+                                                        <option>Blue</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
+                    <section class="input-group-select">
+                        <div class="flex flex-col">
+                            <div class="w-full">
+                                <div class="bg-white rounded-lg shadow-md p-4">
+                                    <div class="">
+                                        <h4 class="text-lg font-semibold">Input Group Select</h4>
+                                    </div>
+                                    <div class="">
+                                        <div class="p-4">
+                                            <div class="flex flex-col md:flex-row md:space-x-4">
+                                                <div class="w-full md:w-1/2 mb-4">
+                                                    <h6 class="text-sm font-semibold">Basic Select with Input Group</h6>
+                                                    <div class="flex mb-3">
+                                                        <label class="bg-gray-100 rounded-l-md px-3 py-2"
+                                                            for="inputGroupSelect01">Options</label>
+                                                        <select class="form-select block w-full rounded-r-md"
+                                                            id="inputGroupSelect01">
+                                                            <option selected>Choose...</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="w-full md:w-1/2 mb-4">
+                                                    <h6 class="text-sm font-semibold">Input group append</h6>
+                                                    <div class="flex mb-3">
+                                                        <select class="form-select block w-full rounded-l-md"
+                                                            id="inputGroupSelect01">
+                                                            <option selected>Choose...</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                        <label class="bg-gray-100 rounded-r-md px-3 py-2"
+                                                            for="inputGroupSelect01">Options</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-4">
+                        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-2">Choices</h4>
+                                <div class="p-2">
+                                    <div class="mb-4">
+                                        <a href="https://github.com/Choices-js/Choices" target="_blank"
+                                            class="text-blue-500 hover:underline">Click here</a> for more information
+                                    </div>
+                                    <div class="mb-4">
+                                        <h6 class="text-sm font-semibold mb-1">Basic Choices</h6>
+                                        <p class="text-sm mb-2">Use <code>.choices</code> class for basic choices
+                                            control.</p>
+                                        <div>
+                                            <select
+                                                class="block w-full px-3 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                                                <option value="square">Square</option>
+                                                <option value="rectangle">Rectangle</option>
+                                                <option value="rombo">Rombo</option>
+                                                <option value="romboid">Romboid</option>
+                                                <option value="trapeze">Trapeze</option>
+                                                <option value="traible">Triangle</option>
+                                                <option value="polygon">Polygon</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h6 class="text-sm font-semibold mb-1">Single Select with Label</h6>
+                                        <p class="text-sm mb-2">Use <code>optgroup</code> attribute for basic choices
+                                            with Label control.</p>
+                                        <div>
+                                            <select
+                                                class="block w-full px-3 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                                                <optgroup label="Figures">
+                                                    <option value="romboid">Romboid</option>
+                                                    <option value="trapeze">Trapeze</option>
+                                                    <option value="triangle">Triangle</option>
+                                                    <option value="polygon">Polygon</option>
+                                                </optgroup>
+                                                <optgroup label="Colors">
+                                                    <option value="red">Red</option>
+                                                    <option value="green">Green</option>
+                                                    <option value="blue">Blue</option>
+                                                    <option value="purple">Purple</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="p-4">
+                        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                            <div class="p-4">
+                                <h4 class="text-lg font-semibold mb-2">Multiple choices</h4>
+                                <div class="p-2">
+                                    <div class="mb-4">
+                                        <h6 class="text-sm font-semibold mb-1">Basic Multiple choices</h6>
+                                        <p class="text-sm mb-2">Use <code>.choices</code> class for basic choices
+                                            control. Use <code>multiple="multiple"</code> attribute for multiple select
+                                            box.</p>
+                                        <div>
+                                            <select multiple
+                                                class="block w-full px-3 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                                                <option value="square">Square</option>
+                                                <option value="rectangle" selected>Rectangle</option>
+                                                <option value="rombo">Rombo</option>
+                                                <option value="romboid">Romboid</option>
+                                                <option value="trapeze">Trapeze</option>
+                                                <option value="traible" selected>Triangle</option>
+                                                <option value="polygon">Polygon</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h6 class="text-sm font-semibold mb-1">Multiple Select with Label</h6>
+                                        <p class="text-sm mb-2">Use <code>optgroup</code> attribute for multiple select
+                                            box with Label control.</p>
+                                        <div>
+                                            <select multiple
+                                                class="block w-full px-3 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                                                <optgroup label="Figures">
+                                                    <option value="romboid">Romboid</option>
+                                                    <option value="trapeze" selected>Trapeze</option>
+                                                    <option value="triangle">Triangle</option>
+                                                    <option value="polygon">Polygon</option>
+                                                </optgroup>
+                                                <optgroup label="Colors">
+                                                    <option value="red">Red</option>
+                                                    <option value="green">Green</option>
+                                                    <option value="blue" selected>Blue</option>
+                                                    <option value="purple">Purple</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                                <footer class="pt-16">
+                                    <div>
+                                        <div class="float-left">
+                                            <p class="text-muted">2023 &copy; Mazer</p>
+                                        </div>
+                                        <div class="float-right">
+                                            <p class="text-muted">
+                                                Crafted with
+                                                <span class="text-center">
+                                                    <svg class="w-5 inline-block" fill="#dc3545" height="100%"
+                                                        style="enable-background:new 0 0 512 512;" version="1.1"
+                                                        viewBox="0 0 512 512" width="100%" xml:space="preserve"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="_x31_66_x2C__Heart_x2C__Love_x2C__Like_x2C__Twitter">
+                                                            <g>
+                                                                <path
+                                                                    d="M365.4,59.628c60.56,0,109.6,49.03,109.6,109.47c0,109.47-109.6,171.8-219.06,281.271    C146.47,340.898,37,278.568,37,169.099c0-60.44,49.04-109.47,109.47-109.47c54.73,0,82.1,27.37,109.47,82.1    C283.3,86.999,310.67,59.628,365.4,59.628z" />
+                                                            </g>
+                                                        </g>
+                                                        <g id="Layer_1" />
+                                                    </svg>
+                                                </span>
+                                                by <a class="link" href="https://saugi.me">Saugi</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
                 </div>
-                <footer class="pt-16">
-                    <div>
-                        <div class="float-left">
-                            <p class="text-muted">2023 &copy; Mazer</p>
-                        </div>
-                        <div class="float-right">
-                            <p class="text-muted">
-                                Crafted with
-                                <span class="text-center">
-                                    <svg class="w-5 inline-block" fill="#dc3545" height="100%"
-                                        style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
-                                        width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <g id="_x31_66_x2C__Heart_x2C__Love_x2C__Like_x2C__Twitter">
-                                            <g>
-                                                <path
-                                                    d="M365.4,59.628c60.56,0,109.6,49.03,109.6,109.47c0,109.47-109.6,171.8-219.06,281.271    C146.47,340.898,37,278.568,37,169.099c0-60.44,49.04-109.47,109.47-109.47c54.73,0,82.1,27.37,109.47,82.1    C283.3,86.999,310.67,59.628,365.4,59.628z" />
-                                            </g>
-                                        </g>
-                                        <g id="Layer_1" />
-                                    </svg>
-                                </span>
-                                by <a class="link" href="https://saugi.me">Saugi</a>
-                            </p>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
 
+<script src="assets/extensions/jquery/jquery.min.js"></script>
+<script src="assets/extensions/parsleyjs/parsley.min.js"></script>
+<script src="assets/static/js/pages/parsley.js"></script>
 <script>
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.getElementsByTagName('html')[0];

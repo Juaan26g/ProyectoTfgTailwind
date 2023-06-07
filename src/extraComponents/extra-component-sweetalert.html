@@ -4,31 +4,32 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avatar - Mazer Admin Dashboard</title>
+    <title>Sweet Alert - Mazer Admin Dashboard</title>
     <link href="/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="../elementos/elementos2.css">
+    <link rel="stylesheet" href="../elementos/extensiones/sweetalert2/sweetalert2.min.css" />
     <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
     <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
 </head>
 
 <body>
     <div id="app">
-        <div id="sidebar" class="xl:active xxl:active fixed">
-            <div class="sidebar-wrapper active entrada">
-                <div class="sidebar-header relative">
+        <div id="sidebar" class="active ">
+            <div class="sidebar-wrapper active entrada min-h-screen">
+                <div class="sidebar-header relative ">
 
-                    <div class="flex w-60 mt-3 mb-2 items-center">
+                    <div class="flex w-60 mt-3 mb-2 items-center ">
                         <div class="logo">
                             <a href="../index.html"><img src="../elementos/herramientas/images/logo/logo.svg"
                                     alt="Logo" /></a>
                         </div>
 
-                        <div class="flex gap-2 items-center mt-1">
+                        <div class=" flex gap-2 items-center mt-1">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                aria-hidden="true" role="img"
-                                class="ml-14 textoSidebar iconify iconify--system-uicons sun-color" width="20"
-                                height="22" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
-                                <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                aria-hidden="true" role="img" class="ml-14 textoSidebar iconify iconify--system-uicons"
+                                width="20" height="22" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
+                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <path
                                         d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
                                         opacity=".3"></path>
@@ -41,7 +42,7 @@
                                 </g>
                             </svg>
 
-                            <div class="relative block mb-2 mt-2 form-switch fs-6" id="theme-toggle">
+                            <div class="relative block mb-2 mt-2 fs-6" id="theme-toggle">
                                 <div id="toggle-button" onclick="toggleTheme()">
                                     <div id="sun-moon" class="sun"></div>
                                 </div>
@@ -50,23 +51,25 @@
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 aria-hidden="true" role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20"
                                 height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                <path fill="#607080"
+                                <path fill="currentColor"
                                     d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
                                 </path>
                             </svg>
                         </div>
 
-            <button id="sidebar-hide"
-              class="sidebar-hide absolute textoSidebar top-2 right-2 bg-color-transparent border-none p-0 xl:hidden xxl:hidden">
-              <svg class="bi" width="25" height="40" fill="currentColor">
-                <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="sidebar-menu">
-          <ul class="menu">
-            <li class="sidebar-title textoSidebar">Menu</li>
+                        <button id="sidebar-hide"
+                            class="sidebar-hide mod:hidden absolute textoSidebar top-2 right-2 bg-transparent border-none p-0">
+                            <svg class="bi" width="25" height="40" fill="currentColor" style="fill: blue;">
+                                <use xlink:href="../elementos/herramientas/images/icons.svg#x" />
+                            </svg>
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="sidebar-menu" style="font-family: 'Nunito';">
+                    <ul class="menu">
+                        <li class="sidebar-title textoSidebar">Menu</li>
 
                         <li class="sidebar-item ">
                             <a href="../index.html" class="sidebar-link">
@@ -76,14 +79,14 @@
                             </a>
                         </li>
 
-                        <li class="w-60 sidebar-item has-sub">
+                        <li class="w-60 sidebar-item  has-sub">
                             <a href="#" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#stack" />
                                 </svg> <span class="textoSidebar">Components</span>
                             </a>
-                            <ul class="submenu textoSidebar ml-8">
-                                <li class="submenu-item">
+                            <ul class="submenu  textoSidebar ml-8">
+                                <li class="submenu-item  ">
                                     <a href="../components/component-accordion.html">Accordion</a>
                                 </li>
                                 <li class="submenu-item">
@@ -137,30 +140,30 @@
                             </ul>
                         </li>
 
-                        <li class="w-60 sidebar-item has-sub active">
+                        <li class="w-60 sidebar-item active has-sub">
                             <a href="#" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
                                 </svg> <span class="textoSidebar">Extra Components</span>
                             </a>
-                            <ul class="submenu textoSidebar ml-8 active">
+                            <ul class="submenu textoSidebar active ml-8">
+                                <li class="submenu-item ">
+                                    <a href="../extraComponents/extra-component-avatar.html">Avatar</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../extraComponents/extra-component-divider.html">Divider</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../extraComponents/extra-component-date-picker.html">Date Picker</a>
+                                </li>
                                 <li class="submenu-item active">
-                                    <a href="extra-component-avatar.html">Avatar</a>
+                                    <a href="../extraComponents/extra-component-sweetalert.html">Sweet Alert</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="extra-component-divider.html">Divider</a>
+                                    <a href="../extraComponents/extra-component-toastify.html">Toastify</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="extra-component-date-picker.html">Date Picker</a>
-                                </li>
-                                <li class="submenu-item">
-                                    <a href="extra-component-sweetalert.html">Sweet Alert</a>
-                                </li>
-                                <li class="submenu-item">
-                                    <a href="extra-component-toastify.html">Toastify</a>
-                                </li>
-                                <li class="submenu-item">
-                                    <a href="extra-component-rating.html">Rating</a>
+                                    <a href="../extraComponents/extra-component-rating.html">Rating</a>
                                 </li>
                             </ul>
                         </li>
@@ -191,7 +194,9 @@
                         </li>
 
                         <li class="sidebar-item  mb-4">
+
                             <span class="ml-4 textoSidebar">Forms & Tables</span>
+
                         </li>
 
                         <li class="w-60 sidebar-item has-sub">
@@ -202,33 +207,34 @@
                             </a>
                             <ul class="submenu textoSidebar ml-8">
                                 <li class="submenu-item">
-                                    <a href="">Input</a>
+                                    <a href="../formtables/form-elements/form-element-input.html">Input</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Input Group</a>
+                                    <a href="../formtables/form-elements/form-element-input-group.html">Input Group</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Select</a>
+                                    <a href="../formtables/form-elements/form-element-select.html">Select</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Radio</a>
+                                    <a href="../formtables/form-elements/form-element-radio.html">Radio</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Checkbox</a>
+                                    <a href="../formtables/form-elements/form-element-checkbox.html">Checkbox</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Textarea</a>
+                                    <a href="../formtables/form-elements/form-element-textarea.html">Textarea</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="w-60 sidebar-item ">
-                            <a href="#" class="sidebar-link">
+                            <a href="../formtables/form-layout.html" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use
                                         xlink:href="../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
                                 </svg> <span class="textoSidebar">Form Layout</span>
                             </a>
+
                         </li>
 
                         <li class="w-60 sidebar-item has-sub">
@@ -239,7 +245,7 @@
                             </a>
                             <ul class="submenu textoSidebar ml-8">
                                 <li class="submenu-item">
-                                    <a href="">Parsley</a>
+                                    <a href="../formtables/form-validation-parsley.html">Parsley</a>
                                 </li>
                             </ul>
                         </li>
@@ -252,27 +258,29 @@
                             </a>
                             <ul class="submenu textoSidebar ml-8">
                                 <li class="submenu-item">
-                                    <a href="">Quill</a>
+                                    <a href="../formtables/form-editor/form-editor-quill.html">Quill</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">CKEditor</a>
+                                    <a href="../formtables/form-editor/form-editor-ckeditor.html">CKEditor</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Summernote</a>
+                                    <a href="../formtables/form-editor/form-editor-summernote.html">Summernote</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">TinyMCE</a>
+                                    <a href="../formtables/form-editor/form-editor-tinymce.html">TinyMCE</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="w-60 sidebar-item ">
-                            <a href="#" class="sidebar-link">
+                            <a href="../formtables/table.html" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
                                 </svg> <span class="textoSidebar">Table</span>
                             </a>
+
                         </li>
+
 
                         <li class="w-60 sidebar-item has-sub mb-6">
                             <a href="#" class="sidebar-link">
@@ -283,16 +291,19 @@
                             </a>
                             <ul class="submenu textoSidebar ml-8">
                                 <li class="submenu-item">
-                                    <a href="">Datatable</a>
+                                    <a href="../formtables/datatables/table-datatable.html">Datatable</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Datatable (jQuery)</a>
+                                    <a href="../formtables/datatables/table-datatable-jquery.html">Datatable
+                                        (jQuery)</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="sidebar-item  mb-4">
+
                             <span class="ml-4 textoSidebar">Extra UI</span>
+
                         </li>
 
                         <li class="w-60 sidebar-item has-sub">
@@ -309,8 +320,9 @@
                                     <a href="../widgets/ui-widgets-pricing.html">Pricing</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="../widgets/ui-widgets-todolist.html">To-do list</a>
+                                    <a href="../widgets/ui-widgets-to-do-list.html">To-do list</a>
                                 </li>
+
                             </ul>
                         </li>
 
@@ -322,7 +334,7 @@
                             </a>
                             <ul class="submenu textoSidebar ml-8">
                                 <li class="submenu-item">
-                                    <a href="">Bootstrap Icons</a>
+                                    <a href="../icons/ui-icons-tailwind-icons.html">Tailwind Icons</a>
                                 </li>
                                 <li class="submenu-item">
                                     <a href="../icons/ui-icons-fontawesome.html">Fontawesome</a>
@@ -350,7 +362,7 @@
                         </li>
 
                         <li class="w-60 sidebar-item ">
-                            <a href="#" class="sidebar-link">
+                            <a href="../fileUploader/ui-file-uploader.html" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#cloud-arrow-up-fill" />
                                 </svg> <span class="textoSidebar">File Uploader</span>
@@ -373,28 +385,115 @@
                             </ul>
                         </li>
 
-                        <li class="w-60 sidebar-item has-sub mb-6 ">
-                            <a href="#" class="sidebar-link">
-                                <svg class="bi" width="15" height="40" fill="currentColor">
-                                    <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
-                                </svg> <span class="textoSidebar">Multi-Level Menu</span>
-                            </a>
-                            <ul class="submenu textoSidebar ml-8">
-                                <li class="submenu-item">
-                                    <a href="">First Level</a>
-                                </li>
-                                <li class="submenu-item">
-                                    <a href="">Another Menu</a>
-                                </li>
-                            </ul>
+                        <li class="w-60 hs-accordion-group mb-7">
+
+                            <div class=" submenu-item hs-accordion" id="hs-basic-heading-1">
+
+                                <button type="button"
+                                    class="hover:dark:bg-gray-700 hover:bg-gray-200 mt-3 ml-4 flex textoSidebar hs-accordion-toggle "
+                                    aria-controls="hs-basic-collapse-1"> <svg class="mr-4 bi" width="15" height="20"
+                                        fill="currentColor">
+                                        <use xlink:href="../elementos/herramientas/images/icons.svg#three-dots" />
+                                    </svg>
+                                    <span class="">Multi-level Menu</span>
+                                    <svg class="ml-8 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-400 dark:text-gray-500"
+                                        width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+
+                                </button>
+
+                                <div id="hs-basic-collapse-1"
+                                    class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300"
+                                    aria-labelledby="hs-basic-heading-1">
+                                    <div class=" p-5 content-wrapper">
+                                        <ul class=" textoSidebar ml-8">
+                                            <li class="">
+                                                <div class="hs-accordion-group">
+                                                    <div class="hs-accordion" id="hs-basic-heading-1">
+
+                                                        <button type="button"
+                                                            class="hover:dark:bg-gray-700 hover:bg-gray-200 ml-3 flex textoSidebar hs-accordion-toggle"
+                                                            aria-controls="hs-basic-collapse-1">
+                                                            <span class="text-sm">First Level</span>
+                                                            <svg class="ml-16 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-500"
+                                                                width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" />
+                                                            </svg>
+                                                        </button>
+
+                                                        <div id="hs-basic-collapse-1"
+                                                            class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300 "
+                                                            aria-labelledby="hs-basic-heading-1">
+                                                            <div class=" p-5 content-wrapper">
+                                                                <ul class=" textoSidebar ">
+                                                                    <li
+                                                                        class="hover:translate-x-2 duration-300 ease-in-out hover:text-blue-800 hover:dark:text-white text-sm ml-5">
+                                                                        <a
+                                                                            href="../multiLevelMenu/ui-multi-level-menu.html">Second
+                                                                            Level</a>
+                                                                    </li>
+                                                                    <li
+                                                                        class="hover:translate-x-2 duration-300 ease-in-out hover:text-blue-800 hover:dark:text-white text-sm ml-5 mt-4 hs-accordion-toggle">
+                                                                        <a href="#">Second Level Menu</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="hs-accordion" id="hs-basic-heading-2">
+
+                                                        <button type="button"
+                                                            class="hover:dark:bg-gray-700 hover:bg-gray-200 flex mt-6 ml-3 textoSidebar hs-accordion-toggle "
+                                                            aria-controls="hs-basic-collapse-2">
+                                                            <span class="text-sm">Another Menu</span>
+                                                            <svg class="ml-10 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-500"
+                                                                width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" />
+                                                            </svg>
+                                                        </button>
+
+                                                        <div id="hs-basic-collapse-2"
+                                                            class="hidden hs-accordion-content overflow-hidden transition-[height] duration-300 "
+                                                            aria-labelledby="hs-basic-heading-2">
+                                                            <div class=" p-5 content-wrapper">
+                                                                <ul class=" textoSidebar">
+                                                                    <li
+                                                                        class="hover:translate-x-2 duration-300 ease-in-out hover:text-blue-800 hover:dark:text-white hs-accordion-toggle text-sm ml-5">
+                                                                        <a href="#">Second Level Menu</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
 
                         <li class="sidebar-item  mb-4">
+
                             <span class="ml-4 textoSidebar">Pages</span>
+
                         </li>
 
                         <li class="w-60 sidebar-item ">
-                            <a href="#" class="sidebar-link">
+                            <a href="../email-application/pages-email.html" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#envelope-fill" />
                                 </svg> <span class="textoSidebar">Email Application</span>
@@ -402,7 +501,7 @@
                         </li>
 
                         <li class="w-60 sidebar-item ">
-                            <a href="#" class="sidebar-link">
+                            <a href="../chat-application/pages-chat.html" class="sidebar-link ">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#chat-dots-fill" />
                                 </svg> <span class="textoSidebar">Chat Application</span>
@@ -412,15 +511,15 @@
                         </li>
 
                         <li class="w-60 sidebar-item ">
-                            <a href="#" class="sidebar-link">
+                            <a href="../photo-gallery/pages-photo.html" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#image-fill" />
                                 </svg> <span class="textoSidebar">Photo Gallery</span>
                             </a>
                         </li>
 
-                        <li class="w-60 sidebar-item ">
-                            <a href="#" class="sidebar-link">
+                        <li class="w-60 sidebar-item  ">
+                            <a href="../checkout-page/pages-checkout.html" class="sidebar-link ">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#basket-fill" />
                                 </svg> <span class="textoSidebar">Checkout Page</span>
@@ -435,13 +534,13 @@
                             </a>
                             <ul class="submenu textoSidebar ml-8">
                                 <li class="submenu-item">
-                                    <a href="auth/auth-login.html">Login</a>
+                                    <a href="../auth/auth-login.html">Login</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="auth/auth-register.html">Register</a>
+                                    <a href="../auth/auth-register.html">Register</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="auth/auth-forgot-password.html">Forgot Password</a>
+                                    <a href="../auth/auth-forgot-password.html">Forgot Password</a>
                                 </li>
                             </ul>
                         </li>
@@ -454,23 +553,25 @@
                             </a>
                             <ul class="submenu textoSidebar ml-8">
                                 <li class="submenu-item">
-                                    <a href="errors/error-403.html">403</a>
+                                    <a href="../errors/error-403.html">403</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="errors/error-404.html">404</a>
+                                    <a href="../errors/error-404.html">404</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="errors/error-500.html">500</a>
+                                    <a href="../errors/error-500.html">500</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="sidebar-item  mb-4">
+
                             <span class="ml-4 textoSidebar">Raise Support</span>
+
                         </li>
 
                         <li class="w-60 sidebar-item ">
-                            <a href="#" class="sidebar-link">
+                            <a href="https://zuramai.github.io/mazer/docs/" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#life-preserver" />
                                 </svg> <span class="textoSidebar">Documentation</span>
@@ -478,7 +579,7 @@
                         </li>
 
                         <li class="w-60 sidebar-item">
-                            <a href="#" class="sidebar-link">
+                            <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#puzzle" />
                                 </svg> <span class="textoSidebar">Contribute</span>
@@ -486,7 +587,7 @@
                         </li>
 
                         <li class="w-60 sidebar-item mb-4">
-                            <a href="#" class="sidebar-link">
+                            <a href="https://github.com/zuramai/mazer#donation" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#cash" />
                                 </svg> <span class="textoSidebar">Donate</span>
@@ -508,7 +609,7 @@
                     <div>
                         <div class="grid grid-cols-12">
                             <div class="col-span-12 md:col-span-6 md:order-1 order-2 mb-4">
-                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Avatar</h3>
+                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">SweetAlert</h3>
                                 <p class="text-subtitle text-muted">A container to show avatar images or initials.</p>
                             </div>
                             <div class="mb-6 col-span-12 md:col-span-6 md:order-2 order-1">
@@ -518,7 +619,7 @@
                                             <a href="../index.html">Dashboard</a>
                                         </li>
                                         <li class="pl-2">
-                                            / Avatar
+                                            / SweetAlert
                                         </li>
                                     </ol>
                                 </nav>
@@ -526,7 +627,161 @@
                         </div>
                     </div>
                     <section class="section">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <div class="relative flex flex-col min-w-0 break-words mx-4 my-8 entrada rounded-lg">
+                                    <div class="px-6 py-2 mb-0 rounded-t-md">
+                                        <h4 class="text-lg font-medium mb-2">Basic Sweet Alert</h4>
+                                        <p class="text-gray-700">
+                                            SweetAlert automatically centers itself on the page and
+                                            looks great no matter if you're using a desktop computer,
+                                            mobile or tablet. It's even highly customizable, as you
+                                            can see below!
+                                        </p>
+                                    </div>
+                                    <div class="px-6 py-2 mb-0 rounded-t-md">
+                                        <div class="grid grid-cols-3 gap-4">
+                                            <button id="basic"
+                                                class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Basic Example
+                                            </button>
+                                            <button id="title"
+                                                class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                A title with a text
+                                            </button>
+                                            <button id="footer"
+                                                class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                With Footer
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="relative flex flex-col min-w-0 break-words mx-4 my-8 entrada rounded-lg">
+                                    <div class="px-6 py-2 mb-0 rounded-t-md">
+                                        <h4 class="text-lg font-medium mb-2">Toast</h4>
+                                        <p class="text-gray-700">
+                                            SweetAlert can also show a message in the corner of your
+                                            screen!
+                                        </p>
+                                    </div>
+                                    <div class="px-6 py-2 mb-0 rounded-t-md">
+                                        <div class="grid grid-cols-3 gap-4 mt-3">
+                                            <button id="toast-success"
+                                                class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Success Example
+                                            </button>
+                                            <button id="toast-failed"
+                                                class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Failed Toast
+                                            </button>
+                                            <button id="toast-warning"
+                                                class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Toast Warning
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
+
+                    <section class="section">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div>
+                                <div class="relative flex flex-col min-w-0 break-words mx-4 my-8 entrada rounded-lg">
+                                    <div class="px-6 py-2 mb-0 rounded-t-md">
+                                        <h4 class="mb-2 px-1 pt-1 font-medium text-lg">Types</h4>
+                                        <p class="text-blueGray-500 opacity-75">
+                                            The type of the modal. SweetAlert comes with 5 built-in types which will
+                                            show a corresponding icon animation: "warning", "error", "success", and
+                                            "info". You can also set it as "input" to get a prompt modal. It can be put
+                                            in the object under the key "icon" or passed as the third parameter of the
+                                            function.
+                                        </p>
+                                    </div>
+                                    <div class="px-6 py-2 mb-0 rounded-t-md">
+                                        <div class="grid grid-cols-3 gap-4">
+                                            <button id="success"
+                                                class="bg-transparent border border-green-500 text-green-500 hover:bg-green-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Success
+                                            </button>
+                                            <button id="error"
+                                                class="bg-transparent border border-red-500 text-red-500 hover:bg-red-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Error
+                                            </button>
+                                            <button id="warning"
+                                                class="bg-transparent border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black py-2 px-4 rounded-lg w-full">
+                                                Warning
+                                            </button>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-4 mt-3">
+                                            <button id="info"
+                                                class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Info
+                                            </button>
+                                            <button id="question"
+                                                class="bg-transparent border border-gray-500 text-gray-500 hover:bg-gray-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Question
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div>
+                                <div class="relative flex flex-col min-w-0 break-words mx-4 my-8 entrada rounded-lg">
+                                    <div class="px-6 py-2 mb-0 rounded-t-md">
+                                        <h4 class="mb-2 px-1 pt-1 font-medium text-lg">Alert Input</h4>
+                                        <p class="text-blueGray-500 opacity-75">
+                                            The type of the modal. SweetAlert comes with 5 built-in
+                                            types which will show a corresponding icon animation:
+                                            "warning", "error", "success" and "info". You can also set
+                                            it as "input" to get a prompt modal. It can either be put
+                                            in the object under the key "icon" or passed as the third
+                                            parameter of the function.
+                                        </p>
+                                    </div>
+                                    <div class="px-6 py-2 mb-0 rounded-t-md">
+                                        <div class="grid grid-cols-3 gap-4">
+                                            <button id="text"
+                                                class="bg-transparent border border-green-500 text-green-500 hover:bg-green-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Text
+                                            </button>
+                                            <button id="email"
+                                                class="bg-transparent border border-red-500 text-red-500 hover:bg-red-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Email
+                                            </button>
+                                            <button id="url"
+                                                class=" bg-transparent border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black py-2 px-4 rounded-lg w-full">
+                                                URL
+                                            </button>
+                                        </div>
+                                        <div class="grid grid-cols-3 gap-4 mt-3">
+                                            <button id="password"
+                                                class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Password
+                                            </button>
+                                            <button id="textarea"
+                                                class="bg-transparent border border-gray-500 text-gray-500 hover:bg-gray-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Textarea
+                                            </button>
+                                            <button id="select"
+                                                class="bg-transparent border border-gray-500 text-gray-500 hover:bg-gray-500 hover:text-white py-2 px-4 rounded-lg w-full">
+                                                Select
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
                 <footer class="pt-16">
                     <div>
@@ -561,138 +816,6 @@
 </body>
 
 </html>
-
-<script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const html = document.getElementsByTagName('html')[0];
-    const body = document.getElementsByTagName('body')[0];
-    const sunMoon = document.getElementById('sun-moon');
-
-
-    themeToggle.addEventListener('click', () => {
-        if (html.classList.contains('dark')) {
-            html.classList.remove('dark');
-            html.classList.add('light');
-            body.classList.remove('bg-dark');
-            body.classList.add('bg-light');
-            localStorage.setItem('theme', 'light');
-        } else {
-            html.classList.remove('light');
-            html.classList.add('dark');
-            body.classList.remove('bg-light');
-            body.classList.add('bg-dark');
-            localStorage.setItem('theme', 'dark');
-        }
-    });
-
-    const savedTheme = localStorage.getItem('theme');
-
-    if (savedTheme === 'dark') {
-        html.classList.add('dark');
-        body.classList.add('bg-dark');
-        sunMoon.classList.remove('sun');
-        sunMoon.classList.add('moon');
-        body.classList.add('dark-theme');
-
-    } else {
-        html.classList.add('light');
-        body.classList.add('bg-light');
-        sunMoon.classList.remove('moon');
-        sunMoon.classList.add('sun');
-        body.classList.remove('dark-theme');
-
-    }
-
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const sidebarItems = document.querySelectorAll('.has-sub');
-
-        sidebarItems.forEach(sidebarItem => {
-            const submenu = sidebarItem.querySelector('.submenu');
-
-            if (!submenu.classList.contains('active')) {
-                submenu.style.maxHeight = '0';
-            }
-
-            sidebarItem.addEventListener('click', function (event) {
-
-                const target = event.target;
-
-                if (target.closest('.submenu-item')) {
-                    return;
-                }
-
-                event.preventDefault();
-
-                if (!submenu.classList.contains('active')) {
-                    submenu.classList.add('active');
-                    const height = submenu.scrollHeight;
-                    submenu.style.maxHeight = `${height}px`;
-                    submenu.style.transitionDuration = `${Math.round(400 + (height / 10))}ms`;
-                } else {
-                    const height = submenu.scrollHeight;
-                    submenu.style.maxHeight = '0';
-                    submenu.style.transition = 'max-height 0.3s ease-out';
-                    setTimeout(() => {
-                        submenu.classList.remove('active');
-                    }, 300);
-                }
-
-
-            });
-        });
-    });
-
-
-    function handleResize() {
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebar = document.getElementById('sidebar');
-        if (window.innerWidth <= 1200) {
-            sidebarToggle.classList.remove('hidden');
-            if (sidebar.classList.contains('active') && window.devicePixelRatio >= 1.5) {
-                sidebar.classList.remove('active');
-            }
-        } else {
-            sidebarToggle.classList.add('hidden');
-            if (!sidebar.classList.contains('active')) {
-                sidebar.classList.add('active');
-            }
-        }
-    }
-
-    window.addEventListener('resize', handleResize);
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const sidebar = document.getElementById('sidebar');
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebarHide = document.getElementById('sidebar-hide');
-
-        sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        sidebarHide.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        handleResize();
-    });
-
-    function toggleTheme() {
-        const body = document.body;
-        const sunMoon = document.getElementById('sun-moon');
-        body.classList.toggle('dark-theme');
-
-        if (body.classList.contains('dark-theme')) {
-            sunMoon.classList.remove('sun');
-            sunMoon.classList.add('moon');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            sunMoon.classList.remove('moon');
-            sunMoon.classList.add('sun');
-            localStorage.setItem('theme', 'light');
-        }
-    }
-
-
-</script>
+<script src="../elementos/extensiones/sweetalert2/sweetalert2.min.js"></script>
+<script src="../elementos/static/sweetalert2.js"></script>
+<script defer src="../elementos/button-light-dark.js"></script>
