@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avatar - Mazer Admin Dashboard</title>
     <link href="/css/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="../elementos/elementos2.css">
-    <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
-    <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../elementos/elementos2.css">
+    <link rel="shortcut icon" href="../../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../elementos/herramientas/images/logo/favicon.png" type="image/png" />
 </head>
 
 <body>
@@ -508,17 +508,17 @@
                     <div>
                         <div class="grid grid-cols-12">
                             <div class="col-span-12 md:col-span-6 md:order-1 order-2 mb-4">
-                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Avatar</h3>
-                                <p class="text-subtitle text-muted">A container to show avatar images or initials.</p>
+                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Radio</h3>
+                                <p class="text-subtitle text-muted">Choose one from a list with radio buttons.</p>
                             </div>
                             <div class="mb-6 col-span-12 md:col-span-6 md:order-2 order-1">
                                 <nav class="float-left lg:float-right">
                                     <ol class="text-body flex">
                                         <li class="link">
-                                            <a href="../index.html">Dashboard</a>
+                                            <a href="../../index.html">Dashboard</a>
                                         </li>
                                         <li class="pl-2">
-                                            / Avatar
+                                            / Radio
                                         </li>
                                     </ol>
                                 </nav>
@@ -526,38 +526,180 @@
                         </div>
                     </div>
                     <section class="section">
+                        <div class="p-6 rounded-lg shadow-md">
+                            <div class="border-b pb-4">
+                                <h4 class="text-lg font-semibold">Default Radio</h4>
+                            </div>
+                            <div class="pt-4">
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                        class="text-blue-500 rounded-full focus:ring focus:ring-blue-300 focus:ring-opacity-50" />
+                                    <label for="flexRadioDefault1" class="ml-2 text-sm text-gray-700">Default
+                                        radio</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked
+                                        class="text-blue-500 rounded-full focus:ring focus:ring-blue-300 focus:ring-opacity-50" />
+                                    <label for="flexRadioDefault2" class="ml-2 text-sm text-gray-700">Default checked
+                                        radio</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled
+                                        class="text-blue-500 rounded-full cursor-not-allowed opacity-50 focus:ring focus:ring-blue-300 focus:ring-opacity-50" />
+                                    <label for="flexRadioDisabled"
+                                        class="ml-2 text-sm text-gray-700 cursor-not-allowed opacity-50">Disabled
+                                        radio</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked
+                                        disabled
+                                        class="text-blue-500 rounded-full cursor-not-allowed opacity-50 focus:ring focus:ring-blue-300 focus:ring-opacity-50" />
+                                    <label for="flexRadioCheckedDisabled"
+                                        class="ml-2 text-sm text-gray-700 cursor-not-allowed opacity-50">Disabled
+                                        checked radio</label>
+                                </div>
+                            </div>
+                        </div>
                     </section>
-                </div>
-                <footer class="pt-16">
-                    <div>
-                        <div class="float-left">
-                            <p class="text-muted">2023 &copy; Mazer</p>
+                    <section class="section">
+                        <div class="p-6 rounded-lg shadow-md">
+                            <div class="border-b pb-4">
+                                <h4 class="text-lg font-semibold">Colors</h4>
+                            </div>
+                            <div class="pt-4">
+                                <p class="mb-4 text-sm text-gray-700">
+                                    Use class
+                                    <code
+                                        class="px-1 py-0.5 rounded bg-gray-100 text-xs font-mono text-gray-800">text-{color}-500</code>
+                                    with
+                                    <code
+                                        class="px-1 py-0.5 rounded bg-gray-100 text-xs font-mono text-gray-800">form-check-input</code>
+                                    to change radio color
+                                </p>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" name="Primary" id="Primary" checked
+                                        class="text-blue-500 rounded-full focus:ring focus:ring-blue-300 focus:ring-opacity-50" />
+                                    <label for="Primary" class="ml-2 text-sm text-gray-700">Primary</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" name="Secondary" id="Secondary" checked
+                                        class="text-gray-500 rounded-full focus:ring focus:ring-gray-300 focus:ring-opacity-50" />
+                                    <label for="Secondary" class="ml-2 text-sm text-gray-700">Secondary</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" name="Warning" id="Warning" checked
+                                        class="text-yellow-500 rounded-full focus:ring focus:ring-yellow-300 focus:ring-opacity-50" />
+                                    <label for="Warning" class="ml-2 text-sm text-gray-700">Warning</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" name="Danger" id="Danger" checked
+                                        class="text-red-500 rounded-full focus:ring focus:ring-red-300 focus:ring-opacity-50" />
+                                    <label for="Danger" class="ml-2 text-sm text-gray-700">Danger</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" name="Success" id="Success" checked
+                                        class="text-green-500 rounded-full focus:ring focus:ring-green-300 focus:ring-opacity-50" />
+                                    <label for="Success" class="ml-2 text-sm text-gray-700">Success</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" name="Dark" id="Dark" checked
+                                        class="text-black rounded-full focus:ring focus:ring-black focus:ring-opacity-50" />
+                                    <label for="Dark" class="ml-2 text-sm text-gray-700">Dark</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="float-right">
-                            <p class="text-muted">
-                                Crafted with
-                                <span class="text-center">
-                                    <svg class="w-5 inline-block" fill="#dc3545" height="100%"
-                                        style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
-                                        width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <g id="_x31_66_x2C__Heart_x2C__Love_x2C__Like_x2C__Twitter">
-                                            <g>
-                                                <path
-                                                    d="M365.4,59.628c60.56,0,109.6,49.03,109.6,109.47c0,109.47-109.6,171.8-219.06,281.271    C146.47,340.898,37,278.568,37,169.099c0-60.44,49.04-109.47,109.47-109.47c54.73,0,82.1,27.37,109.47,82.1    C283.3,86.999,310.67,59.628,365.4,59.628z" />
+                    </section>
+                    <section class="section">
+                        <div class="p-6 rounded-lg shadow-md">
+                            <div class="border-b pb-4">
+                                <h4 class="text-lg font-semibold">Switches</h4>
+                            </div>
+                            <div class="pt-4">
+                                <p class="mb-4 text-sm text-gray-700">
+                                    A switch has the markup of a custom checkbox but uses custom CSS to render a toggle
+                                    switch. Switches also support the disabled attribute.
+                                </p>
+                                <div class="flex items-center mb-2">
+                                    <input type="checkbox" id="flexSwitchCheckDefault" class="switch" />
+                                    <label for="flexSwitchCheckDefault" class="ml-2 text-sm text-gray-700">Default
+                                        switch checkbox input</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="checkbox" id="flexSwitchCheckChecked" checked class="switch" />
+                                    <label for="flexSwitchCheckChecked" class="ml-2 text-sm text-gray-700">Checked
+                                        switch checkbox input</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="checkbox" id="flexSwitchCheckDisabled" disabled class="switch" />
+                                    <label for="flexSwitchCheckDisabled"
+                                        class="ml-2 text-sm text-gray-700 cursor-not-allowed opacity-50">Disabled switch
+                                        checkbox input</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="checkbox" id="flexSwitchCheckCheckedDisabled" checked disabled
+                                        class="switch" />
+                                    <label for="flexSwitchCheckCheckedDisabled"
+                                        class="ml-2 text-sm text-gray-700 cursor-not-allowed opacity-50">Disabled
+                                        checked switch checkbox input</label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section">
+                        <div class="p-6 rounded-lg shadow-md">
+                            <div class="border-b pb-4">
+                                <h4 class="text-lg font-semibold">With Buttons</h4>
+                            </div>
+                            <div class="pt-4">
+                                <p class="mb-4 text-sm text-gray-700">
+                                    A switch has the markup of a custom checkbox but uses custom CSS to render a toggle
+                                    switch. Switches also support the disabled attribute.
+                                </p>
+                                <input type="radio" name="options-outlined" id="success-outlined" autocomplete="off"
+                                    checked class="hidden peer" />
+                                <label for="success-outlined"
+                                    class="btn btn-outline-success text-green-700 border-green-700 hover:bg-green-50 px-3 py-1.5 rounded-md text-sm font-medium">Checked
+                                    success radio</label>
+
+                                <input type="radio" name="options-outlined" id="danger-outlined" autocomplete="off"
+                                    class="hidden peer" />
+                                <label for="danger-outlined"
+                                    class="btn btn-outline-danger text-red-700 border-red-700 hover:bg-red-50 px-3 py-1.5 rounded-md text-sm font-medium">Danger
+                                    radio</label>
+                            </div>
+                        </div>
+                    </section>
+                    <footer class="pt-16">
+                        <div>
+                            <div class="float-left">
+                                <p class="text-muted">2023 &copy; Mazer</p>
+                            </div>
+                            <div class="float-right">
+                                <p class="text-muted">
+                                    Crafted with
+                                    <span class="text-center">
+                                        <svg class="w-5 inline-block" fill="#dc3545" height="100%"
+                                            style="enable-background:new 0 0 512 512;" version="1.1"
+                                            viewBox="0 0 512 512" width="100%" xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="_x31_66_x2C__Heart_x2C__Love_x2C__Like_x2C__Twitter">
+                                                <g>
+                                                    <path
+                                                        d="M365.4,59.628c60.56,0,109.6,49.03,109.6,109.47c0,109.47-109.6,171.8-219.06,281.271    C146.47,340.898,37,278.568,37,169.099c0-60.44,49.04-109.47,109.47-109.47c54.73,0,82.1,27.37,109.47,82.1    C283.3,86.999,310.67,59.628,365.4,59.628z" />
+                                                </g>
                                             </g>
-                                        </g>
-                                        <g id="Layer_1" />
-                                    </svg>
-                                </span>
-                                by <a class="link" href="https://saugi.me">Saugi</a>
-                            </p>
+                                            <g id="Layer_1" />
+                                        </svg>
+                                    </span>
+                                    by <a class="link" href="https://saugi.me">Saugi</a>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </footer>
+                    </footer>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>

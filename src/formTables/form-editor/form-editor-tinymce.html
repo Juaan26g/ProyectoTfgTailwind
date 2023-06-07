@@ -508,8 +508,10 @@
                     <div>
                         <div class="grid grid-cols-12">
                             <div class="col-span-12 md:col-span-6 md:order-1 order-2 mb-4">
-                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Avatar</h3>
-                                <p class="text-subtitle text-muted">A container to show avatar images or initials.</p>
+                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">TinyMCE</h3>
+                                <p class="text-subtitle text-muted">Allow your users to provide formatted content with a
+                                    powerful
+                                    WYSIWYG editor.</p>
                             </div>
                             <div class="mb-6 col-span-12 md:col-span-6 md:order-2 order-1">
                                 <nav class="float-left lg:float-right">
@@ -518,7 +520,7 @@
                                             <a href="../index.html">Dashboard</a>
                                         </li>
                                         <li class="pl-2">
-                                            / Avatar
+                                            / TinyMCE
                                         </li>
                                     </ol>
                                 </nav>
@@ -526,7 +528,33 @@
                         </div>
                     </div>
                     <section class="section">
-                    </section>
+                        <div class="grid grid-cols-12">
+                          <div class="col-span-12">
+                            <div class="p-4 rounded-lg shadow-md bg-white">
+                              <div class="p-4 border-b border-gray-200">
+                                <h4 class="text-lg font-semibold">Default Editor</h4>
+                              </div>
+                              <div class="p-4">
+                                <textarea name="" id="default" cols="30" rows="10"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section class="section">
+                        <div class="grid grid-cols-12">
+                          <div class="col-span-12">
+                            <div class="p-4 rounded-lg shadow-md bg-white">
+                              <div class="p-4 border-b border-gray-200">
+                                <h4 class="text-lg font-semibold">Code Toolbar</h4>
+                              </div>
+                              <div class="p-4">
+                                <textarea id="dark" cols="30" rows="10"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>                      
                 </div>
                 <footer class="pt-16">
                     <div>
@@ -561,6 +589,9 @@
 </body>
 
 </html>
+
+<script src="../../elementos/extensiones/tinymce/tinymce.min.js"></script>
+<script src="../../elementos/static/tinymce.js"></script>
 
 <script>
     const themeToggle = document.getElementById('theme-toggle');
