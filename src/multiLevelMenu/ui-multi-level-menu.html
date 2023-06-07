@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../elementos/elementos.css">
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
   <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
+  <script src="../../node_modules/preline/dist/preline.js"></script>
 </head>
 
 <body>
@@ -304,7 +305,7 @@
                   <a href="../widgets/ui-widgets-pricing.html">Pricing</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">To-do list</a>
+                  <a href="../widgets/ui-widgets-todolist.html">To-do list</a>
                 </li>
               </ul>
             </li>
@@ -320,10 +321,10 @@
                   <a href="">Bootstrap Icons</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Fontawesome</a>
+                  <a href="../icons/ui-icons-fontawesome.html">Fontawesome</a>
                 </li>
                 <li class="submenu-item">
-                  <a href="">Dripicons</a>
+                  <a href="../icons/ui-icons-dripicons.html">Dripicons</a>
                 </li>
               </ul>
             </li>
@@ -368,40 +369,95 @@
               </ul>
             </li>
 
-            <li class="w-60 sidebar-item has-sub mb-6 active">
-                <a href="#" class="sidebar-link">
-                  <svg class="bi" width="15" height="40" fill="currentColor">
-                    <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
-                  </svg> <span class="textoSidebar">Multi-Level Menu</span>
-                </a>
-                <ul class="submenu textoSidebar ml-8 active">
-                  <li class="sidebar-item has-sub active">
-                    <a class="sidebar-link" href="#">First Level</a>
-  
-                    <ul class="submenu active">
-                      <li class="submenu-item has-sub active">
-                        <a href="ui-multi-level-menu.html" class="sidebar-link"
-                          >Second Level</a
-                        >
-                      </li>
-  
-                      <li class="submenu-item">
-                        <a href="#" class="sidebar-link">Second Level Menu</a>
+            <li class="w-60 hs-accordion-group mb-7">
+              <div class="submenu-item hs-accordion active" id="hs-basic-heading-1">
+                <button type="button"
+                  class="hover:dark:bg-gray-700 hover:bg-gray-200 mt-3 flex textoSidebar hs-accordion-toggle hs-accordion:bg-color-blue"
+                  aria-controls="hs-basic-collapse-1"> <svg class="mr-4 bi" width="15" height="20" fill="currentColor">
+                    <use xlink:href="../elementos/herramientas/images/icons.svg#three-dots" />
+                  </svg>
+                  <span class="whitespace-nowrap">Multi-level Menu</span>
+                  <svg
+                    class="ml-10 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-400 dark:text-gray-500"
+                    width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </button>
+
+                <div id="hs-basic-collapse-1" 
+                  class="hs-accordion-content overflow-hidden transition-[height] duration-300"
+                  aria-labelledby="hs-basic-heading-1">
+                  <div class="px-5 py-2 content-wrapper">
+                    <ul class="textoSidebar ml-8">
+                      <li>
+                        <div class="hs-accordion-group"> 
+                          <div class="hs-accordion active" id="hs-basic-heading-1">
+                            <button type="button"
+                              class="hover:dark:bg-gray-700 hover:bg-gray-200 ml-3 flex textoSidebar hs-accordion-toggle hs-accordion:color-texto-blue"
+                              aria-controls="hs-basic-collapse-1">
+                              <span class="text-sm whitespace-nowrap">First Level</span>
+                              <svg
+                                class="ml-16 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-500"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                              </svg>
+                            </button>
+
+                            <div id="hs-basic-collapse-1"
+                              class="hs-accordion-content overflow-hidden transition-[height] duration-300"
+                              aria-labelledby="hs-basic-heading-1">
+                              <div class="ml-4 px-5 py-2 content-wrapper">
+                                <ul class=" textoSidebar ">
+                                  <li
+                                    class="hover:translate-x-2 duration-300 ease-in-out text-blue-800 hover:dark:text-white text-sm ml-5">
+                                    <a href="ui-multi-level-menu.html">Second Level</a>
+                                  </li>
+                                  <li
+                                    class="hover:translate-x-2 duration-300 ease-in-out hover:text-blue-800 hover:dark:text-white text-sm ml-5 mt-4 hs-accordion-toggle">
+                                    <a href="#">Second Level Menu</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="hs-accordion" id="hs-basic-heading-2">
+                            <button type="button"
+                              class="hover:dark:bg-gray-700 hover:bg-gray-200 flex mt-2 ml-3 textoSidebar hs-accordion-toggle hs-accordion-boton"
+                              aria-controls="hs-basic-collapse-2">
+                              <span class="text-sm whitespace-nowrap">Another Menu</span>
+                              <svg
+                                class="ml-10 mt-1 hs-accordion-active:block hs-accordion-active:group-hover:text-blue-600 block w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-500"
+                                width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                              </svg>
+                            </button>
+
+                            <div id="hs-basic-collapse-2"
+                              class="hiddens hs-accordion-content overflow-hidden transition-[height] duration-300 "
+                              aria-labelledby="hs-basic-heading-2">
+                              <div class="ml-4 px-5 py-2 content-wrapper">
+                                <ul class=" textoSidebar">
+                                  <li
+                                    class="hover:translate-x-2 duration-300 ease-in-out hover:text-blue-800 hover:dark:text-white hs-accordion-toggle text-sm ml-5">
+                                    <a href="#">Second Level Menu</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </li>
                     </ul>
-                  </li>
-  
-                  <li class="sidebar-item has-sub">
-                    <a class="sidebar-link" href="#">Another Menu</a>
-  
-                    <ul class="submenu">
-                      <li class="submenu-item">
-                        <a href="#" class="sidebar-link">Second Level Menu</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+                  </div>
+                </div>
+              </div>
+            </li>
 
             <li class="sidebar-item  mb-4">
               <span class="ml-4 textoSidebar">Pages</span>
