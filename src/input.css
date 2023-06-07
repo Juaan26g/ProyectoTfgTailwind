@@ -11,7 +11,7 @@
     color: #607080!important
 }
 
-p {
+p, .text-color {
     color: #607080;
 }
 
@@ -105,4 +105,34 @@ code {
 
 .bg-color-success {
     background-color: #198754 !important;
+}
+
+.bg-color-warning {
+    --tw-bg-opacity: 1;
+    background-color: rgb(228 161 27 / var(--tw-bg-opacity));
+}
+
+.bg-color-light-success {
+    background-color: #d2ffe8;
+    color: #00391c !important;
+}
+
+.bg-color-light-warning {
+    background-color: #fffdd8;
+    color: #3f3c00 !important;
+}
+
+.bg-color-light-danger {
+    background-color: #ffdede;
+    color: #450000 !important;
+}
+
+.bg-color-light-info {
+    background-color: #e6fdff;
+    color: #00474d !important;
+}
+
+.bg-color-light-primary {
+    background-color: #ebf3ff;
+    color: #002152 !important;
 }

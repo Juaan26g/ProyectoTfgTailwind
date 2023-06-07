@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avatar - Mazer Admin Dashboard</title>
     <link href="/css/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="../elementos/elementos2.css">
-    <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
-    <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../../elementos/elementos2.css">
+    <link rel="shortcut icon" href="../../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../elementos/herramientas/images/logo/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="../../elementos/extensiones/quill/quill.snow.css" />
+    <link rel="stylesheet" href="../../elementos/extensions/quill/quill.bubble.css" />
 </head>
 
 <body>
@@ -309,7 +312,7 @@
                                     <a href="../widgets/ui-widgets-pricing.html">Pricing</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">To-do list</a>
+                                    <a href="../widgets/ui-widgets-todolist.html">To-do list</a>
                                 </li>
                             </ul>
                         </li>
@@ -325,10 +328,10 @@
                                     <a href="">Bootstrap Icons</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Fontawesome</a>
+                                    <a href="../icons/ui-icons-fontawesome.html">Fontawesome</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Dripicons</a>
+                                    <a href="../icons/ui-icons-dripicons.html">Dripicons</a>
                                 </li>
                             </ul>
                         </li>
@@ -508,8 +511,9 @@
                     <div>
                         <div class="grid grid-cols-12">
                             <div class="col-span-12 md:col-span-6 md:order-1 order-2 mb-4">
-                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Avatar</h3>
-                                <p class="text-subtitle text-muted">A container to show avatar images or initials.</p>
+                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Quill Form Editor</h3>
+                                <p class="text-subtitle text-muted">Allow your users to provide formatted content with a powerful
+                                    WYSIWYG editor.</p>
                             </div>
                             <div class="mb-6 col-span-12 md:col-span-6 md:order-2 order-1">
                                 <nav class="float-left lg:float-right">
@@ -518,7 +522,7 @@
                                             <a href="../index.html">Dashboard</a>
                                         </li>
                                         <li class="pl-2">
-                                            / Avatar
+                                            / Quill
                                         </li>
                                     </ol>
                                 </nav>
@@ -526,7 +530,52 @@
                         </div>
                     </div>
                     <section class="section">
+                        <div class="p-4 rounded-lg shadow-md bg-white">
+                            <div class="p-4 border-b border-gray-200">
+                                <h4 class="text-lg font-semibold">Quill.js Snow Editor</h4>
+                            </div>
+                            <div class="p-4">
+                                <p>Snow is a clean editor theme</p>
+                                <div id="snow">
+                                    <p>Hello World!</p>
+                                    <p>Some initial <strong>bold</strong> text</p>
+                                    <p><br /></p>
+                                </div>
+                            </div>
+                        </div>
                     </section>
+                    <section class="section">
+                        <div class="p-4 rounded-lg shadow-md bg-white">
+                            <div class="p-4 border-b border-gray-200">
+                                <h4 class="text-lg font-semibold">Bubble Editor</h4>
+                            </div>
+                            <div class="p-4">
+                                <p>Block some text to display options in popovers</p>
+                                <div id="bubble">
+                                    <p>Hello World!</p>
+                                    <p>Some initial <strong>bold</strong> text</p>
+                                    <p><br /></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section">
+                        <div class="p-4 rounded-lg shadow-md bg-white">
+                            <div class="p-4 border-b border-gray-200">
+                                <h4 class="text-lg font-semibold">Full Editor</h4>
+                            </div>
+                            <div class="p-4">
+                                <p>Block some text to display options in popovers</p>
+                                <div id="full">
+                                    <p>Hello World!</p>
+                                    <p>Some initial <strong>bold</strong> text</p>
+                                    <p><br /></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
                 </div>
                 <footer class="pt-16">
                     <div>
@@ -562,6 +611,8 @@
 
 </html>
 
+<script src="../../elementos/extensions/quill/quill.min.js"></script>
+<script src="../../elementos/static/quill.js"></script>
 <script>
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.getElementsByTagName('html')[0];
