@@ -2721,9 +2721,6 @@ input:checked + .toggle-bg {
   gap: 1.25rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
 
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
@@ -5665,15 +5662,6 @@ code {
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-green-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(132 225 188 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-red-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 180 180 / var(--tw-bg-opacity));
-}
 
 .hover\:fill-\[\#8b8b8b\]:hover {
   fill: #8b8b8b;
@@ -6339,16 +6327,6 @@ code {
 .peer:checked ~ .peer-checked\:bg-red-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(240 82 82 / var(--tw-bg-opacity));
-}
-
-.peer:checked ~ .peer-checked\:bg-green-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(188 240 218 / var(--tw-bg-opacity));
-}
-
-.peer:checked ~ .peer-checked\:bg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 213 213 / var(--tw-bg-opacity));
 }
 
 .peer:checked ~ .peer-checked\:text-white {
@@ -7274,15 +7252,6 @@ code {
   color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
-:is(.dark .peer:checked ~ .dark\:peer-checked\:bg-green-500) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 159 110 / var(--tw-bg-opacity));
-}
-
-:is(.dark .peer:checked ~ .dark\:peer-checked\:bg-red-500) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(240 82 82 / var(--tw-bg-opacity));
-}
 
 :is(.dark .peer:focus ~ .dark\:peer-focus\:text-gray-200) {
   --tw-text-opacity: 1;
