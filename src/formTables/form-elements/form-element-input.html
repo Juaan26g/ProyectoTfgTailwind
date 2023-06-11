@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input - Mazer Admin Dashboard</title>
+    <link href="/css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../elementos/elementos2.css">
+    <link rel="shortcut icon" href="../../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../elementos/herramientas/images/logo/favicon.png" type="image/png" />
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="xl:active xxl:active fixed">
+            <div class="sidebar-wrapper active entrada">
+                <div class="sidebar-header relative">
+
+                    <div class="flex w-60 mt-3 mb-2 items-center">
+                        <div class="logo">
+                            <a href="../../index.html"><img src="../../elementos/herramientas/images/logo/logo.svg"
+                                    alt="Logo" /></a>
+                        </div>
+
+                        <div class="flex gap-2 items-center mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true" role="img"
+                                class="ml-14 textoSidebar iconify iconify--system-uicons sun-color" width="20"
+                                height="22" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
+                                <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
+                                        opacity=".3"></path>
+                                    <g transform="translate(-210 -1)">
+                                        <path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path>
+                                        <circle cx="220.5" cy="11.5" r="4"></circle>
+                                        <path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+
+                            <div class="relative block mb-2 mt-2 form-switch fs-6" id="theme-toggle">
+                                <div id="toggle-button" onclick="toggleTheme()">
+                                    <div id="sun-moon" class="sun"></div>
+                                </div>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                aria-hidden="true" role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20"
+                                height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path fill="#607080"
+                                    d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <button id="sidebar-hide"
+                            class="sidebar-hide absolute textoSidebar top-2 right-2 bg-transparent border-none p-0 xl:hidden xxl:hidden">
+                            <svg class="bi" width="25" height="40" fill="currentColor">
+                                <use xlink:href="../../elementos/herramientas/images/icons.svg#x" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title textoSidebar">Menu</li>
+
+                        <li class="sidebar-item ">
+                            <a href="../../index.html" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#grid-fill" />
+                                </svg> <span class="textoSidebar">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../elementos/herramientas/images/icons.svg#stack" />
+                                </svg> <span class="textoSidebar">Components</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="../../components/component-accordion.html">Accordion</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-alert.html">Alert</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-badge.html">Badge</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-breadcrumb.html">Breadcrumb</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-button.html">Button</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-card.html">Card</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../components/component-carousel.html">Carousel</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-collapse.html">Collapse</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-dropdown.html">Dropdown</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-list-group.html">List Group</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-modal.html">Modal</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-navs.html">Navs</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-pagination.html">Pagination</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-progress.html">Progress</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-spinner.html">Spinner</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-toasts.html">Toasts</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../components/component-tooltip.html">Tooltip</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#collection-fill" />
+                                </svg> <span class="textoSidebar">Extra Components</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8 ">
+                                <li class="submenu-item ">
+                                    <a href="../../extraComponents/extra-component-avatar.html">Avatar</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../extraComponents/extra-component-divider.html">Divider</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../extraComponents/extra-component-date-picker.html">Date Picker</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../extraComponents/extra-component-sweetalert.html">Sweet Alert</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../extraComponents/extra-component-toastify.html">Toastify</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../extraComponents/extra-component-rating.html">Rating</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub mb-6">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
+                                </svg> <span class="textoSidebar">Layouts</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="../../layouts/layout-default.html">Default Layout</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../layouts/layout-vertical-1-column.html">1 Column</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../layouts/layout-vertical-navbar.html">Vertical Navbar</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../layouts/layout-rtl.html">RTL Layout</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../layouts/layout-horizontal.html">Horizontal Menu</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  mb-4">
+                            <span class="ml-4 textoSidebar">Forms & Tables</span>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub active">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#hexagon-fill" />
+                                </svg> <span class="textoSidebar">Form Elements</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8 active">
+                                <li class="submenu-item active">
+                                    <a href="./form-element-input.html">Input</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="./form-element-input-group.html">Input Group</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="./form-element-select.html">Select</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="./form-element-radio.html">Radio</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="./form-element-checkbox.html">Checkbox</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="./form-element-textarea.html">Textarea</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item ">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use
+                                        xlink:href="../../elementos/herramientas/images/icons.svg#file-earmark-medical-fill" />
+                                </svg> <span class="textoSidebar">Form Layout</span>
+                            </a>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#journal-check" />
+                                </svg> <span class="textoSidebar">Form Validation</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="../form-validation-parsley.html">Parsley</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#pen-fill" />
+                                </svg> <span class="textoSidebar">Form Editor</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="../form-editor/form-editor-quill.html">Quill</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../form-editor/form-editor-ckeditor.html">CKEditor</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../form-editor/form-editor-summernote.html">Summernote</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../form-editor/form-editor-tinymce.html">TinyMCE</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item ">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
+                                </svg> <span class="textoSidebar">Table</span>
+                            </a>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub mb-6">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use
+                                        xlink:href="../../elementos/herramientas/images/icons.svg#file-earmark-spreadsheet-fill" />
+                                </svg> <span class="textoSidebar">Datatables</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="../datatables/table-datatable.html">Datatable</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../datatables/table-datatable-jquery.html">Datatable (jQuery)</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  mb-4">
+                            <span class="ml-4 textoSidebar">Extra UI</span>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#pentagon-fill" />
+                                </svg> <span class="textoSidebar">Widgets</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="../../widgets/ui-widgets-chatbox.html">Chatbox</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../widgets/ui-widgets-pricing.html">Pricing</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../widgets/ui-widgets-todolist.html">To-do list</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#egg-fill" />
+                                </svg> <span class="textoSidebar">Icons</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="">Bootstrap Icons</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../icons/ui-icons-fontawesome.html">Fontawesome</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../icons/ui-icons-dripicons.html">Dripicons</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#bar-chart-fill" />
+                                </svg> <span class="textoSidebar">Charts</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="../../charts/ui-chart-chartjs.html">ChartJS</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../charts/ui-chart-apexcharts.html">Apexcharts</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item ">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use
+                                        xlink:href="../../elementos/herramientas/images/icons.svg#cloud-arrow-up-fill" />
+                                </svg> <span class="textoSidebar">File Uploader</span>
+                            </a>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#map-fill" />
+                                </svg> <span class="textoSidebar">Maps</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="../../maps/ui-map-google-map.html">Google Map</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../maps/ui-map-jsvectormap.html">JS Vector Map</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub mb-6 ">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#collection-fill" />
+                                </svg> <span class="textoSidebar">Multi-Level Menu</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="">First Level</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="">Another Menu</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  mb-4">
+                            <span class="ml-4 textoSidebar">Pages</span>
+                        </li>
+
+                        <li class="w-60 sidebar-item ">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#envelope-fill" />
+                                </svg> <span class="textoSidebar">Email Application</span>
+                            </a>
+                        </li>
+
+                        <li class="w-60 sidebar-item ">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#chat-dots-fill" />
+                                </svg> <span class="textoSidebar">Chat Application</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item ">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#image-fill" />
+                                </svg> <span class="textoSidebar">Photo Gallery</span>
+                            </a>
+                        </li>
+
+                        <li class="w-60 sidebar-item ">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#basket-fill" />
+                                </svg> <span class="textoSidebar">Checkout Page</span>
+                            </a>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#person-badge-fill" />
+                                </svg> <span class="textoSidebar">Authentication</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="../../auth/auth-login.html">Login</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../auth/auth-register.html">Register</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../auth/auth-forgot-password.html">Forgot Password</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="w-60 sidebar-item has-sub mb-6">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../elementos/herramientas/images/icons.svg#x-octagon-fill" />
+                                </svg> <span class="textoSidebar">Errors</span>
+                            </a>
+                            <ul class="submenu textoSidebar ml-8">
+                                <li class="submenu-item">
+                                    <a href="../../errors/error-403.html">403</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../errors/error-404.html">404</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="../../errors/error-500.html">500</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  mb-4">
+                            <span class="ml-4 textoSidebar">Raise Support</span>
+                        </li>
+
+                        <li class="w-60 sidebar-item ">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#life-preserver" />
+                                </svg> <span class="textoSidebar">Documentation</span>
+                            </a>
+                        </li>
+
+                        <li class="w-60 sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#puzzle" />
+                                </svg> <span class="textoSidebar">Contribute</span>
+                            </a>
+                        </li>
+
+                        <li class="w-60 sidebar-item mb-4">
+                            <a href="#" class="sidebar-link">
+                                <svg class="bi" width="15" height="40" fill="currentColor">
+                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#cash" />
+                                </svg> <span class="textoSidebar">Donate</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="main" class="xl:ml-80 xxl:ml-80 textoSidebar">
+            <button id="sidebar-toggle" class="text-white rounded m-8 mb-6 xl:hidden xxl:hidden">
+                <svg class="bi svg-color w-6 h-6" height="100%" width="100%">
+                    <use xlink:href="../elementos/herramientas/images/icons.svg#justify" />
+                </svg>
+            </button>
+            <div class="p-8 pt-0 xl:p-8 xxl:p-8">
+                <div>
+                    <div>
+                        <div class="grid grid-cols-12">
+                            <div class="col-span-12 md:col-span-6 md:order-1 order-2 mb-4">
+                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Input</h3>
+                                <p class="text-subtitle text-muted">A container to show avatar images or initials.</p>
+                            </div>
+                            <div class="mb-6 col-span-12 md:col-span-6 md:order-2 order-1">
+                                <nav class="float-left lg:float-right">
+                                    <ol class="text-body flex">
+                                        <li class="link">
+                                            <a href="../index.html">Dashboard</a>
+                                        </li>
+                                        <li class="pl-2">
+                                            / Input
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="section">
+                        <div class="p-6 rounded-lg shadow-md">
+                            <div class=" pb-4">
+                                <h4 class="text-lg font-semibold">Basic Inputs</h4>
+                            </div>
+                            <div class="pt-4">
+                                <div class="flex flex-wrap space-x-4">
+                                    <div class="w-5/12">
+                                        <div class="mb-4">
+                                            <label for="basicInput"
+                                                class="block text-sm font-medium text-gray-700">Basic Input</label>
+                                            <input type="text"
+                                                class="mt-1 entrada block w-full rounded-md border-gray-300 shadow-sm"
+                                                id="basicInput" placeholder="Enter email" />
+                                        </div>
+                                        <div class="mb-4">
+                                            <div class="flex"><label for="helpInputTop"
+                                                    class="block text-sm font-medium text-gray-700 mr-2">Input text with
+                                                    help</label><small
+                                                    class="text-xs text-gray-500">eg.<i>someone@example.com</i></small>
+                                            </div>
+                                            <input type="text"
+                                                class="mt-1  entrada block w-full rounded-md border-gray-300 shadow-sm"
+                                                id="helpInputTop" />
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="helperText" class="block text-sm font-medium text-gray-700">With
+                                                Helper Text</label>
+                                            <input type="text" id="helperText"
+                                                class="mt-1  entrada block w-full rounded-md border-gray-300 shadow-sm"
+                                                placeholder="Name" />
+                                            <p>
+                                                <small class="text-xs text-gray-500">Find helper text here for given
+                                                    textbox.</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-5/12">
+                                        <div class="mb-4">
+                                            <label for="disabledInput"
+                                                class="block text-sm font-medium text-gray-700">Disabled Input</label>
+                                            <input type="text"
+                                                class="mt-1 block entrada w-full rounded-md border-gray-300 shadow-sm cursor-not-allowed opacity-50"
+                                                id="disabledInput" placeholder="Disabled Text" disabled />
+                                        </div>
+                                        <div class="w-full md:w-1/2">
+                                            <div class="mb-4">
+                                                <label for="readonlyInput"
+                                                    class="block text-sm font-medium text-gray-700">Readonly
+                                                    Input</label>
+                                                <input type="text"
+                                                    class="mt-1 block entrada w-full rounded-md border-gray-300 shadow-sm cursor-not-allowed bg-gray-100"
+                                                    id="readonlyInput" readonly value="You can't update me :P" />
+                                            </div>
+                                            <div class="mb-4">
+                                                <label for="staticInput"
+                                                    class="block text-sm  entrada font-medium">Static Text</label>
+                                                <p id="staticInput" class="mt-1 text-sm entrada">email@mazer.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                    <section id="input-style" class="my-3">
+                        <div class="p-6 rounded-lg shadow-md">
+                            <div class=" pb-4">
+                                <h4 class="text-lg font-semibold">Input Styles</h4>
+                            </div>
+                            <div class="pt-4">
+                                <div class="flex flex-wrap space-x-4">
+                                    <div class="w-full">
+                                        <p class="mb-4 text-sm text-gray-700">
+                                            To set rounded border to input box, use
+                                            <code
+                                                class="px-1 py-0.5 rounded  text-xs font-mono text-pink-600">rounded-md</code>
+                                            class and to set square border to
+                                            input box, use <code
+                                                class="px-1 py-0.5 rounded  text-xs font-mono text-pink-600">rounded-none</code>
+                                            class along with
+                                            <code
+                                                class="px-1 py-0.5 rounded  text-xs font-mono text-pink-600">form-input</code>
+                                            class.
+                                        </p>
+                                    </div>
+                                    <div class="w-5/12">
+                                        <div class="mb-4">
+                                            <label for="roundText"
+                                                class="block text-sm font-medium text-gray-700">Rounded Input</label>
+                                            <input type="text" id="roundText"
+                                                class="mt-1 block entrada w-full rounded-md border-gray-300 shadow-sm"
+                                                placeholder="Rounded Input" />
+                                        </div>
+                                    </div>
+                                    <div class="w-5/12">
+                                        <div class="mb-4">
+                                            <label for="squareText"
+                                                class="block text-sm font-medium text-gray-700">Square Input</label>
+                                            <input type="text" id="squareText"
+                                                class="mt-1 block w-full entrada rounded-none border-gray-300 shadow-sm"
+                                                placeholder="Square Input" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="horizontal-input" class="my-3">
+                        <div class="p-6 rounded-lg shadow-md">
+                            <div class="pb-4">
+                                <h4 class="text-lg font-semibold">Horizontal Input</h4>
+                            </div>
+                            <div class="pt-4">
+                                <div class="flex flex-wrap space-x-4">
+                                    <div class="w-full">
+                                        <p class="mb-4 text-sm text-gray-700">
+                                            To make label in center of w-full px-3 py-2 border border-gray-300
+                                            rounded-md, use
+                                            <code
+                                                class="px-1 py-0.5 rounded  text-xs font-mono text-pink-600">flex items-center</code>
+                                            class with the parent
+                                            <code
+                                                class="px-1 py-0.5 rounded  text-xs font-mono text-pink-600">div</code>
+                                            element.
+                                        </p>
+                                    </div>
+                                    <div class="w-5/12">
+                                        <div class="flex items-center mb-4">
+                                            <label for="first-name"
+                                                class="w-2/12 text-sm font-medium text-gray-700">First Name</label>
+                                            <input type="text" id="first-name"
+                                                class="w-10/12 ml-4 entrada rounded-md border-gray-300 shadow-sm"
+                                                name="fname" placeholder="First Name" />
+                                        </div>
+                                    </div>
+                                    <div class="w-5/12">
+                                        <div class="flex items-center mb-4">
+                                            <label for="last-name" class="w-2/12 text-sm font-medium text-gray-700">Last
+                                                Name</label>
+                                            <input type="text" id="last-name"
+                                                class="w-10/12  entrada ml-4 rounded-md border-gray-300 shadow-sm"
+                                                name="lname" placeholder="Last Name" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="input-file-browser" class="my-3">
+                        <div class="p-6 rounded-lg shadow-md">
+                            <div class=" pb-4">
+                                <h4 class="text-lg font-semibold">File Input</h4>
+                            </div>
+                            <div class="pt-4">
+                                <div class="flex flex-wrap">
+                                    <div class="w-full lg:w-1/2">
+                                        <div class="mb-4">
+                                            <label for="formFile"
+                                                class="block text-sm font-medium text-gray-700">Default file input
+                                                example</label>
+                                            <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                                                type="file" id="formFile" />
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="formFileMultiple"
+                                                class="block text-sm font-medium text-gray-700">Multiple files input
+                                                example</label>
+                                            <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+                                                type="file" id="formFileMultiple" multiple />
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="formFileDisabled"
+                                                class="block text-sm font-medium text-gray-700">Disabled file input
+                                                example</label>
+                                            <input
+                                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm cursor-not-allowed opacity-50"
+                                                type="file" id="formFileDisabled" disabled />
+                                        </div>
+                                    </div>
+                                    <div class="w-full lg:w-1/2">
+                                        <div class="mb-4">
+                                            <label for="formFileSm"
+                                                class="block text-sm font-medium text-gray-700">Small file input
+                                                example</label>
+                                            <input
+                                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm text-xs px-2 py-1.5"
+                                                id="formFileSm" type="file" />
+                                        </div>
+                                        <div>
+                                            <label for="formFileLg"
+                                                class="block text-sm font-medium text-gray-700">Large file input
+                                                example</label>
+                                            <input
+                                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm text-base px-3 py-2.5"
+                                                id="formFileLg" type="file" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </section>
+                <section id="input-with-icons" class="my-3">
+                    <div class="p-6 rounded-lg shadow-md">
+                        <div class="pb-4">
+                            <h4 class="text-lg font-semibold">Input with Icons</h4>
+                        </div>
+                        <div class="pt-4">
+                            <div class="flex flex-wrap space-x-4">
+                                <div class="w-full">
+                                    <p class="mb-4 text-sm text-gray-700">
+                                        For Input Box with icon use
+                                        <code class="px-1 py-0.5 rounded text-pink-600 text-xs font-mono">relative</code>
+                                        class with
+                                        <code class="px-1 py-0.5 rounded text-pink-600 text-xs font-mono">form-group</code>
+                                        and use class
+                                        <code class="px-1 py-0.5 rounded text-pink-600 text-xs font-mono">pl-[width]</code>
+                                        or
+                                        <code class="px-1 py-0.5 rounded text-pink-600 text-xs font-mono">pr-[width]</code>
+                                        for icon on left or right side.
+                                    </p>
+                                </div>
+                                <div class="w-5/12">
+                                    <h6 class="text-sm font-medium text-gray-700 mb-2">Left Icon</h6>
+                                    <div class="relative mb-4">
+                                        <input type="text"
+                                            class="w-full px-3 py-2 entrada border pl-[2.5rem] border-red-500 rounded-md"
+                                            placeholder="Input with icon left" />
+                                        <div class="absolute top-[0.375rem] left-[0.75rem] text-red-500">
+                                            <svg width="16px" height="16px" viewBox="0 0 16 16"
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                                <path
+                                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-5/12">
+                                    <h6 class="text-sm font-medium text-gray-700 mb-2">Right Icon</h6>
+                                    <div class="relative mb-4">
+                                        <input type="text"
+                                            class="w-full px-3 py-2 entrada border border-gray-300 pr-[2.5rem] rounded-md"
+                                            placeholder="Icon Right, Default Input" />
+                                        <div class="absolute top-[0.375rem] right-[0.75rem]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="input-sizing" class="my-3">
+                    <div class="p-6 rounded-lg shadow-md">
+                        <div class=" pb-4">
+                            <h4 class="text-lg font-semibold">Control Sizing Option</h4>
+                        </div>
+                        <div class="pt-4">
+                            <div class="flex flex-wrap space-x-4">
+                                <div class="w-full">
+                                    <p class="mb-4 text-sm text-gray-700">
+                                        For different sizes of Input, Use classes like
+                                        <code
+                                            class="px-1 py-0.5 rounded text-xs font-mono text-pink-600">text-base px-3 py-2.5</code>
+                                        and
+                                        <code
+                                            class="px-1 py-0.5 rounded text-xs font-mono text-pink-600">text-xs px-2 py-1.5</code>
+                                        for Large and Small input box.
+                                    </p>
+                                </div>
+                                <div class="w-1/4">
+                                    <h6 class="text-sm font-medium text-gray-700 mb-2">Large</h6>
+                                    <input
+                                        class="w-full entrada  border border-gray-300 rounded-md text-base px-3 py-2.5"
+                                        type="text" placeholder="Large Input" />
+                                </div>
+                                <div class="w-1/4">
+                                    <h6 class="text-sm font-medium text-gray-700 mb-2">Default</h6>
+                                    <input class="w-full px-3 py-2 entrada  border border-gray-300 rounded-md"
+                                        type="text" placeholder="Default Input" />
+                                </div>
+                                <div class="w-1/4">
+                                    <h6 class="text-sm font-medium text-gray-700 mb-2">Small</h6>
+                                    <input class="w-full entrada  border border-gray-300 rounded-md text-xs px-2 py-1.5"
+                                        type="text" placeholder="Small Input" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="input-validation" class="my-3">
+                    <div class="p-6 rounded-lg shadow-md">
+                        <div class="border-b pb-4">
+                            <h4 class="text-lg font-semibold">Input Validation States</h4>
+                        </div>
+                        <div class="pt-4">
+                            <div class="flex flex-wrap space-x-4">
+                                <div class="w-full">
+                                    <p class="mb-4 text-sm text-gray-700">
+                                        You can indicate invalid and valid form fields with
+                                        <code
+                                            class="px-1 py-0.5 roundedtext-xs font-mono text-pink-600">border-green-500</code>
+                                        and
+                                        <code
+                                            class="px-1 py-0.5 rounded text-xs font-mono text-pink-600">border-red-500</code>.
+                                    </p>
+                                </div>
+                                <div class="w-5/12">
+                                    <label for="valid-state" class="block text-sm font-medium text-gray-700 mb-1">Valid
+                                        State</label>
+                                    <input type="text" class="w-full px-3 py-2  entrada border-2 rounded-md border-green-500"
+                                        id="valid-state" placeholder="Valid" value="Valid" required />
+                                    <div class="text-xs text-green-500 mt-1 flex items-center">
+                                        <i class="bx bx-radio-circle mr-1"></i>This is valid state.
+                                    </div>
+                                </div>
+                                <div class="w-5/12">
+                                    <label for="invalid-state"
+                                        class="block text-sm font-medium text-gray-700 mb-1">Invalid State</label>
+                                    <input type="text" class="w-full px-3 py-2  entrada border-2 rounded-md border-red-500"
+                                        id="invalid-state" placeholder="Invalid" value="Invalid" required />
+                                    <div class="text-xs text-red-500 mt-1 flex items-center">
+                                        <i class="bx bx-radio-circle mr-1"></i>This is invalid state.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer class="pt-16">
+                <div>
+                    <div class="float-left">
+                        <p class="text-muted">2023 &copy; Mazer</p>
+                    </div>
+                    <div class="float-right">
+                        <p class="text-muted">
+                            Crafted with
+                            <span class="text-center">
+                                <svg class="w-5 inline-block" fill="#dc3545" height="100%"
+                                    style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
+                                    width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="_x31_66_x2C__Heart_x2C__Love_x2C__Like_x2C__Twitter">
+                                        <g>
+                                            <path
+                                                d="M365.4,59.628c60.56,0,109.6,49.03,109.6,109.47c0,109.47-109.6,171.8-219.06,281.271    C146.47,340.898,37,278.568,37,169.099c0-60.44,49.04-109.47,109.47-109.47c54.73,0,82.1,27.37,109.47,82.1    C283.3,86.999,310.67,59.628,365.4,59.628z" />
+                                        </g>
+                                    </g>
+                                    <g id="Layer_1" />
+                                </svg>
+                            </span>
+                            by <a class="link" href="https://saugi.me">Saugi</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.getElementsByTagName('html')[0];
+    const body = document.getElementsByTagName('body')[0];
+    const sunMoon = document.getElementById('sun-moon');
+
+
+    themeToggle.addEventListener('click', () => {
+        if (html.classList.contains('dark')) {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            body.classList.remove('bg-dark');
+            body.classList.add('bg-light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            html.classList.remove('light');
+            html.classList.add('dark');
+            body.classList.remove('bg-light');
+            body.classList.add('bg-dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+        html.classList.add('dark');
+        body.classList.add('bg-dark');
+        sunMoon.classList.remove('sun');
+        sunMoon.classList.add('moon');
+        body.classList.add('dark-theme');
+
+    } else {
+        html.classList.add('light');
+        body.classList.add('bg-light');
+        sunMoon.classList.remove('moon');
+        sunMoon.classList.add('sun');
+        body.classList.remove('dark-theme');
+
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebarItems = document.querySelectorAll('.has-sub');
+
+        sidebarItems.forEach(sidebarItem => {
+            const submenu = sidebarItem.querySelector('.submenu');
+
+            if (!submenu.classList.contains('active')) {
+                submenu.style.maxHeight = '0';
+            }
+
+            sidebarItem.addEventListener('click', function (event) {
+
+                const target = event.target;
+
+                if (target.closest('.submenu-item')) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                if (!submenu.classList.contains('active')) {
+                    submenu.classList.add('active');
+                    const height = submenu.scrollHeight;
+                    submenu.style.maxHeight = `${height}px`;
+                    submenu.style.transitionDuration = `${Math.round(400 + (height / 10))}ms`;
+                } else {
+                    const height = submenu.scrollHeight;
+                    submenu.style.maxHeight = '0';
+                    submenu.style.transition = 'max-height 0.3s ease-out';
+                    setTimeout(() => {
+                        submenu.classList.remove('active');
+                    }, 300);
+                }
+
+
+            });
+        });
+    });
+
+
+    function handleResize() {
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('sidebar');
+        if (window.innerWidth <= 1200) {
+            sidebarToggle.classList.remove('hidden');
+            if (sidebar.classList.contains('active') && window.devicePixelRatio >= 1.5) {
+                sidebar.classList.remove('active');
+            }
+        } else {
+            sidebarToggle.classList.add('hidden');
+            if (!sidebar.classList.contains('active')) {
+                sidebar.classList.add('active');
+            }
+        }
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebarHide = document.getElementById('sidebar-hide');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        sidebarHide.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        handleResize();
+    });
+
+    function toggleTheme() {
+        const body = document.body;
+        const sunMoon = document.getElementById('sun-moon');
+        body.classList.toggle('dark-theme');
+
+        if (body.classList.contains('dark-theme')) {
+            sunMoon.classList.remove('sun');
+            sunMoon.classList.add('moon');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            sunMoon.classList.remove('moon');
+            sunMoon.classList.add('sun');
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+
+</script>

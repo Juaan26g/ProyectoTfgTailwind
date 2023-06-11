@@ -1,3 +1,138 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-fondo{
+    background-color: #f2f7ff;
+}
+
+.text-body {
+    --bs-text-opacity: 1;
+    color: #607080!important
+}
+
+p, .text-color {
+    color: #607080;
+}
+
+.svg-color {
+    fill: #435ebe;
+}
+
+.svg-color:hover {
+    fill:  #364b98;
+}
+
+.link {
+    color: #435ebe;
+}
+
+.link:hover {
+    color: #364b98;
+}
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: #7c8db5!important
+}
+
+.card-default {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: .7rem;
+    padding: 1.5rem;
+}
+
+.light .card-default {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: .7rem;
+    padding: 1.5rem;
+}
+
+.dark .card-default {
+    background-color: #1e1e2d;
+    border: 1px solid #1e1e2d;
+    border-radius: .7rem;
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.light .card-title {
+    color: #25396f;
+}
+
+.dark .card-title {
+    color: #fff;
+}
+
+.dark .card-content {
+    color: #c2c2d9;
+}
+
+.container {
+    width: 100%;
+    padding-right: calc(.75rem * .5);
+    padding-left: calc(.75rem * .5);
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+code {
+    font-family: monospace;
+    color: #d639a6;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.bg-color-transparent {
+    background-color: transparent;
+}
+
+.bg-color-danger {
+    background-color: #dc3545 !important;
+}
+
+.bg-color-primary {
+    background-color: #435ebe !important;
+}
+
+.bg-color-success {
+    background-color: #198754 !important;
+}
+
+.bg-color-warning {
+    --tw-bg-opacity: 1;
+    background-color: rgb(228 161 27 / var(--tw-bg-opacity));
+}
+
+.bg-color-light-success {
+    background-color: #d2ffe8;
+    color: #00391c !important;
+}
+
+.bg-color-light-warning {
+    background-color: #fffdd8;
+    color: #3f3c00 !important;
+}
+
+.bg-color-light-danger {
+    background-color: #ffdede;
+    color: #450000 !important;
+}
+
+.bg-color-light-info {
+    background-color: #e6fdff;
+    color: #00474d !important;
+}
+
+.bg-color-light-primary {
+    background-color: #ebf3ff;
+    color: #002152 !important;
+}
