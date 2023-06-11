@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avatar - Mazer Admin Dashboard</title>
+    <title>Select - Mazer Admin Dashboard</title>
     <link href="/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="../../elementos/elementos2.css">
     <link rel="shortcut icon" href="../../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
@@ -540,14 +540,14 @@
                                             <div class="flex flex-col md:flex-row md:space-x-4">
                                                 <div class="w-full md:w-1/2 mb-4">
                                                     <h6 class="text-sm font-semibold">Basic Select</h6>
-                                                    <p class="text-sm text-gray-600">
-                                                        Use <code class="bg-gray-100 p-1 rounded-md">.form-select</code>
+                                                    <p class="text-sm ">
+                                                        Use <code class="text-pink-600">.form-select</code>
                                                         class for basic select
                                                         control.
                                                     </p>
 
                                                     <select
-                                                        class="block w-full py-1.5 pl-3 pr-7 text-base font-medium leading-6 text-gray-600 bg-white bg-no-repeat border border-gray-300 rounded-md appearance-none bg-right-center bg-size-4 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                                                        class="block w-full py-1.5 pl-3 pr-7 text-base font-medium leading-6 text-gray-600 entrada bg-no-repeat border border-gray-300 rounded-md appearance-none bg-right-center bg-size-4 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                                                         block w-full rounded-md" id="basicSelect">
                                                         <option>IT</option>
                                                         <option>Blade Runner</option>
@@ -558,13 +558,13 @@
                                                 <div class="w-full md:w-1/2 mb-4">
                                                     <h6 class="text-sm font-semibold">Disabled Select</h6>
                                                     <p class="text-sm text-gray-600">
-                                                        Use <code class="bg-gray-100 p-1 rounded-md">disabled</code>
+                                                        Use <code class="entrada p-1 rounded-md">disabled</code>
                                                         attribute for disabled
                                                         select control.
                                                     </p>
 
                                                     <select
-                                                        class="block w-full py-1.5 pl-3 pr-7 text-base font-medium leading-6 text-gray-600 bg-white bg-no-repeat border border-gray-300 rounded-md appearance-none bg-right-center bg-size-4 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                                                        class="block w-full py-1.5 pl-3 pr-7 text-base font-medium leading-6 text-gray-600 entrada bg-no-repeat border border-gray-300 rounded-md appearance-none bg-right-center bg-size-4 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                                                         disabled id="disabledSelect">
                                                         <option>Green</option>
                                                         <option>Red</option>
@@ -592,9 +592,9 @@
                                                 <div class="w-full md:w-1/2 mb-4">
                                                     <h6 class="text-sm font-semibold">Basic Select with Input Group</h6>
                                                     <div class="flex mb-3">
-                                                        <label class="bg-gray-100 rounded-l-md px-3 py-2"
+                                                        <label class="entrada border rounded-l-md px-3 py-2"
                                                             for="inputGroupSelect01">Options</label>
-                                                        <select class="form-select block w-full rounded-r-md"
+                                                        <select class="form-select entrada block w-full rounded-r-md"
                                                             id="inputGroupSelect01">
                                                             <option selected>Choose...</option>
                                                             <option value="1">One</option>
@@ -606,14 +606,14 @@
                                                 <div class="w-full md:w-1/2 mb-4">
                                                     <h6 class="text-sm font-semibold">Input group append</h6>
                                                     <div class="flex mb-3">
-                                                        <select class="form-select block w-full rounded-l-md"
+                                                        <select class="form-select entrada block w-full rounded-l-md"
                                                             id="inputGroupSelect01">
                                                             <option selected>Choose...</option>
                                                             <option value="1">One</option>
                                                             <option value="2">Two</option>
                                                             <option value="3">Three</option>
                                                         </select>
-                                                        <label class="bg-gray-100 rounded-r-md px-3 py-2"
+                                                        <label class="entrada border rounded-r-md px-3 py-2"
                                                             for="inputGroupSelect01">Options</label>
                                                     </div>
                                                 </div>
@@ -625,21 +625,22 @@
                         </div>
                     </section>
                     <section class="my-3">
-                        <div class="max-w-md mx-auto entrada rounded-xl shadow-md overflow-hidden">
-                            <div class="p-4">
+                        <div class="flex flex-col entrada rounded-xl shadow-md overflow-hidden">
+                            <div class="w-full p-4">
                                 <h4 class="text-lg font-semibold mb-2">Choices</h4>
                                 <div class="p-2">
                                     <div class="mb-4">
                                         <a href="https://github.com/Choices-js/Choices" target="_blank"
-                                            class="text-blue-500 hover:underline">Click here</a> for more information
+                                            class="text-blue-500 hover:underline">Click here</a>
+                                        for more information
                                     </div>
-                                    <div class="mb-4">
-                                        <h6 class="text-sm font-semibold mb-1">Basic Choices</h6>
-                                        <p class="text-sm mb-2">Use <code>.choices</code> class for basic choices
-                                            control.</p>
-                                        <div>
+                                    <div class="flex flex-row mb-4">
+                                        <div class="w-5/12 mr-2">
+                                            <h6 class="text-sm font-semibold mb-1">Basic Choices</h6>
+                                            <p class="text-sm mb-2">Use <code>.choices</code> class for basic choices
+                                                control.</p>
                                             <select
-                                                class="block w-full px-3 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                                                class="block w-full px-3 py-2 text-base font-medium text-gray-700 entrada border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
                                                 <option value="square">Square</option>
                                                 <option value="rectangle">Rectangle</option>
                                                 <option value="rombo">Rombo</option>
@@ -649,14 +650,13 @@
                                                 <option value="polygon">Polygon</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <h6 class="text-sm font-semibold mb-1">Single Select with Label</h6>
-                                        <p class="text-sm mb-2">Use <code>optgroup</code> attribute for basic choices
-                                            with Label control.</p>
-                                        <div>
+
+                                        <div class="w-5/12">
+                                            <h6 class="text-sm font-semibold mb-1">Single Select with Label</h6>
+                                            <p class="text-sm mb-2">Use <code>optgroup</code> attribute for basic
+                                                choices with Label control.</p>
                                             <select
-                                                class="block w-full px-3 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                                                class="block w-full px-3 py-2 text-base font-medium text-gray-700 entrada border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
                                                 <optgroup label="Figures">
                                                     <option value="romboid">Romboid</option>
                                                     <option value="trapeze">Trapeze</option>
@@ -676,7 +676,9 @@
                             </div>
                         </div>
                     </section>
-                    <section class="p-4 my-3">
+
+
+                    <!-- <section class="p-4 my-3">
                         <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
                             <div class="p-4">
                                 <h4 class="text-lg font-semibold mb-2">Multiple choices</h4>
@@ -722,37 +724,38 @@
                                         </div>
                                     </div>
                                 </div>
-                                <footer class="pt-16">
-                                    <div>
-                                        <div class="float-left">
-                                            <p class="text-muted">2023 &copy; Mazer</p>
-                                        </div>
-                                        <div class="float-right">
-                                            <p class="text-muted">
-                                                Crafted with
-                                                <span class="text-center">
-                                                    <svg class="w-5 inline-block" fill="#dc3545" height="100%"
-                                                        style="enable-background:new 0 0 512 512;" version="1.1"
-                                                        viewBox="0 0 512 512" width="100%" xml:space="preserve"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                        <g id="_x31_66_x2C__Heart_x2C__Love_x2C__Like_x2C__Twitter">
-                                                            <g>
-                                                                <path
-                                                                    d="M365.4,59.628c60.56,0,109.6,49.03,109.6,109.47c0,109.47-109.6,171.8-219.06,281.271    C146.47,340.898,37,278.568,37,169.099c0-60.44,49.04-109.47,109.47-109.47c54.73,0,82.1,27.37,109.47,82.1    C283.3,86.999,310.67,59.628,365.4,59.628z" />
-                                                            </g>
-                                                        </g>
-                                                        <g id="Layer_1" />
-                                                    </svg>
-                                                </span>
-                                                by <a class="link" href="https://saugi.me">Saugi</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </footer>
+                    </section> -->
+                    <footer class="pt-16">
+                        <div>
+                            <div class="float-left">
+                                <p class="text-muted">2023 &copy; Mazer</p>
+                            </div>
+                            <div class="float-right">
+                                <p class="text-muted">
+                                    Crafted with
+                                    <span class="text-center">
+                                        <svg class="w-5 inline-block" fill="#dc3545" height="100%"
+                                            style="enable-background:new 0 0 512 512;" version="1.1"
+                                            viewBox="0 0 512 512" width="100%" xml:space="preserve"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="_x31_66_x2C__Heart_x2C__Love_x2C__Like_x2C__Twitter">
+                                                <g>
+                                                    <path
+                                                        d="M365.4,59.628c60.56,0,109.6,49.03,109.6,109.47c0,109.47-109.6,171.8-219.06,281.271    C146.47,340.898,37,278.568,37,169.099c0-60.44,49.04-109.47,109.47-109.47c54.73,0,82.1,27.37,109.47,82.1    C283.3,86.999,310.67,59.628,365.4,59.628z" />
+                                                </g>
+                                            </g>
+                                            <g id="Layer_1" />
+                                        </svg>
+                                    </span>
+                                    by <a class="link" href="https://saugi.me">Saugi</a>
+                                </p>
                             </div>
                         </div>
+                    </footer>
                 </div>
+            </div>
+        </div>
 </body>
 
 </html>
