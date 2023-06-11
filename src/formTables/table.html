@@ -518,7 +518,7 @@
                                             <a href="../index.html">Dashboard</a>
                                         </li>
                                         <li class="pl-2">
-                                            / Avatar
+                                            / Table
                                         </li>
                                     </ol>
                                 </nav>
@@ -526,7 +526,541 @@
                         </div>
                     </div>
                     <section class="section">
+                        <div class="flex flex-col md:flex-row" id="basic-table">
+                            <div class="w-full md:w-1/2">
+                                <div class="bg-white shadow rounded p-4">
+                                    <div class="border-b p-2">
+                                        <h4 class="text-lg font-semibold">Table with outer spacing</h4>
+                                    </div>
+                                    <div class="">
+                                        <div class="p-4">
+                                            <p class="">
+                                                Using the most basic table up, here’s how
+                                                <code>.table</code>-based tables look in Bootstrap. You can use
+                                                any example of below table for your table and it can be use with
+                                                any type of bootstrap tables.
+                                            </p>
+                                            <!-- Table with outer spacing -->
+                                            <div class="overflow-x-auto">
+                                                <table class="w-full text-left">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>NAME</th>
+                                                            <th>RATE</th>
+                                                            <th>SKILL</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="font-semibold">Michael Right</td>
+                                                            <td>$15/hr</td>
+                                                            <td class="font-semibold">UI/UX</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="font-semibold">Morgan Vanblum</td>
+                                                            <td>$13/hr</td>
+                                                            <td class="font-semibold">Graphic concepts</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="font-semibold">Tiffani Blogz</td>
+                                                            <td>$15/hr</td>
+                                                            <td class="font-semibold">Animation</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="font-semibold">Ashley Boul</td>
+                                                            <td>$15/hr</td>
+                                                            <td class="font-semibold">Animation</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="font-semibold">Mikkey Mice</td>
+                                                            <td>$15/hr</td>
+                                                            <td class="font-semibold">Animation</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2">
+                                <div class="bg-white shadow rounded p-4">
+                                    <div class="border-b p-2">
+                                        <h4 class="text-lg font-semibold">Table without outer spacing</h4>
+                                    </div>
+                                    <div class="">
+                                        <div class="p-4">
+                                            <p class="">
+                                                Using the most basic table up, here’s how
+                                                <code>.table</code>-based tables look in Bootstrap. You can use any
+                                                example of below table for your table and it can be use with any type
+                                                of bootstrap tables.
+                                            </p>
+                                        </div>
+                                        <!-- Table with no outer spacing -->
+                                        <div class="overflow-x-auto">
+                                            <table class="w-full text-left">
+                                                <thead>
+                                                    <tr>
+                                                        <th>NAME</th>
+                                                        <th>RATE</th>
+                                                        <th>SKILL</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="font-semibold">Michael Right</td>
+                                                        <td>$15/hr</td>
+                                                        <td class="font-semibold">UI/UX</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-semibold">Morgan Vanblum</td>
+                                                        <td>$13/hr</td>
+                                                        <td class="font-semibold">Graphic concepts</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-semibold">Tiffani Blogz</td>
+                                                        <td>$15/hr</td>
+                                                        <td class="font-semibold">Animation</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-semibold">Ashley Boul</td>
+                                                        <td>$15/hr</td>
+                                                        <td class="font-semibold">Animation</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="font-semibold">Mikkey Mice</td>
+                                                        <td>$15/hr</td>
+                                                        <td class="font-semibold">Animation</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </section>
+                    <section class="section m-2">
+                        <div class="grid grid-cols-12" id="table-inverse">
+                            <div class="col-span-12">
+                                <div class="card bg-white shadow-md">
+                                    <div class="card-header p-6 border-b border-gray-200">
+                                        <h4 class="card-title font-bold text-lg">Inverse table</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-body p-6">
+                                            <p>
+                                                You can also invert the colors—with light text on dark
+                                                backgrounds—with
+                                                <code class="highlighter-rouge">.table-dark</code>.
+                                            </p>
+                                        </div>
+                                        <!-- table with dark -->
+                                        <div class="table-responsive">
+                                            <table class="table-auto w-full mb-0 text-white bg-gray-800">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="px-4 py-2">NAME</th>
+                                                        <th class="px-4 py-2">RATE</th>
+                                                        <th class="px-4 py-2">SKILL</th>
+                                                        <th class="px-4 py-2">TYPE</th>
+                                                        <th class="px-4 py-2">LOCATION</th>
+                                                        <th class="px-4 py-2">ACTION</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Replicate the following 'tr' for each row -->
+                                                    <tr>
+                                                        <td class="px-4 py-2 font-bold">Michael Right</td>
+                                                        <td class="px-4 py-2">$15/hr</td>
+                                                        <td class="px-4 py-2 font-bold">UI/UX</td>
+                                                        <td class="px-4 py-2">Remote</td>
+                                                        <td class="px-4 py-2">Austin,Taxes</td>
+                                                        <td class="px-4 py-2">
+                                                            <a href="#"><i class="feather-mail"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- End of row -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="card-body p-6">
+                                            <p>
+                                                You can also invert the colors—with dark text on light
+                                                backgrounds—with
+                                                <code class="highlighter-rouge">.table-light</code>.
+                                            </p>
+                                        </div>
+                                        <!-- table with light -->
+                                        <div class="table-responsive">
+                                            <table class="table-auto w-full mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="px-4 py-2">NAME</th>
+                                                        <th class="px-4 py-2">RATE</th>
+                                                        <th class="px-4 py-2">SKILL</th>
+                                                        <th class="px-4 py-2">TYPE</th>
+                                                        <th class="px-4 py-2">LOCATION</th>
+                                                        <th class="px-4 py-2">ACTION</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Replicate the following 'tr' for each row -->
+                                                    <tr>
+                                                        <td class="px-4 py-2 font-bold">Michael Right</td>
+                                                        <td class="px-4 py-2">$15/hr</td>
+                                                        <td class="px-4 py-2 font-bold">UI/UX</td>
+                                                        <td class="px-4 py-2">Remote</td>
+                                                        <td class="px-4 py-2">Austin,Taxes</td>
+                                                        <td class="px-4 py-2">
+                                                            <a href="#"><i class="feather-mail text-secondary"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- End of row -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Table head options start -->
+                    <section class="section m-2">
+                        <div class="w-full my-4" id="table-head">
+                            <div class="flex flex-col">
+                                <div class="w-full">
+                                    <div class="p-4 bg-white rounded-lg shadow-md">
+                                        <div class="flex justify-between items-center">
+                                            <h4 class="font-bold">Table head options</h4>
+                                        </div>
+                                        <div class="mt-4">
+                                            <p class="text-sm">
+                                                Similar to tables and dark tables, use the modifier
+                                                classes
+                                                <code class="text-purple-600">.thead-light</code> or
+                                                <code class="text-purple-600">.thead-dark</code> to
+                                                make
+                                                <code class="text-purple-600">&lt;thead&gt;</code>s
+                                                appear light or dark gray.
+                                            </p>
+                                        </div>
+                                        <!-- table head dark -->
+                                        <div class="w-full overflow-x-auto">
+                                            <table class="w-full divide-y divide-gray-200">
+                                                <thead class="bg-gray-700 text-white">
+                                                    <tr>
+                                                        <th class="px-4 py-2">NAME</th>
+                                                        <th class="px-4 py-2">RATE</th>
+                                                        <th class="px-4 py-2">SKILL</th>
+                                                        <th class="px-4 py-2">TYPE</th>
+                                                        <th class="px-4 py-2">LOCATION</th>
+                                                        <th class="px-4 py-2">ACTION</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="divide-y divide-gray-200">
+                                                    <tr>
+                                                        <td class="px-4 py-2 font-medium">Michael Right</td>
+                                                        <td class="px-4 py-2">$15/hr</td>
+                                                        <td class="px-4 py-2 font-medium">UI/UX</td>
+                                                        <td class="px-4 py-2">Remote</td>
+                                                        <td class="px-4 py-2">Austin,Taxes</td>
+                                                        <td class="px-4 py-2">
+                                                            <a href="#">
+                                                                <i class="text-secondary" data-feather="mail"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- Repeat <tr> as necessary -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Table head options end -->
+
+                        <!-- Striped rows start -->
+                        <div class="w-full my-4" id="table-striped">
+                            <div class="flex flex-col">
+                                <div class="w-full">
+                                    <div class="p-4 bg-white rounded-lg shadow-md">
+                                        <div class="flex justify-between items-center">
+                                            <h4 class="font-bold">Striped rows</h4>
+                                        </div>
+                                        <div class="mt-4">
+                                            <p class="text-sm">
+                                                Use
+                                                <code class="text-purple-600">.table-striped</code> to
+                                                add zebra-striping to any table row within the
+                                                <code class="text-purple-600">&lt;tbody&gt;</code>.
+                                                This styling doesn't work in IE8 and below as
+                                                <code class="text-purple-600">:nth-child</code> CSS selector isn't
+                                                supported.
+                                            </p>
+                                        </div>
+                                        <!-- table striped -->
+                                        <div class="w-full overflow-x-auto">
+                                            <table class="w-full divide-y divide-gray-200">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="px-4 py-2">NAME</th>
+                                                        <th class="px-4 py-2">RATE</th>
+                                                        <th class="px-4 py-2">SKILL</th>
+                                                        <th class="px-4 py-2">TYPE</th>
+                                                        <th class="px-4 py-2">LOCATION</th>
+                                                        <th class="px-4 py-2">ACTION</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="divide-y divide-gray-200">
+                                                    <tr class="bg-gray-100">
+                                                        <td class="px-4 py-2 font-medium">Michael Right</td>
+                                                        <td class="px-4 py-2">$15/hr</td>
+                                                        <td class="px-4 py-2 font-medium">UI/UX</td>
+                                                        <td class="px-4 py-2">Remote</td>
+                                                        <td class="px-4 py-2">Austin,Taxes</td>
+                                                        <td class="px-4 py-2">
+                                                            <a href="#">
+                                                                <i class="text-secondary" data-feather="mail"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- Repeat <tr> with and without class "bg-gray-100" as necessary for striped rows -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Striped rows end -->
+                    <!-- Striped rows with inverse dark table start -->
+                    <section class="section m-2">
+                        <div class="flex" id="table-striped-dark">
+                            <div class="w-full">
+                                <div class="card">
+                                    <div class="p-4 bg-white rounded-lg shadow-md">
+                                        <h4 class="font-bold">Striped inverse dark</h4>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <p class="text-sm">
+                                                    Use <code class="text-purple-600">.table-dark</code> with
+                                                    <code class="text-purple-600">.table-striped</code> to add
+                                                    zebra-striping to any
+                                                    inverse table row within the <code>&lt;tbody&gt;</code>.
+                                                    This styling doesn't work in IE8 and below as
+                                                    <code>:nth-child</code> CSS selector isn't supported.
+                                                </p>
+                                            </div>
+                                            <!-- table strip dark -->
+                                            <div class="overflow-x-auto">
+                                                <table
+                                                    class="table-auto w-full divide-y divide-gray-200 dark:text-white dark:bg-gray-900 mb-0">
+                                                    <!-- ...rest of table -->
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Striped rows with inverse dark table end -->
+
+                    <!-- Bordered table start -->
+                    <section class="section m-2">
+                        <div class="overflow-x-auto">
+                            <div class="min-w-screen">
+                                <table class="w-full divide-y divide-gray-200">
+                                    <thead>
+                                        <tr>
+                                            <th class="px-3 py-2">NOMBRE</th>
+                                            <th class="px-3 py-2">TARIFA</th>
+                                            <th class="px-3 py-2">HABILIDAD</th>
+                                            <th class="px-3 py-2">TIPO</th>
+                                            <th class="px-3 py-2">UBICACIÓN</th>
+                                            <th class="px-3 py-2">ACCIÓN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr>
+                                            <td class="px-3 py-2 font-bold">Michael Right</td>
+                                            <td class="px-3 py-2">$15/hr</td>
+                                            <td class="px-3 py-2 font-bold">UI/UX</td>
+                                            <td class="px-3 py-2">Remoto</td>
+                                            <td class="px-3 py-2">Austin,Texas</td>
+                                            <td class="px-3 py-2">
+                                                <a href="#" class="text-gray-500 hover:text-gray-900">
+                                                    <i class="far fa-envelope"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Bordered table end -->
+                    <section class="section m-2">
+                        <div class="overflow-x-auto">
+                            <div class="min-w-screen">
+                                <table class="w-full divide-y divide-gray-200">
+                                    <thead>
+                                        <tr>
+                                            <th class="px-3 py-2">NOMBRE</th>
+                                            <th class="px-3 py-2">TARIFA</th>
+                                            <th class="px-3 py-2">HABILIDAD</th>
+                                            <th class="px-3 py-2">TIPO</th>
+                                            <th class="px-3 py-2">UBICACIÓN</th>
+                                            <th class="px-3 py-2">ACCIÓN</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-200">
+                                        <tr class="hover:bg-gray-100">
+                                            <td class="px-3 py-2 font-bold">Michael Right</td>
+                                            <td class="px-3 py-2">$15/hr</td>
+                                            <td class="px-3 py-2 font-bold">UI/UX</td>
+                                            <td class="px-3 py-2">Remoto</td>
+                                            <td class="px-3 py-2">Austin,Texas</td>
+                                            <td class="px-3 py-2">
+                                                <a href="#" class="text-gray-500 hover:text-gray-900">
+                                                    <i class="far fa-envelope"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section m-2">
+                        <div class="flex flex-col" id="table-contexual">
+                            <div class="overflow-x-auto">
+                                <div class="min-w-screen">
+                                    <div class="bg-white rounded-lg shadow-md">
+                                        <div class="px-6 py-4">
+                                            <h4 class="text-lg font-semibold">Contextual classes</h4>
+                                        </div>
+                                        <div class="p-6">
+                                            <p>
+                                                Use contextual classes to color table rows or individual cells. Read
+                                                full documentation
+                                                <a href="https://getbootstrap.com/docs/4.3/content/tables/#contextual-classes"
+                                                    target="_blank" class="text-blue-500 hover:underline">here.</a>
+                                            </p>
+                                        </div>
+                                        <!-- table contextual / colored -->
+                                        <div class="px-6 py-4">
+                                            <div class="w-full">
+                                                <table class="w-full divide-y divide-gray-200 text-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="px-3 py-2 font-semibold text-left">NAME</th>
+                                                            <th class="px-3 py-2 font-semibold text-left">RATE</th>
+                                                            <th class="px-3 py-2 font-semibold text-left">SKILL</th>
+                                                            <th class="px-3 py-2 font-semibold text-left">TYPE</th>
+                                                            <th class="px-3 py-2 font-semibold text-left">LOCATION</th>
+                                                            <th class="px-3 py-2 font-semibold text-left">ACTION</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="divide-y divide-gray-200">
+                                                        <tr class="bg-gray-200">
+                                                            <td class="px-3 py-2 font-bold">Michael Right</td>
+                                                            <td class="px-3 py-2">$15/hr</td>
+                                                            <td class="px-3 py-2 font-bold">UI/UX</td>
+                                                            <td class="px-3 py-2">Remote</td>
+                                                            <td class="px-3 py-2">Austin,Texas</td>
+                                                            <td class="px-3 py-2">
+                                                                <a href="#" class="text-gray-500 hover:text-gray-900">
+                                                                    <span>[icono]</span>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!-- Insert rest of your rows here, applying the corresponding bg- color class -->
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section m-2">
+                        <div class="flex flex-col" id="table-responsive">
+                          <div class="overflow-x-auto">
+                            <div class="min-w-screen">
+                              <div class="bg-white rounded-lg shadow-md">
+                                <div class="px-6 py-4">
+                                  <h4 class="text-lg font-semibold">Siempre responsiva</h4>
+                                </div>
+                                <div class="p-6">
+                                  <p>
+                                    Las tablas responsivas permiten desplazarlas horizontalmente con facilidad. Haz cualquier tabla responsiva en todos los tamaños de pantalla añadiendo un div con la clase <code>.table-responsive</code> alrededor de la tabla. O selecciona un punto de quiebre máximo hasta el cual la tabla será responsiva, añadiendo <code>.table-responsive{-sm|-md|-lg|-xl}</code>. Lee la documentación completa
+                                  </p>
+                                  <div class="alert bg-blue-100 text-blue-800 p-3 rounded-md mt-3">
+                                    <h4 class="font-semibold">
+                                      Recorte/truncamiento vertical
+                                    </h4>
+                                    <p>
+                                      Las tablas responsivas utilizan <code>overflow-y: hidden</code>, lo cual recorta cualquier contenido que se extienda más allá de los bordes superior o inferior de la tabla. En particular, esto puede recortar menús desplegables y otros widgets de terceros.
+                                    </p>
+                                  </div>
+                                </div>
+                                <!-- table responsive -->
+                                <div class="px-6 py-4">
+                                  <div class="overflow-x-auto">
+                                    <table class="table-auto w-full">
+                                      <thead>
+                                        <tr>
+                                          <!-- Inserta tus 9 encabezados aquí, aplicando las clases correspondientes para el estilo -->
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 1</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 2</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 3</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 4</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 5</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 6</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 7</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 8</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 9</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 10</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 11</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 12</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 13</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 14</th>
+                                          <th class="px-4 py-2 bg-gray-200 font-semibold text-left">Encabezado 15</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <!-- Inserta tus celdas aquí -->
+                                          <td class="border px-4 py-2">Celda 1</td>
+                                          <td class="border px-4 py-2">Celda 2</td>
+                                          <td class="border px-4 py-2">Celda 3</td>
+                                          <td class="border px-4 py-2">Celda 4</td>
+                                          <td class="border px-4 py-2">Celda 5</td>
+                                          <td class="border px-4 py-2">Celda 6</td>
+                                          <td class="border px-4 py-2">Celda 7</td>
+                                          <td class="border px-4 py-2">Celda 8</td>
+                                          <td class="border px-4 py-2">Celda 9</td>
+                                        </tr>
+                                        <!-- Inserta el resto de tus filas aquí -->
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      
+
+
+
                 </div>
                 <footer class="pt-16">
                     <div>
