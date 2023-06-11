@@ -2721,6 +2721,7 @@ input:checked + .toggle-bg {
   gap: 1.25rem;
 }
 
+
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -5661,6 +5662,7 @@ code {
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
 }
 
+
 .hover\:fill-\[\#8b8b8b\]:hover {
   fill: #8b8b8b;
 }
@@ -7249,6 +7251,7 @@ code {
   --tw-text-opacity: 1;
   color: rgb(115 115 115 / var(--tw-text-opacity));
 }
+
 
 :is(.dark .peer:focus ~ .dark\:peer-focus\:text-gray-200) {
   --tw-text-opacity: 1;
