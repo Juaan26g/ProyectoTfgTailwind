@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avatar - Mazer Admin Dashboard</title>
+    <title>Table - Mazer Admin Dashboard</title>
     <link href="/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="../elementos/elementos2.css">
     <link rel="shortcut icon" href="../elementos/herramientas/images/logo/favicon.svg" type="image/x-icon" />
@@ -137,30 +137,30 @@
                             </ul>
                         </li>
 
-                        <li class="w-60 sidebar-item has-sub active">
+                        <li class="w-60 sidebar-item has-sub ">
                             <a href="#" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#collection-fill" />
                                 </svg> <span class="textoSidebar">Extra Components</span>
                             </a>
-                            <ul class="submenu textoSidebar ml-8 active">
-                                <li class="submenu-item active">
-                                    <a href="extra-component-avatar.html">Avatar</a>
+                            <ul class="submenu textoSidebar ml-8 ">
+                                <li class="submenu-item ">
+                                    <a href="../extraComponents/extra-component-avatar.html">Avatar</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="extra-component-divider.html">Divider</a>
+                                    <a href="../extraComponents/extra-component-divider.html">Divider</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="extra-component-date-picker.html">Date Picker</a>
+                                    <a href="../extraComponents/extra-component-date-picker.html">Date Picker</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="extra-component-sweetalert.html">Sweet Alert</a>
+                                    <a href="../extraComponents/extra-component-sweetalert.html">Sweet Alert</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="extra-component-toastify.html">Toastify</a>
+                                    <a href="../extraComponents/extra-component-toastify.html">Toastify</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="extra-component-rating.html">Rating</a>
+                                    <a href="../extraComponents/extra-component-rating.html">Rating</a>
                                 </li>
                             </ul>
                         </li>
@@ -252,21 +252,21 @@
                             </a>
                             <ul class="submenu textoSidebar ml-8">
                                 <li class="submenu-item">
-                                    <a href="">Quill</a>
+                                    <a href="../formTables/form-editor/form-editor-quill.html">Quill</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">CKEditor</a>
+                                    <a href="../formTables/form-editor/form-editor-ckeditor.html">CKEditor</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Summernote</a>
+                                    <a href="../formTables/form-editor/form-editor-summernote.html">Summernote</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">TinyMCE</a>
+                                    <a href="../formTables/form-editor/form-editor-tinymce.html">TinyMCE</a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="w-60 sidebar-item ">
+                        <li class="w-60 sidebar-item active ">
                             <a href="#" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
                                     <use xlink:href="../elementos/herramientas/images/icons.svg#grid-1x2-fill" />
@@ -283,10 +283,10 @@
                             </a>
                             <ul class="submenu textoSidebar ml-8">
                                 <li class="submenu-item">
-                                    <a href="">Datatable</a>
+                                    <a href="../formTables/datatables/table-datatable.html">Datatable</a>
                                 </li>
                                 <li class="submenu-item">
-                                    <a href="">Datatable (jQuery)</a>
+                                    <a href="../formTables/datatables/table-datatable-jquery.html">Datatable (jQuery)</a>
                                 </li>
                             </ul>
                         </li>
@@ -508,8 +508,8 @@
                     <div>
                         <div class="grid grid-cols-12">
                             <div class="col-span-12 md:col-span-6 md:order-1 order-2 mb-4">
-                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Avatar</h3>
-                                <p class="text-subtitle text-muted">A container to show avatar images or initials.</p>
+                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Table</h3>
+                                <p class="text-subtitle text-muted">Who does not love tables?</p>
                             </div>
                             <div class="mb-6 col-span-12 md:col-span-6 md:order-2 order-1">
                                 <nav class="float-left lg:float-right">
@@ -526,10 +526,10 @@
                         </div>
                     </div>
                     <section class="section">
-                        <div class="flex flex-col md:flex-row" id="basic-table">
+                        <div class="flex flex-col md:flex-row space-x-4 " id="basic-table">
                             <div class="w-full md:w-1/2">
-                                <div class="bg-white shadow rounded p-4">
-                                    <div class="border-b p-2">
+                                <div class="entrada shadow rounded-lg p-4">
+                                    <div class=" p-2">
                                         <h4 class="text-lg font-semibold">Table with outer spacing</h4>
                                     </div>
                                     <div class="">
@@ -543,38 +543,38 @@
                                             <!-- Table with outer spacing -->
                                             <div class="overflow-x-auto">
                                                 <table class="w-full text-left">
-                                                    <thead>
+                                                    <thead class="border-b-2">
                                                         <tr>
-                                                            <th>NAME</th>
-                                                            <th>RATE</th>
-                                                            <th>SKILL</th>
+                                                            <th class="p-4">NAME</th>
+                                                            <th class="p-4">RATE</th>
+                                                            <th class="p-4">SKILL</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td class="font-semibold">Michael Right</td>
-                                                            <td>$15/hr</td>
-                                                            <td class="font-semibold">UI/UX</td>
+                                                        <tr class="border-b">
+                                                            <td class="font-semibold p-4">Michael Right</td>
+                                                            <td class="p-4">$15/hr</td>
+                                                            <td class="font-semibold p-4">UI/UX</td>
                                                         </tr>
-                                                        <tr>
-                                                            <td class="font-semibold">Morgan Vanblum</td>
-                                                            <td>$13/hr</td>
-                                                            <td class="font-semibold">Graphic concepts</td>
+                                                        <tr class="border-b">
+                                                            <td class="font-semibold p-4">Morgan Vanblum</td>
+                                                            <td class="p-4">$13/hr</td>
+                                                            <td class="font-semibold p-4">Graphic concepts</td>
                                                         </tr>
-                                                        <tr>
-                                                            <td class="font-semibold">Tiffani Blogz</td>
-                                                            <td>$15/hr</td>
-                                                            <td class="font-semibold">Animation</td>
+                                                        <tr class="border-b">
+                                                            <td class="font-semibold p-4">Tiffani Blogz</td>
+                                                            <td class="p-4">$15/hr</td>
+                                                            <td class="font-semibold p-4">Animation</td>
                                                         </tr>
-                                                        <tr>
-                                                            <td class="font-semibold">Ashley Boul</td>
-                                                            <td>$15/hr</td>
-                                                            <td class="font-semibold">Animation</td>
+                                                        <tr class="border-b"> 
+                                                            <td class="font-semibold p-4">Ashley Boul</td>
+                                                            <td class="p-4">$15/hr</td>
+                                                            <td class="font-semibold p-4">Animation</td>
                                                         </tr>
-                                                        <tr>
-                                                            <td class="font-semibold">Mikkey Mice</td>
-                                                            <td>$15/hr</td>
-                                                            <td class="font-semibold">Animation</td>
+                                                        <tr class=" border-b">
+                                                            <td class="font-semibold p-4">Mikkey Mice</td>
+                                                            <td class="p-4">$15/hr</td>
+                                                            <td class="font-semibold p-4">Animation</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -584,8 +584,8 @@
                                 </div>
                             </div>
                             <div class="w-full md:w-1/2">
-                                <div class="bg-white shadow rounded p-4">
-                                    <div class="border-b p-2">
+                                <div class="entrada shadow rounded p-4">
+                                    <div class=" p-2">
                                         <h4 class="text-lg font-semibold">Table without outer spacing</h4>
                                     </div>
                                     <div class="">
@@ -600,40 +600,40 @@
                                         <!-- Table with no outer spacing -->
                                         <div class="overflow-x-auto">
                                             <table class="w-full text-left">
-                                                <thead>
+                                                <thead class="border-b-2">
                                                     <tr>
-                                                        <th>NAME</th>
-                                                        <th>RATE</th>
-                                                        <th>SKILL</th>
+                                                        <th class="p-4">NAME</th>
+                                                        <th class="p-4">RATE</th>
+                                                        <th class="p-4">SKILL</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td class="font-semibold">Michael Right</td>
-                                                        <td>$15/hr</td>
-                                                        <td class="font-semibold">UI/UX</td>
+                                                    <tr class="border-b">
+                                                        <td class="font-semibold P-4">Michael Right</td>
+                                                        <td class="p-4">$15/hr</td>
+                                                        <td class="font-semibold P-4">UI/UX</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td class="font-semibold">Morgan Vanblum</td>
-                                                        <td>$13/hr</td>
-                                                        <td class="font-semibold">Graphic concepts</td>
+                                                    <tr class="border-b">
+                                                        <td class="font-semibold P-4">Morgan Vanblum</td>
+                                                        <td class="p-4">$13/hr</td>
+                                                        <td class="font-semibold P-4">Graphic concepts</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td class="font-semibold">Tiffani Blogz</td>
-                                                        <td>$15/hr</td>
-                                                        <td class="font-semibold">Animation</td>
+                                                    <tr class="border-b">
+                                                        <td class="font-semibold P-4">Tiffani Blogz</td>
+                                                        <td class="p-4">$15/hr</td>
+                                                        <td class="font-semibold P-4">Animation</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td class="font-semibold">Ashley Boul</td>
-                                                        <td>$15/hr</td>
-                                                        <td class="font-semibold">Animation</td>
+                                                    <tr class="border-b">
+                                                        <td class="font-semibold P-4">Ashley Boul</td>
+                                                        <td class="p-4">$15/hr</td>
+                                                        <td class="font-semibold p-4">Animation</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td class="font-semibold">Mikkey Mice</td>
-                                                        <td>$15/hr</td>
-                                                        <td class="font-semibold">Animation</td>
+                                                    <tr class="border-b">
+                                                        <td class="font-semibold p-4">Mikkey Mice</td>
+                                                        <td class="p-4">$15/hr</td>
+                                                        <td class="font-semibold p-4">Animation</td>
                                                     </tr>
-                                                </tbody>
+                                                </tbody >
                                             </table>
                                         </div>
                                     </div>
