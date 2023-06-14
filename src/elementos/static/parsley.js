@@ -53,3 +53,8 @@ Parsley.addValidator("restrictedCity", {
     en: 'You have to live in <a href="https://www.google.com/maps/place/Jakarta">Jakarta</a>.',
   },
 })
+
+Parsley.on('field:error', function() {
+    var errorMessage = this.$element.closest('.form-group').find('.parsley-error');
+    errorMessage.css('color', 'red');
+});

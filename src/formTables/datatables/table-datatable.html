@@ -50,7 +50,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 aria-hidden="true" role="img" class="ml-2 textoSidebar iconify iconify--mdd" width="20"
                                 height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                <path fill="#607080"
+                                <path fill="currentColor"
                                     d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
                                 </path>
                             </svg>
@@ -352,7 +352,8 @@
                         <li class="w-60 sidebar-item ">
                             <a href="#" class="sidebar-link">
                                 <svg class="bi" width="15" height="40" fill="currentColor">
-                                    <use xlink:href="../../elementos/herramientas/images/icons.svg#cloud-arrow-up-fill" />
+                                    <use
+                                        xlink:href="../../elementos/herramientas/images/icons.svg#cloud-arrow-up-fill" />
                                 </svg> <span class="textoSidebar">File Uploader</span>
                             </a>
                         </li>
@@ -508,17 +509,18 @@
                     <div>
                         <div class="grid grid-cols-12">
                             <div class="col-span-12 md:col-span-6 md:order-1 order-2 mb-4">
-                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">Avatar</h3>
-                                <p class="text-subtitle text-muted">A container to show avatar images or initials.</p>
+                                <h3 class="text-2xl xl:text-3xl xxl:text-3xl leading-5 mb-4 log">DataTable</h3>
+                                <p class="text-subtitle text-muted">A sortable, searchable, paginated table without
+                                    dependencies thanks to simple-datatables.</p>
                             </div>
                             <div class="mb-6 col-span-12 md:col-span-6 md:order-2 order-1">
                                 <nav class="float-left lg:float-right">
                                     <ol class="text-body flex">
                                         <li class="link">
-                                            <a href="../index.html">Dashboard</a>
+                                            <a href="../../index.html">Dashboard</a>
                                         </li>
                                         <li class="pl-2">
-                                            / Avatar
+                                            / DataTable
                                         </li>
                                     </ol>
                                 </nav>
@@ -527,53 +529,67 @@
                     </div>
                     <section class="section">
                         <div class="flex flex-col border-2 border-gray-300 rounded-lg shadow-lg overflow-hidden">
-                          <div class="bg-gray-200 text-gray-700 text-lg font-semibold p-3">Tabla Sencilla</div>
-                          <div class="p-3">
-                            <table class="min-w-full divide-y divide-gray-200" id="table1">
-                              <thead class="bg-gray-50">
-                                <tr>
-                                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
-                                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Teléfono</th>
-                                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ciudad</th>
-                                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
-                                </tr>
-                              </thead>
-                              <tbody class="bg-white divide-y divide-gray-200">
-                                <tr>
-                                  <td class="px-6 py-4 whitespace-nowrap">Graiden</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">vehicula.aliquet@semconsequat.co.uk</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">076 4820 8838</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">Offenburg</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Activo</span>
-                                  </td>
-                                </tr>
-                                <!-- Otras filas de la tabla aquí... -->
-                                <tr>
-                                  <td class="px-6 py-4 whitespace-nowrap">Dale</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">fringilla.euismod.enim@quam.ca</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">0500 527693</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">New Quay</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Activo</span>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="px-6 py-4 whitespace-nowrap">Nathaniel</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">mi.Duis@diam.edu</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">(012165) 76278</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">Grumo Appula</td>
-                                  <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Inactivo</span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
+                            <div class="entrada text-gray-700 text-lg font-semibold p-3">simple DataTable</div>
+                            <div class="p-3">
+                                <table class="min-w-full divide-y divide-gray-200" id="table1">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Nombre</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Email</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Teléfono</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Ciudad</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap">Graiden</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">vehicula.aliquet@semconsequat.co.uk
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap">076 4820 8838</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Offenburg</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                <span
+                                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Activo</span>
+                                            </td>
+                                        </tr>
+                                        <!-- Otras filas de la tabla aquí... -->
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap">Dale</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">fringilla.euismod.enim@quam.ca</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">0500 527693</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">New Quay</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                <span
+                                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Activo</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap">Nathaniel</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">mi.Duis@diam.edu</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">(012165) 76278</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">Grumo Appula</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                <span
+                                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Inactivo</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                      </section>
-                      
+                    </section>
+
                 </div>
                 <footer class="pt-16">
                     <div>
@@ -608,6 +624,9 @@
 </body>
 
 </html>
+
+<script src="../../elementos/extensiones/simple-datatables/simple-datatables.js"></script>
+<script src="../../elementos/static/simple-datatables.js"></script>
 
 <script>
     const themeToggle = document.getElementById('theme-toggle');
