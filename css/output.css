@@ -1326,6 +1326,10 @@ input:checked + .toggle-bg {
   order: 2;
 }
 
+.col-auto {
+  grid-column: auto;
+}
+
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
@@ -1458,6 +1462,11 @@ input:checked + .toggle-bg {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .my-8 {
@@ -1665,6 +1674,16 @@ input:checked + .toggle-bg {
 .ms-2 {
   -webkit-margin-start: 0.5rem;
           margin-inline-start: 0.5rem;
+}
+
+.ms-3 {
+  -webkit-margin-start: 0.75rem;
+          margin-inline-start: 0.75rem;
+}
+
+.ms-4 {
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
 }
 
 .mt-0 {
@@ -4140,8 +4159,20 @@ input:checked + .toggle-bg {
   text-align: right;
 }
 
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
 .align-baseline {
   vertical-align: baseline;
+}
+
+.align-top {
+  vertical-align: top;
 }
 
 .align-middle {
@@ -4264,6 +4295,10 @@ input:checked + .toggle-bg {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .font-light {
@@ -5647,6 +5682,12 @@ code {
 .hover\:bg-yellow-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(114 59 19 / var(--tw-bg-opacity));
+}
+
+
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 86 219 / var(--tw-bg-opacity));
 }
 
 .hover\:fill-\[\#8b8b8b\]:hover {
