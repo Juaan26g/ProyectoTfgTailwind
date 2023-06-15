@@ -1,22 +1,23 @@
 let dataTable = new simpleDatatables.DataTable(
   document.getElementById("table1")
 )
-// Move "per page dropdown" selector element out of label
-// to make it work with bootstrap 5. Add bs5 classes.
+
+// Mover el selector "per page dropdown" fuera de la etiqueta
+// para hacerlo funcionar con TailwindCSS. Agregar clases de TailwindCSS.
 function adaptPageDropdown() {
   const selector = dataTable.wrapper.querySelector(".dataTable-selector")
   selector.parentNode.parentNode.insertBefore(selector, selector.parentNode)
-  selector.classList.add("form-select")
+  selector.classList.add(...["block", "pl-3", "pr-10", "py-2", "text-base", "border-gray-300", "focus:outline-none", "focus:ring-1", "focus:ring-indigo-500", "focus:border-indigo-500", "sm:text-sm", "rounded-md"])
 }
 
-// Add bs5 classes to pagination elements
+// Agregar clases de TailwindCSS a los elementos de paginación
 function adaptPagination() {
   const paginations = dataTable.wrapper.querySelectorAll(
     "ul.dataTable-pagination-list"
   )
 
   for (const pagination of paginations) {
-    pagination.classList.add(...["pagination", "pagination-primary"])
+    pagination.classList.add(...["flex", "justify-between"])
   }
 
   const paginationLis = dataTable.wrapper.querySelectorAll(
@@ -24,7 +25,7 @@ function adaptPagination() {
   )
 
   for (const paginationLi of paginationLis) {
-    paginationLi.classList.add("page-item")
+    paginationLi.classList.add("mx-1")
   }
 
   const paginationLinks = dataTable.wrapper.querySelectorAll(
@@ -32,21 +33,40 @@ function adaptPagination() {
   )
 
   for (const paginationLink of paginationLinks) {
-    paginationLink.classList.add("page-link")
+    console.log(paginationLink);
+    paginationLink.classList.add(...["px-3", "py-1", "border", "border-gray-300", "rounded","justify-end"])
   }
+}
+
+// Agregar clases de TailwindCSS a los elementos relevantes
+function adaptElements() {
+  // Alinear verticalmente el texto "Showing entries" con los botones de paginación
+  const info = dataTable.wrapper.querySelector(".dataTable-info")
+  info.parentNode.classList.add("flex", "items-center")
+
+  // Mover el cuadro de búsqueda a la derecha del selector "per page dropdown"
+  const top = dataTable.wrapper.querySelector(".dataTable-top")
+  top.classList.add("flex", "justify-between")
 }
 
 const refreshPagination = () => {
   adaptPagination()
 }
 
-// Patch "per page dropdown" and pagination after table rendered
+// Patchear el selector "per page dropdown" y la paginación después de que se haya renderizado la tabla
 dataTable.on("datatable.init", () => {
   adaptPageDropdown()
   refreshPagination()
+  adaptElements()
 })
-dataTable.on("datatable.update", refreshPagination)
-dataTable.on("datatable.sort", refreshPagination)
+dataTable.on("datatable.update", () => {
+  refreshPagination()
+  adaptElements()
+})
+dataTable.on("datatable.sort", () => {
+  refreshPagination()
+  adaptElements()
+})
 
-// Re-patch pagination after the page was changed
+// Re-patchear la paginación después de que se haya cambiado la página
 dataTable.on("datatable.page", adaptPagination)
