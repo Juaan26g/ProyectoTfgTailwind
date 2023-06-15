@@ -54,7 +54,9 @@ Parsley.addValidator("restrictedCity", {
   },
 })
 
+
 Parsley.on('field:error', function() {
     var errorMessage = this.$element.closest('.form-group').find('.parsley-error');
     errorMessage.css('color', 'red');
 });
+
